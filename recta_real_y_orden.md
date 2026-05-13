@@ -1,6 +1,6 @@
 # La Recta Real y los Números Reales
 
-## ¿Qué son los números reales?
+## Repaso de los números reales
 
 Los **números reales** son todos los números que existen: los naturales (1, 2, 3…), los enteros (…, -2, -1, 0, 1, 2…), los racionales (fracciones como ½, decimales como 3.14) y los irracionales (como √2 o π). Básicamente, cualquier número que puedas imaginar en una recta.
 
