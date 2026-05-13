@@ -94,16 +94,6 @@ Los números reales se pueden sumar, restar, multiplicar y dividir (excepto por 
 | Signos diferentes → resultado negativo | 5 × (-3) = -15,  (-5) × 3 = -15 |
 | Dividir entre cero **no está definido** | 5 ÷ 0 no existe |
 
-### Leyes de los exponentes
-
-| Ley | Ejemplo |
-|-----|---------|
-| aᵐ · aⁿ = aᵐ⁺ⁿ | x² · x³ = x⁵ |
-| aᵐ ÷ aⁿ = aᵐ⁻ⁿ (a ≠ 0) | x⁵ ÷ x² = x³ |
-| (aᵐ)ⁿ = aᵐⁿ | (x²)³ = x⁶ |
-| a⁰ = 1 (a ≠ 0) | 5⁰ = 1 |
-| a⁻ⁿ = 1 / aⁿ (a ≠ 0) | 2⁻³ = 1/8 |
-
 ### Jerarquía de operaciones (PEMDAS)
 
 Cuando hay varias operaciones, se resuelven en este orden:
