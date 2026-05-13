@@ -72,6 +72,105 @@ Resuelve: **x + 3 > 7**
 
 ---
 
+---
+
+## 4. Operaciones Algebraicas con Números Reales
+
+Los números reales se pueden sumar, restar, multiplicar y dividir (excepto por cero). Estas operaciones siguen reglas bien definidas.
+
+### Suma y resta
+
+| Regla | Ejemplo |
+|-------|---------|
+| Signos iguales → se suman y se conserva el signo | 5 + 3 = 8,  (-5) + (-3) = -8 |
+| Signos diferentes → se restan y se pone el signo del mayor | 5 + (-3) = 2,  (-5) + 3 = -2 |
+| Restar un número es lo mismo que sumar su inverso aditivo | 5 – 3 = 5 + (-3) |
+
+### Multiplicación y división
+
+| Regla | Ejemplo |
+|-------|---------|
+| Signos iguales → resultado positivo | 5 × 3 = 15,  (-5) × (-3) = 15 |
+| Signos diferentes → resultado negativo | 5 × (-3) = -15,  (-5) × 3 = -15 |
+| Dividir entre cero **no está definido** | 5 ÷ 0 no existe |
+
+### Leyes de los exponentes
+
+| Ley | Ejemplo |
+|-----|---------|
+| aᵐ · aⁿ = aᵐ⁺ⁿ | x² · x³ = x⁵ |
+| aᵐ ÷ aⁿ = aᵐ⁻ⁿ (a ≠ 0) | x⁵ ÷ x² = x³ |
+| (aᵐ)ⁿ = aᵐⁿ | (x²)³ = x⁶ |
+| a⁰ = 1 (a ≠ 0) | 5⁰ = 1 |
+| a⁻ⁿ = 1 / aⁿ (a ≠ 0) | 2⁻³ = 1/8 |
+
+### Jerarquía de operaciones (PEMDAS)
+
+Cuando hay varias operaciones, se resuelven en este orden:
+
+1. **P** = Paréntesis (y otros signos de agrupación como corchetes o llaves)
+2. **E** = Exponentes y raíces
+3. **M** = Multiplicación y **D** = División (de izquierda a derecha)
+4. **A** = Adición (suma) y **S** = Sustracción (resta) (de izquierda a derecha)
+
+> **Ejemplo:**  3 + 4 × 2²  =  3 + 4 × 4  =  3 + 16  =  19
+
+---
+
+### Inverso Aditivo
+
+El **inverso aditivo** de un número a es el número que, **sumado con a, da cero**. Es simplemente **cambiarle el signo** al número.
+
+- El inverso aditivo de **5** es **-5**, porque 5 + (-5) = 0.
+- El inverso aditivo de **-8** es **8**, porque (-8) + 8 = 0.
+- El inverso aditivo de **0** es **0**, porque 0 + 0 = 0.
+- El inverso aditivo de **√2** es **-√2**, porque √2 + (-√2) = 0.
+- El inverso aditivo de **-¾** es **¾**, porque -¾ + ¾ = 0.
+
+| Número | Inverso Aditivo | Suma |
+|--------|-----------------|------|
+| 7 | -7 | 7 + (-7) = 0 |
+| -4 | 4 | (-4) + 4 = 0 |
+| ½ | -½ | ½ + (-½) = 0 |
+
+También se le llama **opuesto** de un número. Sirve para **restar**: restar un número es sumar su inverso aditivo.
+
+> **Fórmula:**  a – b = a + (**inverso aditivo de b**)
+
+---
+
+### Recíproco de un número
+
+El **recíproco** (o **inverso multiplicativo**) de un número a (distinto de cero) es el número que, **multiplicado por a, da 1**. Se obtiene **invirtiendo la fracción**:
+
+- El recíproco de **5** es **⅕** (un quinto), porque 5 × ⅕ = 1.
+- El recíproco de **-3** es **-⅓**, porque (-3) × (-⅓) = 1.
+- El recíproco de **½** es **2**, porque ½ × 2 = 1.
+- El recíproco de **-¾** es **-⁴⁄₃**, porque (-¾) × (-⁴⁄₃) = 1.
+- El recíproco de **√2** es **1/√2**, porque √2 × 1/√2 = 1.
+
+| Número | Recíproco | Multiplicación |
+|--------|-----------|----------------|
+| 7 | 1/7 | 7 × 1/7 = 1 |
+| -4 | -1/4 | (-4) × (-1/4) = 1 |
+| 2/3 | 3/2 | (2/3) × (3/2) = 1 |
+| 0.5 | 2 | 0.5 × 2 = 1 |
+
+> ⚠️ **El cero no tiene recíproco** porque no existe ningún número que multiplicado por 0 dé 1.
+
+El recíproco sirve para **dividir**: dividir entre un número es lo mismo que multiplicar por su recíproco.
+
+> **Fórmula:**  a ÷ b = a × (**recíproco de b**),  con b ≠ 0
+
+### Comparación rápida
+
+| Concepto | Operación | Resultado | Ejemplo |
+|----------|-----------|-----------|---------|
+| Inverso aditivo | Suma | Da **0** | 5 + (-5) = 0 |
+| Recíproco | Multiplicación | Da **1** | 5 × ⅕ = 1 |
+
+---
+
 ## Resumen visual
 
 ```
