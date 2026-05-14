@@ -169,13 +169,7 @@ El **valor absoluto** de un número es su distancia del cero en la recta real. C
 **Interpretación geométrica:** |*a*| es la distancia entre el punto *a* y el punto 0 en la recta real. Así, |3| = 3 porque el 3 está a 3 unidades del cero, y |−3| = 3 porque el −3 también está a 3 unidades del cero (pero del lado izquierdo).
 
 **Propiedades importantes:**
-
-| Propiedad | Fórmula | Ejemplo |
-|-----------|---------|---------|
-| No negatividad | |*a*| ≥ 0 siempre | |−4| = 4 ≥ 0 |
-| Definición positiva | Si |*a*| = 0 entonces *a* = 0 | |0| = 0 |
-| Simetría | |−*a*| = |*a*| | |−7| = |7| = 7 |
-| Multiplicación | |*a* · *b*| = |*a*| · |*b*| | |(−3)(−2)| = |6| = 6 = (3)(2) |
-| Desigualdad triangular | ||*a*| − |*b*|| ≤ |*a* + *b*| ≤ |*a*| + |*b*| | | |5 + (−3)| = |2| = 2 ≤ |5| + |−3| = 8 |
-
+* Positividad: $|a| \geq 0$
+* Si $a<b$, entonces $|b - a| = b-a$
+* Si $a>b$, entonces $|b - a| = a - b$
 ---
