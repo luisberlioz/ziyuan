@@ -173,7 +173,7 @@ El **valor absoluto** de un número es su distancia del cero en la recta real. C
 | Propiedad | Fórmula | Ejemplo |
 |-----------|---------|---------|
 | No negatividad | |*a*| ≥ 0 siempre | |−4| = 4 ≥ 0 |
-| Definición positiva | |*a*| = 0 ⟺ *a* = 0 | |0| = 0 |
+| Definición positiva | Si |*a*| = 0 entonces *a* = 0 | |0| = 0 |
 | Simetría | |−*a*| = |*a*| | |−7| = |7| = 7 |
 | Multiplicación | |*a* · *b*| = |*a*| · |*b*| | |(−3)(−2)| = |6| = 6 = (3)(2) |
 | Desigualdad triangular | ||*a*| − |*b*|| ≤ |*a* + *b*| ≤ |*a*| + |*b*| | | |5 + (−3)| = |2| = 2 ≤ |5| + |−3| = 8 |
