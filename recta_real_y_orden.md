@@ -4,6 +4,21 @@
 
 Los **números reales** son todos los números que existen: los naturales (1, 2, 3…), los enteros (…, -2, -1, 0, 1, 2…), los racionales (fracciones como ½, decimales como 3.14) y los irracionales (como √2 o π). Básicamente, cualquier número que puedas imaginar en una recta.
 
+### Números positivos y negativos
+
+Los **números positivos** (+)
+: Son todos los números mayores que cero: 1, 2, 3, ½, π, √2… Se escriben con signo + o sin ningún signo. En la recta real están a la **derecha del cero**. Se usan para contar, medir temperaturas sobre cero, ganancias, altitudes sobre el nivel del mar, etc.
+
+Los **números negativos** (−)
+: Son todos los números menores que cero: −1, −2, −3, −½… En la recta real están a la **izquierda del cero**. Se usan para temperaturas bajo cero, deudas, altitudes por debajo del nivel del mar, etc.
+
+El **cero** (0) no es positivo ni negativo — es el punto neutral. Separa los positivos de los negativos en la recta.
+
+Ejemplos cotidianos:
+- +12 °C (hace calor) vs. −5 °C (hace frío)
+- Tener +500 lempiras (dinero a tu favor) vs. −500 lempiras (le debes al banco)
+- +3 pisos (arriba de la planta baja) vs. −2 pisos (sótano)
+
 ---
 
 ## 1. Representación en la Recta Real
@@ -134,3 +149,33 @@ El recíproco sirve para **dividir**: dividir entre un número es lo mismo que m
 
 ---
 
+## 5. Valor Absoluto
+
+El **valor absoluto** de un número es su distancia del cero en la recta real. Como las distancias siempre son positivas (no puedes estar a −5 metros de algo), el valor absoluto **siempre es un número no negativo**.
+
+> **Definición (nivel secundaria/preparatoria):** El valor absoluto de un número *a*, escrito |*a*|, es:
+>
+> - Si *a* es **positivo** o **cero**, entonces |*a*| = *a*
+> - Si *a* es **negativo**, entonces |*a*| = −*a* (es decir, le quitamos el signo)
+
+**Ejemplos:**
+
+- |5| = 5 porque 5 ya es positivo
+- |−5| = 5 porque −5 es negativo, y al quitarle el signo queda 5
+- |0| = 0
+- |−12| = 12
+- |+7| = 7
+
+**Interpretación geométrica:** |*a*| es la distancia entre el punto *a* y el punto 0 en la recta real. Así, |3| = 3 porque el 3 está a 3 unidades del cero, y |−3| = 3 porque el −3 también está a 3 unidades del cero (pero del lado izquierdo).
+
+**Propiedades importantes:**
+
+| Propiedad | Fórmula | Ejemplo |
+|-----------|---------|---------|
+| No negatividad | |*a*| ≥ 0 siempre | |−4| = 4 ≥ 0 |
+| Definición positiva | |*a*| = 0 ⟺ *a* = 0 | |0| = 0 |
+| Simetría | |−*a*| = |*a*| | |−7| = |7| = 7 |
+| Multiplicación | |*a* · *b*| = |*a*| · |*b*| | |(−3)(−2)| = |6| = 6 = (3)(2) |
+| Desigualdad triangular | ||*a*| − |*b*|| ≤ |*a* + *b*| ≤ |*a*| + |*b*| | | |5 + (−3)| = |2| = 2 ≤ |5| + |−3| = 8 |
+
+---
