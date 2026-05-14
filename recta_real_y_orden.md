@@ -40,8 +40,6 @@ Cuando decimos que dos números son iguales (a = b), se cumplen estas propiedade
 | **Reflexiva** | Todo número es igual a sí mismo | 5 = 5 |
 | **Simétrica** | Si a = b, entonces b = a | Si x = 3, entonces 3 = x |
 | **Transitiva** | Si a = b y b = c, entonces a = c | Si x = y y y = 5, entonces x = 5 |
-| **Uniforme (suma)** | Si a = b, entonces a + c = b + c | Si x = 5, entonces x + 2 = 5 + 2 |
-| **Uniforme (multiplicación)** | Si a = b, entonces a · c = b · c | Si x = 5, entonces x · 3 = 5 · 3 |
 
 ---
 
@@ -57,26 +55,13 @@ Los números reales tienen un orden natural. Decimos que **a es menor que b** (a
 | **Transitiva** | Si a < b y b < c, entonces a < c | Si 2 < 5 y 5 < 10, entonces 2 < 10 |
 | **Antisimétrica** | Si a ≤ b y b ≤ a, entonces a = b | — |
 | **Aditiva** | Si a < b, entonces a + c < b + c | Si 3 < 7, entonces 3 + 2 < 7 + 2 |
-| **Multiplicativa (positivos)** | Si a < b y c > 0, entonces a·c < b·c | Si 2 < 5, entonces 2·3 < 5·3 |
-| **Multiplicativa (negativos)** | Si a < b y c < 0, entonces a·c > b·c (¡la desigualdad se voltea!) | Si 2 < 5, entonces 2·(-1) > 5·(-1), es decir -2 > -5 |
 
-### Ejemplo paso a paso
-
-Resuelve: **x + 3 > 7**
-
-1. Restamos 3 de ambos lados (propiedad aditiva):
-   x + 3 – 3 > 7 – 3
-2. Simplificamos:
-   **x > 4**
-3. En la recta real: x es cualquier número a la derecha del 4.
-
----
 
 ---
 
 ## 4. Operaciones Algebraicas con Números Reales
 
-Los números reales se pueden sumar, restar, multiplicar y dividir (excepto por cero). Estas operaciones siguen reglas bien definidas.
+Los números reales se pueden **sumar, restar, multiplicar y dividir** (excepto por cero). Estas operaciones siguen reglas bien definidas.
 
 ### Suma y resta
 
@@ -94,18 +79,6 @@ Los números reales se pueden sumar, restar, multiplicar y dividir (excepto por 
 | Signos diferentes → resultado negativo | 5 × (-3) = -15,  (-5) × 3 = -15 |
 | Dividir entre cero **no está definido** | 5 ÷ 0 no existe |
 
-### Jerarquía de operaciones (PEMDAS)
-
-Cuando hay varias operaciones, se resuelven en este orden:
-
-1. **P** = Paréntesis (y otros signos de agrupación como corchetes o llaves)
-2. **E** = Exponentes y raíces
-3. **M** = Multiplicación y **D** = División (de izquierda a derecha)
-4. **A** = Adición (suma) y **S** = Sustracción (resta) (de izquierda a derecha)
-
-> **Ejemplo:**  3 + 4 × 2²  =  3 + 4 × 4  =  3 + 16  =  19
-
----
 
 ### Inverso Aditivo
 
@@ -161,17 +134,3 @@ El recíproco sirve para **dividir**: dividir entre un número es lo mismo que m
 
 ---
 
-## Resumen visual
-
-```
-         NEGATIVOS        |         POSITIVOS
-←——|——|——|——|——|——|——|——|——|——|——|——|——|——|——|——→
-  -5 -4 -3 -2 -1   0   1   2   3   4   5
-                    ↑
-                  Cero
-```
-
-- Menor → más a la **izquierda**
-- Mayor → más a la **derecha**
-- Entre dos números siempre hay **infinitos números**
-- Si multiplicas una desigualdad por un **negativo**, se **invierte**
