@@ -258,6 +258,47 @@ Y precisamente por esto los memes de PEMDAS se vuelven virales... 😄
 
 ---
 
+## 9. Propiedades de las Potencias (exponentes enteros)
+
+Una **potencia** es una forma abreviada de escribir un producto repetido: $a^n$ significa "$a$ multiplicado por sí mismo $n$ veces".
+
+> **Base:** el número que se repite
+> **Exponente:** cuántas veces se repite
+
+$$a^n = \underbrace{a \times a \times \cdots \times a}_{n \text{ veces}}$$
+
+### Propiedades fundamentales
+
+| Propiedad | Fórmula | Ejemplo |
+|-----------|---------|---------|
+| **Producto de potencias (misma base)** | $a^m \times a^n = a^{m+n}$ | $3^2 \times 3^4 = 3^{2+4} = 3^6$ |
+| **Cociente de potencias (misma base)** | $a^m \div a^n = a^{m-n}$ | $5^4 \div 5^2 = 5^{4-2} = 5^2$ |
+| **Potencia de una potencia** | $(a^m)^n = a^{m \times n}$ | $(2^3)^2 = 2^{3 \times 2} = 2^6$ |
+| **Potencia de un producto** | $(a \times b)^n = a^n \times b^n$ | $(3 \times 4)^2 = 3^2 \times 4^2$ |
+| **Potencia de un cociente** | $(a \div b)^n = a^n \div b^n$ | $(6 \div 2)^2 = 6^2 \div 2^2$ |
+
+### Casos especiales
+
+| Caso | Regla | Ejemplo |
+|------|-------|---------|
+| $a^0$ | $= 1$ (para $a \neq 0$) | $5^0 = 1$ |
+| $a^1$ | $= a$ | $7^1 = 7$ |
+| $a^{-n}$ | $= 1 / a^n$ | $2^{-3} = 1 / 2^3 = 1/8$ |
+| $1^n$ | $= 1$ | $1^{100} = 1$ |
+| $(-a)^n$ (n par) | $= a^n$ | $(-3)^4 = 3^4 = 81$ |
+| $(-a)^n$ (n impar) | $= -a^n$ | $(-3)^3 = -3^3 = -27$ |
+
+### Errores comunes
+
+| Error | Corrección |
+|-------|-----------|
+| $a^m \times a^n = a^{m \times n}$ | ❌ | Correcto: $a^{m+n}$ |
+| $(a + b)^n = a^n + b^n$ | ❌ | La potencia **no** se distribuye sobre la suma |
+| $a^m \div a^n = a^{m \div n}$ | ❌ | Correcto: $a^{m-n}$ |
+| $a^{-n} = -a^n$ | ❌ | El signo negativo del exponente indica **recíproco**, no número negativo |
+
+---
+
 ## 5. Valor Absoluto
 
 El **valor absoluto** de un número es su distancia del cero en la recta real. Como las distancias siempre son positivas (no puedes estar a −5 metros de algo), el valor absoluto **siempre es un número no negativo**.
