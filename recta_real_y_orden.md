@@ -149,6 +149,115 @@ El recíproco sirve para **dividir**: dividir entre un número es lo mismo que m
 
 ---
 
+## 6. Distributividad
+
+La **multiplicación es distributiva respecto a la suma** (y la resta). Esto significa que puedes "expandir" o "factorizar" expresiones con paréntesis.
+
+> **Fórmula:**  a × (b + c) = a × b + a × c
+
+**Ejemplos:**
+
+- 3 × (4 + 5) = 3 × 4 + 3 × 5 = 12 + 15 = 27
+- 2 × (7 − 3) = 2 × 7 − 2 × 3 = 14 − 6 = 8
+- (6 + 2) × 5 = 6 × 5 + 2 × 5 = 30 + 10 = 40
+
+La distributividad funciona en **ambos sentidos**:
+
+- **Expandir:** a(b + c) → ab + ac
+- **Factorizar:** ab + ac → a(b + c)
+
+Factorizar es útil para simplificar fracciones:
+
+$$\frac{6}{9} = \frac{2 \times 3}{3 \times 3} = \frac{2}{3}$$
+
+### Casos importantes
+
+| Expresión | Expandida | Simplificada |
+|-----------|-----------|-------------|
+| (a + b)(c + d) | ac + ad + bc + bd | — |
+| (a + b)² | a² + 2ab + b² | — |
+| (a − b)² | a² − 2ab + b² | — |
+
+---
+
+## 7. Cambio de signo (multiplicar por un número negativo)
+
+Multiplicar un número por **−1** invierte su signo:
+
+> **Fórmula:**  (−1) × a = −a
+
+Multiplicar por **−1** es equivalente al **inverso aditivo**: cambiarle el signo.
+
+**Ejemplos:**
+
+- (−1) × 7 = −7
+- (−1) × (−5) = 5
+- −(a − b) = −a + b (aplicando distributividad)
+
+### Regla práctica
+
+| Multiplicar por | Efecto | Ejemplo |
+|-----------------|--------|---------|
+| **+1** | No cambia nada | 5 × 1 = 5 |
+| **−1** | Invierte el signo | 5 × (−1) = −5 |
+| **+2** | Duplica, mismo signo | 5 × 2 = 10 |
+| **−2** | Duplica, signo invertido | 5 × (−2) = −10 |
+
+### Importante: resolver paréntesis primero
+
+Cuando hay un signo negativo **delante** de un paréntesis, hay que aplicarle la distributividad:
+
+- −(a + b) = −a − b
+- −(a − b) = −a + b
+- −(−a) = a
+
+**Ejemplo:**
+
+$$-(3 + 5 - 2) = -3 - 5 + 2 = -6$$
+
+---
+
+## 8. Orden de operaciones (PEMDAS)
+
+Cuando una expresión tiene varias operaciones, hay que seguir un **orden** para obtener el resultado correcto. Se conoce como **PEMDAS** (o "PEMDAS" en español):
+
+| Letra | Significado | Operaciones |
+|-------|-------------|------------|
+| **P** | Paréntesis | Primero: resolver todo lo que esté dentro de paréntesis, corchetes o llaves |
+| **E** | Exponentes | Segundo: potencias y raíces |
+| **M** | Multiplicación | Tercero: multiplicaciones de izquierda a derecha |
+| **D** | División | Tercero: divisiones de izquierda a derecha |
+| **A** | Adición (Suma) | Cuarto: sumas de izquierda a derecha |
+| **S** | Sustracción (Resta) | Quinto: restas de izquierda a derecha |
+
+> ⚠️ **Importante:** La M y la D están al mismo nivel — se hacen de **izquierda a derecha**, lo mismo para la A y la S.
+
+**Ejemplo paso a paso:**
+
+$$3 + 2 \times (4 - 1)^2$$
+
+1. **P** (paréntesis): 4 − 1 = 3  →  3 + 2 × **3**²
+2. **E** (exponentes): 3² = 9  →  3 + 2 × **9**
+3. **M** (multiplicación): 2 × 9 = 18  →  3 + **18**
+4. **A** (suma): 3 + 18 = **21**
+
+### Errores comunes
+
+| Expresión | Error (PEMDAS mal aplicado) | Correcto |
+|-----------|---------------------------|---------|
+| 8 ÷ 4 × 2 | Hacer la multiplicación primero: 8 ÷ (4 × 2) = 1 | De izquierda a derecha: (8 ÷ 4) × 2 = 4 |
+| 2 + 3 × 4 | Sumar primero: (2 + 3) × 4 = 20 | Multiplicar primero: 2 + (3 × 4) = 14 |
+
+### El meme clásico
+
+Y precisamente por esto los memes de PEMDAS se vuelven virales... 😄
+
+![Meme de orden de operaciones](meme_pemdas.png)
+
+*¿Te suena familiar? Probablemente alguien falló en recordar que la M viene antes que la A.*
+
+---
+
 ## 5. Valor Absoluto
 
 El **valor absoluto** de un número es su distancia del cero en la recta real. Como las distancias siempre son positivas (no puedes estar a −5 metros de algo), el valor absoluto **siempre es un número no negativo**.
