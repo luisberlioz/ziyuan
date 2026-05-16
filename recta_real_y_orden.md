@@ -149,6 +149,32 @@ El recíproco sirve para **dividir**: dividir entre un número es lo mismo que m
 
 ---
 
+## 5. Valor Absoluto
+
+El **valor absoluto** de un número es su distancia del cero en la recta real. Como las distancias siempre son positivas (no puedes estar a −5 metros de algo), el valor absoluto **siempre es un número no negativo**.
+
+> **Definición (nivel secundaria/preparatoria):** El valor absoluto de un número *a*, escrito |*a*|, es:
+>
+> - Si *a* es **positivo** o **cero**, entonces |*a*| = *a*
+> - Si *a* es **negativo**, entonces |*a*| = −*a* (es decir, le quitamos el signo)
+
+**Ejemplos:**
+
+- |5| = 5 porque 5 ya es positivo
+- |−5| = 5 porque −5 es negativo, y al quitarle el signo queda 5
+- |0| = 0
+- |−12| = 12
+- |+7| = 7
+
+**Interpretación geométrica:** |*a*| es la distancia entre el punto *a* y el punto 0 en la recta real. Así, |3| = 3 porque el 3 está a 3 unidades del cero, y |−3| = 3 porque el −3 también está a 3 unidades del cero (pero del lado izquierdo).
+
+**Propiedades importantes:**
+* Positividad: $|a| \geq 0$
+* Si $a<b$, entonces $|b - a| = b-a$
+* Si $a>b$, entonces $|b - a| = a - b$
+
+---
+
 ## 6. Distributividad
 
 La **multiplicación es distributiva respecto a la suma** (y la resta). Esto significa que puedes "expandir" o "factorizar" expresiones con paréntesis.
@@ -299,27 +325,3 @@ $$a^n = \underbrace{a \times a \times \cdots \times a}_{n \text{ veces}}$$
 
 ---
 
-## 5. Valor Absoluto
-
-El **valor absoluto** de un número es su distancia del cero en la recta real. Como las distancias siempre son positivas (no puedes estar a −5 metros de algo), el valor absoluto **siempre es un número no negativo**.
-
-> **Definición (nivel secundaria/preparatoria):** El valor absoluto de un número *a*, escrito |*a*|, es:
->
-> - Si *a* es **positivo** o **cero**, entonces |*a*| = *a*
-> - Si *a* es **negativo**, entonces |*a*| = −*a* (es decir, le quitamos el signo)
-
-**Ejemplos:**
-
-- |5| = 5 porque 5 ya es positivo
-- |−5| = 5 porque −5 es negativo, y al quitarle el signo queda 5
-- |0| = 0
-- |−12| = 12
-- |+7| = 7
-
-**Interpretación geométrica:** |*a*| es la distancia entre el punto *a* y el punto 0 en la recta real. Así, |3| = 3 porque el 3 está a 3 unidades del cero, y |−3| = 3 porque el −3 también está a 3 unidades del cero (pero del lado izquierdo).
-
-**Propiedades importantes:**
-* Positividad: $|a| \geq 0$
-* Si $a<b$, entonces $|b - a| = b-a$
-* Si $a>b$, entonces $|b - a| = a - b$
----
