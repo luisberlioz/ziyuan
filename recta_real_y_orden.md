@@ -325,3 +325,172 @@ $$a^n = \underbrace{a \times a \times \cdots \times a}_{n \text{ veces}}$$
 
 ---
 
+## 10. La raíz n-ésima de un número real
+
+Hasta ahora hemos hablado de **elevar un número a una potencia** (por ejemplo, 3² = 9). La **raíz n-ésima** es la operación inversa: cuando conocemos el resultado y la potencia, buscamos la base.
+
+### Definición
+
+Si $a^n = b$, entonces $a$ es una **raíz n-ésima** de $b$. Se escribe así:
+
+$$a = \sqrt[n]{b}$$
+
+donde:
+- $n$ es el **índice** de la raíz (indica qué tipo de raíz)
+- $b$ es el **radicando** (el número dentro de la raíz)
+- el símbolo $\sqrt{}$ es el **símbolo de raíz**
+
+### Ejemplos básicos
+
+| Operación | Se lee | Significado |
+|-----------|--------|-------------|
+| $\sqrt{9}$ | raíz cuadrada de 9 | "¿Qué número al cuadrado da 9?" → 3 |
+| $\sqrt[3]{8}$ | raíz cúbica de 8 | "¿Qué número al cubo da 8?" → 2 |
+| $\sqrt[4]{16}$ | raíz cuarta de 16 | "¿Qué número elevado a la 4ta da 16?" → 2 |
+
+### La raíz cuadrada especial
+
+La **raíz cuadrada** ($n = 2$) es la más común. Cuando ves $\sqrt{9}$, sin índice, siempre se entiende que es raíz cuadrada:
+
+$$\sqrt{9} = 3 \quad \text{porque} \quad 3^2 = 9$$
+
+> ⚠️ **¡Atención!** El número −3 también cumple (−3)² = 9. Sin embargo, por convención, **la raíz cuadrada se define como el valor positivo**. Por eso $\sqrt{9} = 3$ (no −3). En cambio, la raíz cúbica SÍ puede ser negativa: $\sqrt[3]{-8} = -2$ porque $(−2)^3 = -8$.
+
+### Raíces de números especiales
+
+| Raíz | Resultado | Verificación |
+|------|----------|---------------|
+| $\sqrt{1}$ | 1 | 1² = 1 |
+| $\sqrt{0}$ | 0 | 0² = 0 |
+| $\sqrt{144}$ | 12 | 12² = 144 |
+| $\sqrt{2}$ | ≈ 1.4142... | es un número **irracional** |
+| $\sqrt[3]{-27}$ | −3 | (−3)³ = −27 |
+| $\sqrt[4]{81}$ | 3 | 3⁴ = 81 |
+
+### Propiedades de las raíces
+
+| Propiedad | Fórmula | Ejemplo |
+|-----------|---------|---------|
+| **Producto de raíces del mismo índice** | $\sqrt[n]{a} \times \sqrt[n]{b} = \sqrt[n]{a \times b}$ | $\sqrt{2} \times \sqrt{8} = \sqrt{16} = 4$ |
+| **Cociente de raíces del mismo índice** | $\dfrac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\dfrac{a}{b}}$ | $\sqrt{12} / \sqrt{3} = \sqrt{4} = 2$ |
+| **Raíz de una raíz** | $\sqrt[m]{\sqrt[n]{a}} = \sqrt[m \times n]{a}$ | $\sqrt{\sqrt{16}} = \sqrt[4]{16} = 2$ |
+| **Raíz de una potencia** | $\sqrt[n]{a^n} = a$ (si $a \geq 0$) | $\sqrt{5^2} = 5$ |
+
+### Conexión con las potencias
+
+Las raíces y las potencias son operaciones **inversas**. Esta conexión es muy útil para simplificar expresiones:
+
+| Raíz | Como potencia | Resultado |
+|------|--------------|-----------|
+| $\sqrt{a}$ | $a^{1/2}$ | $\sqrt{a}$ |
+| $\sqrt[3]{a}$ | $a^{1/3}$ | raíz cúbica |
+| $\sqrt[n]{a}$ | $a^{1/n}$ | raíz n-ésima |
+
+> 💡 **Regla fácil:** la raíz n-ésima de $a$ es lo mismo que elevar $a$ a la potencia $1/n$.
+
+---
+
+## 11. La definición 1/n (el recíproco del exponente)
+
+Cuando aprendiste fracciones, aprendiste que el **recíproco** (o inverso) de un número es cuando le das vuelta. El recíproco de 2 es $\dfrac{1}{2}$, el de $\dfrac{3}{4}$ es $\dfrac{4}{3}$.
+
+Con los exponentes pasa algo similar, pero el **recíproco del exponente** (es decir, $\frac{1}{n}$) nos da **raíces**.
+
+### La idea central
+
+> Si $a^n = b$, entonces $a = b^{1/n}$.
+
+El exponente $\dfrac{1}{n}$ significa: "buscar la raíz n-ésima".
+
+### Ejemplos concretos
+
+| Exponente | Significado | Ejemplo | Resultado |
+|-----------|-------------|---------|-----------|
+| $a^{1/2}$ | Buscar la raíz cuadrada | $36^{1/2}$ | $\sqrt{36} = 6$ |
+| $a^{1/3}$ | Buscar la raíz cúbica | $8^{1/3}$ | $\sqrt[3]{8} = 2$ |
+| $a^{1/4}$ | Buscar la raíz cuarta | $16^{1/4}$ | $\sqrt[4]{16} = 2$ |
+| $a^{1/5}$ | Buscar la raíz quinta | $32^{1/5}$ | $\sqrt[5]{32} = 2$ |
+
+### ¿Por qué funciona?
+
+Veamos el caso de $a^{1/2}$. Si $a^{1/2} \times a^{1/2} = a^{1/2 + 1/2} = a^1 = a$, entonces $(a^{1/2})^2 = a$. Esto significa que $a^{1/2}$, elevado al cuadrado, da $a$. ¡Eso es exactamente la definición de la raíz cuadrada de $a$!
+
+Lo mismo funciona para cualquier $n$:
+
+$$(a^{1/n})^n = a^{1/n \times n} = a^1 = a$$
+
+Por lo tanto, $a^{1/n}$ es la raíz n-ésima de $a$.
+
+### Ejemplo paso a paso
+
+**¿Cuánto es $64^{1/3}$?**
+
+1. $64^{1/3}$ significa "la raíz cúbica de 64"
+2. Nos preguntamos: ¿qué número elevado al cubo da 64?
+3. $4 \times 4 \times 4 = 64$
+4. Entonces $64^{1/3} = 4$
+
+### La lógica del 1/n en una tabla
+
+| Si $a^{1/n}$ elevado a la $n$... | Resultado | Explicación |
+|----------------------------------|----------|-------------|
+| $(a^{1/n})^n$ | $a^{1/n \times n} = a^1 = a$ | Por la propiedad de potencias |
+| Entonces $a^{1/n}$ es la **raíz n-ésima** de $a$ | $\sqrt[n]{a}$ | Definición |
+
+> 💡 **Para recordar:** cuando el exponente es una fracción $\dfrac{1}{n}$, el **denominador** te dice qué raíz buscar. El **numerador** 1 te dice que estás buscando la "primera" raíz (la normal).
+
+---
+
+## 12. Potencias racionales (exponentes fraccionarios)
+
+Ya sabes que $a^{1/n}$ es la raíz n-ésima de $a$. ¿Qué pasa cuando el exponente es una fracción más general, como $\dfrac{m}{n}$?
+
+### Definición
+
+Una **potencia racional** es aquella donde el exponente es una fracción de números enteros: $\dfrac{m}{n}$. Se define así:
+
+$$a^{m/n} = \sqrt[n]{a^m} = (\sqrt[n]{a})^m$$
+
+Es decir: primero elevas a la $m$, luego sacas la raíz $n$-ésima, o al revés — el resultado es el mismo.
+
+### Ejemplos
+
+| Expresión | Interpretación | Desarrollo | Resultado |
+|-----------|---------------|------------|-----------|
+| $8^{2/3}$ | "(raíz cúbica de 8) al cuadrado" | $\sqrt[3]{8} = 2$, luego $2^2 = 4$ | 4 |
+| $16^{3/4}$ | "(raíz cuarta de 16) al cubo" | $\sqrt[4]{16} = 2$, luego $2^3 = 8$ | 8 |
+| $9^{3/2}$ | "(raíz cuadrada de 9) al cubo" | $\sqrt{9} = 3$, luego $3^3 = 27$ | 27 |
+| $4^{5/2}$ | "(raíz cuadrada de 4) a la 5ta" | $\sqrt{4} = 2$, luego $2^5 = 32$ | 32 |
+
+### Paso a paso con $8^{2/3}$
+
+1. **Identifica el numerador y el denominador:** $m = 2$, $n = 3$
+2. **El denominador $n$ dice qué raíz:** raíz cúbica ($\sqrt[3]{}$)
+3. **El numerador $m$ dice qué potencia:** elevar a la 2
+4. **Aplica:** $8^{2/3} = (\sqrt[3]{8})^2 = (2)^2 = 4$
+5. **Verifica:** si $(8^{2/3})^3 = 8^2 = 64$, entonces $8^{2/3} = \sqrt[3]{64} = 4$ ✅
+
+### Propiedades que siguen vigentes
+
+Todas las propiedades de las potencias que ya conocías funcionan también con exponentes racionales:
+
+| Propiedad | Fórmula | Ejemplo |
+|-----------|---------|---------|
+| **Producto** | $a^{m/n} \times a^{p/q} = a^{m/n + p/q}$ | $4^{1/2} \times 4^{1/2} = 4^{1} = 4$ |
+| **Potencia de potencia** | $(a^{m/n})^{p/q} = a^{m/n \times p/q}$ | $(9^{1/2})^3 = 9^{3/2} = 27$ |
+| **Cociente** | $a^{m/n} / a^{p/q} = a^{m/n - p/q}$ | $8^{2/3} / 8^{1/3} = 8^{1/3} = 2$ |
+
+### La lógica detrás de las potencias racionales
+
+Pensemos en $a^{m/n}$ como $(a^m)^{1/n}$. El numerador $m$ te dice que **primero** eleves a la $m$, y el denominador $n$ te dice que **después** saques la raíz $n$-ésima.
+
+También puedes pensarlo al revés: $a^{m/n} = (a^{1/n})^m$ — primero la raíz, después la potencia.
+
+| Forma | Orden | Ejemplo con $8^{2/3}$ |
+|-------|-------|------------------------|
+| $(a^m)^{1/n}$ | Primero $a^m$, después raíz $n$ | $(8^2)^{1/3} = 64^{1/3} = 4$ |
+| $(a^{1/n})^m$ | Primero raíz $n$, después $a^m$ | $(\sqrt[3]{8})^2 = 2^2 = 4$ |
+
+Ambas dan el mismo resultado.
+
+> ⚠️ **Importante:** Si el radicando $a$ es **negativo** y el denominador $n$ es **par**, la raíz no está definida en los números reales (no existe un número real que elevado al cuadrado dé un número negativo). Por ejemplo, $(-4)^{1/2}$ no es un número real.
