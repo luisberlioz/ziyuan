@@ -392,7 +392,7 @@ Las raíces y las potencias son operaciones **inversas**. Esta conexión es muy 
 
 ## 11. La definición 1/n (el recíproco del exponente)
 
-Cuando aprendiste fracciones, aprendiste que el **recíproco** (o inverso) de un número es cuando le das vuelta. El recíproco de 2 es $\dfrac{1}{2}$, el de $\dfrac{3}{4}$ es $\dfrac{4}{3}$.
+Recordemos que el **recíproco** (o inverso) de un número es cuando le das vuelta. El recíproco de 2 es $\dfrac{1}{2}$, el de $\dfrac{3}{4}$ es $\dfrac{4}{3}$.
 
 Con los exponentes pasa algo similar, pero el **recíproco del exponente** (es decir, $\frac{1}{n}$) nos da **raíces**.
 
@@ -411,15 +411,6 @@ El exponente $\dfrac{1}{n}$ significa: "buscar la raíz n-ésima".
 | $a^{1/4}$ | Buscar la raíz cuarta | $16^{1/4}$ | $\sqrt[4]{16} = 2$ |
 | $a^{1/5}$ | Buscar la raíz quinta | $32^{1/5}$ | $\sqrt[5]{32} = 2$ |
 
-### ¿Por qué funciona?
-
-Veamos el caso de $a^{1/2}$. Si $a^{1/2} \times a^{1/2} = a^{1/2 + 1/2} = a^1 = a$, entonces $(a^{1/2})^2 = a$. Esto significa que $a^{1/2}$, elevado al cuadrado, da $a$. ¡Eso es exactamente la definición de la raíz cuadrada de $a$!
-
-Lo mismo funciona para cualquier $n$:
-
-$$(a^{1/n})^n = a^{1/n \times n} = a^1 = a$$
-
-Por lo tanto, $a^{1/n}$ es la raíz n-ésima de $a$.
 
 ### Ejemplo paso a paso
 
@@ -480,17 +471,3 @@ Todas las propiedades de las potencias que ya conocías funcionan también con e
 | **Potencia de potencia** | $(a^{m/n})^{p/q} = a^{m/n \times p/q}$ | $(9^{1/2})^3 = 9^{3/2} = 27$ |
 | **Cociente** | $a^{m/n} / a^{p/q} = a^{m/n - p/q}$ | $8^{2/3} / 8^{1/3} = 8^{1/3} = 2$ |
 
-### La lógica detrás de las potencias racionales
-
-Pensemos en $a^{m/n}$ como $(a^m)^{1/n}$. El numerador $m$ te dice que **primero** eleves a la $m$, y el denominador $n$ te dice que **después** saques la raíz $n$-ésima.
-
-También puedes pensarlo al revés: $a^{m/n} = (a^{1/n})^m$ — primero la raíz, después la potencia.
-
-| Forma | Orden | Ejemplo con $8^{2/3}$ |
-|-------|-------|------------------------|
-| $(a^m)^{1/n}$ | Primero $a^m$, después raíz $n$ | $(8^2)^{1/3} = 64^{1/3} = 4$ |
-| $(a^{1/n})^m$ | Primero raíz $n$, después $a^m$ | $(\sqrt[3]{8})^2 = 2^2 = 4$ |
-
-Ambas dan el mismo resultado.
-
-> ⚠️ **Importante:** Si el radicando $a$ es **negativo** y el denominador $n$ es **par**, la raíz no está definida en los números reales (no existe un número real que elevado al cuadrado dé un número negativo). Por ejemplo, $(-4)^{1/2}$ no es un número real.
