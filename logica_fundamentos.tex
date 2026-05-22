@@ -1,0 +1,413 @@
+\documentclass[aspectratio=169,10pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackageutf8x
+\usepackage{amsmath,amssymb}
+\usepackage{colortbl}
+
+\usetheme{Madrid}
+\usecolortheme{whale}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\title{Fundamentos de Lógica}
+\subtitle{Curso de Matemáticas Discretas — Primeraño CS}
+\author{}
+\date{}
+
+\begin{document}
+
+% ================================================================
+\section{1. Conectivas Básicas y Tablas de Verdad}
+% ================================================================
+
+\begin{frame}{Conectivas Básicas}
+Sean $p$, $q$ proposiciones (verdadero o falso).
+
+\vspace{0.4em}
+\begin{tabular}{cll}
+\hline
+\textbf{Conectiva} & \textbf{Símbolo} & \textbf{Nombre} \\
+\hline
+Negación & $\neg p$ & \alert{No} \\
+Conjunción & $p \land q$ & \alert{Y} (AND) \\
+Disyunción & $p \lor q$ & \alert{O} (OR) \\
+Implicación & $p \to q$ & \alert{Si...entonces} \\
+Doble implicación & $p \leftrightarrow q$ & \alert{Si y solo si} \\
+\hline
+\end{tabular}
+
+\vspace{1em}
+\small
+\begin{tabular}{cc|ccccc}
+$p$ & $q$ & $\neg p$ & $p\land q$ & $p\lor q$ & $p\to q$ & $p\leftrightarrow q$ \\ \hline
+V & V & F & V & V & V & V \\
+V & F & F & F & V & F & F \\
+F & V & V & F & V & V & F \\
+F & F & V & F & F & V & V
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Conectivas en Programación}
+\begin{block}{Equivalencias CS}
+\begin{itemize}
+\item $p \land q$  \ \ \texttt{==} \ \texttt{p \&\& q}  \quad (ambos ciertos)
+\item $p \lor q$    \ \ \texttt{==} \ \texttt{p || q}   \quad (al menos uno)
+\item $\neg p$      \ \ \texttt{==} \ \texttt{!p}         \quad (inversión)
+\end{itemize}
+\end{block}
+\vfill
+\begin{block}{Ejemplo: condición en código}
+\texttt{if (x > 0 \&\& y > 0) \{ ... \}} \\
+\pause
+Traducción lógica: $(x>0) \land (y>0)$ — ambas condiciones deben cumplirse.
+\end{block}
+\end{frame}
+
+% ================================================================
+\section{2. Equivalencia Lógica: Leyes de la Lógica}
+% ================================================================
+
+\begin{frame}{Equivalencia Lógica}
+Dos proposiciones $P$ y $Q$ son \alert{lógicamente equivalentes} ($P \equiv Q$) si tienen \textbf{la misma tabla de verdad}.
+
+\vspace{1em}
+Ejemplo clásico — \textbf{Leyes de De Morgan}:
+\[
+\neg(p \land q) \equiv \neg p \lor \neg q
+\qquad
+\neg(p \lor q) \equiv \neg p \land \neg q
+\]
+\end{frame}
+
+\begin{frame}{Leyes Principales}
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\textbf{Leyes de Idempotencia}
+\begin{itemize}\small
+\item $p \lor p \equiv p$
+\item $p \land p \equiv p$
+\end{itemize}
+\textbf{Leyes de Identidad}
+\begin{itemize}\small
+\item $p \lor F \equiv p$
+\item $p \land V \equiv p$
+\end{itemize}
+\textbf{Leyes de Dominación}
+\begin{itemize}\small
+\item $p \lor V \equiv V$
+\item $p \land F \equiv F$
+\end{itemize}
+\textbf{Leyes de Doble Negación}
+\begin{itemize}\small
+\item $\neg\neg p \equiv p$
+\end{itemize}
+\end{column}
+\begin{column}{0.48\textwidth}
+\textbf{Leyes Conmutativas}
+\begin{itemize}\small
+\item $p \lor q \equiv q \lor p$
+\item $p \land q \equiv q \land p$
+\end{itemize}
+\textbf{Leyes Asociativas}
+\begin{itemize}\small
+\item $(p\lor q)\lor r \equiv p\lor(q\lor r)$
+\item $(p\land q)\land r \equiv p\land(q\land r)$
+\end{itemize}
+\textbf{Leyes Distributivas}
+\begin{itemize}\small
+\item $p\land(q\lor r) \equiv (p\land q)\lor(p\land r)$
+\item $p\lor(q\land r) \equiv (p\lor q)\land(p\lor r)$
+\end{itemize}
+\textbf{Leyes de De Morgan}
+\begin{itemize}\small
+\item $\neg(p\land q) \equiv \neg p \lor \neg q$
+\item $\neg(p\lor q) \equiv \neg p \land \neg q$
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Aplicación: Simplificación}
+\textbf{Problema:} Demostrar que \ $p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)$
+
+\pause
+\vspace{0.5em}
+Usando la ley distributiva \textbf{directamente}:
+
+\[
+\begin{aligned}
+p \lor (q \land r) &
+\equiv (p \lor q) \land (p \lor r) \qquad \text{Ley distributiva}
+\end{aligned}
+\]
+
+\pause
+\vspace{1em}
+\textbf{Ejemplo en código:} simplificar \texttt{if (x || (y \&\& z))}
+
+Equivale a: \texttt{if ((x || y) \&\& (x || z))} — a veces más eficiente.
+\end{frame}
+
+% ================================================================
+\section{3. Implicación Lógica: Reglas de Inferencia}
+% ================================================================
+
+\begin{frame}{La Implicación ($p \to q$)}
+$p \to q$ es \alert{falsa} solo cuando $p$ es V y $q$ es F.
+
+\vspace{1em}
+\begin{block}{Terminología}
+\begin{itemize}
+\item[$p$] --- \textbf{Antecedente} (hipótesis, condición)
+\item[$q$] --- \textbf{Consecuente} (tesis, conclusión)
+\end{itemize}
+\end{block}
+
+\vspace{0.5em}
+\begin{block}{Equivalencias útiles}
+\[
+p \to q \equiv \neg p \lor q \equiv \neg q \to \neg p
+\]
+La segunda se llama \alert{contron recíproco} — útil en demostraciones.
+\end{block}
+\end{frame}
+
+\begin{frame}{Reglas de Inferencia}
+\textbf{Una inferencia es válida} si siempre que las premisas son V, la conclusión también es V.
+
+\vspace{0.5em}
+\begin{tabular}{cll}
+\hline
+\textbf{Nombre} & \textbf{Forma} & \textbf{Intuición} \\
+\hline
+Modus Ponens (MP) & $p\to q,\ p \vdash q$ & Si $p$ implica $q$, y $p$ es V, entonces $q$ es V \\
+Modus Tollens (MT) & $p\to q,\ \neg q \vdash \neg p$ & Si $q$ es F, entonces $p$ debe ser F \\
+Silogismo Hipotético (SH) & $p\to q,\ q\to r \vdash p\to r$ & Cadena de implicaciones \\
+Silogismo Disyuntivo (SD) & $p\lor q,\ \neg p \vdash q$ & Si una opción es falsa, la otra es V \\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Ejemplo: Modus Ponens en Código}
+\begin{block}{Premisa 1 (invariante):} \texttt{if (x != null) then x.length >= 0}
+\end{block}
+\begin{block}{Premisa 2 (condición):} \texttt{x != null} es \texttt{true}
+\end{block}
+\begin{block}{Conclusión (por MP):} \texttt{x.length >= 0}
+\end{block}
+\vfill
+\pause
+\textbf{Esto es exactamente lo que hace un compilador/verificador:}
+\begin{enumerate}
+\item Conocer una precondición ($p\to q$)
+\item Comprobar que la precondición se cumple ($p$)
+\item \textbf{Inferir} la postcondición ($q$) automáticamente
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Falacias Comunes}
+\begin{block}{Afirmación del consecuente (FALSA):}
+\[
+p\to q,\ q \ \not\vdash\ p \quad \text{¡INCORRECTO!}
+\]
+\textbf{Ejemplo:} ``Si llueve, el suelo está mojado. El suelo está mojado. $\Rightarrow$ ¿Está lloviendo?''
+\end{block}
+\pause
+\vfill
+\begin{block}{Negación del antecedente (FALSA):}
+\[
+p\to q,\ \neg p \ \not\vdash\ \neg q \quad \text{¡INCORRECTO!}
+\]
+\textbf{Ejemplo:} ``Si estudias, apruebas. No estudiaste. $\Rightarrow$ ¿Aprobaste?''
+\end{block}
+\end{frame}
+
+% ================================================================
+\section{4. El Uso de Cuantificadores}
+% ================================================================
+
+\begin{frame}{Cuantificador Universal ($\forall$) y Existencial ($\exists$)}
+\begin{block}{Universal: $\forall x,\ P(x)$}
+``Para \textbf{todo} $x$, $P(x)$ es verdadero.'' \\
+Ejemplo: $\forall n \in \mathbb{N},\ n^2 \geq 0$ \quad (todo entero al cuadrado es no negativo)
+\end{block}
+\vfill
+\begin{block}{Existencial: $\exists x,\ P(x)$}
+``Existe \textbf{al menos un} $x$ tal que $P(x)$ es verdadero.'' \\
+Ejemplo: $\exists n \in \mathbb{N},\ n^2 = 4$ \quad (existe $n=2$)
+\end{block}
+\vfill
+\textbf{Negación:}
+\[
+\neg(\forall x,\ P(x)) \equiv \exists x,\ \neg P(x)
+\qquad
+\neg(\exists x,\ P(x)) \equiv \forall x,\ \neg P(x)
+\]
+\end{frame}
+
+\begin{frame}{Cuantificadores Restringidos}
+En CS solemos cuantificar sobre un dominio específico:
+
+\[
+\forall n \in \mathbb{Z},\ n > 0 \to n^2 > 0
+\qquad\text{``Todo entero positivo tiene cuadrado positivo''}
+\]
+
+\[
+\exists x \in \mathbb{R},\ x^2 = 2 \quad\text{``Existe una raíz cuadrada de 2''}
+\]
+
+\vfill
+\begin{block}{En código:}
+\begin{itemize}
+\item \texttt{for all i: assert(condition(i))}  \quad $\equiv \forall i,\ P(i)$
+\item \texttt{if (exists i: condition(i))}      \quad $\equiv \exists i,\ P(i)$
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Orden de los Cuantificadores ¡IMPORTANTE!}
+El orden \alert{sí importa} cuando hay cuantificadores distintos:
+
+\[
+\forall x \exists y,\ (x < y) \quad\text{``Todo $x$ tiene un $y$ mayor''} \ =\ \text{VERDADERO}
+\]
+\[
+\exists y \forall x,\ (x < y) \quad\text{``Existe un $y$ mayor que todo $x$''} \ =\ \text{FALSO}
+\]
+
+\vfill
+\textbf{Regla:} $\forall x \forall y$ y $\exists x \exists y$ son conmutativos; con distintos, el orden cambia el significado.
+\end{frame}
+
+% ================================================================
+\section{5. Cuantificadores, Definiciones y Demostración}
+% ================================================================
+
+\begin{frame}{Definiciones como Bicondicionales}
+En matemáticas, una \alert{definición} es siempre un ``si y solo si'':
+
+\[
+\text{``$n$ es par''} \iff \exists k \in \mathbb{Z},\ n = 2k
+\]
+\[
+\text{``$x$ es primo''} \iff x>1 \land \forall a,b \in \mathbb{Z}^+,\ (a|x \land b|x) \to (a=1 \lor b=1)
+\]
+
+\vfill
+\textbf{Parafraseando:} para \textbf{demostrar} que un número es par, basta exhibir el $k$.
+Para \textbf{refutar}, encontrar un divisor que no sea 1 ni el propio número.
+\end{frame}
+
+\begin{frame}{Estrategias de Demostración}
+\begin{block}{Directa}
+Assume $p$, aplica reglas de inferencia, llega a $q$. \quad Usa modus ponens repetidamente.
+\end{block}
+\vfill
+\begin{block}{Por contrapositivo}
+$p \to q \equiv \neg q \to \neg p$. Demuestra la segunda (a veces más fácil).
+\end{block}
+\vfill
+\begin{block}{Por contradicción}
+Assume $\neg q$ y $p$, deduce una contradicción (e.g., $F$). Entonces $p \to q$.
+\end{block}
+\vfill
+\begin{block}{Contraejemplo}
+Para refutar $\forall x,\ P(x)$, basta un solo $x$ con $\neg P(x)$.
+\end{block}
+\end{frame}
+
+\begin{frame}{Ejemplo: Demostración Directa}
+\textbf{Teorema:} Si $n$ es par, entonces $n^2$ es par.
+
+\vspace{0.5em}
+\textbf{Demostración:}
+\begin{enumerate}
+\item[] $n$ es par $\Rightarrow$ por definición, $\exists k \in \mathbb{Z},\ n = 2k$.
+\item[] Entonces $n^2 = (2k)^2 = 4k^2 = 2(2k^2)$.
+\item[] Como $2k^2 \in \mathbb{Z}$, $n^2$ es par. \qed
+\end{enumerate}
+
+\vfill
+\pause
+\textbf{¿Ves la estructura?}
+\begin{itemize}
+\item[1.] Desempacar definición ($\forall$/$\exists$)
+\item[2.] Manipulación algebraica
+\item[3.] Empaquetar de nuevo en la definición
+\end{itemize}
+\end{frame}
+
+% ================================================================
+\section{6. Resumen y Repaso Histórico}
+% ================================================================
+
+\begin{frame}{Resumen: Conectivas}
+\begin{tabular}{lll}
+\textbf{Nombre} & \textbf{Símbolo} & \textbf{Equivale a} \\ \hline
+Negación & $\neg p$ & NOT \\
+Conjunción & $p \land q$ & $p$ AND $q$ \\
+Disyunción & $p \lor q$ & $p$ OR $q$ \\
+Implicación & $p \to q$ & $\neg p \lor q$ \\
+Bicondicional & $p \leftrightarrow q$ & $(p\to q)\land(q\to p)$
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Resumen: Cuantificadores y Negación}
+\[
+\boxed{\neg\forall \equiv \exists\neg \qquad \neg\exists \equiv \forall\neg}
+\]
+\textbf{Ejemplo:} ``No todos los cisnes son blancos''
+\[
+\neg(\forall x,\ \text{Cisne}(x) \to \text{Blanco}(x)) \equiv \exists x,\ \text{Cisne}(x) \land \neg\text{Blanco}(x)
+\]
+\end{frame}
+
+\begin{frame}{Línea del Tiempo}
+\begin{tabular}{cl}
+\textbf{Época} & \textbf{Hitos} \\ \hline
+\scriptsize 384--322 a.C. & Aristóteles: silogismos, lógica formal \\
+\scriptsize 1847 & Boole: \textit{Laws of Thought}, álgebra booleana \\
+\scriptsize 1879 & Frege: lógica de primer orden, cuantificadores \\
+\scriptsize 1910--13 & Russell y Whitehead: \textit{Principia Mathematica} \\
+\scriptsize 1936 & Turing: máquina de Turing, lógica $\leftrightarrow$ computación \\
+\scriptsize 1940s & Shannon: circuitos lógicos (AND, OR, NOT en hardware) \\
+\scriptsize 1960s & Verificación formal, lenguajes de demostración (Coq, ACL2)
+\end{tabular}
+\end{frame}
+
+\begin{frame}{¿Por qué esto importa en CS?}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{block}{Hardware}
+Puertas lógicas (AND, OR, NOT) $\to$ circuitos $\to$ CPU
+\end{block}
+\begin{block}{Software}
+Pre/poscondiciones, invariantes de ciclo, verificación formal
+\end{block}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{block}{Algoritmos}
+Correctitud: ``si la entrada satisface $P$, la salida satisface $Q$''
+\end{block}
+\begin{block}{Bases de datos}
+Consultas SQL = lógica de predicados ($\exists$, $\forall$)
+\end{block}
+\end{column}
+\end{columns}
+
+\vfill
+\hfill\textit{``La lógica es la arquitectura de la computación.''}
+\end{frame}
+
+\begin{frame}{Recursos}
+\begin{itemize}
+\item \textbf{Libro:} Rosen — \textit{Discrete Mathematics and Its Applications}, caps. 1 y 2
+\item \textbf{Libro:} Epp — \textit{Discrete Mathematics with Applications}
+\item \textbf{Online:} \url{https://proofwiki.org} — base de datos de demostraciones
+\item \textbf{Interactivo:} \url{https://logicbook.net} — tablas de verdad online
+\end{itemize}
+\end{frame}
+
+\end{document}
