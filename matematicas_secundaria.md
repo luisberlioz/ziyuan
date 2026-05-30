@@ -201,6 +201,10 @@ Un auto viaja a 90 km/h y recorre una distancia en 4 horas. ¿Cuánto tiempo tar
 
 *(Aquí la velocidad y el tiempo son inversamente proporcionales — a más velocidad, menos tiempo, así que es regla de tres INVERSA, ver abajo.)*
 
+**Ejemplo 4 - Dosimetria:**
+
+
+
 ---
 
 ### 3.2 Regla de tres inversa
@@ -292,4 +296,4 @@ x   =  450 piezas
 
 ---
 
-*Documento elaborado para apoyo en matemáticas de nivel medio.*
+
