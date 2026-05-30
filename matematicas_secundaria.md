@@ -201,11 +201,39 @@ Un auto viaja a 90 km/h y recorre una distancia en 4 horas. ¿Cuánto tiempo tar
 
 *(Aquí la velocidad y el tiempo son inversamente proporcionales — a más velocidad, menos tiempo, así que es regla de tres INVERSA, ver abajo.)*
 
-**Ejemplo 4 - Dosimetria:**
+**Ejemplo 4 — Dosimetría (goteo intravenoso):**
 
+En un hospital, se prescribe administrar **500 mL de solución glucosada al 5%** a un paciente durante **8 horas**, usando un gotero que entrega **20 gotas por mL**. ¿Cuántas gotas por minuto se deben configurar?
 
+**Paso 1:** Identificar las magnitudes.
 
----
+| Magnitud | Valor |
+|----------|-------|
+| Volumen total | 500 mL |
+| Tiempo total | 8 horas |
+| Factor del gotero | 20 gotas/mL |
+
+**Paso 2:** Convertir horas a minutos.
+
+```
+8 horas × 60 min/hora = 480 minutos
+```
+
+**Paso 3:** Plantear la regla de tres.
+
+```
+500 mL   →   20 gotas/mL  =  10,000 gotas totales
+10,000 gotas  →  480 minutos
+
+1 minuto  →  x gotas
+
+1 / 480  =  x / 10,000
+x = 10,000 / 480 ≈ 20.83 gotas/min
+```
+
+**Resultado:** Se configura el gotero a aproximadamente **21 gotas por minuto** (redondeando al entero más cercano, lo cual es la práctica estándar).
+
+> **Nota clínica:** En la realidad se redondea a un número entero para facilidad de conteo, y se recalcula periódicamente según la respuesta del paciente.
 
 ### 3.2 Regla de tres inversa
 
