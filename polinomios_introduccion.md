@@ -120,7 +120,7 @@ $$P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0$$
 
 La siguiente animación parte de la constante y va agregando, uno por uno, los términos lineal, cuadrático, cúbico y cuártico. En la columna izquierda se acumula la expresión algebraica; en la derecha se dibuja la gráfica de la suma parcial correspondiente.
 
-![Construcción de un polinomio término a término](polinomios_construccion.mp4)
+![Construcción de un polinomio término a término](./polinomios_construccion.mp4)
 
 ---
 
@@ -150,7 +150,7 @@ La siguiente animación muestra el procedimiento sobre dos polinomios $P(x)$ y $
 
 El ejemplo incluye un término de grado $4$ en $P(x)$ que no aparece en $Q(x)$, para ilustrar qué hacer cuando un polinomio no tiene un término: su coeficiente es $0$ y el término del otro polinomio se copia sin cambio.
 
-![Suma de polinomios término a término](polinomios_suma.mp4)
+![Suma de polinomios término a término](./polinomios_suma.mp4)
 
 ### 4.2 Diferencia (resta) de polinomios
 
