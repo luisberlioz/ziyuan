@@ -1,15 +1,6 @@
-# LaTeX build artifacts
-*.aux
-*.log
-*.nav
-*.out
-*.snm
-*.toc
-*.fdb_latexmk
-*.fls
-*.synctex.gz
+# MkDocs build output
+/site/
 
-# Editor/OS files
-.DS_Store
-Thumbs.db
-texput.log
+# Python
+__pycache__/
+*.py[cod]
