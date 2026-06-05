@@ -122,6 +122,8 @@ La siguiente animación parte de la constante y va agregando, uno por uno, los t
 
 ![Construcción de un polinomio término a término](./polinomios_construccion.mp4)
 
+> **Nota sobre la reproducción en GitHub:** github.com no embebe videos en archivos Markdown (solo en comentarios / PRs). Para ver la animación incrustada en este documento, abre el archivo en el editor web de GitHub y arrastra `polinomios_construccion.mp4` dentro del área de edición — GitHub lo sube a su CDN y reemplaza la línea de arriba con un reproductor de video incrustado.
+
 ---
 
 ## 4. Operaciones con polinomios
@@ -151,6 +153,8 @@ La siguiente animación muestra el procedimiento sobre dos polinomios $P(x)$ y $
 El ejemplo incluye un término de grado $4$ en $P(x)$ que no aparece en $Q(x)$, para ilustrar qué hacer cuando un polinomio no tiene un término: su coeficiente es $0$ y el término del otro polinomio se copia sin cambio.
 
 ![Suma de polinomios término a término](./polinomios_suma.mp4)
+
+> **Nota sobre la reproducción en GitHub:** ver la nota equivalente en la sección 3 más arriba. Para incrustar el reproductor, arrastra el archivo `.mp4` correspondiente dentro del editor web de GitHub.
 
 ### 4.2 Diferencia (resta) de polinomios
 
