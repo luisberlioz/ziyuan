@@ -186,6 +186,20 @@ $$
 = 2x^3 - 5x^2 - 2x + 15
 $$
 
+### Animación: producto de polinomios término a término
+
+La siguiente animación muestra el procedimiento sobre dos polinomios $P(x)$ y $Q(x)$. Para cada término del primer polinomio (empezando por el de menor grado) y cada término del segundo:
+
+1. se enmarcan los dos términos que se van a multiplicar en las filas de $P(x)$ y $Q(x)$,
+2. se muestra el producto parcial $a \cdot b = c$ como anotación al costado,
+3. el producto parcial se agrega a la expansión acumulada $P(x) \cdot Q(x)$ que se construye en la parte inferior.
+
+Al final, se agrupan los términos **semejantes** para obtener el polinomio simplificado.
+
+![Multiplicación de polinomios término a término](./polinomios_multiplicacion.mp4)
+
+> **Nota sobre la reproducción en GitHub:** github.com no embebe videos en archivos Markdown (solo en comentarios / PRs). Para ver la animación incrustada en este documento, abre el archivo en el editor web de GitHub y arrastra `polinomios_multiplicacion.mp4` dentro del área de edición — GitHub lo sube a su CDN y reemplaza la línea de arriba con un reproductor de video incrustado.
+
 **Propiedad:** el grado del producto es la **suma** de los grados de los factores.
 
 **Multiplicación de un polinomio por un escalar:**
