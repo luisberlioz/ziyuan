@@ -118,7 +118,7 @@ $$P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0$$
 
 ### Animación: construyendo un polinomio término a término
 
-La siguiente animación parte de la constante y va agregando, uno por uno, los términos lineal, cuadrático, cúbico y cuártico. En la columna izquierda se acumula la expresión algebraica; en la derecha se dibuja la gráfica de la suma parcial correspondiente.
+La siguiente animación parte de la constante y va agregando, uno por uno, los términos lineal, cuadrático, cúbico y cuártico. A la izquierda se acumula la expresión algebraica; a la derecha se dibuja la gráfica de la suma parcial.
 
 ![Construcción de un polinomio término a término](./polinomios_construccion.mp4)
 
@@ -144,13 +144,7 @@ $$P(x) + Q(x) = (4x^2 - 2x^2) + (-3x + 7x) + (5 - 1) = 2x^2 + 4x + 4$$
 
 ### Animación: suma de polinomios término a término
 
-La siguiente animación muestra el procedimiento sobre dos polinomios $P(x)$ y $Q(x)$. Para cada grado (empezando por la constante, luego el término lineal, el cuadrático, etc.):
-
-1. se enmarcan los dos términos **semejantes** en las filas de $P(x)$ y $Q(x)$,
-2. se bajan a una mesa de trabajo donde se suman sus coeficientes,
-3. el término resultante se agrega al lado derecho a la suma acumulada $P(x) + Q(x)$.
-
-El ejemplo incluye un término de grado $4$ en $P(x)$ que no aparece en $Q(x)$, para ilustrar qué hacer cuando un polinomio no tiene un término: su coeficiente es $0$ y el término del otro polinomio se copia sin cambio.
+La siguiente animación muestra la suma de $P(x)$ y $Q(x)$ término a término: se enmarcan los términos **semejantes**, se suman sus coeficientes y el resultado se acumula a la derecha. El ejemplo incluye un término de grado $4$ que solo aparece en $P(x)$ para ilustrar el caso "coeficiente $0$".
 
 ![Suma de polinomios término a término](./polinomios_suma.mp4)
 
@@ -188,13 +182,7 @@ $$
 
 ### Animación: producto de polinomios término a término
 
-La siguiente animación muestra el procedimiento sobre dos polinomios $P(x)$ y $Q(x)$. Para cada término del primer polinomio (empezando por el de menor grado) y cada término del segundo:
-
-1. se enmarcan los dos términos que se van a multiplicar en las filas de $P(x)$ y $Q(x)$,
-2. se muestra el producto parcial $a \cdot b = c$ como anotación al costado,
-3. el producto parcial se agrega a la expansión acumulada $P(x) \cdot Q(x)$ que se construye en la parte inferior.
-
-Al final, se agrupan los términos **semejantes** para obtener el polinomio simplificado.
+La siguiente animación muestra el producto $P(x) \cdot Q(x)$ término a término: se enmarcan los dos términos a multiplicar, se muestra el producto parcial $a \cdot b = c$ al costado y se acumula abajo. Al final se agrupan los términos **semejantes**.
 
 ![Multiplicación de polinomios término a término](./polinomios_multiplicacion.mp4)
 
