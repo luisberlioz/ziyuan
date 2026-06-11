@@ -13,6 +13,7 @@
 \usepackage{amsmath, amssymb, amsthm, mathtools}
 \usepackage{tikz}
 \usetikzlibrary{calc,arrows.meta,positioning,shapes.geometric,backgrounds,fit}
+\usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{xcolor}
 
@@ -102,31 +103,19 @@
 % ------------------------------------------------------------
 \begin{frame}{Óptimo local vs.\ global}
   \begin{columns}
-    \column{0.55\textwidth}
+    \column{0.5\textwidth}
       \begin{itemize}
-        \item $x^\star$ \textbf{óptimo local}: $\exists\,R>0$ tal que
-          $f_0(x^\star)\le f_0(\x)$ para todo factible con $\|\x-x^\star\|_2\le R$.
+        \item $\x^\star$ \textbf{óptimo local}: $\exists\,R>0$ tal que
+          $f_0(\x^\star)\le f_0(\x)$ para todo factible con
+          $\|\x-\x^\star\|_2\le R$.
         \item \textbf{Global}: vale para \emph{todo} $\x$ factible.
         \item En general: óptimo global $\Rightarrow$ local, pero no al revés.
+        \item La imagen muestra los cuatro casos en una sola función.
       \end{itemize}
-    \column{0.45\textwidth}
+    \column{0.5\textwidth}
       \centering
-      \begin{tikzpicture}[scale=0.85]
-        \draw[->] (-0.2,0)--(3.4,0) node[right]{$x$};
-        \draw[->] (0,-0.2)--(0,2.4) node[above]{$f_0$};
-        % Funcion NO convexa con dos valles
-        \draw[thick,accentblue,domain=0.05:3.25,samples=80,smooth]
-          plot(\x,{0.5+0.9*exp(-((\x-0.5)^2)/0.08)
-                  +0.45*exp(-((\x-2.3)^2)/0.12)
-                  +0.2*sin(deg(2.4*\x))*0.4});
-        % Minimos locales y globales
-        \fill[accentred] (0.5,1.4) circle(1.6pt);
-        \node[accentred,above right] at (0.55,1.45) {\scriptsize local};
-        \fill[accentred] (2.3,0.95) circle(1.6pt);
-        \node[accentred,above right] at (2.35,1.0) {\scriptsize local};
-        \fill[accentgreen] (2.3,0.95) circle(2.2pt);
-        \node[accentgreen,below right] at (2.3,0.85) {\scriptsize global};
-      \end{tikzpicture}
+      \includegraphics[width=\linewidth]{images/extrema_example_original.pdf}\\[0.3em]
+      {\tiny Imagen: KSmrq, Wikimedia Commons, CC BY-SA 3.0.}
   \end{columns}
 \end{frame}
 
@@ -155,20 +144,33 @@
 \end{frame}
 
 % ------------------------------------------------------------
-\begin{frame}{Tres nociones de solución}
+\begin{frame}{Tres nociones de solución (y una cuarta)}
   \begin{enumerate}
-    \item \textbf{Óptimo global} ($\x^\star$).
-    \item \textbf{Óptimo local}.
-    \item \textbf{Óptimo local ``estricto''}: $\exists\,R>0$ tal que
-      $f_0(\x^\star)<f_0(\x)$ para todo factible,
-      $0<\|\x-x^\star\|_2\le R$.
+    \item \textbf{Óptimo global} ($\x^\star$):
+      $f_0(\x^\star)\le f_0(\x)$ para todo $\x$ factible.
+    \item \textbf{Óptimo local}:
+      $\exists\,R>0$ tal que $f_0(\x^\star)\le f_0(\x)$ para todo
+      factible con $\|\x-\x^\star\|_2\le R$.
+    \item \textbf{Óptimo local ``estricto''}:
+      la misma condición con desigualdad estricta, y
+      $0<\|\x-\x^\star\|_2\le R$.
   \end{enumerate}
-  \vspace{0.5em}
+  \vspace{0.4em}
+  \begin{block}{$\epsilon$-\'optimo}
+    Dado $\epsilon>0$, $\x$ es \textbf{$\epsilon$-\'optimo} si es factible y
+    \[
+      f_0(\x)\le f_0(\x^\star)+\epsilon.
+    \]
+    Es una \emph{cuarta noción}: \emph{aproximación práctica} a la
+    optimalidad, porque los algoritmos rara vez alcanzan $x^\star$ exacto.
+  \end{block}
   \begin{itemize}
     \item Una función estrictamente decreciente sobre un dominio acotado:
       óptimo en un vértice.
     \item Problemas \emph{no convexos} pueden tener óptimos locales no
       globales.
+    \item En la práctica basta con $\epsilon$-optimalidad para
+      tolerancia numérica.
   \end{itemize}
 \end{frame}
 
@@ -332,6 +334,45 @@
     \text{s.a. }  & A\x\le b,\ \x\ge 0.
   \end{align*}
   Solución en un vértice del poliedro factible.
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Programación lineal-fraccional (LFP)}
+  \begin{block}{Forma estándar}
+    \[
+      \begin{array}{ll}
+        \text{minimizar} & \dfrac{c^\top\x + d}{e^\top\x + f} \\[0.6em]
+        \text{sujeto a}  & G\x\preceq h,\quad A\x=b
+      \end{array}
+    \]
+    con denominador positivo: $e^\top\x+f>0$ sobre la región factible.
+  \end{block}
+  \begin{itemize}
+    \item \textbf{Objetivo}: cociente de funciones afines (numerador y
+      denominador).
+    \item Restricciones \textbf{lineales} (afines): el conjunto factible es
+      un \emph{poliedro}.
+    \item Es un caso intermedio entre LP y convexo general.
+  \end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{LFP como problema convexo}
+  \begin{alertblock}{}
+    El problema LFP \emph{siempre} se puede reformular como un LP
+    mediante el cambio de variables:
+    \[
+      y=\frac{\x}{e^\top\x+f},\qquad
+      t=\frac{1}{e^\top\x+f},
+    \]
+    con $t>0$.
+  \end{alertblock}
+  \begin{itemize}
+    \item El problema transformado es lineal en $(y,t)$.
+    \item Por tanto LFP es \textbf{resoluble tan eficientemente como un LP}.
+    \item Ejemplo clásico: maximizar la razón \emph{retorno / riesgo}
+      en optimización de portafolios.
+  \end{itemize}
 \end{frame}
 
 % ============================================================
@@ -601,12 +642,14 @@
     arrow/.style={-Stealth,thick}
   ]
     \node[box] (lp) {LP\\$\min c^\top x$};
-    \node[box,below=of lp] (qp) {QP\\$\min x^\top P x$};
+    \node[box,below=of lp] (lfp) {LFP\\$\min \frac{c^\top x+d}{e^\top x+f}$};
+    \node[box,below=of lfp] (qp) {QP\\$\min x^\top P x$};
     \node[box,below=of qp] (gp) {GP\\posinomios};
     \node[box,below=of gp] (socp) {SOCP\\$\|A x+b\|\le c^\top x+d$};
     \node[box,below=of socp] (sdp) {SDP\\restricc. matriciales};
     \node[box,right=1.6cm of qp,fill=accentgreen!10] (coc) {POC general};
     \draw[arrow] (lp)--(coc) node[midway,above,sloped]{\scriptsize caso particular};
+    \draw[arrow] (lfp)--(coc);
     \draw[arrow] (qp)--(coc);
     \draw[arrow] (gp)--(coc);
     \draw[arrow] (socp)--(coc);
@@ -620,8 +663,8 @@
     \item \textbf{POC} = minimizar convexa, restricciones convexas e iguales afines.
     \item \textbf{Óptimo local = global} (y por tanto, los algoritmos encuentran
       la mejor solución posible).
-    \item \textbf{LP, QP, GP, SOCP, SDP} son casos particulares, todos resolubles
-      eficiente y confiablemente.
+    \item \textbf{LP, LFP, QP, GP, SOCP, SDP} son casos particulares, todos
+      resolubles eficiente y confiablemente.
     \item \textbf{GP} se vuelve convexo con el cambio $y=\log x$.
     \item \textbf{Desigualdades generalizadas} extienden LP $\to$ SDP vía conos propios.
     \item \textbf{Optimización vectorial} se reduce a múltiples escalares (ponderación),
