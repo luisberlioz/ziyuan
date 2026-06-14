@@ -342,7 +342,7 @@ $$x = \frac{-17 \pm 1}{24}$$
 
 $$x_1 = \frac{-16}{24} = -\frac{2}{3} \quad \text{y} \quad x_2 = \frac{-18}{24} = -\frac{3}{4}$$
 
-$$C.S. = \left\{-\frac{3}{4}, -\frac{2}{3}\right\}$$
+$$C.S. = \{-\frac{3}{4}, -\frac{2}{3}\}$$
 
 ---
 
