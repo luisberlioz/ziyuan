@@ -1,0 +1,1763 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Materiales académicos de matemáticas y afines">
+      
+      
+        <meta name="author" content="Luis">
+      
+      
+      
+        <link rel="prev" href="../recta_real_y_orden/">
+      
+      
+        <link rel="next" href="../matematicas_secundaria/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Números Reales - Ziyuan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#numeros-reales-y-notacion-cientifica" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Ziyuan" class="md-header__button md-logo" aria-label="Ziyuan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ziyuan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Números Reales
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../recta_real_y_orden/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  La Recta Real
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Números Reales
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../polinomios_introduccion.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Polinomios
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ecuaciones_unidad_iii.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ecuaciones (Unidad III)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../matematicas_secundaria/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Matemáticas de Secundaria
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Ziyuan" class="md-nav__button md-logo" aria-label="Ziyuan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ziyuan
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recta_real_y_orden/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    La Recta Real
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Números Reales
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Números Reales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-simbolos-de-agrupacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Símbolos de Agrupación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Símbolos de Agrupación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#los-tres-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Los tres principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-necesitamos-varios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué necesitamos varios?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-resuelto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo resuelto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-distancia-en-los-numeros-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Distancia en los Números Reales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Distancia en los Números Reales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-funciona-esto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué funciona esto?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-desigualdades-con-distancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplicación: Desigualdades con distancia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-notacion-cientifica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Notación Científica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Notación Científica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-problema-numeros-muy-grandes-y-muy-pequenos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El problema: números muy grandes y muy pequeños
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La solución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-convertimos-un-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Cómo convertimos un número?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-con-un-numero-grande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo con un número GRANDE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-con-un-numero-pequeno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo con un número PEQUEÑO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ilustrando-la-utilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ilustrando la utilidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ilustrando la utilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeros-grandes-una-galaxia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Números GRANDES: una galaxia 🌀
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numeros-pequenos-una-molecula-de-agua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Números PEQUEÑOS: una molécula de agua 💧
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-de-referencia-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de referencia rápida
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-operaciones-con-numeros-en-notacion-cientifica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Operaciones con Números en Notación Científica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Operaciones con Números en Notación Científica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-suma-y-resta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Suma y Resta 🔢➕🔢
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Suma y Resta 🔢➕🔢">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-1-mismo-exponente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 1: Mismo exponente ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-2-distinto-exponente-hay-que-igualar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 2: Distinto exponente → hay que igualar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#truco-rapido-escribir-todo-completo-y-luego-convertir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truco rápido: escribir todo completo y luego convertir
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-multiplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Multiplicación 🔢✖️🔢
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Multiplicación 🔢✖️🔢">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 División 🔢➗🔢
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 División 🔢➗🔢">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-potencia-de-una-expresion-en-notacion-cientifica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Potencia de una expresión en notación científica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 Potencia de una expresión en notación científica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen-rapido-de-operaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen rápido de operaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-para-practicar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicios para practicar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../polinomios_introduccion.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polinomios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecuaciones_unidad_iii.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ecuaciones (Unidad III)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../matematicas_secundaria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matemáticas de Secundaria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-simbolos-de-agrupacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Símbolos de Agrupación
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Símbolos de Agrupación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#los-tres-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Los tres principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-necesitamos-varios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué necesitamos varios?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-resuelto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo resuelto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-distancia-en-los-numeros-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Distancia en los Números Reales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Distancia en los Números Reales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-funciona-esto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Por qué funciona esto?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicacion-desigualdades-con-distancia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aplicación: Desigualdades con distancia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-notacion-cientifica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Notación Científica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Notación Científica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-problema-numeros-muy-grandes-y-muy-pequenos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El problema: números muy grandes y muy pequeños
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La solución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-convertimos-un-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Cómo convertimos un número?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-con-un-numero-grande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo con un número GRANDE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-con-un-numero-pequeno" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo con un número PEQUEÑO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ilustrando-la-utilidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ilustrando la utilidad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ilustrando la utilidad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeros-grandes-una-galaxia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Números GRANDES: una galaxia 🌀
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numeros-pequenos-una-molecula-de-agua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Números PEQUEÑOS: una molécula de agua 💧
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-de-referencia-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de referencia rápida
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-operaciones-con-numeros-en-notacion-cientifica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Operaciones con Números en Notación Científica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Operaciones con Números en Notación Científica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-suma-y-resta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Suma y Resta 🔢➕🔢
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Suma y Resta 🔢➕🔢">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caso-1-mismo-exponente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 1: Mismo exponente ✅
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caso-2-distinto-exponente-hay-que-igualar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caso 2: Distinto exponente → hay que igualar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#truco-rapido-escribir-todo-completo-y-luego-convertir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Truco rápido: escribir todo completo y luego convertir
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-multiplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Multiplicación 🔢✖️🔢
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Multiplicación 🔢✖️🔢">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 División 🔢➗🔢
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 División 🔢➗🔢">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-potencia-de-una-expresion-en-notacion-cientifica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Potencia de una expresión en notación científica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 Potencia de una expresión en notación científica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resumen-rapido-de-operaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen rápido de operaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-para-practicar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicios para practicar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="numeros-reales-y-notacion-cientifica">Números Reales y Notación Científica<a class="headerlink" href="#numeros-reales-y-notacion-cientifica" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Guía de estudio</strong> — Nivel bachillerato</p>
+</blockquote>
+<hr />
+<h2 id="1-simbolos-de-agrupacion">1. Símbolos de Agrupación<a class="headerlink" href="#1-simbolos-de-agrupacion" title="Permanent link">&para;</a></h2>
+<p>Cuando escribimos expresiones matemáticas, necesitamos indicar <strong>qué operaciones se hacen primero</strong>. Para eso usamos símbolos de agrupación, que son como "señales de tráfico" que le dicen al lector: <em>"¡Ojo! Esto va junto."</em></p>
+<h3 id="los-tres-principales">Los tres principales<a class="headerlink" href="#los-tres-principales" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Símbolo</th>
+<th>Nombre</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>( )</code></td>
+<td>Paréntesis</td>
+<td><span class="arithmatex">\(3 \times (2 + 5)\)</span></td>
+</tr>
+<tr>
+<td><code>[ ]</code></td>
+<td>Corchetes</td>
+<td><span class="arithmatex">\(2 \times [3 + (4 - 1)]\)</span></td>
+</tr>
+<tr>
+<td><code>{ }</code></td>
+<td>Llaves</td>
+<td><span class="arithmatex">\(\{2 + [3 \times (1 + 1)]\} - 5\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="por-que-necesitamos-varios">¿Por qué necesitamos varios?<a class="headerlink" href="#por-que-necesitamos-varios" title="Permanent link">&para;</a></h3>
+<p>Imagina que una expresión tiene <strong>varios niveles</strong> de agrupación. Si solo usáramos paréntesis, sería un lío:</p>
+<div class="arithmatex">\[2 \times (3 + (4 - (1 + 1)))\]</div>
+<p>Es difícil saber qué paréntesis se cierra con cuál. En cambio, si usamos distintos símbolos, queda clarísimo:</p>
+<div class="arithmatex">\[2 \times \{3 + [4 - (1 + 1)]\}\]</div>
+<p><strong>Regla general:</strong> Se resuelven de adentro hacia afuera:
+1. Primero los <strong>paréntesis</strong> <code>( )</code>
+2. Luego los <strong>corchetes</strong> <code>[ ]</code>
+3. Finalmente las <strong>llaves</strong> <code>{ }</code></p>
+<h3 id="ejemplo-resuelto">Ejemplo resuelto<a class="headerlink" href="#ejemplo-resuelto" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[\{5 + [3 \times (2 + 1)]\} - 4\]</div>
+<p><strong>Paso 1:</strong> Paréntesis → <span class="arithmatex">\(2 + 1 = 3\)</span>
+$<span class="arithmatex">\(\{5 + [3 \times 3]\} - 4\)</span>$</p>
+<p><strong>Paso 2:</strong> Corchetes → <span class="arithmatex">\(3 \times 3 = 9\)</span>
+$<span class="arithmatex">\(\{5 + 9\} - 4\)</span>$</p>
+<p><strong>Paso 3:</strong> Llaves → <span class="arithmatex">\(5 + 9 = 14\)</span>
+$<span class="arithmatex">\(14 - 4 = \boxed{10}\)</span>$</p>
+<blockquote>
+<p>💡 <strong>Dato curioso:</strong> La barra de fracción <span class="arithmatex">\(\frac{a}{b}\)</span> también funciona como símbolo de agrupación. El numerador y el denominador se tratan como si estuvieran entre paréntesis.</p>
+</blockquote>
+<hr />
+<h2 id="2-distancia-en-los-numeros-reales">2. Distancia en los Números Reales<a class="headerlink" href="#2-distancia-en-los-numeros-reales" title="Permanent link">&para;</a></h2>
+<p>Ya conoces el <strong>valor absoluto</strong> de un número: <span class="arithmatex">\(|x|\)</span> es la distancia de <span class="arithmatex">\(x\)</span> al cero en la recta numérica. Ahora vamos un paso más allá: ¿cuál es la distancia <strong>entre dos números cualesquiera</strong>?</p>
+<h3 id="definicion">Definición<a class="headerlink" href="#definicion" title="Permanent link">&para;</a></h3>
+<p>La <strong>distancia</strong> entre dos números reales <span class="arithmatex">\(a\)</span> y <span class="arithmatex">\(b\)</span> es:</p>
+<div class="arithmatex">\[d(a, b) = |a - b|\]</div>
+<p>¡Así de simple! Solo calculamos el valor absoluto de la diferencia.</p>
+<h3 id="por-que-funciona-esto">¿Por qué funciona esto?<a class="headerlink" href="#por-que-funciona-esto" title="Permanent link">&para;</a></h3>
+<p>Piensa en la recta numérica:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>---|---|---|---|---|---|---|---|---|---&gt;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  -3  -2  -1   0   1   2   3   4   5
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>              &lt;-------&gt;           
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>               distancia de -1 a 3 = |(-1) - 3| = |-4| = 4
+</code></pre></div>
+<p>Da igual en qué orden restes: <span class="arithmatex">\(|3 - (-1)| = |4| = 4\)</span> también funciona.</p>
+<h3 id="ejemplos">Ejemplos<a class="headerlink" href="#ejemplos" title="Permanent link">&para;</a></h3>
+<p>| <span class="arithmatex">\(a\)</span> | <span class="arithmatex">\(b\)</span> | <span class="arithmatex">\(d(a,b) = |a-b|\)</span> | Verificación rápida |
+|------|------|------------|------------------------------|
+| <span class="arithmatex">\(3\)</span> | <span class="arithmatex">\(7\)</span> | <span class="arithmatex">\(|3-7| = |-4| = 4\)</span> | Contando: 4 → ✅ |
+| <span class="arithmatex">\(-2\)</span> | <span class="arithmatex">\(5\)</span> | <span class="arithmatex">\(|-2-5| = |-7| = 7\)</span> | Contando: 7 → ✅ |
+| <span class="arithmatex">\(-3\)</span> | <span class="arithmatex">\(-8\)</span> | <span class="arithmatex">\(|-3-(-8)| = |5| = 5\)</span> | Contando: 5 → ✅ |
+| <span class="arithmatex">\(0\)</span> | <span class="arithmatex">\(0\)</span> | <span class="arithmatex">\(|0-0| = 0\)</span> | Estás en el mismo punto → ✅ |</p>
+<h3 id="aplicacion-desigualdades-con-distancia">Aplicación: Desigualdades con distancia<a class="headerlink" href="#aplicacion-desigualdades-con-distancia" title="Permanent link">&para;</a></h3>
+<p>Si te dicen "los puntos que están a distancia menor que 3 del 5", esto se escribe:</p>
+<div class="arithmatex">\[|x - 5| &lt; 3\]</div>
+<p>Esto significa: <span class="arithmatex">\(\;x\)</span> está entre <span class="arithmatex">\(5-3\)</span> y <span class="arithmatex">\(5+3\)</span>, es decir:</p>
+<div class="arithmatex">\[2 &lt; x &lt; 8\]</div>
+<p>En la recta:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>---|----|----|----|----|----|----|---&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   2    3    4    5    6    7    8
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        &lt;-------------------&gt;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        (todos los puntos a distancia &lt; 3 del 5)
+</code></pre></div>
+<hr />
+<h2 id="3-notacion-cientifica">3. Notación Científica<a class="headerlink" href="#3-notacion-cientifica" title="Permanent link">&para;</a></h2>
+<h3 id="el-problema-numeros-muy-grandes-y-muy-pequenos">El problema: números muy grandes y muy pequeños<a class="headerlink" href="#el-problema-numeros-muy-grandes-y-muy-pequenos" title="Permanent link">&para;</a></h3>
+<p>Mira estos dos números:</p>
+<ul>
+<li><strong>La distancia a la galaxia NGC 4414 (en la foto):</strong> aproximadamente <span class="arithmatex">\(60{,}000{,}000{,}000{,}000{,}000{,}000{,}000\)</span> metros</li>
+<li><strong>El diámetro de una molécula de agua:</strong> aproximadamente <span class="arithmatex">\(0.0000000003\)</span> metros</li>
+</ul>
+<p>¡Son horribles de leer! Los ceros dan dolor de cabeza y es fácil perderse countándolos.</p>
+<h3 id="la-solucion">La solución<a class="headerlink" href="#la-solucion" title="Permanent link">&para;</a></h3>
+<p>La <strong>notación científica</strong> es una forma de escribir cualquier número como:</p>
+<div class="arithmatex">\[a \times 10^n\]</div>
+<p>donde:
+- <span class="arithmatex">\(a\)</span> es un número <strong>mayor o igual a 1 y menor que 10</strong> (llamado <strong>coeficiente</strong>)
+- <span class="arithmatex">\(n\)</span> es un número entero (positivo o negativo), llamado <strong>exponente</strong></p>
+<h3 id="como-convertimos-un-numero">¿Cómo convertimos un número?<a class="headerlink" href="#como-convertimos-un-numero" title="Permanent link">&para;</a></h3>
+<p><strong>Paso 1:</strong> Mueve el punto decimal hasta que quede solo <strong>un dígito</strong> antes del punto.</p>
+<p><strong>Paso 2:</strong> Cuenta cuántos lugares moviste el punto:
+- Si lo moviste <strong>hacia la izquierda</strong> → el exponente es <strong>positivo</strong>
+- Si lo moviste <strong>hacia la derecha</strong> → el exponente es <strong>negativo</strong></p>
+<h3 id="ejemplo-con-un-numero-grande">Ejemplo con un número GRANDE<a class="headerlink" href="#ejemplo-con-un-numero-grande" title="Permanent link">&para;</a></h3>
+<p>El radio de la Vía Láctea: <strong>~700,000,000,000,000,000,000,000 m</strong></p>
+<p>Movemos el punto 23 lugares a la izquierda:</p>
+<div class="arithmatex">\[7\;\overset{1}{0}\;\overset{2}{0}\;\overset{3}{0}\; \cdots\; \overset{23}{0}\; \Rightarrow\; 7 \times 10^{23} \text{ m}\]</div>
+<h3 id="ejemplo-con-un-numero-pequeno">Ejemplo con un número PEQUEÑO<a class="headerlink" href="#ejemplo-con-un-numero-pequeno" title="Permanent link">&para;</a></h3>
+<p>El diámetro de un átomo de oxígeno: <strong>~0.000000000148 m</strong></p>
+<p>Movemos el punto 10 lugares a la derecha:</p>
+<div class="arithmatex">\[0\overset{-1}{.}\overset{-2}{0}\overset{-3}{0}\overset{-4}{0}\overset{-5}{0}\overset{-6}{0}\overset{-7}{0}\overset{-8}{0}\overset{-9}{0}\overset{-10}{1}\overset{-11}{4}\overset{-12}{8} \Rightarrow\; 1.48 \times 10^{-10} \text{ m}\]</div>
+<h3 id="ilustrando-la-utilidad">Ilustrando la utilidad<a class="headerlink" href="#ilustrando-la-utilidad" title="Permanent link">&para;</a></h3>
+<h4 id="numeros-grandes-una-galaxia">Números GRANDES: una galaxia 🌀<a class="headerlink" href="#numeros-grandes-una-galaxia" title="Permanent link">&para;</a></h4>
+<p>La galaxia NGC 4414, fotografiada por el telescopio Hubble:</p>
+<p><img alt="Galaxia NGC 4414" src="../galaxy.jpg" /></p>
+<p><em>Galaxia NGC 4414 — Foto: NASA/ESA Hubble Space Telescope</em></p>
+<ul>
+<li>Distancia desde la Tierra: <strong>~60 sextillones de metros</strong> → <span class="arithmatex">\(6 \times 10^{25}\)</span> m</li>
+<li>Sin notación científica: 60,000,000,000,000,000,000,000,000 m — ¡intenta leer eso en voz alta!</li>
+</ul>
+<h4 id="numeros-pequenos-una-molecula-de-agua">Números PEQUEÑOS: una molécula de agua 💧<a class="headerlink" href="#numeros-pequenos-una-molecula-de-agua" title="Permanent link">&para;</a></h4>
+<p>La molécula H₂O — dos átomos de hidrógeno unidos a uno de oxígeno:</p>
+<p><img alt="Molécula de agua" src="../water_molecule.svg" /></p>
+<p><em>Estructura de la molécula de agua (H₂O) — Dominio público</em></p>
+<ul>
+<li>Diámetro aproximado: <strong>~0.0000000003 m</strong> → <span class="arithmatex">\(3 \times 10^{-10}\)</span> m</li>
+<li>Sin notación científica: 0.0000000003 m — fácil perderse con los decimales</li>
+</ul>
+<h3 id="tabla-de-referencia-rapida">Tabla de referencia rápida<a class="headerlink" href="#tabla-de-referencia-rapida" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>En Decimal</th>
+<th>En Notación Científica</th>
+<th>Tamaño relativo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(1{,}000{,}000{,}000\)</span></td>
+<td><span class="arithmatex">\(1 \times 10^{9}\)</span></td>
+<td>Mil millones</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(0.000001\)</span></td>
+<td><span class="arithmatex">\(1 \times 10^{-6}\)</span></td>
+<td>Millionésimo</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(5{,}200{,}000{,}000\)</span></td>
+<td><span class="arithmatex">\(5.2 \times 10^{9}\)</span></td>
+<td>Población mundial aprox.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(1{,}380{,}000{,}000{,}000{,}000{,}000{,}000{,}000{,}000\)</span></td>
+<td><span class="arithmatex">\(1.38 \times 10^{27}\)</span></td>
+<td>Masa de la Tierra (kg)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-operaciones-con-numeros-en-notacion-cientifica">4. Operaciones con Números en Notación Científica<a class="headerlink" href="#4-operaciones-con-numeros-en-notacion-cientifica" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Antes de empezar:</strong> recuerda las propiedades de los exponentes:
+- <span class="arithmatex">\(10^a \times 10^b = 10^{a+b}\)</span>
+- <span class="arithmatex">\(\frac{10^a}{10^b} = 10^{a-b}\)</span>
+- <span class="arithmatex">\((10^a)^n = 10^{a \times n}\)</span></p>
+</blockquote>
+<h3 id="41-suma-y-resta">4.1 Suma y Resta 🔢➕🔢<a class="headerlink" href="#41-suma-y-resta" title="Permanent link">&para;</a></h3>
+<p><strong>Regla de oro:</strong> Solo se pueden sumar o restar directamente si tienen el <strong>mismo exponente</strong>. Si no, hay que convertir primero.</p>
+<h4 id="caso-1-mismo-exponente">Caso 1: Mismo exponente ✅<a class="headerlink" href="#caso-1-mismo-exponente" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[(3 \times 10^{5}) + (2 \times 10^{5}) = (3+2) \times 10^{5} = 5 \times 10^{5}\]</div>
+<p>Fíjate: es como sumar peras con peras — el exponente <span class="arithmatex">\(10^5\)</span> es la "unidad".</p>
+<h4 id="caso-2-distinto-exponente-hay-que-igualar">Caso 2: Distinto exponente → hay que igualar<a class="headerlink" href="#caso-2-distinto-exponente-hay-que-igualar" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[\underbrace{(3 \times 10^{6})}_{3{,}000{,}000} + \underbrace{(5 \times 10^{4})}_{50{,}000}\]</div>
+<p>Convertimos el segundo al mismo exponente:</p>
+<div class="arithmatex">\[5 \times 10^{4} = 0.5 \times 10^{5} = 0.05 \times 10^{6}\]</div>
+<p>Ahora sí:</p>
+<div class="arithmatex">\[(3 \times 10^{6}) + (0.05 \times 10^{6}) = 3.05 \times 10^{6} = 3{,}050{,}000\]</div>
+<h4 id="truco-rapido-escribir-todo-completo-y-luego-convertir">Truco rápido: escribir todo completo y luego convertir<a class="headerlink" href="#truco-rapido-escribir-todo-completo-y-luego-convertir" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[3 \times 10^{6} = 3{,}000{,}000$$
+$$5 \times 10^{4} = 0{,}000{,}050{,}000\]</div>
+<p>Sumamos: <span class="arithmatex">\(3{,}000{,}000 + 50{,}000 = 3{,}050{,}000\)</span></p>
+<p>Luego convertimos de vuelta: <span class="arithmatex">\(3.05 \times 10^{6}\)</span> ✅</p>
+<h3 id="42-multiplicacion">4.2 Multiplicación 🔢✖️🔢<a class="headerlink" href="#42-multiplicacion" title="Permanent link">&para;</a></h3>
+<p><strong>Regla:</strong> se multiplican los coeficientes y <strong>se suman los exponentes</strong>.</p>
+<div class="arithmatex">\[(a \times 10^{m}) \times (b \times 10^{n}) = (a \times b) \times 10^{m+n}\]</div>
+<h4 id="ejemplo">Ejemplo<a class="headerlink" href="#ejemplo" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[(3 \times 10^{8}) \times (2 \times 10^{4})$$
+$$= (3 \times 2) \times 10^{8+4}$$
+$$= 6 \times 10^{12}\]</div>
+<h3 id="43-division">4.3 División 🔢➗🔢<a class="headerlink" href="#43-division" title="Permanent link">&para;</a></h3>
+<p><strong>Regla:</strong> se dividen los coeficientes y <strong>se restan los exponentes</strong> (exponente de arriba menos el de abajo).</p>
+<div class="arithmatex">\[\frac{a \times 10^{m}}{b \times 10^{n}} = \left(\frac{a}{b}\right) \times 10^{m-n}\]</div>
+<h4 id="ejemplo_1">Ejemplo<a class="headerlink" href="#ejemplo_1" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[\frac{9 \times 10^{12}}{3 \times 10^{5}}$$
+$$= \frac{9}{3} \times 10^{12-5}$$
+$$= 3 \times 10^{7}\]</div>
+<h3 id="44-potencia-de-una-expresion-en-notacion-cientifica">4.4 Potencia de una expresión en notación científica<a class="headerlink" href="#44-potencia-de-una-expresion-en-notacion-cientifica" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[(a \times 10^{m})^{n} = a^{n} \times 10^{m \times n}\]</div>
+<h4 id="ejemplo_2">Ejemplo<a class="headerlink" href="#ejemplo_2" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[(2 \times 10^{3})^{2}$$
+$$= 2^{2} \times 10^{3 \times 2}$$
+$$= 4 \times 10^{6}\]</div>
+<h3 id="resumen-rapido-de-operaciones">Resumen rápido de operaciones<a class="headerlink" href="#resumen-rapido-de-operaciones" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Regla</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Suma/Resta</strong> (mismo exp.)</td>
+<td><span class="arithmatex">\((a \pm b) \times 10^{n}\)</span></td>
+<td><span class="arithmatex">\((3 + 2) \times 10^{4} = 5 \times 10^{4}\)</span></td>
+</tr>
+<tr>
+<td><strong>Suma/Resta</strong> (distinto exp.)</td>
+<td>Igualar exponentes primero</td>
+<td>Convertir al mayor exponente</td>
+</tr>
+<tr>
+<td><strong>Multiplicación</strong></td>
+<td><span class="arithmatex">\((a \times b) \times 10^{m+n}\)</span></td>
+<td><span class="arithmatex">\((3 \times 2) \times 10^{4+2} = 6 \times 10^{6}\)</span></td>
+</tr>
+<tr>
+<td><strong>División</strong></td>
+<td><span class="arithmatex">\(\left(\frac{a}{b}\right) \times 10^{m-n}\)</span></td>
+<td><span class="arithmatex">\(\frac{6}{2} \times 10^{6-3} = 3 \times 10^{3}\)</span></td>
+</tr>
+<tr>
+<td><strong>Potencia</strong></td>
+<td><span class="arithmatex">\(a^{n} \times 10^{m \times n}\)</span></td>
+<td><span class="arithmatex">\(3^{2} \times 10^{2\times 4} = 9 \times 10^{8}\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ejercicios-para-practicar">Ejercicios para practicar<a class="headerlink" href="#ejercicios-para-practicar" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Símbolos de agrupación:</strong> Calcula: <span class="arithmatex">\(\{8 - [2 \times (3 + 1)]\} + 5\)</span></p>
+</li>
+<li>
+<p><strong>Distancia:</strong> ¿Cuál es la distancia entre <span class="arithmatex">\(-7\)</span> y <span class="arithmatex">\(3\)</span>? ¿Y entre <span class="arithmatex">\(2.5\)</span> y <span class="arithmatex">\(-4.5\)</span>?</p>
+</li>
+<li>
+<p><strong>Notación científica:</strong> Convierte a notación científica:</p>
+</li>
+<li><span class="arithmatex">\(0.00000000016\)</span></li>
+<li>
+<p><span class="arithmatex">\(48{,}000{,}000{,}000\)</span></p>
+</li>
+<li>
+<p><strong>Operaciones:</strong> Resuelve y expresa el resultado en notación científica:</p>
+</li>
+<li><span class="arithmatex">\((3 \times 10^{6}) + (5 \times 10^{5})\)</span></li>
+<li><span class="arithmatex">\((7 \times 10^{8}) \times (2 \times 10^{3})\)</span></li>
+<li><span class="arithmatex">\(\frac{8 \times 10^{10}}{4 \times 10^{6}}\)</span></li>
+</ol>
+<hr />
+<p><em>Imágenes: Galaxia NGC 4414 (NASA/ESA Hubble, dominio público) | Diagrama molécula H₂O (Sakurambo, dominio público)</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

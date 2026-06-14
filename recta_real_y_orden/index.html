@@ -1,0 +1,2715 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Materiales académicos de matemáticas y afines">
+      
+      
+        <meta name="author" content="Luis">
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../numeros_reales_notacion_cientifica/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>La Recta Real - Ziyuan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#la-recta-real-y-los-numeros-reales" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Ziyuan" class="md-header__button md-logo" aria-label="Ziyuan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ziyuan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              La Recta Real
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  La Recta Real
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../numeros_reales_notacion_cientifica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Números Reales
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../polinomios_introduccion.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Polinomios
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ecuaciones_unidad_iii.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ecuaciones (Unidad III)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../matematicas_secundaria/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Matemáticas de Secundaria
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Ziyuan" class="md-nav__button md-logo" aria-label="Ziyuan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ziyuan
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    La Recta Real
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    La Recta Real
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repaso-de-los-numeros-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repaso de los números reales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repaso de los números reales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeros-positivos-y-negativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Números positivos y negativos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-representacion-en-la-recta-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Representación en la Recta Real
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Representación en la Recta Real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Características
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades importantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-propiedades-de-la-igualdad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Propiedades de la Igualdad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Propiedades de la Igualdad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-la-igualdad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades de la igualdad
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-relacion-de-orden-en-los-numeros-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Relación de Orden en los Números Reales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Relación de Orden en los Números Reales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-la-relacion-de-orden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades de la relación de orden
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-operaciones-algebraicas-con-numeros-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Operaciones Algebraicas con Números Reales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Operaciones Algebraicas con Números Reales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suma-y-resta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suma y resta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplicacion-y-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiplicación y división
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverso-aditivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inverso Aditivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reciproco-de-un-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recíproco de un número
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparación rápida
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-valor-absoluto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Valor Absoluto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-distributividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Distributividad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Distributividad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos importantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cambio-de-signo-multiplicar-por-un-numero-negativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Cambio de signo (multiplicar por un número negativo)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Cambio de signo (multiplicar por un número negativo)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importante-resolver-parentesis-primero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importante: resolver paréntesis primero
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-orden-de-operaciones-pemdas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Orden de operaciones (PEMDAS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Orden de operaciones (PEMDAS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#errores-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores comunes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-meme-clasico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El meme clásico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-propiedades-de-las-potencias-exponentes-enteros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Propiedades de las Potencias (exponentes enteros)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Propiedades de las Potencias (exponentes enteros)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-fundamentales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades fundamentales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos especiales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errores-comunes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores comunes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-la-raiz-n-esima-de-un-numero-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. La raíz n-ésima de un número real
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. La raíz n-ésima de un número real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos básicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-raiz-cuadrada-especial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La raíz cuadrada especial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raices-de-numeros-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Raíces de números especiales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-las-raices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades de las raíces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-con-las-potencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conexión con las potencias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-la-definicion-1n-el-reciproco-del-exponente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. La definición 1/n (el recíproco del exponente)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. La definición 1/n (el recíproco del exponente)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-idea-central" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La idea central
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-concretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos concretos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo paso a paso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-logica-del-1n-en-una-tabla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La lógica del 1/n en una tabla
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-potencias-racionales-exponentes-fraccionarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Potencias racionales (exponentes fraccionarios)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Potencias racionales (exponentes fraccionarios)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-a-paso-con-823" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso a paso con \(8^{2/3}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-que-siguen-vigentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades que siguen vigentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numeros_reales_notacion_cientifica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Números Reales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../polinomios_introduccion.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polinomios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecuaciones_unidad_iii.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ecuaciones (Unidad III)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../matematicas_secundaria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matemáticas de Secundaria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repaso-de-los-numeros-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repaso de los números reales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Repaso de los números reales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#numeros-positivos-y-negativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Números positivos y negativos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-representacion-en-la-recta-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Representación en la Recta Real
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Representación en la Recta Real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Características
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades importantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-propiedades-de-la-igualdad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Propiedades de la Igualdad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Propiedades de la Igualdad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-la-igualdad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades de la igualdad
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-relacion-de-orden-en-los-numeros-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Relación de Orden en los Números Reales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Relación de Orden en los Números Reales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-la-relacion-de-orden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades de la relación de orden
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-operaciones-algebraicas-con-numeros-reales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Operaciones Algebraicas con Números Reales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Operaciones Algebraicas con Números Reales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suma-y-resta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Suma y resta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiplicacion-y-division" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multiplicación y división
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverso-aditivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inverso Aditivo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reciproco-de-un-numero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recíproco de un número
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparacion-rapida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparación rápida
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-valor-absoluto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Valor Absoluto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-distributividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Distributividad
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Distributividad">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#casos-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos importantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-cambio-de-signo-multiplicar-por-un-numero-negativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Cambio de signo (multiplicar por un número negativo)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Cambio de signo (multiplicar por un número negativo)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regla-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regla práctica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#importante-resolver-parentesis-primero" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importante: resolver paréntesis primero
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-orden-de-operaciones-pemdas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Orden de operaciones (PEMDAS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Orden de operaciones (PEMDAS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#errores-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores comunes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-meme-clasico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El meme clásico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-propiedades-de-las-potencias-exponentes-enteros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Propiedades de las Potencias (exponentes enteros)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Propiedades de las Potencias (exponentes enteros)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-fundamentales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades fundamentales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#casos-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Casos especiales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errores-comunes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errores comunes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-la-raiz-n-esima-de-un-numero-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. La raíz n-ésima de un número real
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. La raíz n-ésima de un número real">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos básicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-raiz-cuadrada-especial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La raíz cuadrada especial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raices-de-numeros-especiales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Raíces de números especiales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-de-las-raices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades de las raíces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conexion-con-las-potencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conexión con las potencias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-la-definicion-1n-el-reciproco-del-exponente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. La definición 1/n (el recíproco del exponente)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. La definición 1/n (el recíproco del exponente)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-idea-central" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La idea central
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-concretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos concretos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-paso-a-paso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo paso a paso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-logica-del-1n-en-una-tabla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La lógica del 1/n en una tabla
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-potencias-racionales-exponentes-fraccionarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Potencias racionales (exponentes fraccionarios)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Potencias racionales (exponentes fraccionarios)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-a-paso-con-823" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso a paso con \(8^{2/3}\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-que-siguen-vigentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades que siguen vigentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="la-recta-real-y-los-numeros-reales">La Recta Real y los Números Reales<a class="headerlink" href="#la-recta-real-y-los-numeros-reales" title="Permanent link">&para;</a></h1>
+<h2 id="repaso-de-los-numeros-reales">Repaso de los números reales<a class="headerlink" href="#repaso-de-los-numeros-reales" title="Permanent link">&para;</a></h2>
+<p>Los <strong>números reales</strong> son todos los números que existen: los naturales (1, 2, 3…), los enteros (…, -2, -1, 0, 1, 2…), los racionales (fracciones como ½, decimales como 3.14) y los irracionales (como √2 o π). Básicamente, cualquier número que puedas imaginar en una recta.</p>
+<h3 id="numeros-positivos-y-negativos">Números positivos y negativos<a class="headerlink" href="#numeros-positivos-y-negativos" title="Permanent link">&para;</a></h3>
+<dl>
+<dt>Los <strong>números positivos</strong> (+)</dt>
+<dd>Son todos los números mayores que cero: 1, 2, 3, ½, π, √2… Se escriben con signo + o sin ningún signo. En la recta real están a la <strong>derecha del cero</strong>. Se usan para contar, medir temperaturas sobre cero, ganancias, altitudes sobre el nivel del mar, etc.</dd>
+<dt>Los <strong>números negativos</strong> (−)</dt>
+<dd>Son todos los números menores que cero: −1, −2, −3, −½… En la recta real están a la <strong>izquierda del cero</strong>. Se usan para temperaturas bajo cero, deudas, altitudes por debajo del nivel del mar, etc.</dd>
+</dl>
+<p>El <strong>cero</strong> (0) no es positivo ni negativo — es el punto neutral. Separa los positivos de los negativos en la recta.</p>
+<p>Ejemplos cotidianos:
+- +12 °C (hace calor) vs. −5 °C (hace frío)
+- Tener +500 lempiras (dinero a tu favor) vs. −500 lempiras (le debes al banco)
+- +3 pisos (arriba de la planta baja) vs. −2 pisos (sótano)</p>
+<hr />
+<h2 id="1-representacion-en-la-recta-real">1. Representación en la Recta Real<a class="headerlink" href="#1-representacion-en-la-recta-real" title="Permanent link">&para;</a></h2>
+<p>La <strong>recta real</strong> es una línea recta donde cada punto representa un número. Nos sirve para visualizar y ordenar los números.</p>
+<p><img alt="La Recta Real" src="../recta_real.png" /></p>
+<h3 id="caracteristicas">Características<a class="headerlink" href="#caracteristicas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tiene <strong>dos direcciones</strong>: a la derecha del 0 van los números <strong>positivos</strong>, a la izquierda los <strong>negativos</strong>.</li>
+<li>Es <strong>infinita</strong>: se extiende sin fin en ambas direcciones (por eso las flechas en los extremos).</li>
+<li>Es <strong>continua</strong>: no hay "huecos" entre un número y otro. Entre dos números reales siempre hay infinitos números más.</li>
+<li>Cada número real tiene <strong>una única posición</strong> en la recta.</li>
+</ul>
+<h3 id="propiedades-importantes">Propiedades importantes<a class="headerlink" href="#propiedades-importantes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Orden total</strong></td>
+<td>Dos números reales siempre se pueden comparar: uno es menor, igual o mayor que el otro.</td>
+</tr>
+<tr>
+<td><strong>Densidad</strong></td>
+<td>Entre dos números reales distintos siempre hay otro número real. Por ejemplo, entre 1.5 y 1.6 está 1.55, y entre 1.55 y 1.6 está 1.575… ¡y así hasta el infinito!</td>
+</tr>
+<tr>
+<td><strong>Completitud</strong></td>
+<td>La recta real no tiene "saltos". A diferencia de los números racionales, los números reales llenan toda la recta sin dejar espacios.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-propiedades-de-la-igualdad">2. Propiedades de la Igualdad<a class="headerlink" href="#2-propiedades-de-la-igualdad" title="Permanent link">&para;</a></h2>
+<p>Cuando decimos que dos números son iguales (a = b), se cumplen estas propiedades:</p>
+<h3 id="propiedades-de-la-igualdad">Propiedades de la igualdad<a class="headerlink" href="#propiedades-de-la-igualdad" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Significado</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reflexiva</strong></td>
+<td>Todo número es igual a sí mismo</td>
+<td>5 = 5</td>
+</tr>
+<tr>
+<td><strong>Simétrica</strong></td>
+<td>Si a = b, entonces b = a</td>
+<td>Si x = 3, entonces 3 = x</td>
+</tr>
+<tr>
+<td><strong>Transitiva</strong></td>
+<td>Si a = b y b = c, entonces a = c</td>
+<td>Si x = y y y = 5, entonces x = 5</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-relacion-de-orden-en-los-numeros-reales">3. Relación de Orden en los Números Reales<a class="headerlink" href="#3-relacion-de-orden-en-los-numeros-reales" title="Permanent link">&para;</a></h2>
+<p>Los números reales tienen un orden natural. Decimos que <strong>a es menor que b</strong> (a &lt; b) si a está a la izquierda de b en la recta real.</p>
+<h3 id="propiedades-de-la-relacion-de-orden">Propiedades de la relación de orden<a class="headerlink" href="#propiedades-de-la-relacion-de-orden" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Significado</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tricotomía</strong></td>
+<td>Dados dos números a y b, solo una es cierta: a &lt; b, a = b, o a &gt; b</td>
+<td>-3 &lt; 2, 4 = 4, 7 &gt; 0</td>
+</tr>
+<tr>
+<td><strong>Transitiva</strong></td>
+<td>Si a &lt; b y b &lt; c, entonces a &lt; c</td>
+<td>Si 2 &lt; 5 y 5 &lt; 10, entonces 2 &lt; 10</td>
+</tr>
+<tr>
+<td><strong>Antisimétrica</strong></td>
+<td>Si a ≤ b y b ≤ a, entonces a = b</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Aditiva</strong></td>
+<td>Si a &lt; b, entonces a + c &lt; b + c</td>
+<td>Si 3 &lt; 7, entonces 3 + 2 &lt; 7 + 2</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-operaciones-algebraicas-con-numeros-reales">4. Operaciones Algebraicas con Números Reales<a class="headerlink" href="#4-operaciones-algebraicas-con-numeros-reales" title="Permanent link">&para;</a></h2>
+<p>Los números reales se pueden <strong>sumar, restar, multiplicar y dividir</strong> (excepto por cero). Estas operaciones siguen reglas bien definidas.</p>
+<h3 id="suma-y-resta">Suma y resta<a class="headerlink" href="#suma-y-resta" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Regla</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Signos iguales → se suman y se conserva el signo</td>
+<td>5 + 3 = 8,  (-5) + (-3) = -8</td>
+</tr>
+<tr>
+<td>Signos diferentes → se restan y se pone el signo del mayor</td>
+<td>5 + (-3) = 2,  (-5) + 3 = -2</td>
+</tr>
+<tr>
+<td>Restar un número es lo mismo que sumar su inverso aditivo</td>
+<td>5 – 3 = 5 + (-3)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="multiplicacion-y-division">Multiplicación y división<a class="headerlink" href="#multiplicacion-y-division" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Regla</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Signos iguales → resultado positivo</td>
+<td>5 × 3 = 15,  (-5) × (-3) = 15</td>
+</tr>
+<tr>
+<td>Signos diferentes → resultado negativo</td>
+<td>5 × (-3) = -15,  (-5) × 3 = -15</td>
+</tr>
+<tr>
+<td>Dividir entre cero <strong>no está definido</strong></td>
+<td>5 ÷ 0 no existe</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inverso-aditivo">Inverso Aditivo<a class="headerlink" href="#inverso-aditivo" title="Permanent link">&para;</a></h3>
+<p>El <strong>inverso aditivo</strong> de un número a es el número que, <strong>sumado con a, da cero</strong>. Es simplemente <strong>cambiarle el signo</strong> al número.</p>
+<ul>
+<li>El inverso aditivo de <strong>5</strong> es <strong>-5</strong>, porque 5 + (-5) = 0.</li>
+<li>El inverso aditivo de <strong>-8</strong> es <strong>8</strong>, porque (-8) + 8 = 0.</li>
+<li>El inverso aditivo de <strong>0</strong> es <strong>0</strong>, porque 0 + 0 = 0.</li>
+<li>El inverso aditivo de <strong>√2</strong> es <strong>-√2</strong>, porque √2 + (-√2) = 0.</li>
+<li>El inverso aditivo de <strong>-¾</strong> es <strong>¾</strong>, porque -¾ + ¾ = 0.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Número</th>
+<th>Inverso Aditivo</th>
+<th>Suma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>-7</td>
+<td>7 + (-7) = 0</td>
+</tr>
+<tr>
+<td>-4</td>
+<td>4</td>
+<td>(-4) + 4 = 0</td>
+</tr>
+<tr>
+<td>½</td>
+<td>-½</td>
+<td>½ + (-½) = 0</td>
+</tr>
+</tbody>
+</table>
+<p>También se le llama <strong>opuesto</strong> de un número. Sirve para <strong>restar</strong>: restar un número es sumar su inverso aditivo.</p>
+<blockquote>
+<p><strong>Fórmula:</strong>  a – b = a + (<strong>inverso aditivo de b</strong>)</p>
+</blockquote>
+<hr />
+<h3 id="reciproco-de-un-numero">Recíproco de un número<a class="headerlink" href="#reciproco-de-un-numero" title="Permanent link">&para;</a></h3>
+<p>El <strong>recíproco</strong> (o <strong>inverso multiplicativo</strong>) de un número a (distinto de cero) es el número que, <strong>multiplicado por a, da 1</strong>. Se obtiene <strong>invirtiendo la fracción</strong>:</p>
+<ul>
+<li>El recíproco de <strong>5</strong> es <strong>⅕</strong> (un quinto), porque 5 × ⅕ = 1.</li>
+<li>El recíproco de <strong>-3</strong> es <strong>-⅓</strong>, porque (-3) × (-⅓) = 1.</li>
+<li>El recíproco de <strong>½</strong> es <strong>2</strong>, porque ½ × 2 = 1.</li>
+<li>El recíproco de <strong>-¾</strong> es <strong>-⁴⁄₃</strong>, porque (-¾) × (-⁴⁄₃) = 1.</li>
+<li>El recíproco de <strong>√2</strong> es <strong>1/√2</strong>, porque √2 × 1/√2 = 1.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Número</th>
+<th>Recíproco</th>
+<th>Multiplicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7</td>
+<td>1/7</td>
+<td>7 × 1/7 = 1</td>
+</tr>
+<tr>
+<td>-4</td>
+<td>-&frac14;</td>
+<td>(-4) × (-&frac14;) = 1</td>
+</tr>
+<tr>
+<td>&#8532;</td>
+<td>3/2</td>
+<td>(&#8532;) × (3/2) = 1</td>
+</tr>
+<tr>
+<td>0.5</td>
+<td>2</td>
+<td>0.5 × 2 = 1</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>El cero no tiene recíproco</strong> porque no existe ningún número que multiplicado por 0 dé 1.</p>
+</blockquote>
+<p>El recíproco sirve para <strong>dividir</strong>: dividir entre un número es lo mismo que multiplicar por su recíproco.</p>
+<blockquote>
+<p><strong>Fórmula:</strong>  a ÷ b = a × (<strong>recíproco de b</strong>),  con b ≠ 0</p>
+</blockquote>
+<h3 id="comparacion-rapida">Comparación rápida<a class="headerlink" href="#comparacion-rapida" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Operación</th>
+<th>Resultado</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inverso aditivo</td>
+<td>Suma</td>
+<td>Da <strong>0</strong></td>
+<td>5 + (-5) = 0</td>
+</tr>
+<tr>
+<td>Recíproco</td>
+<td>Multiplicación</td>
+<td>Da <strong>1</strong></td>
+<td>5 × ⅕ = 1</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-valor-absoluto">5. Valor Absoluto<a class="headerlink" href="#5-valor-absoluto" title="Permanent link">&para;</a></h2>
+<p>El <strong>valor absoluto</strong> de un número es su distancia del cero en la recta real. Como las distancias siempre son positivas (no puedes estar a −5 metros de algo), el valor absoluto <strong>siempre es un número no negativo</strong>.</p>
+<blockquote>
+<p><strong>Definición (nivel secundaria/preparatoria):</strong> El valor absoluto de un número <em>a</em>, escrito |<em>a</em>|, es:</p>
+<ul>
+<li>Si <em>a</em> es <strong>positivo</strong> o <strong>cero</strong>, entonces |<em>a</em>| = <em>a</em></li>
+<li>Si <em>a</em> es <strong>negativo</strong>, entonces |<em>a</em>| = −<em>a</em> (es decir, le quitamos el signo)</li>
+</ul>
+</blockquote>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li>|5| = 5 porque 5 ya es positivo</li>
+<li>|−5| = 5 porque −5 es negativo, y al quitarle el signo queda 5</li>
+<li>|0| = 0</li>
+<li>|−12| = 12</li>
+<li>|+7| = 7</li>
+</ul>
+<p><strong>Interpretación geométrica:</strong> |<em>a</em>| es la distancia entre el punto <em>a</em> y el punto 0 en la recta real. Así, |3| = 3 porque el 3 está a 3 unidades del cero, y |−3| = 3 porque el −3 también está a 3 unidades del cero (pero del lado izquierdo).</p>
+<p><strong>Propiedades importantes:</strong>
+* Positividad: <span class="arithmatex">\(|a| \geq 0\)</span>
+* Si <span class="arithmatex">\(a&lt;b\)</span>, entonces <span class="arithmatex">\(|b - a| = b-a\)</span>
+* Si <span class="arithmatex">\(a&gt;b\)</span>, entonces <span class="arithmatex">\(|b - a| = a - b\)</span></p>
+<hr />
+<h2 id="6-distributividad">6. Distributividad<a class="headerlink" href="#6-distributividad" title="Permanent link">&para;</a></h2>
+<p>La <strong>multiplicación es distributiva respecto a la suma</strong> (y la resta). Esto significa que puedes "expandir" o "factorizar" expresiones con paréntesis.</p>
+<blockquote>
+<p><strong>Fórmula:</strong>  a × (b + c) = a × b + a × c</p>
+</blockquote>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li>3 × (4 + 5) = 3 × 4 + 3 × 5 = 12 + 15 = 27</li>
+<li>2 × (7 − 3) = 2 × 7 − 2 × 3 = 14 − 6 = 8</li>
+<li>(6 + 2) × 5 = 6 × 5 + 2 × 5 = 30 + 10 = 40</li>
+</ul>
+<p>La distributividad funciona en <strong>ambos sentidos</strong>:</p>
+<ul>
+<li><strong>Expandir:</strong> a(b + c) → ab + ac</li>
+<li><strong>Factorizar:</strong> ab + ac → a(b + c)</li>
+</ul>
+<p>Factorizar es útil para simplificar fracciones:</p>
+<div class="arithmatex">\[\frac{6}{9} = \frac{2 \times 3}{3 \times 3} = \frac{2}{3}\]</div>
+<h3 id="casos-importantes">Casos importantes<a class="headerlink" href="#casos-importantes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Expresión</th>
+<th>Expandida</th>
+<th>Simplificada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(a + b)(c + d)</td>
+<td>ac + ad + bc + bd</td>
+<td>—</td>
+</tr>
+<tr>
+<td>(a + b)²</td>
+<td>a² + 2ab + b²</td>
+<td>—</td>
+</tr>
+<tr>
+<td>(a − b)²</td>
+<td>a² − 2ab + b²</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-cambio-de-signo-multiplicar-por-un-numero-negativo">7. Cambio de signo (multiplicar por un número negativo)<a class="headerlink" href="#7-cambio-de-signo-multiplicar-por-un-numero-negativo" title="Permanent link">&para;</a></h2>
+<p>Multiplicar un número por <strong>−1</strong> invierte su signo:</p>
+<blockquote>
+<p><strong>Fórmula:</strong>  (−1) × a = −a</p>
+</blockquote>
+<p>Multiplicar por <strong>−1</strong> es equivalente al <strong>inverso aditivo</strong>: cambiarle el signo.</p>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li>(−1) × 7 = −7</li>
+<li>(−1) × (−5) = 5</li>
+<li>−(a − b) = −a + b (aplicando distributividad)</li>
+</ul>
+<h3 id="regla-practica">Regla práctica<a class="headerlink" href="#regla-practica" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Multiplicar por</th>
+<th>Efecto</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>+1</strong></td>
+<td>No cambia nada</td>
+<td>5 × 1 = 5</td>
+</tr>
+<tr>
+<td><strong>−1</strong></td>
+<td>Invierte el signo</td>
+<td>5 × (−1) = −5</td>
+</tr>
+<tr>
+<td><strong>+2</strong></td>
+<td>Duplica, mismo signo</td>
+<td>5 × 2 = 10</td>
+</tr>
+<tr>
+<td><strong>−2</strong></td>
+<td>Duplica, signo invertido</td>
+<td>5 × (−2) = −10</td>
+</tr>
+</tbody>
+</table>
+<h3 id="importante-resolver-parentesis-primero">Importante: resolver paréntesis primero<a class="headerlink" href="#importante-resolver-parentesis-primero" title="Permanent link">&para;</a></h3>
+<p>Cuando hay un signo negativo <strong>delante</strong> de un paréntesis, hay que aplicarle la distributividad:</p>
+<ul>
+<li>−(a + b) = −a − b</li>
+<li>−(a − b) = −a + b</li>
+<li>−(−a) = a</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<div class="arithmatex">\[-(3 + 5 - 2) = -3 - 5 + 2 = -6\]</div>
+<hr />
+<h2 id="8-orden-de-operaciones-pemdas">8. Orden de operaciones (PEMDAS)<a class="headerlink" href="#8-orden-de-operaciones-pemdas" title="Permanent link">&para;</a></h2>
+<p>Cuando una expresión tiene varias operaciones, hay que seguir un <strong>orden</strong> para obtener el resultado correcto. Se conoce como <strong>PEMDAS</strong> (o "PEMDAS" en español):</p>
+<table>
+<thead>
+<tr>
+<th>Letra</th>
+<th>Significado</th>
+<th>Operaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong></td>
+<td>Paréntesis</td>
+<td>Primero: resolver todo lo que esté dentro de paréntesis, corchetes o llaves</td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>Exponentes</td>
+<td>Segundo: potencias y raíces</td>
+</tr>
+<tr>
+<td><strong>M</strong></td>
+<td>Multiplicación</td>
+<td>Tercero: multiplicaciones de izquierda a derecha</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>División</td>
+<td>Tercero: divisiones de izquierda a derecha</td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td>Adición (Suma)</td>
+<td>Cuarto: sumas de izquierda a derecha</td>
+</tr>
+<tr>
+<td><strong>S</strong></td>
+<td>Sustracción (Resta)</td>
+<td>Quinto: restas de izquierda a derecha</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Importante:</strong> La M y la D están al mismo nivel — se hacen de <strong>izquierda a derecha</strong>, lo mismo para la A y la S.</p>
+</blockquote>
+<p><strong>Ejemplo paso a paso:</strong></p>
+<div class="arithmatex">\[3 + 2 \times (4 - 1)^2\]</div>
+<ol>
+<li><strong>P</strong> (paréntesis): 4 − 1 = 3  →  3 + 2 × <strong>3</strong>²</li>
+<li><strong>E</strong> (exponentes): 3² = 9  →  3 + 2 × <strong>9</strong></li>
+<li><strong>M</strong> (multiplicación): 2 × 9 = 18  →  3 + <strong>18</strong></li>
+<li><strong>A</strong> (suma): 3 + 18 = <strong>21</strong></li>
+</ol>
+<h3 id="errores-comunes">Errores comunes<a class="headerlink" href="#errores-comunes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Expresión</th>
+<th>Error (PEMDAS mal aplicado)</th>
+<th>Correcto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 ÷ 4 × 2</td>
+<td>Hacer la multiplicación primero: 8 ÷ (4 × 2) = 1</td>
+<td>De izquierda a derecha: (8 ÷ 4) × 2 = 4</td>
+</tr>
+<tr>
+<td>2 + 3 × 4</td>
+<td>Sumar primero: (2 + 3) × 4 = 20</td>
+<td>Multiplicar primero: 2 + (3 × 4) = 14</td>
+</tr>
+</tbody>
+</table>
+<h3 id="el-meme-clasico">El meme clásico<a class="headerlink" href="#el-meme-clasico" title="Permanent link">&para;</a></h3>
+<p>Y precisamente por esto los memes de PEMDAS se vuelven virales... 😄</p>
+<p><img alt="Meme de orden de operaciones" src="../meme_pemdas.png" /></p>
+<p><em>¿Te suena familiar? Probablemente alguien falló en recordar que la M viene antes que la A.</em></p>
+<hr />
+<h2 id="9-propiedades-de-las-potencias-exponentes-enteros">9. Propiedades de las Potencias (exponentes enteros)<a class="headerlink" href="#9-propiedades-de-las-potencias-exponentes-enteros" title="Permanent link">&para;</a></h2>
+<p>Una <strong>potencia</strong> es una forma abreviada de escribir un producto repetido: <span class="arithmatex">\(a^n\)</span> significa "<span class="arithmatex">\(a\)</span> multiplicado por sí mismo <span class="arithmatex">\(n\)</span> veces".</p>
+<blockquote>
+<p><strong>Base:</strong> el número que se repite
+<strong>Exponente:</strong> cuántas veces se repite</p>
+</blockquote>
+<div class="arithmatex">\[a^n = \underbrace{a \times a \times \cdots \times a}_{n \text{ veces}}\]</div>
+<h3 id="propiedades-fundamentales">Propiedades fundamentales<a class="headerlink" href="#propiedades-fundamentales" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Fórmula</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Producto de potencias (misma base)</strong></td>
+<td><span class="arithmatex">\(a^m \times a^n = a^{m+n}\)</span></td>
+<td><span class="arithmatex">\(3^2 \times 3^4 = 3^{2+4} = 3^6\)</span></td>
+</tr>
+<tr>
+<td><strong>Cociente de potencias (misma base)</strong></td>
+<td><span class="arithmatex">\(a^m \div a^n = a^{m-n}\)</span></td>
+<td><span class="arithmatex">\(5^4 \div 5^2 = 5^{4-2} = 5^2\)</span></td>
+</tr>
+<tr>
+<td><strong>Potencia de una potencia</strong></td>
+<td><span class="arithmatex">\((a^m)^n = a^{m \times n}\)</span></td>
+<td><span class="arithmatex">\((2^3)^2 = 2^{3 \times 2} = 2^6\)</span></td>
+</tr>
+<tr>
+<td><strong>Potencia de un producto</strong></td>
+<td><span class="arithmatex">\((a \times b)^n = a^n \times b^n\)</span></td>
+<td><span class="arithmatex">\((3 \times 4)^2 = 3^2 \times 4^2\)</span></td>
+</tr>
+<tr>
+<td><strong>Potencia de un cociente</strong></td>
+<td><span class="arithmatex">\((a \div b)^n = a^n \div b^n\)</span></td>
+<td><span class="arithmatex">\((6 \div 2)^2 = 6^2 \div 2^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="casos-especiales">Casos especiales<a class="headerlink" href="#casos-especiales" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Caso</th>
+<th>Regla</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(a^0\)</span></td>
+<td><span class="arithmatex">\(= 1\)</span> (para <span class="arithmatex">\(a \neq 0\)</span>)</td>
+<td><span class="arithmatex">\(5^0 = 1\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a^1\)</span></td>
+<td><span class="arithmatex">\(= a\)</span></td>
+<td><span class="arithmatex">\(7^1 = 7\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a^{-n}\)</span></td>
+<td><span class="arithmatex">\(= 1 / a^n\)</span></td>
+<td><span class="arithmatex">\(2^{-3} = 1 / 2^3 = 1/8\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(1^n\)</span></td>
+<td><span class="arithmatex">\(= 1\)</span></td>
+<td><span class="arithmatex">\(1^{100} = 1\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((-a)^n\)</span> (n par)</td>
+<td><span class="arithmatex">\(= a^n\)</span></td>
+<td><span class="arithmatex">\((-3)^4 = 3^4 = 81\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((-a)^n\)</span> (n impar)</td>
+<td><span class="arithmatex">\(= -a^n\)</span></td>
+<td><span class="arithmatex">\((-3)^3 = -3^3 = -27\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="errores-comunes_1">Errores comunes<a class="headerlink" href="#errores-comunes_1" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Corrección</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(a^m \times a^n = a^{m \times n}\)</span></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((a + b)^n = a^n + b^n\)</span></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a^m \div a^n = a^{m \div n}\)</span></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a^{-n} = -a^n\)</span></td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-la-raiz-n-esima-de-un-numero-real">10. La raíz n-ésima de un número real<a class="headerlink" href="#10-la-raiz-n-esima-de-un-numero-real" title="Permanent link">&para;</a></h2>
+<p>Hasta ahora hemos hablado de <strong>elevar un número a una potencia</strong> (por ejemplo, 3² = 9). La <strong>raíz n-ésima</strong> es la operación inversa: cuando conocemos el resultado y la potencia, buscamos la base.</p>
+<h3 id="definicion">Definición<a class="headerlink" href="#definicion" title="Permanent link">&para;</a></h3>
+<p>Si <span class="arithmatex">\(a^n = b\)</span>, entonces <span class="arithmatex">\(a\)</span> es una <strong>raíz n-ésima</strong> de <span class="arithmatex">\(b\)</span>. Se escribe así:</p>
+<div class="arithmatex">\[a = \sqrt[n]{b}\]</div>
+<p>donde:
+- <span class="arithmatex">\(n\)</span> es el <strong>índice</strong> de la raíz (indica qué tipo de raíz)
+- <span class="arithmatex">\(b\)</span> es el <strong>radicando</strong> (el número dentro de la raíz)
+- el símbolo <span class="arithmatex">\(\sqrt{}\)</span> es el <strong>símbolo de raíz</strong></p>
+<h3 id="ejemplos-basicos">Ejemplos básicos<a class="headerlink" href="#ejemplos-basicos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Se lee</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\sqrt{9}\)</span></td>
+<td>raíz cuadrada de 9</td>
+<td>"¿Qué número al cuadrado da 9?" → 3</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sqrt[3]{8}\)</span></td>
+<td>raíz cúbica de 8</td>
+<td>"¿Qué número al cubo da 8?" → 2</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sqrt[4]{16}\)</span></td>
+<td>raíz cuarta de 16</td>
+<td>"¿Qué número elevado a la 4ta da 16?" → 2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="la-raiz-cuadrada-especial">La raíz cuadrada especial<a class="headerlink" href="#la-raiz-cuadrada-especial" title="Permanent link">&para;</a></h3>
+<p>La <strong>raíz cuadrada</strong> (<span class="arithmatex">\(n = 2\)</span>) es la más común. Cuando ves <span class="arithmatex">\(\sqrt{9}\)</span>, sin índice, siempre se entiende que es raíz cuadrada:</p>
+<div class="arithmatex">\[\sqrt{9} = 3 \quad \text{porque} \quad 3^2 = 9\]</div>
+<blockquote>
+<p>⚠️ <strong>¡Atención!</strong> El número −3 también cumple (−3)² = 9. Sin embargo, por convención, <strong>la raíz cuadrada se define como el valor positivo</strong>. Por eso <span class="arithmatex">\(\sqrt{9} = 3\)</span> (no −3). En cambio, la raíz cúbica SÍ puede ser negativa: <span class="arithmatex">\(\sqrt[3]{-8} = -2\)</span> porque <span class="arithmatex">\((−2)^3 = -8\)</span>.</p>
+</blockquote>
+<h3 id="raices-de-numeros-especiales">Raíces de números especiales<a class="headerlink" href="#raices-de-numeros-especiales" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Raíz</th>
+<th>Resultado</th>
+<th>Verificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\sqrt{1}\)</span></td>
+<td>1</td>
+<td>1² = 1</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sqrt{0}\)</span></td>
+<td>0</td>
+<td>0² = 0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sqrt{144}\)</span></td>
+<td>12</td>
+<td>12² = 144</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sqrt{2}\)</span></td>
+<td>≈ 1.4142...</td>
+<td>es un número <strong>irracional</strong></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sqrt[3]{-27}\)</span></td>
+<td>−3</td>
+<td>(−3)³ = −27</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sqrt[4]{81}\)</span></td>
+<td>3</td>
+<td>3⁴ = 81</td>
+</tr>
+</tbody>
+</table>
+<h3 id="propiedades-de-las-raices">Propiedades de las raíces<a class="headerlink" href="#propiedades-de-las-raices" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Fórmula</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Producto de raíces del mismo índice</strong></td>
+<td><span class="arithmatex">\(\sqrt[n]{a} \times \sqrt[n]{b} = \sqrt[n]{a \times b}\)</span></td>
+<td><span class="arithmatex">\(\sqrt{2} \times \sqrt{8} = \sqrt{16} = 4\)</span></td>
+</tr>
+<tr>
+<td><strong>Cociente de raíces del mismo índice</strong></td>
+<td><span class="arithmatex">\(\dfrac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\dfrac{a}{b}}\)</span></td>
+<td><span class="arithmatex">\(\sqrt{12} / \sqrt{3} = \sqrt{4} = 2\)</span></td>
+</tr>
+<tr>
+<td><strong>Raíz de una raíz</strong></td>
+<td><span class="arithmatex">\(\sqrt[m]{\sqrt[n]{a}} = \sqrt[m \times n]{a}\)</span></td>
+<td><span class="arithmatex">\(\sqrt{\sqrt{16}} = \sqrt[4]{16} = 2\)</span></td>
+</tr>
+<tr>
+<td><strong>Raíz de una potencia</strong></td>
+<td><span class="arithmatex">\(\sqrt[n]{a^n} = a\)</span> (si <span class="arithmatex">\(a \geq 0\)</span>)</td>
+<td><span class="arithmatex">\(\sqrt{5^2} = 5\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="conexion-con-las-potencias">Conexión con las potencias<a class="headerlink" href="#conexion-con-las-potencias" title="Permanent link">&para;</a></h3>
+<p>Las raíces y las potencias son operaciones <strong>inversas</strong>. Esta conexión es muy útil para simplificar expresiones:</p>
+<table>
+<thead>
+<tr>
+<th>Raíz</th>
+<th>Como potencia</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\sqrt{a}\)</span></td>
+<td><span class="arithmatex">\(a^{1/2}\)</span></td>
+<td><span class="arithmatex">\(\sqrt{a}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sqrt[3]{a}\)</span></td>
+<td><span class="arithmatex">\(a^{1/3}\)</span></td>
+<td>raíz cúbica</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\sqrt[n]{a}\)</span></td>
+<td><span class="arithmatex">\(a^{1/n}\)</span></td>
+<td>raíz n-ésima</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>Regla fácil:</strong> la raíz n-ésima de <span class="arithmatex">\(a\)</span> es lo mismo que elevar <span class="arithmatex">\(a\)</span> a la potencia <span class="arithmatex">\(1/n\)</span>.</p>
+</blockquote>
+<hr />
+<h2 id="11-la-definicion-1n-el-reciproco-del-exponente">11. La definición 1/n (el recíproco del exponente)<a class="headerlink" href="#11-la-definicion-1n-el-reciproco-del-exponente" title="Permanent link">&para;</a></h2>
+<p>Recordemos que el <strong>recíproco</strong> (o inverso) de un número es cuando le das vuelta. El recíproco de 2 es <span class="arithmatex">\(\dfrac{1}{2}\)</span>, el de <span class="arithmatex">\(\dfrac{3}{4}\)</span> es <span class="arithmatex">\(\dfrac{4}{3}\)</span>.</p>
+<p>Con los exponentes pasa algo similar, pero el <strong>recíproco del exponente</strong> (es decir, <span class="arithmatex">\(\frac{1}{n}\)</span>) nos da <strong>raíces</strong>.</p>
+<h3 id="la-idea-central">La idea central<a class="headerlink" href="#la-idea-central" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Si <span class="arithmatex">\(a^n = b\)</span>, entonces <span class="arithmatex">\(a = b^{1/n}\)</span>.</p>
+</blockquote>
+<p>El exponente <span class="arithmatex">\(\dfrac{1}{n}\)</span> significa: "buscar la raíz n-ésima".</p>
+<h3 id="ejemplos-concretos">Ejemplos concretos<a class="headerlink" href="#ejemplos-concretos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Exponente</th>
+<th>Significado</th>
+<th>Ejemplo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(a^{1/2}\)</span></td>
+<td>Buscar la raíz cuadrada</td>
+<td><span class="arithmatex">\(36^{1/2}\)</span></td>
+<td><span class="arithmatex">\(\sqrt{36} = 6\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a^{1/3}\)</span></td>
+<td>Buscar la raíz cúbica</td>
+<td><span class="arithmatex">\(8^{1/3}\)</span></td>
+<td><span class="arithmatex">\(\sqrt[3]{8} = 2\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a^{1/4}\)</span></td>
+<td>Buscar la raíz cuarta</td>
+<td><span class="arithmatex">\(16^{1/4}\)</span></td>
+<td><span class="arithmatex">\(\sqrt[4]{16} = 2\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(a^{1/5}\)</span></td>
+<td>Buscar la raíz quinta</td>
+<td><span class="arithmatex">\(32^{1/5}\)</span></td>
+<td><span class="arithmatex">\(\sqrt[5]{32} = 2\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-paso-a-paso">Ejemplo paso a paso<a class="headerlink" href="#ejemplo-paso-a-paso" title="Permanent link">&para;</a></h3>
+<p><strong>¿Cuánto es <span class="arithmatex">\(64^{1/3}\)</span>?</strong></p>
+<ol>
+<li><span class="arithmatex">\(64^{1/3}\)</span> significa "la raíz cúbica de 64"</li>
+<li>Nos preguntamos: ¿qué número elevado al cubo da 64?</li>
+<li><span class="arithmatex">\(4 \times 4 \times 4 = 64\)</span></li>
+<li>Entonces <span class="arithmatex">\(64^{1/3} = 4\)</span></li>
+</ol>
+<h3 id="la-logica-del-1n-en-una-tabla">La lógica del 1/n en una tabla<a class="headerlink" href="#la-logica-del-1n-en-una-tabla" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Si <span class="arithmatex">\(a^{1/n}\)</span> elevado a la <span class="arithmatex">\(n\)</span>...</th>
+<th>Resultado</th>
+<th>Explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\((a^{1/n})^n\)</span></td>
+<td><span class="arithmatex">\(a^{1/n \times n} = a^1 = a\)</span></td>
+<td>Por la propiedad de potencias</td>
+</tr>
+<tr>
+<td>Entonces <span class="arithmatex">\(a^{1/n}\)</span> es la <strong>raíz n-ésima</strong> de <span class="arithmatex">\(a\)</span></td>
+<td><span class="arithmatex">\(\sqrt[n]{a}\)</span></td>
+<td>Definición</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>Para recordar:</strong> cuando el exponente es una fracción <span class="arithmatex">\(\dfrac{1}{n}\)</span>, el <strong>denominador</strong> te dice qué raíz buscar. El <strong>numerador</strong> 1 te dice que estás buscando la "primera" raíz (la normal).</p>
+</blockquote>
+<hr />
+<h2 id="12-potencias-racionales-exponentes-fraccionarios">12. Potencias racionales (exponentes fraccionarios)<a class="headerlink" href="#12-potencias-racionales-exponentes-fraccionarios" title="Permanent link">&para;</a></h2>
+<p>Ya sabes que <span class="arithmatex">\(a^{1/n}\)</span> es la raíz n-ésima de <span class="arithmatex">\(a\)</span>. ¿Qué pasa cuando el exponente es una fracción más general, como <span class="arithmatex">\(\dfrac{m}{n}\)</span>?</p>
+<h3 id="definicion_1">Definición<a class="headerlink" href="#definicion_1" title="Permanent link">&para;</a></h3>
+<p>Una <strong>potencia racional</strong> es aquella donde el exponente es una fracción de números enteros: <span class="arithmatex">\(\dfrac{m}{n}\)</span>. Se define así:</p>
+<div class="arithmatex">\[a^{m/n} = \sqrt[n]{a^m} = (\sqrt[n]{a})^m\]</div>
+<p>Es decir: primero elevas a la <span class="arithmatex">\(m\)</span>, luego sacas la raíz <span class="arithmatex">\(n\)</span>-ésima, o al revés — el resultado es el mismo.</p>
+<h3 id="ejemplos">Ejemplos<a class="headerlink" href="#ejemplos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Expresión</th>
+<th>Interpretación</th>
+<th>Desarrollo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(8^{2/3}\)</span></td>
+<td>"(raíz cúbica de 8) al cuadrado"</td>
+<td><span class="arithmatex">\(\sqrt[3]{8} = 2\)</span>, luego <span class="arithmatex">\(2^2 = 4\)</span></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(16^{3/4}\)</span></td>
+<td>"(raíz cuarta de 16) al cubo"</td>
+<td><span class="arithmatex">\(\sqrt[4]{16} = 2\)</span>, luego <span class="arithmatex">\(2^3 = 8\)</span></td>
+<td>8</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(9^{3/2}\)</span></td>
+<td>"(raíz cuadrada de 9) al cubo"</td>
+<td><span class="arithmatex">\(\sqrt{9} = 3\)</span>, luego <span class="arithmatex">\(3^3 = 27\)</span></td>
+<td>27</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(4^{5/2}\)</span></td>
+<td>"(raíz cuadrada de 4) a la 5ta"</td>
+<td><span class="arithmatex">\(\sqrt{4} = 2\)</span>, luego <span class="arithmatex">\(2^5 = 32\)</span></td>
+<td>32</td>
+</tr>
+</tbody>
+</table>
+<h3 id="paso-a-paso-con-823">Paso a paso con <span class="arithmatex">\(8^{2/3}\)</span><a class="headerlink" href="#paso-a-paso-con-823" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Identifica el numerador y el denominador:</strong> <span class="arithmatex">\(m = 2\)</span>, <span class="arithmatex">\(n = 3\)</span></li>
+<li><strong>El denominador <span class="arithmatex">\(n\)</span> dice qué raíz:</strong> raíz cúbica (<span class="arithmatex">\(\sqrt[3]{}\)</span>)</li>
+<li><strong>El numerador <span class="arithmatex">\(m\)</span> dice qué potencia:</strong> elevar a la 2</li>
+<li><strong>Aplica:</strong> <span class="arithmatex">\(8^{2/3} = (\sqrt[3]{8})^2 = (2)^2 = 4\)</span></li>
+<li><strong>Verifica:</strong> si <span class="arithmatex">\((8^{2/3})^3 = 8^2 = 64\)</span>, entonces <span class="arithmatex">\(8^{2/3} = \sqrt[3]{64} = 4\)</span> ✅</li>
+</ol>
+<h3 id="propiedades-que-siguen-vigentes">Propiedades que siguen vigentes<a class="headerlink" href="#propiedades-que-siguen-vigentes" title="Permanent link">&para;</a></h3>
+<p>Todas las propiedades de las potencias que ya conocías funcionan también con exponentes racionales:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Fórmula</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Producto</strong></td>
+<td><span class="arithmatex">\(a^{m/n} \times a^{p/q} = a^{m/n + p/q}\)</span></td>
+<td><span class="arithmatex">\(4^{1/2} \times 4^{1/2} = 4^{1} = 4\)</span></td>
+</tr>
+<tr>
+<td><strong>Potencia de potencia</strong></td>
+<td><span class="arithmatex">\((a^{m/n})^{p/q} = a^{m/n \times p/q}\)</span></td>
+<td><span class="arithmatex">\((9^{1/2})^3 = 9^{3/2} = 27\)</span></td>
+</tr>
+<tr>
+<td><strong>Cociente</strong></td>
+<td><span class="arithmatex">\(a^{m/n} / a^{p/q} = a^{m/n - p/q}\)</span></td>
+<td><span class="arithmatex">\(8^{2/3} / 8^{1/3} = 8^{1/3} = 2\)</span></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
