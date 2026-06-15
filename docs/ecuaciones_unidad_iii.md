@@ -98,6 +98,14 @@ $$
 
 ### 2.4 Ejemplos resueltos
 
+**Ejemplo 0** (introductorio, con animación):
+
+Veamos cómo se resuelve la ecuación $2x + 5 = 9$ paso a paso. La siguiente animación muestra, junto a la manipulación algebraica, una **balanza** que representa ambos miembros de la ecuación: las operaciones que hacemos en algebra se corresponden con quitar o agregar el mismo peso en ambos lados de la balanza.
+
+![Resolución paso a paso de la ecuación 2x + 5 = 9](./ecuacion_lineal_resolucion.mp4)
+
+> **Nota sobre la reproducción en GitHub:** github.com no embebe videos en archivos Markdown. Para ver la animación incrustada en este documento, abre el archivo en el editor web de GitHub y arrastra `ecuacion_lineal_resolucion.mp4` dentro del área de edición — GitHub lo sube a su CDN y reemplaza la línea de arriba con un reproductor de video incrustado.
+
 **Ejemplo 1** (problema 1.a de la guía):
 
 $$
