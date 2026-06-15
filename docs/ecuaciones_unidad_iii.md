@@ -25,7 +25,10 @@ Una **raíz** o **solución** de una ecuación es el valor (o valores) de la var
 
 **Ejemplo:** en la ecuación $3x - 2 = 10$, el valor $x = 4$ es una solución, ya que al sustituir:
 
-\[3(4) - 2 = 12 - 2 = 10 \checkmark\]
+$$
+3(4) - 2 = 12 - 2 = 10 \checkmark
+$$
+
 
 ### 1.3 Conjunto solución
 
@@ -54,7 +57,10 @@ Dos ecuaciones son equivalentes si se cumple alguna de las siguientes operacione
 
 Una **ecuación lineal** (también llamada **ecuación de primer grado**) es una ecuación donde la variable aparece elevada al exponente 1, es decir, la mayor potencia de la variable es 1. Su forma general es:
 
-\[ax + b = 0 \quad \text{o} \quad ax + b = cx + d\]
+$$
+ax + b = 0 \quad \text{o} \quad ax + b = cx + d
+$$
+
 
 donde $a, b, c, d$ son números reales con $a \neq 0$.
 
@@ -79,7 +85,10 @@ Para resolver una ecuación lineal, el objetivo es **aislar la variable** en uno
 
 Si $ax + b = 0$ con $a \neq 0$, entonces:
 
-\[x = -\frac{b}{a}\]
+$$
+x = -\frac{b}{a}
+$$
+
 
 ### 2.3 Tipos de soluciones
 
@@ -90,34 +99,99 @@ Si $ax + b = 0$ con $a \neq 0$, entonces:
 ### 2.4 Ejemplos resueltos
 
 **Ejemplo 1** (problema 1.a de la guía):
-\[3x - 2x = 5\]
-\[x = 5\]
-\[C.S. = \{5\}\]
+
+$$
+3x - 2x = 5
+$$
+
+$$
+x = 5
+$$
+
+$$
+C.S. = \{5\}
+$$
+
 
 **Ejemplo 2** (problema 1.f de la guía):
-\[\frac{1}{2}x + \frac{7}{4}x = 9\]
+
+$$
+\frac{1}{2}x + \frac{7}{4}x = 9
+$$
+
 
 Multiplicamos por el mcm(2, 4) = 4:
-\[2x + 7x = 36\]
-\[9x = 36\]
-\[x = 4\]
-\[C.S. = \{4\}\]
+
+$$
+2x + 7x = 36
+$$
+
+$$
+9x = 36
+$$
+
+$$
+x = 4
+$$
+
+$$
+C.S. = \{4\}
+$$
+
 
 **Ejemplo 3** (problema 1.m de la guía):
-\[2(x + 2) - 7 = 5\]
-\[2x + 4 - 7 = 5\]
-\[2x - 3 = 5\]
-\[2x = 8\]
-\[x = 4\]
-\[C.S. = \{4\}\]
+
+$$
+2(x + 2) - 7 = 5
+$$
+
+$$
+2x + 4 - 7 = 5
+$$
+
+$$
+2x - 3 = 5
+$$
+
+$$
+2x = 8
+$$
+
+$$
+x = 4
+$$
+
+$$
+C.S. = \{4\}
+$$
+
 
 **Ejemplo 4** (problema 1.o de la guía):
-\[4(2 - x) + 3(x + 1) = 15\]
-\[8 - 4x + 3x + 3 = 15\]
-\[11 - x = 15\]
-\[-x = 4\]
-\[x = -4\]
-\[C.S. = \{-4\}\]
+
+$$
+4(2 - x) + 3(x + 1) = 15
+$$
+
+$$
+8 - 4x + 3x + 3 = 15
+$$
+
+$$
+11 - x = 15
+$$
+
+$$
+-x = 4
+$$
+
+$$
+x = -4
+$$
+
+$$
+C.S. = \{-4\}
+$$
+
 
 ---
 
@@ -145,10 +219,22 @@ Problemas donde se mezclan dos soluciones de distinta concentración para obtene
 
 **Planteamiento:** sea $x$ los ml de la solución al 2%. Entonces los ml de la solución al 10% son $200 - x$.
 
-\[0.02x + 0.10(200 - x) = 0.05 \cdot 200\]
-\[0.02x + 20 - 0.10x = 10\]
-\[-0.08x = -10\]
-\[x = 125\]
+$$
+0.02x + 0.10(200 - x) = 0.05 \cdot 200
+$$
+
+$$
+0.02x + 20 - 0.10x = 10
+$$
+
+$$
+-0.08x = -10
+$$
+
+$$
+x = 125
+$$
+
 
 El enfermero debe mezclar **125 ml de la solución al 2%** y **75 ml de la solución al 10%**.
 
@@ -161,10 +247,22 @@ Problemas donde se pide encontrar números que cumplen ciertas relaciones.
 
 **Planteamiento:** sea $x$ el número menor. Entonces el mayor es $48 - x$.
 
-\[4x = 2(48 - x)\]
-\[4x = 96 - 2x\]
-\[6x = 96\]
-\[x = 16\]
+$$
+4x = 2(48 - x)
+$$
+
+$$
+4x = 96 - 2x
+$$
+
+$$
+6x = 96
+$$
+
+$$
+x = 16
+$$
+
 
 Los números son **16 y 32**.
 
@@ -177,7 +275,10 @@ Problemas donde se aplican descuentos, ganancias o comisiones.
 
 **Planteamiento:** el propietario recibe el 92% del precio de venta.
 
-\[C = 275{,}000 \cdot 0.92 = 253{,}000\]
+$$
+C = 275{,}000 \cdot 0.92 = 253{,}000
+$$
+
 
 El propietario recibe **L. 253,000**.
 
@@ -190,10 +291,22 @@ Problemas donde se aplica la relación fundamental: $d = v \cdot t$ (distancia =
 
 **Planteamiento:** sea $v$ la velocidad del más lento. La velocidad del más rápido es $v + 7$. Como van uno hacia el otro, las distancias se suman.
 
-\[v \cdot 4 + (v + 7) \cdot 4 = 540\]
-\[4v + 4v + 28 = 540\]
-\[8v = 512\]
-\[v = 64\]
+$$
+v \cdot 4 + (v + 7) \cdot 4 = 540
+$$
+
+$$
+4v + 4v + 28 = 540
+$$
+
+$$
+8v = 512
+$$
+
+$$
+v = 64
+$$
+
 
 Las velocidades son **64 y 71 millas por hora**.
 
@@ -206,12 +319,25 @@ Problemas donde varias personas o máquinas realizan un trabajo juntas.
 
 **Planteamiento:** María hace $\frac{1}{30}$ del trabajo por minuto, y Pedro hace $\frac{1}{20}$ por minuto. Sea $t$ el tiempo (en minutos) que tardan juntos.
 
-\[\frac{1}{30}t + \frac{1}{20}t = 1\]
+$$
+\frac{1}{30}t + \frac{1}{20}t = 1
+$$
+
 
 Multiplicamos por el mcm(30, 20) = 60:
-\[2t + 3t = 60\]
-\[5t = 60\]
-\[t = 12\]
+
+$$
+2t + 3t = 60
+$$
+
+$$
+5t = 60
+$$
+
+$$
+t = 12
+$$
+
 
 Juntos tardan **12 minutos**.
 
@@ -223,7 +349,10 @@ Juntos tardan **12 minutos**.
 
 Una **ecuación cuadrática** (o **ecuación de segundo grado**) es una ecuación donde la mayor potencia de la variable es 2. Su forma general es:
 
-\[ax^2 + bx + c = 0\]
+$$
+ax^2 + bx + c = 0
+$$
+
 
 donde $a$, $b$ y $c$ son números reales y $a \neq 0$ (si $a = 0$, la ecuación deja de ser cuadrática y se convierte en lineal).
 
@@ -243,7 +372,10 @@ donde $a$, $b$ y $c$ son números reales y $a \neq 0$ (si $a = 0$, la ecuación 
 
 La cantidad de soluciones de una ecuación cuadrática depende de un valor llamado **discriminante**:
 
-\[\Delta = b^2 - 4ac\]
+$$
+\Delta = b^2 - 4ac
+$$
+
 
 - Si $\Delta > 0$: la ecuación tiene **dos soluciones reales distintas**.
 - Si $\Delta = 0$: la ecuación tiene **una solución real** (doble).
@@ -255,34 +387,65 @@ La cantidad de soluciones de una ecuación cuadrática depende de un valor llama
 
 Para cualquier ecuación $ax^2 + bx + c = 0$ con $a \neq 0$, las soluciones son:
 
-\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
 
 Esta fórmula siempre funciona, sin importar el tipo de números involucrados.
 
 **Ejemplo** (problema 3.b de la guía):
-\[x^2 + 3x - 10 = 0\]
+
+$$
+x^2 + 3x - 10 = 0
+$$
+
 
 Aquí $a = 1$, $b = 3$, $c = -10$. Calculamos el discriminante:
-\[\Delta = 3^2 - 4(1)(-10) = 9 + 40 = 49\]
-\[\sqrt{49} = 7\]
+
+$$
+\Delta = 3^2 - 4(1)(-10) = 9 + 40 = 49
+$$
+
+$$
+\sqrt{49} = 7
+$$
+
 
 Aplicamos la fórmula:
-\[x = \frac{-3 \pm 7}{2}\]
+
+$$
+x = \frac{-3 \pm 7}{2}
+$$
+
 
 Las dos soluciones son:
-\[x_1 = \frac{-3 + 7}{2} = 2 \quad \text{y} \quad x_2 = \frac{-3 - 7}{2} = -5\]
 
-\[C.S. = \{-5, 2\}\]
+$$
+x_1 = \frac{-3 + 7}{2} = 2 \quad \text{y} \quad x_2 = \frac{-3 - 7}{2} = -5
+$$
+
+
+$$
+C.S. = \{-5, 2\}
+$$
+
 
 #### b) Factorización
 
 Consiste en reescribir la ecuación cuadrática como el producto de dos factores lineales igualado a cero:
 
-\[(x - p)(x - q) = 0\]
+$$
+(x - p)(x - q) = 0
+$$
+
 
 Por la **propiedad del producto cero**, si un producto es igual a cero, al menos uno de sus factores debe ser cero:
 
-\[x - p = 0 \quad \text{o} \quad x - q = 0\]
+$$
+x - p = 0 \quad \text{o} \quad x - q = 0
+$$
+
 
 Por lo tanto, $x = p$ o $x = q$.
 
@@ -292,57 +455,122 @@ Por lo tanto, $x = p$ o $x = q$.
 - $p \cdot q = c$ (el producto es el término independiente)
 
 **Ejemplo** (problema 3.a de la guía):
-\[x^2 - 1 = 0\]
+
+$$
+x^2 - 1 = 0
+$$
+
 
 Aplicamos diferencia de cuadrados:
-\[(x-1)(x+1) = 0\]
 
-\[x - 1 = 0 \quad \text{o} \quad x + 1 = 0\]
+$$
+(x-1)(x+1) = 0
+$$
 
-\[x = 1 \quad \text{o} \quad x = -1\]
 
-\[C.S. = \{-1, 1\}\]
+$$
+x - 1 = 0 \quad \text{o} \quad x + 1 = 0
+$$
+
+
+$$
+x = 1 \quad \text{o} \quad x = -1
+$$
+
+
+$$
+C.S. = \{-1, 1\}
+$$
+
 
 **Ejemplo** (problema 3.f de la guía):
-\[x^2 + 7x + 10 = 0\]
+
+$$
+x^2 + 7x + 10 = 0
+$$
+
 
 Buscamos dos números que sumen 7 y cuyo producto sea 10: son 5 y 2.
-\[(x + 5)(x + 2) = 0\]
 
-\[x = -5 \quad \text{o} \quad x = -2\]
+$$
+(x + 5)(x + 2) = 0
+$$
 
-\[C.S. = \{-5, -2\}\]
+
+$$
+x = -5 \quad \text{o} \quad x = -2
+$$
+
+
+$$
+C.S. = \{-5, -2\}
+$$
+
 
 #### c) Completar el cuadrado
 
 Es un método alternativo donde se reescribe la ecuación en la forma:
 
-\[(x + h)^2 = k\]
+$$
+(x + h)^2 = k
+$$
+
 
 y luego se aplica raíz cuadrada en ambos lados. Aunque es muy útil en contextos teóricos (por ejemplo, para deducir la fórmula general), en la práctica suele ser más rápido usar la fórmula general o la factorización.
 
 ### 4.4 Ejemplos resueltos
 
 **Ejemplo 1** (problema 3.c de la guía):
-\[x^2 - 3x - 4 = 0\]
+
+$$
+x^2 - 3x - 4 = 0
+$$
+
 
 Por factorización, buscamos dos números que sumen $-3$ y cuyo producto sea $-4$: son $-4$ y $1$.
-\[(x - 4)(x + 1) = 0\]
 
-\[x = 4 \quad \text{o} \quad x = -1\]
+$$
+(x - 4)(x + 1) = 0
+$$
 
-\[C.S. = \{-1, 4\}\]
+
+$$
+x = 4 \quad \text{o} \quad x = -1
+$$
+
+
+$$
+C.S. = \{-1, 4\}
+$$
+
 
 **Ejemplo 2** (problema 3.s de la guía):
-\[12x^2 + 17x + 6 = 0\]
+
+$$
+12x^2 + 17x + 6 = 0
+$$
+
 
 Por fórmula general, con $a = 12$, $b = 17$, $c = 6$:
-\[\Delta = 17^2 - 4(12)(6) = 289 - 288 = 1\]
-\[x = \frac{-17 \pm 1}{24}\]
 
-\[x_1 = \frac{-16}{24} = -\frac{2}{3} \quad \text{y} \quad x_2 = \frac{-18}{24} = -\frac{3}{4}\]
+$$
+\Delta = 17^2 - 4(12)(6) = 289 - 288 = 1
+$$
 
-\[C.S. = \left\{-\frac{3}{4}, -\frac{2}{3}\right\}\]
+$$
+x = \frac{-17 \pm 1}{24}
+$$
+
+
+$$
+x_1 = \frac{-16}{24} = -\frac{2}{3} \quad \text{y} \quad x_2 = \frac{-18}{24} = -\frac{3}{4}
+$$
+
+
+$$
+C.S. = \left\{-\frac{3}{4}, -\frac{2}{3}\right\}
+$$
+
 
 ---
 
@@ -383,7 +611,11 @@ Los coeficientes de $p(x)$ son: $1, 2, -1, 3$. El valor de $c$ es $1$ (porque $x
 - **Residuo:** $5$
 
 Por lo tanto:
-\[x^3 + 2x^2 - x + 3 = (x - 1)(x^2 + 3x + 2) + 5\]
+
+$$
+x^3 + 2x^2 - x + 3 = (x - 1)(x^2 + 3x + 2) + 5
+$$
+
 
 ### 5.3 Ejemplo resuelto
 
@@ -404,7 +636,11 @@ Dividir $p(x) = 2x^4 - 3x^3 + x^2 - 5x + 4$ entre $x + 2$ (es decir, $c = -2$).
 - **Residuo:** $74$
 
 Por lo tanto:
-\[2x^4 - 3x^3 + x^2 - 5x + 4 = (x + 2)(2x^3 - 7x^2 + 15x - 35) + 74\]
+
+$$
+2x^4 - 3x^3 + x^2 - 5x + 4 = (x + 2)(2x^3 - 7x^2 + 15x - 35) + 74
+$$
+
 
 ---
 
@@ -423,7 +659,11 @@ En otras palabras, al hacer división sintética con $c$, el último número que
 **Ejemplo:**
 
 Para el problema 4.a anterior, $p(x) = x^3 + 2x^2 - x + 3$ y $c = 1$:
-\[p(1) = (1)^3 + 2(1)^2 - (1) + 3 = 1 + 2 - 1 + 3 = 5\]
+
+$$
+p(1) = (1)^3 + 2(1)^2 - (1) + 3 = 1 + 2 - 1 + 3 = 5
+$$
+
 
 Coincide con el residuo $5$ que obtuvimos. ✓
 
@@ -440,7 +680,11 @@ En otras palabras, $x - c$ divide **exactamente** (sin residuo) a $p(x)$ si y so
 **Ejemplo:**
 
 Para $p(x) = x^3 - 2x^2 - 5x + 6$, evaluamos en $x = 3$:
-\[p(3) = (3)^3 - 2(3)^2 - 5(3) + 6 = 27 - 18 - 15 + 6 = 0\]
+
+$$
+p(3) = (3)^3 - 2(3)^2 - 5(3) + 6 = 27 - 18 - 15 + 6 = 0
+$$
+
 
 Por lo tanto, $x = 3$ es una raíz y $(x - 3)$ es un factor de $p(x)$.
 
@@ -494,7 +738,10 @@ Por lo tanto, $p(x) = (x-2)(x-3)(x+2)$ y el conjunto solución de $p(x) = 0$ es 
 
 Una **ecuación polinómica de grado mayor que dos** es una ecuación de la forma:
 
-\[p(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 = 0\]
+$$
+p(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 = 0
+$$
+
 
 donde $n \geq 3$ y $a_n \neq 0$.
 
@@ -517,7 +764,11 @@ Para resolver ecuaciones polinómicas de grado mayor que dos:
 ### 7.3 Ejemplo resuelto
 
 **Ejemplo** (problema 5.a de la guía):
-\[-2x^3 + 9x^2 - x - 12 = 0\]
+
+$$
+-2x^3 + 9x^2 - x - 12 = 0
+$$
+
 
 **Paso 1:** buscamos raíces racionales.
 
@@ -546,18 +797,32 @@ El cociente es $-2x^2 + x + 3$.
 **Paso 4:** resolvemos $-2x^2 + x + 3 = 0$, o equivalentemente $2x^2 - x - 3 = 0$.
 
 Por factorización: buscamos dos números que sumen $-1$ y cuyo producto sea $-6$: son $-3$ y $2$.
-\[(2x - 3)(x + 1) = 0\]
 
-\[x = \frac{3}{2} \quad \text{o} \quad x = -1\]
+$$
+(2x - 3)(x + 1) = 0
+$$
+
+
+$$
+x = \frac{3}{2} \quad \text{o} \quad x = -1
+$$
+
 
 **Paso 5:** unimos todas las raíces.
 
-\[C.S. = \left\{-1, \frac{3}{2}, 4\right\}\]
+$$
+C.S. = \left\{-1, \frac{3}{2}, 4\right\}
+$$
+
 
 ### 7.4 Ejemplo con grado 4
 
 **Ejemplo** (problema 5.f de la guía):
-\[2x^4 - 2x^3 - 14x^2 + 2x + 12 = 0\]
+
+$$
+2x^4 - 2x^3 - 14x^2 + 2x + 12 = 0
+$$
+
 
 **Paso 1:** primero, factorizamos el 2 común para simplificar: $2(x^4 - x^3 - 7x^2 + x + 6) = 0$, lo que nos da $x^4 - x^3 - 7x^2 + x + 6 = 0$.
 
@@ -593,7 +858,10 @@ El cociente es $x^2 - x - 6 = (x-3)(x+2)$.
 
 **Paso 6:** unión de todas las raíces.
 
-\[C.S. = \{-2, -1, 1, 3\}\]
+$$
+C.S. = \{-2, -1, 1, 3\}
+$$
+
 
 ---
 
