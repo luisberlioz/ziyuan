@@ -1,0 +1,2173 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Materiales académicos de matemáticas y afines">
+      
+      
+        <meta name="author" content="Luis">
+      
+      
+      
+        <link rel="prev" href="../polinomios_introduccion/">
+      
+      
+        <link rel="next" href="../matematicas_secundaria/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Ecuaciones (Unidad III) - Ziyuan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unidad-iii-ecuaciones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Ziyuan" class="md-header__button md-logo" aria-label="Ziyuan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ziyuan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ecuaciones (Unidad III)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../recta_real_y_orden/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  La Recta Real
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../numeros_reales_notacion_cientifica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Números Reales
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../polinomios_introduccion/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Polinomios
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ecuaciones (Unidad III)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../matematicas_secundaria/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Matemáticas de Secundaria
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Ziyuan" class="md-nav__button md-logo" aria-label="Ziyuan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ziyuan
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recta_real_y_orden/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    La Recta Real
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numeros_reales_notacion_cientifica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Números Reales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../polinomios_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polinomios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ecuaciones (Unidad III)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ecuaciones (Unidad III)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-conceptos-fundamentales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Conceptos fundamentales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Conceptos fundamentales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-ecuacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Ecuación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-raiz-o-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Raíz o solución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-conjunto-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Conjunto solución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-ecuaciones-equivalentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Ecuaciones equivalentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ecuacion-lineal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Ecuación lineal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Ecuación lineal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Resolución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-tipos-de-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Tipos de soluciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-ejemplos-resueltos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Ejemplos resueltos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-aplicaciones-de-la-ecuacion-lineal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Aplicaciones de la ecuación lineal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Aplicaciones de la ecuación lineal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-metodo-para-plantear-problemas-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Método para plantear problemas de aplicación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-tipos-comunes-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Tipos comunes de problemas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Tipos comunes de problemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-mezclas-y-concentraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a) Mezclas y concentraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-problemas-de-numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b) Problemas de números
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-problemas-de-porcentajes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        c) Problemas de porcentajes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-problemas-de-movimiento-velocidad-distancia-tiempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        d) Problemas de movimiento (velocidad, distancia, tiempo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-trabajo-conjunto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        e) Trabajo conjunto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ecuacion-cuadratica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ecuación cuadrática
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Ecuación cuadrática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-numero-de-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Número de soluciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-metodos-de-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Métodos de resolución
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Métodos de resolución">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-formula-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a) Fórmula general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-factorizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b) Factorización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-completar-el-cuadrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        c) Completar el cuadrado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-ejemplos-resueltos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Ejemplos resueltos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-division-sintetica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. División sintética
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. División sintética">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-procedimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Procedimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-ejemplo-resuelto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Ejemplo resuelto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-teoremas-sobre-polinomios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Teoremas sobre polinomios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Teoremas sobre polinomios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-teorema-del-residuo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Teorema del Residuo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-teorema-del-factor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Teorema del Factor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-teorema-de-las-raices-racionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Teorema de las raíces racionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-resolucion-de-ecuaciones-polinomicas-de-grado-mayor-que-dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Resolución de ecuaciones polinómicas de grado mayor que dos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Resolución de ecuaciones polinómicas de grado mayor que dos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-estrategia-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Estrategia general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-ejemplo-resuelto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Ejemplo resuelto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-ejemplo-con-grado-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Ejemplo con grado 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-resumen-de-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Resumen de la unidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-sugeridos-de-la-guia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicios sugeridos de la guía
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../matematicas_secundaria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matemáticas de Secundaria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-conceptos-fundamentales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Conceptos fundamentales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Conceptos fundamentales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-ecuacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Ecuación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-raiz-o-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Raíz o solución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-conjunto-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Conjunto solución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-ecuaciones-equivalentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Ecuaciones equivalentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ecuacion-lineal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Ecuación lineal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Ecuación lineal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Resolución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-tipos-de-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Tipos de soluciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-ejemplos-resueltos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Ejemplos resueltos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-aplicaciones-de-la-ecuacion-lineal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Aplicaciones de la ecuación lineal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Aplicaciones de la ecuación lineal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-metodo-para-plantear-problemas-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Método para plantear problemas de aplicación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-tipos-comunes-de-problemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Tipos comunes de problemas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Tipos comunes de problemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-mezclas-y-concentraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a) Mezclas y concentraciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-problemas-de-numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b) Problemas de números
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-problemas-de-porcentajes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        c) Problemas de porcentajes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-problemas-de-movimiento-velocidad-distancia-tiempo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        d) Problemas de movimiento (velocidad, distancia, tiempo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-trabajo-conjunto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        e) Trabajo conjunto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ecuacion-cuadratica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ecuación cuadrática
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Ecuación cuadrática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-numero-de-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Número de soluciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-metodos-de-resolucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Métodos de resolución
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Métodos de resolución">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-formula-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a) Fórmula general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-factorizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b) Factorización
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-completar-el-cuadrado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        c) Completar el cuadrado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-ejemplos-resueltos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Ejemplos resueltos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-division-sintetica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. División sintética
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. División sintética">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-procedimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Procedimiento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-ejemplo-resuelto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Ejemplo resuelto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-teoremas-sobre-polinomios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Teoremas sobre polinomios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Teoremas sobre polinomios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-teorema-del-residuo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Teorema del Residuo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-teorema-del-factor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Teorema del Factor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-teorema-de-las-raices-racionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Teorema de las raíces racionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-resolucion-de-ecuaciones-polinomicas-de-grado-mayor-que-dos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Resolución de ecuaciones polinómicas de grado mayor que dos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Resolución de ecuaciones polinómicas de grado mayor que dos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-estrategia-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Estrategia general
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-ejemplo-resuelto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Ejemplo resuelto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-ejemplo-con-grado-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Ejemplo con grado 4
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-resumen-de-la-unidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Resumen de la unidad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios-sugeridos-de-la-guia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejercicios sugeridos de la guía
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="unidad-iii-ecuaciones">Unidad III: Ecuaciones<a class="headerlink" href="#unidad-iii-ecuaciones" title="Permanent link">&para;</a></h1>
+<p>Una guía completa sobre ecuaciones, sus conceptos fundamentales y los métodos para resolverlas: desde la ecuación lineal hasta las ecuaciones polinómicas de grado superior. Cubre el contenido de la <strong>Unidad III</strong> del curso Matemática I (MM-112) impartido en la UNAH.</p>
+<hr />
+<h2 id="1-conceptos-fundamentales">1. Conceptos fundamentales<a class="headerlink" href="#1-conceptos-fundamentales" title="Permanent link">&para;</a></h2>
+<h3 id="11-ecuacion">1.1 Ecuación<a class="headerlink" href="#11-ecuacion" title="Permanent link">&para;</a></h3>
+<p>Una <strong>ecuación</strong> es una igualdad entre dos expresiones algebraicas que se cumple únicamente para uno o varios valores específicos de la variable (llamados <strong>incógnitas</strong>).</p>
+<p><strong>Ejemplo:</strong> <span class="arithmatex">\(3x - 2 = 10\)</span> es una ecuación porque la igualdad entre <span class="arithmatex">\(3x - 2\)</span> y <span class="arithmatex">\(10\)</span> solo se cumple cuando <span class="arithmatex">\(x = 4\)</span>.</p>
+<p>Toda ecuación tiene dos partes llamadas <strong>miembros</strong>, separadas por el signo "=":</p>
+<ul>
+<li><strong>Primer miembro:</strong> la expresión a la izquierda del signo igual.</li>
+<li><strong>Segundo miembro:</strong> la expresión a la derecha del signo igual.</li>
+</ul>
+<p>En el ejemplo anterior, el primer miembro es <span class="arithmatex">\(3x - 2\)</span> y el segundo miembro es <span class="arithmatex">\(10\)</span>.</p>
+<h3 id="12-raiz-o-solucion">1.2 Raíz o solución<a class="headerlink" href="#12-raiz-o-solucion" title="Permanent link">&para;</a></h3>
+<p>Una <strong>raíz</strong> o <strong>solución</strong> de una ecuación es el valor (o valores) de la variable que hace que la igualdad sea verdadera. Cuando se sustituye la raíz en la ecuación, ambos miembros dan el mismo resultado.</p>
+<p><strong>Ejemplo:</strong> en la ecuación <span class="arithmatex">\(3x - 2 = 10\)</span>, el valor <span class="arithmatex">\(x = 4\)</span> es una solución, ya que al sustituir:</p>
+<div class="arithmatex">\[3(4) - 2 = 12 - 2 = 10 \checkmark\]</div>
+<h3 id="13-conjunto-solucion">1.3 Conjunto solución<a class="headerlink" href="#13-conjunto-solucion" title="Permanent link">&para;</a></h3>
+<p>El <strong>conjunto solución</strong> es el conjunto de todos los valores que satisfacen la ecuación. Se denota generalmente como <span class="arithmatex">\(C.S.\)</span> o simplemente <span class="arithmatex">\(S\)</span>.</p>
+<p><strong>Ejemplo:</strong> para la ecuación <span class="arithmatex">\(x^2 - 4 = 0\)</span>, el conjunto solución es <span class="arithmatex">\(C.S. = \{-2, 2\}\)</span>, ya que tanto <span class="arithmatex">\(-2\)</span> como <span class="arithmatex">\(2\)</span> satisfacen la ecuación.</p>
+<h3 id="14-ecuaciones-equivalentes">1.4 Ecuaciones equivalentes<a class="headerlink" href="#14-ecuaciones-equivalentes" title="Permanent link">&para;</a></h3>
+<p>Dos ecuaciones son <strong>equivalentes</strong> si tienen exactamente el mismo conjunto solución. Es decir, toda solución de la primera es también solución de la segunda, y viceversa.</p>
+<p><strong>Criterios de equivalencia:</strong></p>
+<p>Dos ecuaciones son equivalentes si se cumple alguna de las siguientes operaciones:</p>
+<ol>
+<li>Se suma o resta el mismo número (o expresión algebraica) a <strong>ambos miembros</strong> de la ecuación.</li>
+<li>Se multiplican o dividen ambos miembros por el mismo número distinto de cero.</li>
+</ol>
+<p><strong>Ejemplo:</strong> las ecuaciones <span class="arithmatex">\(3x = 9\)</span> y <span class="arithmatex">\(x = 3\)</span> son equivalentes (se dividió entre 3). Ambas tienen <span class="arithmatex">\(C.S. = \{3\}\)</span>.</p>
+<hr />
+<h2 id="2-ecuacion-lineal">2. Ecuación lineal<a class="headerlink" href="#2-ecuacion-lineal" title="Permanent link">&para;</a></h2>
+<h3 id="21-definicion">2.1 Definición<a class="headerlink" href="#21-definicion" title="Permanent link">&para;</a></h3>
+<p>Una <strong>ecuación lineal</strong> (también llamada <strong>ecuación de primer grado</strong>) es una ecuación donde la variable aparece elevada al exponente 1, es decir, la mayor potencia de la variable es 1. Su forma general es:</p>
+<div class="arithmatex">\[ax + b = 0 \quad \text{o} \quad ax + b = cx + d\]</div>
+<p>donde <span class="arithmatex">\(a, b, c, d\)</span> son números reales con <span class="arithmatex">\(a \neq 0\)</span>.</p>
+<p><strong>Ejemplos de ecuaciones lineales:</strong></p>
+<ul>
+<li><span class="arithmatex">\(2x - 5 = 7\)</span></li>
+<li><span class="arithmatex">\(\dfrac{1}{2}x + \dfrac{3}{4} = 2\)</span></li>
+<li><span class="arithmatex">\(3(2x + 1) - 4x = 10\)</span></li>
+</ul>
+<p><strong>No son ecuaciones lineales:</strong> <span class="arithmatex">\(x^2 = 4\)</span> (exponente 2), <span class="arithmatex">\(\sqrt{x} = 5\)</span> (raíz).</p>
+<h3 id="22-resolucion">2.2 Resolución<a class="headerlink" href="#22-resolucion" title="Permanent link">&para;</a></h3>
+<p>Para resolver una ecuación lineal, el objetivo es <strong>aislar la variable</strong> en uno de los miembros. Esto se logra aplicando las propiedades de equivalencia:</p>
+<ol>
+<li><strong>Eliminar denominadores</strong> (si los hay) multiplicando por el mínimo común múltiplo.</li>
+<li><strong>Eliminar paréntesis</strong> aplicando la propiedad distributiva.</li>
+<li><strong>Agrupar términos con la variable</strong> en un miembro y los términos independientes en el otro.</li>
+<li><strong>Operar</strong> hasta obtener la solución.</li>
+</ol>
+<p><strong>Fórmula general:</strong></p>
+<p>Si <span class="arithmatex">\(ax + b = 0\)</span> con <span class="arithmatex">\(a \neq 0\)</span>, entonces:</p>
+<div class="arithmatex">\[x = -\frac{b}{a}\]</div>
+<h3 id="23-tipos-de-soluciones">2.3 Tipos de soluciones<a class="headerlink" href="#23-tipos-de-soluciones" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Solución única:</strong> la mayoría de ecuaciones lineales. Por ejemplo, <span class="arithmatex">\(2x = 10 \Rightarrow x = 5\)</span>.</li>
+<li><strong>Infinitas soluciones:</strong> cuando la ecuación se reduce a una identidad como <span class="arithmatex">\(0 = 0\)</span>. Por ejemplo, <span class="arithmatex">\(2(x+1) = 2x + 2\)</span>.</li>
+<li><strong>Sin solución:</strong> cuando la ecuación se reduce a algo imposible como <span class="arithmatex">\(0 = 5\)</span>. Por ejemplo, <span class="arithmatex">\(2x + 1 = 2x + 3\)</span>.</li>
+</ul>
+<h3 id="24-ejemplos-resueltos">2.4 Ejemplos resueltos<a class="headerlink" href="#24-ejemplos-resueltos" title="Permanent link">&para;</a></h3>
+<p><strong>Ejemplo 1</strong> (problema 1.a de la guía):
+$<span class="arithmatex">\(3x - 2x = 5\)</span>$
+$<span class="arithmatex">\(x = 5\)</span>$
+$<span class="arithmatex">\(C.S. = \{5\}\)</span>$</p>
+<p><strong>Ejemplo 2</strong> (problema 1.f de la guía):
+$<span class="arithmatex">\(\frac{1}{2}x + \frac{7}{4}x = 9\)</span>$</p>
+<p>Multiplicamos por el mcm(2, 4) = 4:
+$<span class="arithmatex">\(2x + 7x = 36\)</span>$
+$<span class="arithmatex">\(9x = 36\)</span>$
+$<span class="arithmatex">\(x = 4\)</span>$
+$<span class="arithmatex">\(C.S. = \{4\}\)</span>$</p>
+<p><strong>Ejemplo 3</strong> (problema 1.m de la guía):
+$<span class="arithmatex">\(2(x + 2) - 7 = 5\)</span>$
+$<span class="arithmatex">\(2x + 4 - 7 = 5\)</span>$
+$<span class="arithmatex">\(2x - 3 = 5\)</span>$
+$<span class="arithmatex">\(2x = 8\)</span>$
+$<span class="arithmatex">\(x = 4\)</span>$
+$<span class="arithmatex">\(C.S. = \{4\}\)</span>$</p>
+<p><strong>Ejemplo 4</strong> (problema 1.o de la guía):
+$<span class="arithmatex">\(4(2 - x) + 3(x + 1) = 15\)</span>$
+$<span class="arithmatex">\(8 - 4x + 3x + 3 = 15\)</span>$
+$<span class="arithmatex">\(11 - x = 15\)</span>$
+$<span class="arithmatex">\(-x = 4\)</span>$
+$<span class="arithmatex">\(x = -4\)</span>$
+$<span class="arithmatex">\(C.S. = \{-4\}\)</span>$</p>
+<hr />
+<h2 id="3-aplicaciones-de-la-ecuacion-lineal">3. Aplicaciones de la ecuación lineal<a class="headerlink" href="#3-aplicaciones-de-la-ecuacion-lineal" title="Permanent link">&para;</a></h2>
+<h3 id="31-metodo-para-plantear-problemas-de-aplicacion">3.1 Método para plantear problemas de aplicación<a class="headerlink" href="#31-metodo-para-plantear-problemas-de-aplicacion" title="Permanent link">&para;</a></h3>
+<p>Para resolver un problema mediante una ecuación lineal:</p>
+<ol>
+<li><strong>Leer cuidadosamente</strong> el problema e identificar la cantidad desconocida.</li>
+<li><strong>Asignar una variable</strong> a la cantidad desconocida (generalmente <span class="arithmatex">\(x\)</span>).</li>
+<li><strong>Expresar todas las cantidades</strong> del problema en términos de la variable.</li>
+<li><strong>Plantear la ecuación</strong> traduciendo la relación descrita a lenguaje algebraico.</li>
+<li><strong>Resolver</strong> la ecuación.</li>
+<li><strong>Verificar</strong> que la solución tenga sentido en el contexto del problema.</li>
+</ol>
+<h3 id="32-tipos-comunes-de-problemas">3.2 Tipos comunes de problemas<a class="headerlink" href="#32-tipos-comunes-de-problemas" title="Permanent link">&para;</a></h3>
+<h4 id="a-mezclas-y-concentraciones">a) Mezclas y concentraciones<a class="headerlink" href="#a-mezclas-y-concentraciones" title="Permanent link">&para;</a></h4>
+<p>Problemas donde se mezclan dos soluciones de distinta concentración para obtener una concentración final.</p>
+<p><strong>Ejemplo</strong> (problema 2.a de la guía):</p>
+<blockquote>
+<p>Un enfermero necesita preparar 200 ml de una solución glucosada al 5% usando dos soluciones existentes: una al 2% y otra al 10%. ¿Cuántos mililitros de cada solución debe mezclar?</p>
+</blockquote>
+<p><strong>Planteamiento:</strong> sea <span class="arithmatex">\(x\)</span> los ml de la solución al 2%. Entonces los ml de la solución al 10% son <span class="arithmatex">\(200 - x\)</span>.</p>
+<div class="arithmatex">\[0.02x + 0.10(200 - x) = 0.05 \cdot 200$$
+$$0.02x + 20 - 0.10x = 10$$
+$$-0.08x = -10$$
+$$x = 125\]</div>
+<p>El enfermero debe mezclar <strong>125 ml de la solución al 2%</strong> y <strong>75 ml de la solución al 10%</strong>.</p>
+<h4 id="b-problemas-de-numeros">b) Problemas de números<a class="headerlink" href="#b-problemas-de-numeros" title="Permanent link">&para;</a></h4>
+<p>Problemas donde se pide encontrar números que cumplen ciertas relaciones.</p>
+<p><strong>Ejemplo</strong> (problema 2.e de la guía):</p>
+<blockquote>
+<p>La suma de dos números es 48. El cuádruplo del menor es igual al doble del mayor. Encontrar los números.</p>
+</blockquote>
+<p><strong>Planteamiento:</strong> sea <span class="arithmatex">\(x\)</span> el número menor. Entonces el mayor es <span class="arithmatex">\(48 - x\)</span>.</p>
+<div class="arithmatex">\[4x = 2(48 - x)$$
+$$4x = 96 - 2x$$
+$$6x = 96$$
+$$x = 16\]</div>
+<p>Los números son <strong>16 y 32</strong>.</p>
+<h4 id="c-problemas-de-porcentajes">c) Problemas de porcentajes<a class="headerlink" href="#c-problemas-de-porcentajes" title="Permanent link">&para;</a></h4>
+<p>Problemas donde se aplican descuentos, ganancias o comisiones.</p>
+<p><strong>Ejemplo</strong> (problema 2.h de la guía):</p>
+<blockquote>
+<p>Una casa se vendió en L. 275,000. ¿Cuánto recibe el propietario si el abogado quien le realizó el trámite tiene una comisión del 8%?</p>
+</blockquote>
+<p><strong>Planteamiento:</strong> el propietario recibe el 92% del precio de venta.</p>
+<div class="arithmatex">\[C = 275{,}000 \cdot 0.92 = 253{,}000\]</div>
+<p>El propietario recibe <strong>L. 253,000</strong>.</p>
+<h4 id="d-problemas-de-movimiento-velocidad-distancia-tiempo">d) Problemas de movimiento (velocidad, distancia, tiempo)<a class="headerlink" href="#d-problemas-de-movimiento-velocidad-distancia-tiempo" title="Permanent link">&para;</a></h4>
+<p>Problemas donde se aplica la relación fundamental: <span class="arithmatex">\(d = v \cdot t\)</span> (distancia = velocidad × tiempo).</p>
+<p><strong>Ejemplo</strong> (problema 2.n de la guía):</p>
+<blockquote>
+<p>Dos automóviles que están a una distancia de 540 millas entre sí y cuyas velocidades difieren en 7 millas por hora se dirigen el uno hacia el otro. Se encontrarán dentro de cuatro horas. ¿Cuál es la velocidad de cada automóvil?</p>
+</blockquote>
+<p><strong>Planteamiento:</strong> sea <span class="arithmatex">\(v\)</span> la velocidad del más lento. La velocidad del más rápido es <span class="arithmatex">\(v + 7\)</span>. Como van uno hacia el otro, las distancias se suman.</p>
+<div class="arithmatex">\[v \cdot 4 + (v + 7) \cdot 4 = 540$$
+$$4v + 4v + 28 = 540$$
+$$8v = 512$$
+$$v = 64\]</div>
+<p>Las velocidades son <strong>64 y 71 millas por hora</strong>.</p>
+<h4 id="e-trabajo-conjunto">e) Trabajo conjunto<a class="headerlink" href="#e-trabajo-conjunto" title="Permanent link">&para;</a></h4>
+<p>Problemas donde varias personas o máquinas realizan un trabajo juntas.</p>
+<p><strong>Ejemplo</strong> (problema 2.q de la guía):</p>
+<blockquote>
+<p>María tarda en hacer un trabajo 30 minutos y Pedro tarda 20 minutos en hacer el mismo trabajo. ¿En cuánto tiempo harán el mismo trabajo si lo hacen juntos?</p>
+</blockquote>
+<p><strong>Planteamiento:</strong> María hace <span class="arithmatex">\(\frac{1}{30}\)</span> del trabajo por minuto, y Pedro hace <span class="arithmatex">\(\frac{1}{20}\)</span> por minuto. Sea <span class="arithmatex">\(t\)</span> el tiempo (en minutos) que tardan juntos.</p>
+<div class="arithmatex">\[\frac{1}{30}t + \frac{1}{20}t = 1\]</div>
+<p>Multiplicamos por el mcm(30, 20) = 60:
+$<span class="arithmatex">\(2t + 3t = 60\)</span>$
+$<span class="arithmatex">\(5t = 60\)</span>$
+$<span class="arithmatex">\(t = 12\)</span>$</p>
+<p>Juntos tardan <strong>12 minutos</strong>.</p>
+<hr />
+<h2 id="4-ecuacion-cuadratica">4. Ecuación cuadrática<a class="headerlink" href="#4-ecuacion-cuadratica" title="Permanent link">&para;</a></h2>
+<h3 id="41-definicion">4.1 Definición<a class="headerlink" href="#41-definicion" title="Permanent link">&para;</a></h3>
+<p>Una <strong>ecuación cuadrática</strong> (o <strong>ecuación de segundo grado</strong>) es una ecuación donde la mayor potencia de la variable es 2. Su forma general es:</p>
+<div class="arithmatex">\[ax^2 + bx + c = 0\]</div>
+<p>donde <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span> y <span class="arithmatex">\(c\)</span> son números reales y <span class="arithmatex">\(a \neq 0\)</span> (si <span class="arithmatex">\(a = 0\)</span>, la ecuación deja de ser cuadrática y se convierte en lineal).</p>
+<p><strong>Términos:</strong></p>
+<ul>
+<li><span class="arithmatex">\(a\)</span> es el <strong>coeficiente cuadrático</strong> (acompaña a <span class="arithmatex">\(x^2\)</span>).</li>
+<li><span class="arithmatex">\(b\)</span> es el <strong>coeficiente lineal</strong> (acompaña a <span class="arithmatex">\(x\)</span>).</li>
+<li><span class="arithmatex">\(c\)</span> es el <strong>término independiente</strong> (no depende de <span class="arithmatex">\(x\)</span>).</li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li><span class="arithmatex">\(x^2 - 5x + 6 = 0\)</span> → <span class="arithmatex">\(a = 1\)</span>, <span class="arithmatex">\(b = -5\)</span>, <span class="arithmatex">\(c = 6\)</span>.</li>
+<li><span class="arithmatex">\(2x^2 + 3x = 0\)</span> → <span class="arithmatex">\(a = 2\)</span>, <span class="arithmatex">\(b = 3\)</span>, <span class="arithmatex">\(c = 0\)</span>.</li>
+<li><span class="arithmatex">\(-x^2 + 4 = 0\)</span> → <span class="arithmatex">\(a = -1\)</span>, <span class="arithmatex">\(b = 0\)</span>, <span class="arithmatex">\(c = 4\)</span>.</li>
+</ul>
+<h3 id="42-numero-de-soluciones">4.2 Número de soluciones<a class="headerlink" href="#42-numero-de-soluciones" title="Permanent link">&para;</a></h3>
+<p>La cantidad de soluciones de una ecuación cuadrática depende de un valor llamado <strong>discriminante</strong>:</p>
+<div class="arithmatex">\[\Delta = b^2 - 4ac\]</div>
+<ul>
+<li>Si <span class="arithmatex">\(\Delta &gt; 0\)</span>: la ecuación tiene <strong>dos soluciones reales distintas</strong>.</li>
+<li>Si <span class="arithmatex">\(\Delta = 0\)</span>: la ecuación tiene <strong>una solución real</strong> (doble).</li>
+<li>Si <span class="arithmatex">\(\Delta &lt; 0\)</span>: la ecuación <strong>no tiene soluciones reales</strong> (las soluciones son complejas).</li>
+</ul>
+<h3 id="43-metodos-de-resolucion">4.3 Métodos de resolución<a class="headerlink" href="#43-metodos-de-resolucion" title="Permanent link">&para;</a></h3>
+<h4 id="a-formula-general">a) Fórmula general<a class="headerlink" href="#a-formula-general" title="Permanent link">&para;</a></h4>
+<p>Para cualquier ecuación <span class="arithmatex">\(ax^2 + bx + c = 0\)</span> con <span class="arithmatex">\(a \neq 0\)</span>, las soluciones son:</p>
+<div class="arithmatex">\[x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\]</div>
+<p>Esta fórmula siempre funciona, sin importar el tipo de números involucrados.</p>
+<p><strong>Ejemplo</strong> (problema 3.b de la guía):
+$<span class="arithmatex">\(x^2 + 3x - 10 = 0\)</span>$</p>
+<p>Aquí <span class="arithmatex">\(a = 1\)</span>, <span class="arithmatex">\(b = 3\)</span>, <span class="arithmatex">\(c = -10\)</span>. Calculamos el discriminante:
+$<span class="arithmatex">\(\Delta = 3^2 - 4(1)(-10) = 9 + 40 = 49\)</span>$
+$<span class="arithmatex">\(\sqrt{49} = 7\)</span>$</p>
+<p>Aplicamos la fórmula:
+$<span class="arithmatex">\(x = \frac{-3 \pm 7}{2}\)</span>$</p>
+<p>Las dos soluciones son:
+$<span class="arithmatex">\(x_1 = \frac{-3 + 7}{2} = 2 \quad \text{y} \quad x_2 = \frac{-3 - 7}{2} = -5\)</span>$</p>
+<div class="arithmatex">\[C.S. = \{-5, 2\}\]</div>
+<h4 id="b-factorizacion">b) Factorización<a class="headerlink" href="#b-factorizacion" title="Permanent link">&para;</a></h4>
+<p>Consiste en reescribir la ecuación cuadrática como el producto de dos factores lineales igualado a cero:</p>
+<div class="arithmatex">\[(x - p)(x - q) = 0\]</div>
+<p>Por la <strong>propiedad del producto cero</strong>, si un producto es igual a cero, al menos uno de sus factores debe ser cero:</p>
+<div class="arithmatex">\[x - p = 0 \quad \text{o} \quad x - q = 0\]</div>
+<p>Por lo tanto, <span class="arithmatex">\(x = p\)</span> o <span class="arithmatex">\(x = q\)</span>.</p>
+<p><strong>Para factorizar</strong> una ecuación <span class="arithmatex">\(x^2 + bx + c = 0\)</span>, se buscan dos números <span class="arithmatex">\(p\)</span> y <span class="arithmatex">\(q\)</span> tales que:</p>
+<ul>
+<li><span class="arithmatex">\(p + q = b\)</span> (la suma es el coeficiente lineal)</li>
+<li><span class="arithmatex">\(p \cdot q = c\)</span> (el producto es el término independiente)</li>
+</ul>
+<p><strong>Ejemplo</strong> (problema 3.a de la guía):
+$<span class="arithmatex">\(x^2 - 1 = 0\)</span>$</p>
+<p>Aplicamos diferencia de cuadrados:
+$<span class="arithmatex">\((x-1)(x+1) = 0\)</span>$</p>
+<div class="arithmatex">\[x - 1 = 0 \quad \text{o} \quad x + 1 = 0\]</div>
+<div class="arithmatex">\[x = 1 \quad \text{o} \quad x = -1\]</div>
+<div class="arithmatex">\[C.S. = \{-1, 1\}\]</div>
+<p><strong>Ejemplo</strong> (problema 3.f de la guía):
+$<span class="arithmatex">\(x^2 + 7x + 10 = 0\)</span>$</p>
+<p>Buscamos dos números que sumen 7 y cuyo producto sea 10: son 5 y 2.
+$<span class="arithmatex">\((x + 5)(x + 2) = 0\)</span>$</p>
+<div class="arithmatex">\[x = -5 \quad \text{o} \quad x = -2\]</div>
+<div class="arithmatex">\[C.S. = \{-5, -2\}\]</div>
+<h4 id="c-completar-el-cuadrado">c) Completar el cuadrado<a class="headerlink" href="#c-completar-el-cuadrado" title="Permanent link">&para;</a></h4>
+<p>Es un método alternativo donde se reescribe la ecuación en la forma:</p>
+<div class="arithmatex">\[(x + h)^2 = k\]</div>
+<p>y luego se aplica raíz cuadrada en ambos lados. Aunque es muy útil en contextos teóricos (por ejemplo, para deducir la fórmula general), en la práctica suele ser más rápido usar la fórmula general o la factorización.</p>
+<h3 id="44-ejemplos-resueltos">4.4 Ejemplos resueltos<a class="headerlink" href="#44-ejemplos-resueltos" title="Permanent link">&para;</a></h3>
+<p><strong>Ejemplo 1</strong> (problema 3.c de la guía):
+$<span class="arithmatex">\(x^2 - 3x - 4 = 0\)</span>$</p>
+<p>Por factorización, buscamos dos números que sumen <span class="arithmatex">\(-3\)</span> y cuyo producto sea <span class="arithmatex">\(-4\)</span>: son <span class="arithmatex">\(-4\)</span> y <span class="arithmatex">\(1\)</span>.
+$<span class="arithmatex">\((x - 4)(x + 1) = 0\)</span>$</p>
+<div class="arithmatex">\[x = 4 \quad \text{o} \quad x = -1\]</div>
+<div class="arithmatex">\[C.S. = \{-1, 4\}\]</div>
+<p><strong>Ejemplo 2</strong> (problema 3.s de la guía):
+$<span class="arithmatex">\(12x^2 + 17x + 6 = 0\)</span>$</p>
+<p>Por fórmula general, con <span class="arithmatex">\(a = 12\)</span>, <span class="arithmatex">\(b = 17\)</span>, <span class="arithmatex">\(c = 6\)</span>:
+$<span class="arithmatex">\(\Delta = 17^2 - 4(12)(6) = 289 - 288 = 1\)</span>$
+$<span class="arithmatex">\(x = \frac{-17 \pm 1}{24}\)</span>$</p>
+<div class="arithmatex">\[x_1 = \frac{-16}{24} = -\frac{2}{3} \quad \text{y} \quad x_2 = \frac{-18}{24} = -\frac{3}{4}\]</div>
+<div class="arithmatex">\[C.S. = \left\{-\frac{3}{4}, -\frac{2}{3}\right\}\]</div>
+<hr />
+<h2 id="5-division-sintetica">5. División sintética<a class="headerlink" href="#5-division-sintetica" title="Permanent link">&para;</a></h2>
+<h3 id="51-definicion">5.1 Definición<a class="headerlink" href="#51-definicion" title="Permanent link">&para;</a></h3>
+<p>La <strong>división sintética</strong> (también llamada <strong>regla de Ruffini</strong>) es un método abreviado para dividir un polinomio entre un binomio de la forma <span class="arithmatex">\(x - c\)</span>. Aunque solo funciona para este tipo de divisores, es mucho más rápido que la división larga tradicional.</p>
+<h3 id="52-procedimiento">5.2 Procedimiento<a class="headerlink" href="#52-procedimiento" title="Permanent link">&para;</a></h3>
+<p>Para dividir <span class="arithmatex">\(p(x)\)</span> entre <span class="arithmatex">\(x - c\)</span>:</p>
+<ol>
+<li>Escribir los coeficientes de <span class="arithmatex">\(p(x)\)</span> en orden (de mayor a menor grado), incluyendo coeficientes de cero si faltan términos.</li>
+<li>Escribir el valor de <span class="arithmatex">\(c\)</span> a la izquierda.</li>
+<li>Bajar el primer coeficiente tal cual (será el primer coeficiente del cociente).</li>
+<li>Multiplicar ese coeficiente por <span class="arithmatex">\(c\)</span> y escribir el resultado debajo del siguiente coeficiente.</li>
+<li>Sumar la columna. El resultado es el siguiente coeficiente del cociente.</li>
+<li>Repetir los pasos 4 y 5 hasta el último término.</li>
+<li>El último número obtenido es el <strong>residuo</strong>; los demás números son los coeficientes del <strong>cociente</strong> (de un grado menor que el dividendo).</li>
+</ol>
+<p><strong>Ejemplo</strong> (problema 4.a de la guía):</p>
+<p>Dividir <span class="arithmatex">\(p(x) = x^3 + 2x^2 - x + 3\)</span> entre <span class="arithmatex">\(x - 1\)</span>.</p>
+<p>Los coeficientes de <span class="arithmatex">\(p(x)\)</span> son: <span class="arithmatex">\(1, 2, -1, 3\)</span>. El valor de <span class="arithmatex">\(c\)</span> es <span class="arithmatex">\(1\)</span> (porque <span class="arithmatex">\(x - 1 = 0 \Rightarrow x = 1\)</span>).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1 |  1    2   -1    3
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  |       1    3    2
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  |________________________
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>     1    3    2    5
+</code></pre></div>
+<p><strong>Lectura del resultado:</strong></p>
+<ul>
+<li><strong>Cociente:</strong> <span class="arithmatex">\(x^2 + 3x + 2\)</span></li>
+<li><strong>Residuo:</strong> <span class="arithmatex">\(5\)</span></li>
+</ul>
+<p>Por lo tanto:
+$<span class="arithmatex">\(x^3 + 2x^2 - x + 3 = (x - 1)(x^2 + 3x + 2) + 5\)</span>$</p>
+<h3 id="53-ejemplo-resuelto">5.3 Ejemplo resuelto<a class="headerlink" href="#53-ejemplo-resuelto" title="Permanent link">&para;</a></h3>
+<p><strong>Ejemplo</strong> (problema 4.b de la guía):</p>
+<p>Dividir <span class="arithmatex">\(p(x) = 2x^4 - 3x^3 + x^2 - 5x + 4\)</span> entre <span class="arithmatex">\(x + 2\)</span> (es decir, <span class="arithmatex">\(c = -2\)</span>).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>-2 |  2   -3    1   -5    4
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   |      -4   14  -30   70
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>   |______________________________
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      2   -7   15  -35   74
+</code></pre></div>
+<p><strong>Lectura del resultado:</strong></p>
+<ul>
+<li><strong>Cociente:</strong> <span class="arithmatex">\(2x^3 - 7x^2 + 15x - 35\)</span></li>
+<li><strong>Residuo:</strong> <span class="arithmatex">\(74\)</span></li>
+</ul>
+<p>Por lo tanto:
+$<span class="arithmatex">\(2x^4 - 3x^3 + x^2 - 5x + 4 = (x + 2)(2x^3 - 7x^2 + 15x - 35) + 74\)</span>$</p>
+<hr />
+<h2 id="6-teoremas-sobre-polinomios">6. Teoremas sobre polinomios<a class="headerlink" href="#6-teoremas-sobre-polinomios" title="Permanent link">&para;</a></h2>
+<h3 id="61-teorema-del-residuo">6.1 Teorema del Residuo<a class="headerlink" href="#61-teorema-del-residuo" title="Permanent link">&para;</a></h3>
+<p>El <strong>Teorema del Residuo</strong> establece que:</p>
+<blockquote>
+<p>Cuando un polinomio <span class="arithmatex">\(p(x)\)</span> se divide entre un binomio <span class="arithmatex">\(x - c\)</span>, el residuo de la división es igual al valor que toma el polinomio al evaluar <span class="arithmatex">\(x = c\)</span>, es decir, <span class="arithmatex">\(p(c)\)</span>.</p>
+</blockquote>
+<p>En otras palabras, al hacer división sintética con <span class="arithmatex">\(c\)</span>, el último número que aparece es precisamente <span class="arithmatex">\(p(c)\)</span>.</p>
+<p><strong>Aplicación:</strong> para encontrar el residuo de dividir <span class="arithmatex">\(p(x)\)</span> entre <span class="arithmatex">\(x - c\)</span> sin hacer toda la división, simplemente se calcula <span class="arithmatex">\(p(c)\)</span>.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>Para el problema 4.a anterior, <span class="arithmatex">\(p(x) = x^3 + 2x^2 - x + 3\)</span> y <span class="arithmatex">\(c = 1\)</span>:
+$<span class="arithmatex">\(p(1) = (1)^3 + 2(1)^2 - (1) + 3 = 1 + 2 - 1 + 3 = 5\)</span>$</p>
+<p>Coincide con el residuo <span class="arithmatex">\(5\)</span> que obtuvimos. ✓</p>
+<h3 id="62-teorema-del-factor">6.2 Teorema del Factor<a class="headerlink" href="#62-teorema-del-factor" title="Permanent link">&para;</a></h3>
+<p>El <strong>Teorema del Factor</strong> establece que:</p>
+<blockquote>
+<p>Un binomio <span class="arithmatex">\(x - c\)</span> es un <strong>factor</strong> de un polinomio <span class="arithmatex">\(p(x)\)</span> si y solo si <span class="arithmatex">\(p(c) = 0\)</span>, es decir, si y solo si <span class="arithmatex">\(c\)</span> es una raíz (solución) de <span class="arithmatex">\(p(x) = 0\)</span>.</p>
+</blockquote>
+<p>En otras palabras, <span class="arithmatex">\(x - c\)</span> divide <strong>exactamente</strong> (sin residuo) a <span class="arithmatex">\(p(x)\)</span> si y solo si al sustituir <span class="arithmatex">\(x = c\)</span> en el polinomio el resultado es cero.</p>
+<p><strong>Aplicación:</strong> permite verificar si un número es raíz de un polinomio (y por tanto factor de él) sin hacer la división: simplemente se evalúa el polinomio en ese número.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>Para <span class="arithmatex">\(p(x) = x^3 - 2x^2 - 5x + 6\)</span>, evaluamos en <span class="arithmatex">\(x = 3\)</span>:
+$<span class="arithmatex">\(p(3) = (3)^3 - 2(3)^2 - 5(3) + 6 = 27 - 18 - 15 + 6 = 0\)</span>$</p>
+<p>Por lo tanto, <span class="arithmatex">\(x = 3\)</span> es una raíz y <span class="arithmatex">\((x - 3)\)</span> es un factor de <span class="arithmatex">\(p(x)\)</span>.</p>
+<h3 id="63-teorema-de-las-raices-racionales">6.3 Teorema de las raíces racionales<a class="headerlink" href="#63-teorema-de-las-raices-racionales" title="Permanent link">&para;</a></h3>
+<p>El <strong>Teorema de las raíces racionales</strong> (o <strong>Teorema de Gauss</strong>) da una herramienta para encontrar las posibles raíces racionales de un polinomio con coeficientes enteros.</p>
+<blockquote>
+<p>Si un polinomio con coeficientes enteros tiene una raíz racional <span class="arithmatex">\(\dfrac{p}{q}\)</span> (en su mínima expresión), entonces:
+- <span class="arithmatex">\(p\)</span> (el numerador) divide al <strong>término independiente</strong> del polinomio.
+- <span class="arithmatex">\(q\)</span> (el denominador) divide al <strong>coeficiente principal</strong> del polinomio.</p>
+</blockquote>
+<p><strong>Procedimiento para encontrar raíces racionales:</strong></p>
+<ol>
+<li>Listar todos los divisores del término independiente (estos son los candidatos para <span class="arithmatex">\(p\)</span>).</li>
+<li>Listar todos los divisores del coeficiente principal (estos son los candidatos para <span class="arithmatex">\(q\)</span>).</li>
+<li>Formar todas las fracciones <span class="arithmatex">\(\dfrac{p}{q}\)</span> posibles.</li>
+<li>Probar cada candidato sustituyéndolo en el polinomio (usando el Teorema del Residuo) hasta encontrar una raíz.</li>
+<li>Una vez encontrada una raíz <span class="arithmatex">\(c\)</span>, dividir el polinomio entre <span class="arithmatex">\(x - c\)</span> (usando división sintética) para obtener un polinomio de menor grado.</li>
+<li>Repetir el proceso con el cociente hasta encontrar todas las raíces.</li>
+</ol>
+<p><strong>Ejemplo:</strong></p>
+<p>Para el polinomio <span class="arithmatex">\(p(x) = x^3 - 3x^2 - 4x + 12\)</span>:</p>
+<ul>
+<li>Coeficiente principal: <span class="arithmatex">\(1\)</span>. Sus divisores son <span class="arithmatex">\(\pm 1\)</span>.</li>
+<li>Término independiente: <span class="arithmatex">\(12\)</span>. Sus divisores son <span class="arithmatex">\(\pm 1, \pm 2, \pm 3, \pm 4, \pm 6, \pm 12\)</span>.</li>
+</ul>
+<p>Posibles raíces racionales: <span class="arithmatex">\(\pm 1, \pm 2, \pm 3, \pm 4, \pm 6, \pm 12\)</span>.</p>
+<p>Probamos:
+- <span class="arithmatex">\(p(2) = 8 - 12 - 8 + 12 = 0\)</span> ✓</p>
+<p>Por lo tanto, <span class="arithmatex">\(x = 2\)</span> es una raíz y <span class="arithmatex">\((x - 2)\)</span> es un factor. Dividimos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>2 |  1   -3   -4   12
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  |       2   -2  -12
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  |________________________
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>     1   -1   -6    0
+</code></pre></div>
+<p>El cociente es <span class="arithmatex">\(x^2 - x - 6 = (x-3)(x+2)\)</span>, cuyas raíces son <span class="arithmatex">\(x = 3\)</span> y <span class="arithmatex">\(x = -2\)</span>.</p>
+<p>Por lo tanto, <span class="arithmatex">\(p(x) = (x-2)(x-3)(x+2)\)</span> y el conjunto solución de <span class="arithmatex">\(p(x) = 0\)</span> es <span class="arithmatex">\(C.S. = \{-2, 2, 3\}\)</span>.</p>
+<hr />
+<h2 id="7-resolucion-de-ecuaciones-polinomicas-de-grado-mayor-que-dos">7. Resolución de ecuaciones polinómicas de grado mayor que dos<a class="headerlink" href="#7-resolucion-de-ecuaciones-polinomicas-de-grado-mayor-que-dos" title="Permanent link">&para;</a></h2>
+<h3 id="71-definicion">7.1 Definición<a class="headerlink" href="#71-definicion" title="Permanent link">&para;</a></h3>
+<p>Una <strong>ecuación polinómica de grado mayor que dos</strong> es una ecuación de la forma:</p>
+<div class="arithmatex">\[p(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 = 0\]</div>
+<p>donde <span class="arithmatex">\(n \geq 3\)</span> y <span class="arithmatex">\(a_n \neq 0\)</span>.</p>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+<li>Cúbica (<span class="arithmatex">\(n = 3\)</span>): <span class="arithmatex">\(-2x^3 + 9x^2 - x - 12 = 0\)</span></li>
+<li>Cuártica (<span class="arithmatex">\(n = 4\)</span>): <span class="arithmatex">\(2x^4 - 2x^3 - 14x^2 + 2x + 12 = 0\)</span></li>
+<li>Quíntica (<span class="arithmatex">\(n = 5\)</span>): <span class="arithmatex">\(2x^5 - x^4 - 12x^3 + 7x^2 + 16x - 12 = 0\)</span></li>
+</ul>
+<h3 id="72-estrategia-general">7.2 Estrategia general<a class="headerlink" href="#72-estrategia-general" title="Permanent link">&para;</a></h3>
+<p>Para resolver ecuaciones polinómicas de grado mayor que dos:</p>
+<ol>
+<li><strong>Buscar una raíz racional</strong> usando el Teorema de las raíces racionales.</li>
+<li><strong>Verificar</strong> la raíz sustituyendo en el polinomio (Teorema del Residuo).</li>
+<li><strong>Dividir el polinomio</strong> entre <span class="arithmatex">\((x - c)\)</span> usando división sintética.</li>
+<li><strong>Resolver el cociente</strong>, que es de un grado menor, repitiendo el proceso o usando la fórmula general si es cuadrático.</li>
+<li><strong>Aplicar la propiedad del producto cero</strong>: si <span class="arithmatex">\((x - c) \cdot q(x) = 0\)</span>, entonces <span class="arithmatex">\(x = c\)</span> o <span class="arithmatex">\(q(x) = 0\)</span>.</li>
+</ol>
+<h3 id="73-ejemplo-resuelto">7.3 Ejemplo resuelto<a class="headerlink" href="#73-ejemplo-resuelto" title="Permanent link">&para;</a></h3>
+<p><strong>Ejemplo</strong> (problema 5.a de la guía):
+$<span class="arithmatex">\(-2x^3 + 9x^2 - x - 12 = 0\)</span>$</p>
+<p><strong>Paso 1:</strong> buscamos raíces racionales.</p>
+<ul>
+<li>Coeficiente principal: <span class="arithmatex">\(-2\)</span>. Divisores: <span class="arithmatex">\(\pm 1, \pm 2\)</span>.</li>
+<li>Término independiente: <span class="arithmatex">\(-12\)</span>. Divisores: <span class="arithmatex">\(\pm 1, \pm 2, \pm 3, \pm 4, \pm 6, \pm 12\)</span>.</li>
+</ul>
+<p>Posibles raíces racionales: <span class="arithmatex">\(\pm 1, \pm 2, \pm 3, \pm 4, \pm 6, \pm 12, \pm \dfrac{1}{2}, \pm \dfrac{3}{2}\)</span>.</p>
+<p><strong>Paso 2:</strong> probamos candidatos.</p>
+<p><span class="arithmatex">\(p(3) = -2(27) + 9(9) - 3 - 12 = -54 + 81 - 3 - 12 = 12\)</span> ✗</p>
+<p><span class="arithmatex">\(p(4) = -2(64) + 9(16) - 4 - 12 = -128 + 144 - 4 - 12 = 0\)</span> ✓</p>
+<p><strong>Paso 3:</strong> dividimos entre <span class="arithmatex">\(x - 4\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>4 |  -2    9   -1   -12
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  |       -8    4    12
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  |________________________
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>     -2    1    3     0
+</code></pre></div>
+<p>El cociente es <span class="arithmatex">\(-2x^2 + x + 3\)</span>.</p>
+<p><strong>Paso 4:</strong> resolvemos <span class="arithmatex">\(-2x^2 + x + 3 = 0\)</span>, o equivalentemente <span class="arithmatex">\(2x^2 - x - 3 = 0\)</span>.</p>
+<p>Por factorización: buscamos dos números que sumen <span class="arithmatex">\(-1\)</span> y cuyo producto sea <span class="arithmatex">\(-6\)</span>: son <span class="arithmatex">\(-3\)</span> y <span class="arithmatex">\(2\)</span>.
+$<span class="arithmatex">\((2x - 3)(x + 1) = 0\)</span>$</p>
+<div class="arithmatex">\[x = \frac{3}{2} \quad \text{o} \quad x = -1\]</div>
+<p><strong>Paso 5:</strong> unimos todas las raíces.</p>
+<div class="arithmatex">\[C.S. = \left\{-1, \frac{3}{2}, 4\right\}\]</div>
+<h3 id="74-ejemplo-con-grado-4">7.4 Ejemplo con grado 4<a class="headerlink" href="#74-ejemplo-con-grado-4" title="Permanent link">&para;</a></h3>
+<p><strong>Ejemplo</strong> (problema 5.f de la guía):
+$<span class="arithmatex">\(2x^4 - 2x^3 - 14x^2 + 2x + 12 = 0\)</span>$</p>
+<p><strong>Paso 1:</strong> primero, factorizamos el 2 común para simplificar: <span class="arithmatex">\(2(x^4 - x^3 - 7x^2 + x + 6) = 0\)</span>, lo que nos da <span class="arithmatex">\(x^4 - x^3 - 7x^2 + x + 6 = 0\)</span>.</p>
+<p><strong>Paso 2:</strong> buscamos raíces racionales. Coeficiente principal: <span class="arithmatex">\(1\)</span>, término independiente: <span class="arithmatex">\(6\)</span>. Candidatos: <span class="arithmatex">\(\pm 1, \pm 2, \pm 3, \pm 6\)</span>.</p>
+<p><span class="arithmatex">\(p(1) = 1 - 1 - 7 + 1 + 6 = 0\)</span> ✓</p>
+<p><strong>Paso 3:</strong> dividimos entre <span class="arithmatex">\(x - 1\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>1 |  1   -1   -7    1    6
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  |       1    0   -7   -6
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  |______________________________
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>     1    0   -7   -6    0
+</code></pre></div>
+<p>El cociente es <span class="arithmatex">\(x^3 - 7x - 6\)</span>.</p>
+<p><strong>Paso 4:</strong> seguimos buscando raíces racionales de <span class="arithmatex">\(x^3 - 7x - 6\)</span>. Candidatos: <span class="arithmatex">\(\pm 1, \pm 2, \pm 3, \pm 6\)</span>.</p>
+<p><span class="arithmatex">\(p(-1) = -1 + 7 - 6 = 0\)</span> ✓</p>
+<p><strong>Paso 5:</strong> dividimos <span class="arithmatex">\(x^3 - 7x - 6\)</span> entre <span class="arithmatex">\(x + 1\)</span>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>-1 |  1    0   -7   -6
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>   |      -1    1    6
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>   |________________________
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>      1   -1   -6    0
+</code></pre></div>
+<p>El cociente es <span class="arithmatex">\(x^2 - x - 6 = (x-3)(x+2)\)</span>.</p>
+<p><strong>Paso 6:</strong> unión de todas las raíces.</p>
+<div class="arithmatex">\[C.S. = \{-2, -1, 1, 3\}\]</div>
+<hr />
+<h2 id="8-resumen-de-la-unidad">8. Resumen de la unidad<a class="headerlink" href="#8-resumen-de-la-unidad" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Concepto clave</th>
+<th>Métodos principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conceptos básicos</td>
+<td>Ecuación, raíz, conjunto solución, equivalencia</td>
+<td>Propiedades de equivalencia</td>
+</tr>
+<tr>
+<td>Ecuación lineal</td>
+<td><span class="arithmatex">\(ax + b = 0\)</span>, grado 1</td>
+<td>Despeje directo, propiedades de equivalencia</td>
+</tr>
+<tr>
+<td>Aplicaciones</td>
+<td>Mezclas, números, porcentajes, movimiento, trabajo</td>
+<td>Plantear y traducir a lenguaje algebraico</td>
+</tr>
+<tr>
+<td>Ecuación cuadrática</td>
+<td><span class="arithmatex">\(ax^2 + bx + c = 0\)</span>, grado 2</td>
+<td>Fórmula general, factorización</td>
+</tr>
+<tr>
+<td>División sintética</td>
+<td>División entre <span class="arithmatex">\(x - c\)</span></td>
+<td>Regla de Ruffini</td>
+</tr>
+<tr>
+<td>Teorema del Residuo</td>
+<td>Residuo = <span class="arithmatex">\(p(c)\)</span></td>
+<td>Evaluación directa</td>
+</tr>
+<tr>
+<td>Teorema del Factor</td>
+<td><span class="arithmatex">\(p(c) = 0 \Leftrightarrow (x-c)\)</span> es factor</td>
+<td>Verificación de raíces</td>
+</tr>
+<tr>
+<td>Raíces racionales</td>
+<td>Candidatos: <span class="arithmatex">\(\frac{p}{q}\)</span> con <span class="arithmatex">\(p\mid c\)</span>, <span class="arithmatex">\(q\mid a\)</span></td>
+<td>Lista de candidatos + evaluación</td>
+</tr>
+<tr>
+<td>Ecuaciones de grado ≥ 3</td>
+<td>Reducir grado hallando raíces</td>
+<td>Factorización sucesiva + fórmula general</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ejercicios-sugeridos-de-la-guia">Ejercicios sugeridos de la guía<a class="headerlink" href="#ejercicios-sugeridos-de-la-guia" title="Permanent link">&para;</a></h2>
+<p>Para practicar esta unidad, se recomienda resolver los siguientes ejercicios de la guía de la Unidad III:</p>
+<ul>
+<li><strong>Ecuaciones lineales (básicas):</strong> 1.a, 1.b, 1.c</li>
+<li><strong>Ecuaciones con fracciones:</strong> 1.f, 1.g, 1.h, 1.j</li>
+<li><strong>Ecuaciones con paréntesis:</strong> 1.m, 1.n, 1.o, 1.p</li>
+<li><strong>Aplicaciones:</strong> 2.a, 2.c, 2.e, 2.h, 2.j, 2.n, 2.q, 2.x</li>
+<li><strong>Ecuaciones cuadráticas (factorización):</strong> 3.a, 3.b, 3.c, 3.f, 3.j</li>
+<li><strong>Ecuaciones cuadráticas (fórmula general):</strong> 3.k, 3.l, 3.s, 3.t</li>
+<li><strong>División sintética:</strong> 4.a, 4.b, 4.c</li>
+<li><strong>Ecuaciones de grado mayor que 2:</strong> 5.a, 5.b, 5.d, 5.f</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
