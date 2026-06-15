@@ -4,3 +4,14 @@
 # Python
 __pycache__/
 *.py[cod]
+
+# LaTeX / Beamer build artifacts
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
