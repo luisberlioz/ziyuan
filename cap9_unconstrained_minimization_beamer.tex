@@ -259,25 +259,10 @@
       \begin{center}\scriptsize Convergencia rápida y monótona.\end{center}
     \end{column}
     \begin{column}{0.5\textwidth}
-      \begin{center}\textbf{Mal condicionado ($\gamma=10$)}\end{center}
-      \begin{tikzpicture}[scale=0.5, every node/.style={font=\scriptsize}]
-        \draw[->] (-3.6,0)--(3.6,0) node[right]{$x_1$};
-        \draw[->] (0,-3.6)--(0,3.6) node[above]{$x_2$};
-        \foreach \r in {0.8,1.6,2.4,3.2} {
-          \draw[accentblue!50, thick] ({\r*0.97},0) ellipse ({\r*0.97} and {\r*0.18});
-        }
-        % zig-zag trajectory
-        \draw[accentred,->,thick] (3,0) -- (0,1.0);
-        \draw[accentred,->,thick] (0,1.0) -- (2.5,0);
-        \draw[accentred,->,thick] (2.5,0) -- (0,0.5);
-        \draw[accentred,->,thick] (0,0.5) -- (1.6,0);
-        \draw[accentred,->,thick] (1.6,0) -- (0,0.25);
-        \draw[accentred,->,thick] (0,0.25) -- (1.0,0);
-        \fill[accentred] (3,0) circle (2.5pt);
-        \fill[accentred] (0,0) circle (2.5pt);
-        \node[accentblue] at (0,3.3) {contornos alargados};
-      \end{tikzpicture}
-      \begin{center}\scriptsize \textbf{Zig-zag}: muchos pasos pequeños.\end{center}
+      \begin{center}
+        \includegraphics[width=\linewidth]{cap9_images/gradient_zigzag_quadratic.png}
+      \end{center}
+      \begin{center}\scriptsize \textbf{Zig-zag}: búsqueda exacta sobre $f$ mal condicionada.\end{center}
     \end{column}
   \end{columns}
   \begin{center}
