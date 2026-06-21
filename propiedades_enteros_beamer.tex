@@ -1,0 +1,718 @@
+% ============================================================
+% Propiedades de los Enteros
+% Capítulo 3 — Rosen, "Elementary Number Theory" / Matemática Discreta
+% Presentación Beamer en español
+% Curso: Matemática Discreta
+% ============================================================
+\documentclass[10pt,aspectratio=169]{beamer}
+
+% --- Paquetes ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,positioning,shapes.geometric,backgrounds,fit,
+                decorations.pathreplacing,calligraphy}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+
+% --- Teoremas, definiciones, etc. ---
+\theoremstyle{definition}
+\newtheorem{definicion}{Definición}
+\newtheorem{ejemplo}{Ejemplo}
+\theoremstyle{plain}
+\newtheorem{teorema}{Teorema}
+\newtheorem{proposicion}{Proposición}
+\newtheorem{corolario}{Corolario}
+\theoremstyle{remark}
+\newtheorem*{observacion}{Observación}
+
+% --- Tema y colores ---
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+\definecolor{accentblue}{RGB}{31,73,125}
+\definecolor{accentgreen}{RGB}{46,125,50}
+\definecolor{accentred}{RGB}{198,40,40}
+\definecolor{accentorange}{RGB}{230,120,30}
+\setbeamercolor{frametitle}{bg=accentblue,fg=white}
+\setbeamercolor{title}{fg=accentblue}
+\setbeamercolor{block title}{bg=accentblue,fg=white}
+\setbeamercolor{block body}{bg=accentblue!10}
+\setbeamercolor{alertblock title}{bg=accentred,fg=white}
+\setbeamercolor{alertblock body}{bg=accentred!10}
+\setbeamercolor{exampleblock title}{bg=accentgreen,fg=white}
+\setbeamercolor{exampleblock body}{bg=accentgreen!10}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+% --- Datos del documento ---
+\title{Propiedades de los Enteros}
+\subtitle{Inducción, recursión, primalidad y divisibilidad}
+\author{Matemática Discreta}
+\date{\today}
+
+% --- Atajos ---
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\mcd}{\operatorname{mcd}}
+\newcommand{\mcm}{\operatorname{mcm}}
+\newcommand{\primo}{\mathrm{es\ primo}}
+\providecommand{\lcm}{\operatorname{lcm}}
+
+% ============================================================
+\begin{document}
+
+% ============================================================
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Esquema de la presentación}
+  \tableofcontents
+\end{frame}
+
+% ============================================================
+\section{Principio del Buen Orden}
+% ============================================================
+\begin{frame}{Principio del Buen Orden}
+  \begin{definicion}[Buen orden de $\N$]
+    Todo subconjunto no vacío $S\subseteq\N$ tiene un \textbf{menor elemento} (o
+    \textbf{mínimo}). Es decir, existe $m\in S$ tal que $m\le s$ para todo
+    $s\in S$.
+  \end{definicion}
+  \vspace{0.4em}
+  \begin{ejemplo}
+    \begin{itemize}
+      \item $S=\{5,\,8,\,13,\,21\}$ tiene mínimo $m=5$.
+      \item $S=\{n\in\N : n^2\ge 10\} = \{4,5,6,\dots\}$ tiene mínimo $m=4$.
+      \item $S=\{n\in\N : n\equiv 0 \pmod 7\} = \{7,14,21,\dots\}$ tiene mínimo
+            $m=7$.
+    \end{itemize}
+  \end{ejemplo}
+  \begin{observacion}
+    El buen orden \textbf{no se cumple} en $\Z$ ni en $\Q$: por ejemplo,
+    $\Z^- = \{\dots,-2,-1\}$ no tiene mínimo.
+  \end{observacion}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Principio del Buen Orden — Importancia}
+  \begin{itemize}
+    \item Es uno de los \textbf{axiomas fundamentales} de los naturales.
+    \item Es \textbf{equivalente} al Principio de Inducción Matemática
+          (lo demostraremos en breve).
+    \item Es la herramienta básica para probar la \textbf{existencia} del
+          mínimo común múltiplo y la unicidad en el Teorema Fundamental
+          de la Aritmética.
+  \end{itemize}
+  \vspace{0.4em}
+  \begin{block}{Idea clave}
+    Para demostrar que existe un objeto con una propiedad, supongamos
+    que es el \emph{menor} contraejemplo y lleguemos a una contradicción.
+  \end{block}
+\end{frame}
+
+% ============================================================
+\section{Inducción Matemática}
+% ============================================================
+\begin{frame}{Inducción Matemática}
+  \begin{teorema}[Principio de Inducción Matemática]
+    Sea $P(n)$ una proposición definida para todo $n\in\N$. Si
+    \begin{enumerate}
+      \item \textbf{Caso base:} $P(1)$ es verdadera; y
+      \item \textbf{Paso inductivo:} $P(k)\Rightarrow P(k+1)$ es verdadera
+            para todo $k\in\N$,
+    \end{enumerate}
+    entonces $P(n)$ es verdadera para todo $n\in\N$.
+  \end{teorema}
+  \vspace{0.3em}
+  \begin{center}
+    \begin{tikzpicture}[scale=0.9, every node/.style={transform shape}]
+      % Circles centered at x = 0.9, 1.8, ..., 6.3 (radius 0.32)
+      \foreach \i in {1,2,3,4,5,6,7} {
+        \draw[fill=accentblue!20, draw=accentblue]
+          (\i*0.9,0) circle (0.32) node{$P(\i)$};
+      }
+      % Horizontal arrows connecting the right edge of circle k
+      % to the left edge of circle k+1, at y=0.
+      % Right edge of circle k:  x = k*0.9 + 0.32
+      % Left  edge of circle k+1: x = (k+1)*0.9 - 0.32
+      \draw[->, thick, accentred] (1.22, 0) -- (1.48, 0);
+      \draw[->, thick, accentred] (2.12, 0) -- (2.38, 0);
+      \draw[->, thick, accentred] (3.02, 0) -- (3.28, 0);
+      \draw[->, thick, accentred] (3.92, 0) -- (4.18, 0);
+      \draw[->, thick, accentred] (4.82, 0) -- (5.08, 0);
+      \draw[->, thick, accentred] (5.72, 0) -- (5.98, 0);
+      \node[above] at (3.6, 0.7) {\small cascada};
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Inducción Matemática — Ejemplo clásico}
+  \begin{ejemplo}[Fórmula de la suma]
+    Demostrar que para todo $n\in\N$,
+    \[
+      \sum_{i=1}^{n} i \;=\; \frac{n(n+1)}{2}.
+    \]
+  \end{ejemplo}
+  \begin{proof}
+    \textbf{Caso base ($n=1$):} $\displaystyle\sum_{i=1}^{1} i = 1
+    = \frac{1\cdot 2}{2}$. \checkmark
+    \vspace{0.3em}
+    \textbf{Paso inductivo:} Supongamos $\displaystyle\sum_{i=1}^{k} i
+    = \frac{k(k+1)}{2}$ (H.I.). Entonces
+    \[
+      \sum_{i=1}^{k+1} i
+      = \frac{k(k+1)}{2} + (k+1)
+      = (k+1)\!\left(\frac{k}{2}+1\right)
+      = \frac{(k+1)(k+2)}{2},
+    \]
+    que es la fórmula con $n=k+1$. \checkmark
+  \end{proof}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Buen Orden $\Longleftrightarrow$ Inducción}
+  \begin{teorema}[Equivalencia]
+    El Principio del Buen Orden y el Principio de Inducción Matemática son
+    equivalentes.
+  \end{teorema}
+  \vspace{0.3em}
+  \begin{block}{Demostración: Buen Orden $\Rightarrow$ Inducción}
+    Sea $A=\{n\in\N : P(n)\text{ es falso}\}$. Si $A\ne\emptyset$, por
+    Buen Orden tiene mínimo $m$. Como $P(1)$ es verdadero, $m>1$. Luego
+    $m-1\in\N$, $m-1\notin A$, así $P(m-1)$ es verdadero. Por el paso
+    inductivo, $P(m)$ debería ser verdadero — contradicción.
+  \end{block}
+  \begin{alertblock}{Conclusión}
+    Toda proposición demostrable por Buen Orden es demostrable por
+    Inducción, y viceversa. Son dos caras de la misma moneda.
+  \end{alertblock}
+\end{frame}
+
+% ============================================================
+\section{Definiciones Recursivas}
+% ============================================================
+\begin{frame}{Definiciones Recursivas}
+  \begin{definicion}[Definición recursiva]
+    Una \textbf{definición recursiva} de una función $f:\N\to\Z$ (o
+    $f:\N\to\N$) consta de dos partes:
+    \begin{enumerate}
+      \item \textbf{Caso base:} se especifica el valor de $f(0)$ (o
+            $f(1)$).
+      \item \textbf{Paso recursivo:} se da una regla para expresar
+            $f(n)$ en términos de $f$ evaluada en valores \emph{menores}
+            que $n$ (usualmente $f(n-1)$).
+    \end{enumerate}
+  \end{definicion}
+  \vspace{0.3em}
+  \begin{observacion}
+    La inducción matemática es la herramienta que \textbf{garantiza} que
+    la definición recursiva produce un único valor para cada $n$.
+  \end{observacion}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Ejemplos de definiciones recursivas}
+  \begin{ejemplo}[Factorial]
+    \[
+      f(0)=1,\qquad f(n)=n\cdot f(n-1)\ \text{para } n\ge 1.
+    \]
+    Por lo tanto $f(1)=1$, $f(2)=2$, $f(3)=6$, $f(4)=24$, $f(5)=120$.
+  \end{ejemplo}
+  \begin{ejemplo}[Sucesión de Fibonacci]
+    \[
+      f(0)=0,\quad f(1)=1,\qquad f(n)=f(n-1)+f(n-2)\ \text{para } n\ge 2.
+    \]
+    Por lo tanto $f(2)=1$, $f(3)=2$, $f(4)=3$, $f(5)=5$, $f(6)=8$,
+    $f(7)=13$, \ldots
+  \end{ejemplo}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Recursión e inducción}
+  \begin{ejemplo}[Suma de los primeros $n$ cuadrados]
+    Definamos recursivamente $S(n)=\sum_{i=1}^{n} i^2$:
+    \[
+      S(0)=0,\qquad S(n)=S(n-1)+n^2\ \text{para } n\ge 1.
+    \]
+    \emph{Conjetura:} $S(n)=\dfrac{n(n+1)(2n+1)}{6}$.
+  \end{ejemplo}
+  \begin{block}{Verificación por inducción}
+    \textbf{Caso base} $n=1$: $1=\frac{1\cdot 2\cdot 3}{6}=1$. \checkmark
+    \vspace{0.2em}
+    \textbf{Paso inductivo}:
+    $S(k+1)=S(k)+(k+1)^2 = \frac{k(k+1)(2k+1)}{6} + (k+1)^2
+     = \frac{(k+1)(k+2)(2k+3)}{6}$. \checkmark
+  \end{block}
+\end{frame}
+
+% ============================================================
+\section{El Algoritmo de la División}
+% ============================================================
+\begin{frame}{Divisibilidad}
+  \begin{definicion}[Divisibilidad]
+    Si $a$ y $b$ son enteros con $a\ne 0$, decimos que \textbf{$a$ divide
+    a $b$} (escrito $a\mid b$) si existe un entero $c$ tal que
+    $b = a\cdot c$.
+    \begin{itemize}
+      \item Si $a\nmid b$ escribimos que $a$ \textbf{no divide} a $b$.
+      \item Cuando $a\mid b$ decimos que $a$ es un \textbf{divisor} (o
+            \textbf{factor}) de $b$, y que $b$ es un \textbf{múltiplo} de
+            $a$.
+    \end{itemize}
+  \end{definicion}
+  \vspace{0.3em}
+  \begin{ejemplo}
+    $3\mid 12$ (pues $12=3\cdot 4$), $5\mid 25$ (pues $25=5\cdot 5$),
+    pero $7\nmid 24$ y $4\nmid 18$.
+  \end{ejemplo}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Propiedades de la divisibilidad}
+  \begin{proposicion}
+    Para todo $a,b,c\in\Z$ con $a\ne 0$:
+    \begin{enumerate}
+      \item Si $a\mid b$ y $a\mid c$, entonces $a\mid (b+c)$.
+      \item Si $a\mid b$, entonces $a\mid bc$ para todo $c\in\Z$.
+      \item Si $a\mid b$ y $b\mid c$, entonces $a\mid c$
+            (transitividad).
+    \end{enumerate}
+  \end{proposicion}
+  \begin{proof}[Prueba de (1)]
+    Como $a\mid b$, $b=ak$; como $a\mid c$, $c=al$. Luego
+    $b+c = a(k+l)$, así $a\mid(b+c)$.
+  \end{proof}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Algoritmo de la División}
+  \begin{teorema}[Algoritmo de la División]
+    Sean $a\in\Z$ y $d\in\Z^+$. Existen \textbf{únicos} enteros $q$ y $r$
+    con
+    \[
+      a = d\,q + r,\qquad 0 \le r < d.
+    \]
+    Al valor $d$ lo llamamos el \textbf{divisor}, a $a$ el
+    \textbf{dividendo}, a $q$ el \textbf{cociente} y a $r$ el
+    \textbf{resto}.
+  \end{teorema}
+  \vspace{0.3em}
+  \begin{ejemplo}
+    \begin{itemize}
+      \item $a=101$, $d=7$: $101 = 7\cdot 14 + 3$, así $q=14$, $r=3$.
+      \item $a=-17$, $d=5$: $-17 = 5\cdot(-4) + 3$, así $q=-4$, $r=3$.
+      \item $a=84$, $d=12$: $84 = 12\cdot 7 + 0$, así $q=7$, $r=0$ y
+            por tanto $12\mid 84$.
+    \end{itemize}
+  \end{ejemplo}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Algoritmo de la División — Visualización}
+  \begin{center}
+    \begin{tikzpicture}[scale=0.85]
+      % Dividendo
+      \draw[thick] (0,3) -- (10,3);
+      \node at (5,3.5) {\small dividendo $a$};
+      % Cociente y resto
+      \draw[fill=accentblue!25, draw=accentblue, thick]
+        (0,1.6) rectangle (7,2.4);
+      \node at (3.5, 2) {$d\cdot q$};
+      \draw[fill=accentorange!40, draw=accentorange, thick]
+        (7,1.6) rectangle (10,2.4);
+      \node at (8.5, 2) {$r$};
+      \node at (3.5, 1) {\small múltiplo de $d$};
+      \node at (8.5, 1) {\small $0\le r<d$};
+    \end{tikzpicture}
+  \end{center}
+  \begin{block}{Idea geométrica}
+    Repetimos $d$ tantas veces como quepa en $a$. Lo que queda es $r$,
+    que es menor que $d$.
+  \end{block}
+\end{frame}
+
+% ============================================================
+\section{Números Primos}
+% ============================================================
+\begin{frame}{Números primos}
+  \begin{definicion}[Número primo]
+    Un entero $p>1$ es \textbf{primo} si sus únicos divisores positivos
+    son $1$ y $p$. Un entero mayor que $1$ que \emph{no} es primo se llama
+    \textbf{compuesto}.
+  \end{definicion}
+  \begin{ejemplo}
+    \begin{itemize}
+      \item Primos: $2,\,3,\,5,\,7,\,11,\,13,\,17,\,19,\,23,\,29,\,31,\dots$
+      \item Compuestos: $4=2\cdot 2$, $6=2\cdot 3$, $8=2^3$,
+            $9=3^2$, $10=2\cdot 5$, \ldots
+    \end{itemize}
+  \end{ejemplo}
+  \begin{observacion}
+    $1$ \textbf{no} es ni primo ni compuesto.
+  \end{observacion}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Criba de Eratóstenes}
+  \begin{center}
+    \begin{tikzpicture}[scale=0.62, every node/.style={font=\small}]
+      % Numbers 1..40 in a 8x5 grid
+      \foreach \n/\x/\y in {1/0/4, 2/1/4, 3/2/4, 4/3/4, 5/4/4,
+        6/5/4, 7/6/4, 8/7/4,
+        9/0/3, 10/1/3, 11/2/3, 12/3/3, 13/4/3, 14/5/3, 15/6/3, 16/7/3,
+        17/0/2, 18/1/2, 19/2/2, 20/3/2, 21/4/2, 22/5/2, 23/6/2, 24/7/2,
+        25/0/1, 26/1/1, 27/2/1, 28/3/1, 29/4/1, 30/5/1, 31/6/1, 32/7/1,
+        33/0/0, 34/1/0, 35/2/0, 36/3/0, 37/4/0, 38/5/0, 39/6/0, 40/7/0} {
+        \pgfmathtruncatemacro{\composite}{(\n==4)+(\n==6)+(\n==8)+(\n==9)+(\n==10)+(\n==12)+(\n==14)+(\n==15)+(\n==16)+(\n==18)+(\n==20)+(\n==21)+(\n==22)+(\n==24)+(\n==25)+(\n==26)+(\n==27)+(\n==28)+(\n==30)+(\n==32)+(\n==33)+(\n==34)+(\n==35)+(\n==36)+(\n==38)+(\n==39)+(\n==40)}
+        \ifnum\composite=1
+          \node[draw, fill=accentred!25, minimum size=0.85cm, anchor=south west] at (\x,\y) {\n};
+        \else
+          \ifnum\n=1
+            \node[draw, fill=gray!25, minimum size=0.85cm, anchor=south west] at (\x,\y) {\n};
+          \else
+            \node[draw, fill=accentgreen!25, minimum size=0.85cm, anchor=south west] at (\x,\y) {\n};
+          \fi
+        \fi
+      }
+    \end{tikzpicture}
+  \end{center}
+  \begin{itemize}
+    \item \textcolor{gray}{Gris} $=1$ (no primo). \quad
+          \textcolor{accentgreen!60!black}{Verde} $=$ primo. \quad
+          \textcolor{accentred!70!black}{Rojo} $=$ compuesto.
+  \end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Teorema fundamental: infinitud de primos}
+  \begin{teorema}
+    Existen \textbf{infinitos} números primos.
+  \end{teorema}
+  \begin{proof}[Demostración de Euclides]
+    Supongamos, por contradicción, que hay sólo finitos primos:
+    $p_1,p_2,\dots,p_n$. Considérese
+    \[
+      N \;=\; p_1 p_2\cdots p_n + 1.
+    \]
+    Sea $p$ un primo que divide a $N$ (existe por el Teorema Fundamental
+    de la Aritmética). Como $N\equiv 1\pmod{p_i}$ para cada $i$,
+    $p\ne p_i$ para todo $i$. Pero entonces $p$ es un primo que no está
+    en la lista, contradicción.
+  \end{proof}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Más propiedades de los primos}
+  \begin{proposicion}
+    Si $p$ es primo y $p\mid ab$, entonces $p\mid a$ ó $p\mid b$.
+  \end{proposicion}
+  \begin{teorema}
+    Todo entero $n>1$ puede escribirse como producto de uno o más primos,
+    en donde los primos están escritos en orden no decreciente.
+  \end{teorema}
+  \begin{ejemplo}
+    \[
+      100 = 2\cdot 2\cdot 5\cdot 5 = 2^2\cdot 5^2,\qquad
+      999 = 3^3\cdot 37,\qquad
+      2310 = 2\cdot 3\cdot 5\cdot 7\cdot 11.
+    \]
+  \end{ejemplo}
+\end{frame}
+
+% ============================================================
+\section{Máximo Común Divisor y Algoritmo de Euclides}
+% ============================================================
+\begin{frame}{Máximo Común Divisor}
+  \begin{definicion}[Máximo Común Divisor]
+    Sean $a,b$ enteros, no ambos nulos. El \textbf{máximo común divisor}
+    de $a$ y $b$ es el entero positivo más grande que divide a ambos:
+    \[
+      \mcd(a,b) = \max\{d\in\Z^+ : d\mid a\ \text{y}\ d\mid b\}.
+    \]
+  \end{definicion}
+  \begin{ejemplo}
+    $\mcd(12,18)=6$, $\mcd(15,28)=1$, $\mcd(0,5)=5$.
+  \end{ejemplo}
+  \begin{definicion}[Primos relativos (coprimos)]
+    Decimos que $a$ y $b$ son \textbf{primos relativos} (o
+    \textbf{coprimos}) si $\mcd(a,b)=1$.
+  \end{definicion}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Combinaciones lineales y el mcd}
+  \begin{teorema}
+    El máximo común divisor de $a$ y $b$ es la \textbf{menor combinación
+    lineal positiva} de $a$ y $b$:
+    \[
+      \mcd(a,b) = \min\{xa+yb : x,y\in\Z,\ xa+yb > 0\}.
+    \]
+  \end{teorema}
+  \begin{corolario}[Identidad de Bézout]
+    Existen enteros $x,y$ tales que
+    \[
+      \mcd(a,b) = xa + yb.
+    \]
+  \end{corolario}
+  \begin{ejemplo}
+    $\mcd(105,252) = 21 = 5\cdot 105 - 2\cdot 252$.
+  \end{ejemplo}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Algoritmo de Euclides}
+  \begin{teorema}[Algoritmo de Euclides]
+    Para encontrar $\mcd(a,b)$ con $a\ge b>0$, aplicar repetidamente el
+    Algoritmo de la División:
+    \[
+      \begin{aligned}
+        a &= b q_1 + r_1, & 0\le r_1 < b,\\
+        b &= r_1 q_2 + r_2, & 0\le r_2 < r_1,\\
+        r_1 &= r_2 q_3 + r_3, & 0\le r_3 < r_2,\\
+        &\ \vdots\\
+        r_{n-2} &= r_{n-1} q_n + r_n, & 0\le r_n < r_{n-1},\\
+        r_{n-1} &= r_n q_{n+1} + 0.
+      \end{aligned}
+    \]
+    Entonces $\mcd(a,b)=r_n$, el \textbf{último resto no nulo}.
+  \end{teorema}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Algoritmo de Euclides — Ejemplo}
+  \begin{ejemplo}[$\mcd(252, 198)$]
+    \[
+      \begin{array}{rcl}
+        252 &=& 198\cdot 1 + 54,\\
+        198 &=& 54\cdot 3 + 36,\\
+         54 &=& 36\cdot 1 + 18,\\
+         36 &=& 18\cdot 2 + 0.
+      \end{array}
+      \qquad\Longrightarrow\qquad \mcd(252,198)=18.
+    \]
+  \end{ejemplo}
+  \begin{center}
+    \begin{tikzpicture}[
+      every node/.style={font=\small},
+      block/.style={draw, fill=accentblue!20, minimum width=2.1cm,
+                    minimum height=0.5cm},
+      gcd/.style={draw, fill=accentgreen!30, minimum width=2.1cm,
+                  minimum height=0.5cm}
+    ]
+      % Stacked blocks (dividend, divisor, remainders) with arrows
+      % showing the flow of the Euclidean algorithm. Generous vertical
+      % spacing so arrows + labels fit cleanly between blocks.
+      \node[block] (a)  at (0, 2.0) {$a = 252$};
+      \node[block] (b)  at (0, 1.0) {$b = 198$};
+      \node[block] (r1) at (0, 0.0) {$r_1 = 54$};
+      \node[block] (r2) at (0,-1.0) {$r_2 = 36$};
+      \node[gcd]  (r3) at (0,-2.0) {$r_3 = 18 = \mcd$};
+      % Vertical arrows from below one block to above the next,
+      % with the quotient labeled on the right side.
+      \draw[->, thick, accentred]
+        ([yshift=-3pt]a.south)  -- node[right=2pt]{$q_1 = 1$} ([yshift=3pt]b.north);
+      \draw[->, thick, accentred]
+        ([yshift=-3pt]b.south)  -- node[right=2pt]{$q_2 = 3$} ([yshift=3pt]r1.north);
+      \draw[->, thick, accentred]
+        ([yshift=-3pt]r1.south) -- node[right=2pt]{$q_3 = 1$} ([yshift=3pt]r2.north);
+      \draw[->, thick, accentred]
+        ([yshift=-3pt]r2.south) -- node[right=2pt]{$q_4 = 2$} ([yshift=3pt]r3.north);
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Algoritmo de Euclides — por qué funciona}
+  \begin{teorema}[Lema clave de Euclides]
+    Si $a = bq + r$, entonces $\mcd(a,b) = \mcd(b,r)$.
+  \end{teorema}
+  \begin{proof}
+    Sea $d=\mcd(a,b)$. Como $d\mid a$ y $d\mid b$, $d\mid(a-bq)=r$, así
+    $d\mid\gcd(b,r)$.
+    Recíprocamente, sea $e=\mcd(b,r)$. Como $e\mid b$ y $e\mid r$,
+    $e\mid(bq+r)=a$, así $e\mid\gcd(a,b)$. Luego $d=e$.
+  \end{proof}
+  \begin{observacion}
+    El algoritmo termina porque $b > r_1 > r_2 > \cdots \ge 0$ es una
+    sucesión estrictamente decreciente de enteros no negativos.
+  \end{observacion}
+\end{frame}
+
+% ============================================================
+\section{Teorema Fundamental de la Aritmética}
+% ============================================================
+\begin{frame}{Teorema Fundamental de la Aritmética}
+  \begin{teorema}[Teorema Fundamental de la Aritmética]
+    Todo entero $n>1$ puede escribirse de manera \textbf{única} (salvo el
+    orden) como producto de uno o más números primos:
+    \[
+      n = p_1 p_2 \cdots p_k,
+    \]
+    donde cada $p_i$ es primo y $p_1\le p_2\le \cdots\le p_k$.
+  \end{teorema}
+  \begin{ejemplo}
+    \begin{itemize}
+      \item $999\,999 = 3\cdot 3\cdot 7\cdot 11\cdot 13\cdot 37$
+            $= 3^2\cdot 7\cdot 11\cdot 13\cdot 37$.
+      \item $1024 = 2^{10}$.
+      \item $360 = 2^3\cdot 3^2\cdot 5$.
+    \end{itemize}
+  \end{ejemplo}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Demostración: existencia}
+  \begin{proof}[Existencia (por inducción fuerte)]
+    \textbf{Caso base} $n=2$: $2$ es primo, así la factorización es
+    trivial. \checkmark
+    \vspace{0.3em}
+    \textbf{Paso inductivo:} Supongamos que todo entero $m$ con
+    $2\le m<n$ tiene factorización prima. Si $n$ es primo, la
+    factorización es $n$ mismo. Si $n$ es compuesto, entonces
+    $n=ab$ con $1<a\le b<n$. Por H.I., $a$ y $b$ tienen factorización
+    prima, y juntándolas se obtiene la de $n$.
+  \end{proof}
+  \begin{alertblock}{Inducción fuerte}
+    En este caso la H.I. se aplica a \emph{todos} los enteros menores
+    que $n$, no sólo a $n-1$. Esto se justifica con la inducción
+    ordinaria por una técnica de cambio de variable.
+  \end{alertblock}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Demostración: unicidad}
+  \begin{proof}[Unicidad (por buen orden)]
+    Supongamos que $n$ tiene dos factorizaciones primas:
+    \[
+      n = p_1 p_2\cdots p_j = q_1 q_2\cdots q_k,
+    \]
+    con $p_1\le\cdots\le p_j$ y $q_1\le\cdots\le q_k$. Demostremos por
+    inducción sobre $n$ que ambas listas son idénticas.
+    \vspace{0.2em}
+    Si $p_1=q_1$, cancelamos y aplicamos la H.I. a $n/p_1$.
+    \vspace{0.2em}
+    Si $p_1<q_1$, entonces $p_1\nmid q_1\cdots q_k=n$ porque $p_1<q_1$
+    y todos los $q_i$ son $\ge q_1$. Pero entonces $p_1\nmid n$, lo que
+    contradice que $p_1\mid p_1\cdots p_j = n$. Luego $p_1=q_1$.
+  \end{proof}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Aplicaciones del TFA}
+  \begin{block}{Divisibilidad a partir de la factorización}
+    Si $n=p_1^{a_1}\cdots p_k^{a_k}$, entonces $d\mid n$ si y sólo si
+    $d=p_1^{b_1}\cdots p_k^{b_k}$ con $0\le b_i\le a_i$.
+  \end{block}
+  \begin{ejemplo}
+    $360 = 2^3\cdot 3^2\cdot 5$. ¿Cuántos divisores tiene?
+    \[
+      \tau(360) = (3+1)(2+1)(1+1) = 24.
+    \]
+  \end{ejemplo}
+  \begin{teorema}[Fórmula del número de divisores]
+    Si $n=p_1^{a_1}\cdots p_k^{a_k}$, entonces el número de divisores
+    positivos de $n$ es
+    \[
+      \tau(n) = (a_1+1)(a_2+1)\cdots(a_k+1).
+    \]
+  \end{teorema}
+\end{frame}
+
+% ============================================================
+\section{Resumen y notas históricas}
+% ============================================================
+\begin{frame}{Línea del tiempo}
+  \begin{center}
+    \begin{tikzpicture}[
+      every node/.style={font=\small},
+      period/.style={circle, draw, fill=accentblue!30, minimum size=0.9cm,
+                     inner sep=0pt, font=\scriptsize},
+      ev/.style={anchor=west, align=left}
+    ]
+      \draw[->, very thick, accentblue] (-0.5,0) -- (14,0);
+      \node[period] at (1,0)   {-300};
+      \node[period] at (3,0)   {c. 300 aC};
+      \node[period] at (5,0)   {c. 250 aC};
+      \node[period] at (7,0)   {c. 200 aC};
+      \node[period] at (9,0)   {s. IX};
+      \node[period] at (11,0)  {1600};
+      \node[period] at (13,0)  {1801};
+      \node[ev] at (1,-1.2)  {Euclides, \\\scriptsize \emph{Elementos}};
+      \node[ev] at (3,-1.2)  {Criba de\\Eratóstenes};
+      \node[ev] at (5,-1.2)  {Primos\\y TFA};
+      \node[ev] at (7,-1.2)  {Alg. Euclides\\(texto chino)};
+      \node[ev] at (9,-1.2)  {al-Jwarizmi\\álgebra};
+      \node[ev] at (11,-1.2) {Bachet, trad.\\lat. de Diofanto};
+      \node[ev] at (13,-1.2) {Gauss, \\\scriptsize \emph{Disq. Arith.}};
+    \end{tikzpicture}
+  \end{center}
+  \begin{itemize}
+    \item \textbf{Euclides} (s. III a.C.): \emph{Elementos}, Libro IX —
+          demostración de la infinitud de los primos.
+    \item \textbf{Eratóstenes} (s. III a.C.): método de la criba para
+          encontrar primos.
+    \item \textbf{Gauss} (1801): \emph{Disquisitiones Arithmeticae} —
+          tratamiento sistemático de la teoría de números moderna.
+  \end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Resumen de la presentación}
+  \begin{enumerate}
+    \item \textbf{Principio del Buen Orden}: todo subconjunto no vacío de
+          $\N$ tiene mínimo.
+    \item \textbf{Inducción Matemática}: principio equivalente, base +
+          paso inductivo.
+    \item \textbf{Definiciones recursivas}: especifican valores usando
+          casos base y casos recursivos.
+    \item \textbf{Algoritmo de la División}: $a = dq + r$ con
+          $0\le r<d$, único.
+    \item \textbf{Números primos}: divisores triviales; existen
+          infinitos.
+    \item \textbf{Máximo común divisor}: mayor divisor común; Bézout:
+          $\mcd(a,b)=xa+yb$.
+    \item \textbf{Algoritmo de Euclides}: cálculo eficiente del mcd.
+    \item \textbf{Teorema Fundamental de la Aritmética}: existencia y
+          unicidad de la factorización prima.
+  \end{enumerate}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Ejercicios propuestos}
+  \begin{enumerate}
+    \item Demostrar por inducción que
+          $\displaystyle\sum_{i=1}^{n} i^3 = \left(\frac{n(n+1)}{2}\right)^2.$
+    \item Demostrar que $\sqrt{2}$ es irracional usando el Principio del
+          Buen Orden.
+    \item Aplicar el Algoritmo de Euclides para encontrar
+          $\mcd(12378,\, 3054)$. Expresar el mcd como combinación lineal
+          (Bézout).
+    \item Factorizar $2^{10}-1$ y $2^{12}-1$ y comparar con el patrón
+          de primos de Mersenne.
+    \item Demostrar: si $p$ es primo y $p\mid a^2$, entonces $p\mid a$.
+  \end{enumerate}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Referencias}
+  \begin{thebibliography}{9}
+    \bibitem{rosen} K. H. Rosen, \emph{Elementary Number Theory},
+      6\textsuperscript{th} ed., Pearson, 2011.
+    \bibitem{rosen-disc} K. H. Rosen, \emph{Matemática Discreta y sus
+      aplicaciones}, 7\textsuperscript{a} ed., McGraw-Hill, 2012.
+    \bibitem{euclid} Euclides, \emph{Los Elementos}, Libros VII--IX.
+    \bibitem{hardy-wright} G. H. Hardy y E. M. Wright, \emph{An
+      Introduction to the Theory of Numbers}, 6\textsuperscript{th} ed.,
+      Oxford, 2008.
+  \end{thebibliography}
+\end{frame}
+
+\end{document}
