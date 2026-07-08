@@ -8,6 +8,9 @@
 \usepackage[spanish]{babel}
 \usepackage{amsmath,amssymb}
 \usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{booktabs}
 
 %% ── Portada ──
 \title[Relaciones y Funciones]{Relaciones y Funciones}
@@ -40,39 +43,92 @@
 
 
 %% ======================================================================
+\section{Motivación: por qué necesitamos relaciones y funciones}
+%% ======================================================================
+
+\begin{frame}{De conjuntos aislados a conjuntos que interactúan}
+  \begin{alertblock}{Pregunta central del capítulo}
+    Hasta ahora hemos estudiado conjuntos como colecciones de objetos.
+    \alert{¿Cómo describimos matemáticamente la \emph{interacción} entre
+    elementos de uno o varios conjuntos?}
+  \end{alertblock}
+
+  \begin{itemize}
+    \item Un alumno \emph{pertenece} a una sección.
+    \item Un número \emph{divide} a otro.
+    \item Una función $f(x) = x^2$ \emph{asigna} a cada $x$ su cuadrado.
+  \end{itemize}
+
+  \vspace{0.2cm}
+  Todas estas afirmaciones son \textbf{relaciones} o \textbf{funciones}.
+  Este capítulo construye el lenguaje formal para manejarlas.
+\end{frame}
+
+\begin{frame}{Hoja de ruta}
+  El capítulo sigue una \textbf{escalera de generalización}:
+
+  \begin{enumerate}
+    \item Construimos el \emph{escenario}: \textbf{productos cartesianos}.
+    \item Sobre ellos definimos \textbf{relaciones} y, en particular, \textbf{funciones}.
+    \item Clasificamos las funciones (inyectivas, sobreyectivas, biyectivas).
+    \item Las \textbf{combinamos} (composición) y las \textbf{deshacemos} (inversa).
+    \item Aplicamos todo en \textbf{conteo}, en el \textbf{principio del palomar}
+          y en \textbf{complejidad computacional}.
+  \end{enumerate}
+\end{frame}
+
+
+
+
+
+%% ======================================================================
 \section{Productos cartesianos y relaciones}
 %% ======================================================================
 
 \begin{frame}{Producto cartesiano}
   \begin{block}{Definición}
-    Sean $A$ y $B$ conjuntos. El \textbf{producto cartesiano} $A \times B$ es el
-    conjunto de todos los \alert{pares ordenados} $(a,b)$ con $a \in A$ y $b \in B$:
+    Sean $A$ y $B$ conjuntos. El \textbf{producto cartesiano} $A \times B$ es
+    el conjunto de todos los \alert{pares ordenados} $(a,b)$ con
+    $a \in A$ y $b \in B$:
     \[
       A \times B = \{(a,b) \mid a \in A \text{ y } b \in B\}.
     \]
   \end{block}
 
+  \begin{block}{Tamaño}
+    Si $A$ y $B$ son finitos, $|A \times B| = |A| \cdot |B|$.
+  \end{block}
+
   \begin{itemize}
-    \item Si $A$ y $B$ son finitos, $|A \times B| = |A| \cdot |B|$.
     \item El par es \textbf{ordenado}: $(a,b) \neq (b,a)$ en general.
+    \item Se extiende a $n$ conjuntos: $A_1 \times \cdots \times A_n$.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Relación}
+\begin{frame}{Relaciones}
   \begin{block}{Definición}
-    Una \textbf{relación} de $A$ en $B$ es un subconjunto de $A \times B$.
-    Una \textbf{relación en} $A$ es un subconjunto de $A \times A$.
+    Una \textbf{relación} $\mathcal{R}$ de $A$ en $B$ es cualquier
+    subconjunto de $A \times B$.
+    Cuando $A = B$, hablamos de una \textbf{relación en} $A$.
   \end{block}
 
   \begin{block}{Notación}
-    Si $R \subseteq A \times B$, escribimos $a \mathbin{R} b$ (ó $a\,R\,b$) en
-    lugar de $(a,b) \in R$.
+    En lugar de $(a,b) \in \mathcal{R}$ escribimos $a \mathbin{\mathcal{R}} b$.
   \end{block}
 
-  \begin{itemize}
-    \item Ejemplo: en $\mathbb{Z}$, ``$a \leq b$'' es una relación.
-    \item Una relación queda determinada por su \textbf{grafo}: $\{(a,b) \in R\}$.
-  \end{itemize}
+  \begin{exampleblock}{Ejemplos que ya conoce el lector}
+    \begin{itemize}
+      \item ``$\leq$'' en $\mathbb{Z}$ es una relación en $\mathbb{Z}$.
+      \item ``divide a'' en $\mathbb{N}$: $a \mid b$.
+      \item ``está matriculado en'' entre alumnos y secciones.
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{¿Por qué nos interesan?}
+  Toda interacción entre conjuntos \emph{es} una relación.
+  A continuación veremos el caso particular más importante:
+  las \textbf{funciones}.
 \end{frame}
 
 
@@ -80,92 +136,174 @@
 
 
 %% ======================================================================
-\section{Funciones: en general e inyectivas}
+\section{Funciones: definición general}
 %% ======================================================================
 
-\begin{frame}{Función}
+\begin{frame}{Función: definición}
   \begin{block}{Definición}
     Una \textbf{función} $f$ de $A$ en $B$, escrita $f : A \to B$, es una
-    relación de $A$ en $B$ tal que \alert{cada elemento de $A$ aparece como
-    primera componente de exactamente un par}.
+    relación de $A$ en $B$ en la que \alert{cada elemento de $A$ aparece
+    como primera componente de exactamente un par}.
   \end{block}
 
   \begin{itemize}
     \item $A$ es el \textbf{dominio} de $f$; $B$ es el \textbf{codominio}.
-    \item Si $f(a) = b$, $b$ es la \textbf{imagen} de $a$, y $a$ es una
+    \item Si $f(a) = b$: $b$ es la \textbf{imagen} de $a$, y $a$ es una
           \textbf{preimagen} de $b$.
-    \item El \textbf{rango} (o imagen) de $f$ es
+    \item El \textbf{rango} de $f$ es
           $f(A) = \{f(a) \mid a \in A\} \subseteq B$.
+  \end{itemize}
+
+  \begin{alertblock}{Idea clave}
+    Una función es una \textbf{regla de correspondencia} sin ambigüedad:
+    cada $a \in A$ tiene \emph{una y solo una} imagen.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Funciones como diagramas}
+  \begin{center}
+    \begin{tikzpicture}[scale=1, every node/.style={font=\small}]
+      \node (A) at (0,0) {$A$};
+      \node (a1) at (-0.6,-0.7) {$a_1$};
+      \node (a2) at (-0.6,-1.3) {$a_2$};
+      \node (a3) at (-0.6,-1.9) {$a_3$};
+      \node (B) at (4,0) {$B$};
+      \node (b1) at (4.6,-0.7) {$b_1$};
+      \node (b2) at (4.6,-1.3) {$b_2$};
+      \node (b3) at (4.6,-1.9) {$b_3$};
+      \draw[->] (a1) -- (b1);
+      \draw[->] (a2) -- (b3);
+      \draw[->] (a3) -- (b1);
+    \end{tikzpicture}
+  \end{center}
+  \begin{itemize}
+    \item \emph{Cada} elemento de $A$ tiene \textbf{exactamente una} flecha saliendo.
+    \item Algunos elementos de $B$ pueden no recibir flechas (no es sobreyectiva).
+    \item Algunos pueden recibir varias flechas (no es inyectiva).
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Función inyectiva}
+
+
+
+
+%% ======================================================================
+\section{Funciones inyectivas y sobreyectivas}
+%% ======================================================================
+
+\begin{frame}{Funciones inyectivas}
   \begin{block}{Definición}
-    Una función $f : A \to B$ es \textbf{inyectiva} (o \emph{uno a uno}) si
-    \alert{elementos distintos de $A$ se llevan a elementos distintos de $B$}:
+    $f : A \to B$ es \textbf{inyectiva} (o \emph{uno a uno}) si elementos
+    distintos de $A$ van a elementos distintos de $B$:
     \[
       \forall a_1, a_2 \in A,\; f(a_1) = f(a_2) \implies a_1 = a_2.
     \]
   \end{block}
 
   \begin{itemize}
-    \item Equivalentemente: $a_1 \neq a_2 \implies f(a_1) \neq f(a_2)$.
+    \item Equivale a: $a_1 \neq a_2 \implies f(a_1) \neq f(a_2)$.
     \item Si $A$ es finito y $f$ es inyectiva, entonces $|A| \leq |B|$.
   \end{itemize}
+
+  \begin{exampleblock}{Idea visual}
+    Las flechas de la función \textbf{nunca se juntan} en el codominio.
+  \end{exampleblock}
 \end{frame}
 
-
-
-
-
-%% ======================================================================
-\section{Funciones sobreyectivas: Números de Stirling}
-%% ======================================================================
-
-\begin{frame}{Función sobreyectiva}
+\begin{frame}{Funciones sobreyectivas}
   \begin{block}{Definición}
-    Una función $f : A \to B$ es \textbf{sobreyectiva} (o \emph{subyectiva}) si
-    \alert{todo elemento de $B$ es imagen de algún elemento de $A$}:
+    $f : A \to B$ es \textbf{sobreyectiva} (o \emph{subyectiva}) si todo
+    elemento de $B$ es imagen de algún elemento de $A$:
     \[
-      \forall b \in B,\; \exists a \in A \text{ tal que } f(a) = b.
+      \forall b \in B,\; \exists a \in A \text{ con } f(a) = b.
     \]
     Es decir, $f(A) = B$.
   \end{block}
 
   \begin{itemize}
-    \item Si $A$ y $B$ son finitos y $f : A \to B$ es sobreyectiva,
-          entonces $|A| \geq |B|$.
-    \item \textbf{Biyectiva}: inyectiva \emph{y} sobreyectiva.
+    \item Si $A$ y $B$ son finitos y $f$ es sobreyectiva, entonces $|A| \geq |B|$.
+    \item \textbf{Biyectiva} = inyectiva \emph{y} sobreyectiva.
   \end{itemize}
+
+  \begin{alertblock}{Idea visual}
+    Las flechas \textbf{cubren todo} el codominio: cada $b \in B$ recibe al menos una.
+  \end{alertblock}
 \end{frame}
 
-\begin{frame}{Conteo de funciones sobreyectivas}
-  \begin{block}{Número de funciones sobreyectivas}
-    Para $A, B$ finitos con $|A| = n$ y $|B| = k$ ($n \geq k$), el número de
-    funciones sobreyectivas $A \to B$ es
-    \[
-      k! \cdot S(n,k),
-    \]
-    donde $S(n,k)$ es el \textbf{número de Stirling de segundo tipo}.
-  \end{block}
+\begin{frame}{Las tres clases, en una mirada}
+  \begin{center}
+  \begin{tabular}{lccc}
+    \toprule
+    Propiedad & Inyectiva & Sobreyectiva & Biyectiva \\
+    \midrule
+    Flechas distintas en $A$ \emph{llegan} a distintos $b$? & Sí & --- & Sí \\
+    Toda $b \in B$ recibe alguna flecha? & --- & Sí & Sí \\
+    Cardinalidad (finitos) & $|A|\le|B|$ & $|A|\ge|B|$ & $|A|=|B|$ \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+  Una biyección entre $A$ y $B$ finitos es, en particular, un
+  \textbf{emparejamiento perfecto}: los dos conjuntos tienen el mismo tamaño.
+\end{frame}
+
+
+
+
+
+%% ======================================================================
+\section{Conteo de funciones sobreyectivas: Stirling}
+%% ======================================================================
+
+\begin{frame}{El problema del conteo}
+  Ya sabemos qué es una función sobreyectiva.
+  \begin{alertblock}{Pregunta de conteo}
+    ¿Cuántas funciones sobreyectivas $f : A \to B$ existen si
+    $|A| = n$ y $|B| = k$ con $n \geq k$?
+  \end{alertblock}
+
+  La respuesta requiere una idea intermedia: \textbf{particionar} $A$ en
+  $k$ bloques no vacíos, uno por cada elemento de $B$.
 \end{frame}
 
 \begin{frame}{Números de Stirling del segundo tipo}
   \begin{block}{Definición}
-    Para enteros $n, k \geq 0$, el \textbf{número de Stirling de segundo tipo}
-    $S(n,k)$ es el \alert{número de formas de particionar un conjunto de
-    $n$ elementos en $k$ subconjuntos no vacíos}.
+    Para enteros $n, k \geq 0$, el \textbf{número de Stirling de segundo
+    tipo} $S(n,k)$ es el \alert{número de formas de particionar un conjunto
+    de $n$ elementos en $k$ subconjuntos no vacíos}.
   \end{block}
 
   \begin{itemize}
     \item Convención: $S(n,0) = 0$ si $n > 0$, y $S(0,0) = 1$.
+    \item \textbf{Casos base}: $S(n,1) = 1$, $S(n,n) = 1$.
     \item \textbf{Recurrencia}:
       \[
-        S(n,k) = k \cdot S(n-1,k) + S(n-1,k-1), \quad 1 \leq k \leq n.
+        S(n,k) = k \cdot S(n-1,k) + S(n-1,k-1).
       \]
-    \item Primeros valores: $S(n,1) = S(n,n) = 1$;
-          $S(3,2) = 3$, $S(4,2) = 7$, $S(4,3) = 6$.
+      \begin{itemize}
+        \item $k \cdot S(n-1,k)$: el elemento nuevo se agrega a uno de los
+              $k$ bloques existentes.
+        \item $S(n-1,k-1)$: el elemento nuevo forma un bloque aparte.
+      \end{itemize}
   \end{itemize}
+\end{frame}
+
+\begin{frame}{De particiones a funciones sobreyectivas}
+  \begin{block}{Teorema}
+    El número de funciones sobreyectivas de un conjunto $A$ de $n$ elementos
+    en un conjunto $B$ de $k$ elementos ($n \geq k$) es
+    \[
+      k! \cdot S(n,k).
+    \]
+  \end{block}
+
+  \begin{block}{Idea de la demostración}
+    \begin{enumerate}
+      \item Particionar $A$ en $k$ bloques no vacíos: $S(n,k)$ formas.
+      \item Asignar cada bloque a un elemento distinto de $B$: $k!$ formas.
+    \end{enumerate}
+  \end{block}
+
+  Esto cierra el primer uso del capítulo: contar funciones vía combinatoria.
 \end{frame}
 
 
@@ -176,7 +314,7 @@
 \section{Funciones especiales}
 %% ======================================================================
 
-\begin{frame}{Funciones especiales}
+\begin{frame}{Funciones constantes, identidad, piso y techo}
   \begin{block}{Función constante}
     $f : A \to B$ es \textbf{constante} si existe $b_0 \in B$ tal que
     $f(a) = b_0$ para todo $a \in A$.
@@ -184,7 +322,7 @@
 
   \begin{block}{Función identidad}
     La \textbf{identidad} en $A$ es $\mathrm{id}_A : A \to A$ definida por
-    $\mathrm{id}_A(a) = a$ para todo $a \in A$. Es biyectiva.
+    $\mathrm{id}_A(a) = a$. Es \emph{biyectiva} y actúa como neutro para la composición.
   \end{block}
 
   \begin{block}{Función piso y techo}
@@ -196,19 +334,19 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Funciones especiales: lógica y factorial}
+\begin{frame}{Función característica y factorial}
   \begin{block}{Función característica}
-    Para un subconjunto $X \subseteq U$,
+    Para $X \subseteq U$,
     \[
       \chi_X : U \to \{0,1\}, \quad
       \chi_X(u) = \begin{cases} 1 & \text{si } u \in X, \\ 0 & \text{si } u \notin X. \end{cases}
     \]
+    Codifica subconjuntos como funciones: $\mathcal{P}(U) \leftrightarrow \{0,1\}^U$.
   \end{block}
 
   \begin{block}{Factorial y combinaciones}
-    Para $n \geq 0$,
-    $n! = n \cdot (n-1) \cdots 1$ (con $0! = 1$).
-    Para $0 \leq r \leq n$,
+    Para $n \geq 0$: $n! = n \cdot (n-1) \cdots 1$ (con $0! = 1$).
+    Para $0 \leq r \leq n$:
     \[
       \binom{n}{r} = \frac{n!}{r!\,(n-r)!}
     \]
@@ -224,21 +362,37 @@
 \section{El principio del palomar}
 %% ======================================================================
 
-\begin{frame}{Principio del palomar}
-  \begin{block}{Enunciado}
-    Si se distribuyen $n$ objetos en $k$ cajas y $n > k$, entonces
+\begin{frame}{El principio}
+  \begin{block}{Principio del palomar}
+    Si $n$ objetos se distribuyen en $k$ cajas y $n > k$, entonces
     \alert{al menos una caja contiene más de un objeto}.
   \end{block}
 
-  \begin{itemize}
-    \item \textbf{Versión general}: si $n$ objetos van a $k$ cajas, alguna caja
-          contiene al menos $\lceil n/k \rceil$ objetos.
-    \item Es \emph{no constructivo}: garantiza la existencia, no la exhibe.
-  \end{itemize}
+  \begin{block}{Versión general}
+    Si $n$ objetos van a $k$ cajas, alguna caja contiene al menos
+    $\lceil n/k \rceil$ objetos.
+  \end{block}
 
-  \begin{exampleblock}{Aplicaciones típicas}
-    Demostrar que entre ciertos conjuntos existen dos elementos con la misma
-    propiedad (misma fecha de cumpleaños, mismo residuo módulo $k$, etc.).
+  \begin{alertblock}{Carácter no constructivo}
+    El principio \emph{garantiza la existencia} del conflicto, pero
+    \emph{no dice} dónde ocurre. Es un argumento de conteo disfrazado.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Ejemplos que conectan con el resto del capítulo}
+  \begin{exampleblock}{Ejemplo 1 — divisibilidad}
+    Entre $\{1,2,\dots,n+1\}$ hay dos que dejan el mismo residuo al dividir
+    por $n$: hay $n+1$ números y solo $n$ residuos posibles.
+  \end{exampleblock}
+
+  \begin{exampleblock}{Ejemplo 2 — funciones no inyectivas}
+    Toda función $f : \{1,\dots,n+1\} \to \{1,\dots,n\}$ \emph{no} es inyectiva.
+    Es exactamente la versión ``funciones'' del principio del palomar.
+  \end{exampleblock}
+
+  \begin{exampleblock}{Ejemplo 3 — cumpleaños}
+    Con 367 personas hay dos que cumplen años el mismo día;
+    con sólo 23, la probabilidad ya supera el 50\%.
   \end{exampleblock}
 \end{frame}
 
@@ -250,7 +404,7 @@
 \section{Composición de funciones e inversas}
 %% ======================================================================
 
-\begin{frame}{Composición de funciones}
+\begin{frame}{Composición: encadenar funciones}
   \begin{block}{Definición}
     Dadas $g : A \to B$ y $f : B \to C$, la \textbf{composición} $f \circ g :
     A \to C$ se define por
@@ -260,17 +414,17 @@
   \end{block}
 
   \begin{itemize}
-    \item La composición \emph{no} es conmutativa en general.
+    \item \textbf{No es conmutativa} en general: $f \circ g \neq g \circ f$.
     \item \textbf{Identidad}: $f \circ \mathrm{id}_A = f = \mathrm{id}_B \circ f$.
     \item \textbf{Asociatividad}: $(f \circ g) \circ h = f \circ (g \circ h)$.
-    \item Composición de inyectivas es inyectiva; de sobreyectivas es sobreyectiva.
+    \item Componer inyectivas (resp.\ sobreyectivas) da inyectiva (resp.\ sobreyectiva).
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Función inversa}
+\begin{frame}{Función inversa: deshacer una función}
   \begin{block}{Definición}
-    Si $f : A \to B$ es \textbf{biyectiva}, su \textbf{inversa} $f^{-1} : B \to A$
-    es la función definida por
+    Si $f : A \to B$ es \textbf{biyectiva}, su \textbf{inversa}
+    $f^{-1} : B \to A$ se define por
     \[
       f^{-1}(b) = a \iff f(a) = b.
     \]
@@ -278,9 +432,15 @@
 
   \begin{itemize}
     \item $f \circ f^{-1} = \mathrm{id}_B$ y $f^{-1} \circ f = \mathrm{id}_A$.
-    \item $f$ es biyectiva $\iff$ tiene inversa.
-    \item Si $f$ y $g$ son biyectivas, $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$.
+    \item $f$ tiene inversa $\iff$ $f$ es biyectiva.
+    \item Si $f$ y $g$ son biyectivas, $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$
+          (el orden se \emph{invierte}).
   \end{itemize}
+
+  \begin{alertblock}{Idea}
+    Las biyecciones son las funciones \textbf{reversibles}. Por eso la
+    biyectividad es tan importante en matemática y en criptografía.
+  \end{alertblock}
 \end{frame}
 
 
@@ -291,37 +451,55 @@
 \section{Complejidad computacional}
 %% ======================================================================
 
-\begin{frame}{Complejidad computacional}
+\begin{frame}{¿Qué pregunta la complejidad computacional?}
   \begin{block}{Idea}
-    La \textbf{complejidad computacional} estudia los recursos (tiempo,
-    memoria) que requiere un algoritmo en función del tamaño de la entrada.
+    La \textbf{complejidad computacional} clasifica los problemas según
+    los \emph{recursos} (tiempo, memoria) que necesita cualquier algoritmo
+    que los resuelva, en función del tamaño $n$ de la entrada.
   \end{block}
 
-  \begin{itemize}
-    \item Un \textbf{problema computacional} es una pregunta genérica a
-          resolver; un \textbf{algoritmo} es un procedimiento paso a paso.
-    \item \textbf{Instancia}: un caso particular del problema (con datos
-          específicos).
-  \end{itemize}
-
-  \begin{block}{Notación asintótica (repaso)}
-    $f(n) = O(g(n))$ si existen $C, n_0 > 0$ tales que
-    $|f(n)| \leq C \cdot g(n)$ para todo $n \geq n_0$.
+  \begin{block}{Vocabulario esencial}
+    \begin{itemize}
+      \item \textbf{Problema}: pregunta genérica a resolver.
+      \item \textbf{Instancia}: un caso particular con datos concretos.
+      \item \textbf{Algoritmo}: procedimiento paso a paso que resuelve
+            el problema.
+      \item \textbf{Recurso}: tiempo (número de operaciones) o espacio
+            (memoria).
+    \end{itemize}
   \end{block}
 \end{frame}
 
-\begin{frame}{Clases de complejidad usuales}
-  \begin{block}{Jerarquía de crecimiento}
-    De menor a mayor:
+\begin{frame}{Notación asintótica}
+  \begin{block}{Definición}
+    Decimos $f(n) = O(g(n))$ si existen constantes $C, n_0 > 0$ tales que
+    \[
+      |f(n)| \leq C \cdot g(n) \quad \text{para todo } n \geq n_0.
+    \]
+  \end{block}
+
+  \begin{itemize}
+    \item $O(\cdot)$ describe el \textbf{comportamiento asintótico}: ignora
+          constantes y términos de menor orden.
+    \item Útil porque dos algoritmos con constantes distintas pero misma
+          $O(\cdot)$ escalan igual cuando $n$ crece.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Jerarquía de crecimiento}
+  \begin{block}{Orden, de menor a mayor}
     \[
       1 \;<\; \log n \;<\; n \;<\; n \log n \;<\; n^2 \;<\; n^3 \;<\; 2^n.
     \]
   \end{block}
 
   \begin{itemize}
-    \item \textbf{Tiempo polinomial}: $O(n^k)$ para alguna constante $k$
+    \item \textbf{Tiempo polinomial}: $O(n^k)$ para alguna $k$
           (clase \textbf{P}).
     \item \textbf{Tiempo exponencial}: $O(c^n)$ con $c > 1$.
+    \item La frontera polinomial/exponencial \emph{no} es sólo un tecnicismo:
+          marca la diferencia entre \textbf{resoluble} y
+          \textbf{intratable} en la práctica.
   \end{itemize}
 \end{frame}
 
@@ -333,24 +511,59 @@
 \section{Análisis de algoritmos}
 %% ======================================================================
 
-\begin{frame}{Análisis de algoritmos}
+\begin{frame}{Análisis de algoritmos: precisar la intuición}
   \begin{block}{Definición}
-    El \textbf{análisis de algoritmos} determina, asintóticamente, el número de
-    operaciones elementales que un algoritmo realiza en el peor caso (o caso
-    promedio) en función del tamaño $n$ de la entrada.
+    El \textbf{análisis de algoritmos} determina, asintóticamente, el número
+    de operaciones elementales que un algoritmo realiza, en función del
+    tamaño $n$ de la entrada.
   \end{block}
 
+  \begin{block}{Tres medidas estándar}
+    \begin{itemize}
+      \item \textbf{Peor caso}: $T_{\max}(n) = \max_{|x|=n} (\text{ops}(x))$.
+            Cota superior universal.
+      \item \textbf{Caso promedio}: $T_{\text{avg}}(n) =
+            \mathbb{E}[\text{ops}(X)]$ sobre una distribución de entradas.
+      \item \textbf{Mejor caso}: $T_{\min}(n) = \min_{|x|=n} (\text{ops}(x))$.
+            Útil sólo como información complementaria.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Ejemplo: búsqueda lineal}
+  \begin{exampleblock}{Problema}
+    Buscar un elemento $x$ en un arreglo $A[1..n]$ recorriendo las
+    posiciones en orden y devolviendo ``no está'' si no aparece.
+  \end{exampleblock}
+
   \begin{itemize}
-    \item \textbf{Peor caso}: cota superior para \emph{todas} las entradas de
-          tamaño $n$.
-    \item \textbf{Caso promedio}: esperado sobre una distribución de entradas.
-    \item \textbf{Mejor caso}: usualmente poco útil, pero informativo.
+    \item \textbf{Mejor caso}: $x = A[1]$, $T_{\min}(n) = O(1)$.
+    \item \textbf{Peor caso}: $x \notin A$ o $x = A[n]$,
+          $T_{\max}(n) = O(n)$.
+    \item \textbf{Caso promedio}: $x$ en posición uniforme,
+          $T_{\text{avg}}(n) = O(n)$.
   \end{itemize}
 
-  \begin{exampleblock}{Ejemplo}
-    Búsqueda lineal en un arreglo de tamaño $n$:
-    peor caso $T(n) = O(n)$.
-  \end{exampleblock}
+  \begin{alertblock}{Conclusión}
+    La búsqueda lineal es $O(n)$ en el peor caso.
+    Un análisis cuidadoso \emph{distingue} mejor / peor / promedio, no los
+    mezcla.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{El puente final}
+  Las herramientas que aprendimos en el capítulo se conectan aquí:
+
+  \begin{itemize}
+    \item Las \textbf{funciones} aparecen al describir algoritmos
+          ($f : \text{Entrada} \to \text{Salida}$).
+    \item El \textbf{principio del palomar} explica por qué ciertos
+          problemas \emph{deben} ser lentos.
+    \item \textbf{Composición} y \textbf{recursión} justifican las
+          recurrencias que aparecen al analizar algoritmos divide-y-vencerás.
+    \item La \textbf{notación $O$} resume el comportamiento de esas
+          recurrencias.
+  \end{itemize}
 \end{frame}
 
 
@@ -361,34 +574,35 @@
 \section{Resumen y repaso histórico}
 %% ======================================================================
 
-\begin{frame}{Resumen del capítulo}
-  \begin{itemize}
-    \item \textbf{Producto cartesiano}: pares ordenados; $|A \times B| = |A||B|$.
-    \item \textbf{Relación}: subconjunto de un producto cartesiano.
-    \item \textbf{Función}: relación con primera componente única.
-    \item \textbf{Inyectiva / sobreyectiva / biyectiva}: tipos de funciones.
-    \item \textbf{Stirling de segundo tipo} $S(n,k)$: particiones en $k$ bloques;
-          funciones sobreyectivas $= k!\,S(n,k)$.
-    \item \textbf{Constante, identidad, piso, techo, característica, factorial}.
-    \item \textbf{Principio del palomar}: $n$ objetos en $k$ cajas $\Rightarrow$
-          una caja tiene $\geq \lceil n/k \rceil$ objetos.
-    \item \textbf{Composición} $f \circ g$ y \textbf{inversa} $f^{-1}$.
-    \item \textbf{Complejidad} y \textbf{análisis de algoritmos}: $O(\cdot)$,
-          $P$, polinomial vs.\ exponencial.
-  \end{itemize}
+\begin{frame}{Resumen del capítulo: el hilo conductor}
+  \begin{enumerate}
+    \item \textbf{Producto cartesiano y relación}: el lenguaje para describir
+          interacciones entre conjuntos.
+    \item \textbf{Función}: la relación sin ambigüedad; inyectiva, sobreyectiva,
+          biyectiva.
+    \item \textbf{Conteo}: funciones sobreyectivas $= k!\,S(n,k)$ vía particiones.
+    \item \textbf{Funciones auxiliares}: constante, identidad, piso, techo,
+          característica, factorial.
+    \item \textbf{Principio del palomar}: herramienta de existencia no constructiva.
+    \item \textbf{Composición e inversa}: cómo combinar y revertir funciones.
+    \item \textbf{Complejidad y análisis}: traducir problemas a funciones y
+          medir su costo asintótico.
+  \end{enumerate}
 \end{frame}
 
 \begin{frame}{Repaso histórico}
   \begin{itemize}
-    \item \textbf{Georg Cantor} (s.\ XIX): fundador de la teoría de conjuntos.
-    \item \textbf{James Stirling} (s.\ XVIII): números que llevan su nombre,
-          con aplicaciones en combinatoria.
-    \item \textbf{Dirichlet} (s.\ XIX): formulaciones del principio del palomar
-          (\emph{cajón de Dirichlet}).
-    \item \textbf{Alonzo Church} y \textbf{Alan Turing} (s.\ XX): bases
-          teóricas de la computación y de la noción de algoritmo.
-    \item \textbf{Don Knuth} (s.\ XX): ``El arte de programar'', formaliza el
-          análisis asintótico de algoritmos.
+    \item \textbf{Georg Cantor} (s.\ XIX): fundador de la teoría de conjuntos;
+          los conjuntos son el lenguaje base del capítulo.
+    \item \textbf{James Stirling} (s.\ XVIII): los números que llevan su nombre,
+          herramientas centrales en combinatoria.
+    \item \textbf{Peter Gustav Lejeune Dirichlet} (s.\ XIX): formulaciones
+          rigurosas del principio del palomar (\emph{cajón de Dirichlet}).
+    \item \textbf{Alonzo Church} y \textbf{Alan Turing} (s.\ XX):
+          formalizan la noción de ``función computable'' y, con ella,
+          la idea misma de \emph{algoritmo}.
+    \item \textbf{Donald Knuth} (s.\ XX): ``The Art of Computer Programming'';
+          formaliza el análisis asintótico de algoritmos.
   \end{itemize}
 \end{frame}
 
