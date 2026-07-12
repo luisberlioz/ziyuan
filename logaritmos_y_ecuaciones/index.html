@@ -1,0 +1,2276 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Materiales académicos de matemáticas y afines">
+      
+      
+        <meta name="author" content="Luis">
+      
+      
+      
+        <link rel="prev" href="../matematicas_secundaria/">
+      
+      
+        <link rel="next" href="../temas_basicos_funciones/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Logaritmos y Ecuaciones - Ziyuan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#logaritmos-expresiones-logaritmicas-y-ecuaciones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Ziyuan" class="md-header__button md-logo" aria-label="Ziyuan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ziyuan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Logaritmos y Ecuaciones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../recta_real_y_orden/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  La Recta Real
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../numeros_reales_notacion_cientifica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Números Reales
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../polinomios_introduccion/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Polinomios
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ecuaciones_unidad_iii/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ecuaciones (Unidad III)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../matematicas_secundaria/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Matemáticas de Secundaria
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Logaritmos y Ecuaciones
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../temas_basicos_funciones/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Temas Básicos
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Ziyuan" class="md-nav__button md-logo" aria-label="Ziyuan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ziyuan
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recta_real_y_orden/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    La Recta Real
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numeros_reales_notacion_cientifica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Números Reales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../polinomios_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polinomios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecuaciones_unidad_iii/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ecuaciones (Unidad III)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../matematicas_secundaria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matemáticas de Secundaria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logaritmos y Ecuaciones
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logaritmos y Ecuaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-logaritmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Logaritmos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Logaritmos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-casos-particulares-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Casos particulares importantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-conversion-entre-forma-logaritmica-y-exponencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Conversión entre forma logarítmica y exponencial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Conversión entre forma logarítmica y exponencial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#de-logaritmica-a-exponencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        De logarítmica a exponencial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-exponencial-a-logaritmica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        De exponencial a logarítmica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacion-fundamental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación fundamental
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-formula-de-cambio-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Fórmula de cambio de base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-propiedades-de-los-logaritmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Propiedades de los logaritmos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-ejemplos-de-aplicacion-directa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Ejemplos de aplicación directa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-expresiones-logaritmicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Expresiones Logarítmicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Expresiones Logarítmicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-simplificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Simplificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Expansión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-reduccion-a-un-solo-termino" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Reducción a un solo término
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-consejos-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Consejos prácticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ecuaciones-exponenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Ecuaciones Exponenciales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ecuaciones Exponenciales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-metodo-1-igualar-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Método 1: Igualar bases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-metodo-2-tomar-logaritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Método 2: Tomar logaritmo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-metodo-3-cambio-de-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Método 3: Cambio de variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-resumen-cuando-usar-cada-metodo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Resumen — cuándo usar cada método
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ecuaciones-logaritmicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ecuaciones Logarítmicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Ecuaciones Logarítmicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-condiciones-de-existencia-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Condiciones de existencia (dominio)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-metodo-1-convertir-a-forma-exponencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Método 1: Convertir a forma exponencial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-metodo-2-usar-propiedades-para-reducir-a-un-solo-logaritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Método 2: Usar propiedades para reducir a un solo logaritmo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-metodo-3-cambio-de-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Método 3: Cambio de variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-ecuaciones-con-cambio-de-base-obligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Ecuaciones con cambio de base obligatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-verificacion-de-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Verificación de soluciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-general-de-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen General de Fórmulas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resumen General de Fórmulas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecuaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ecuaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dominios-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dominios obligatorios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../temas_basicos_funciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temas Básicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-logaritmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Logaritmos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Logaritmos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-casos-particulares-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Casos particulares importantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-conversion-entre-forma-logaritmica-y-exponencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Conversión entre forma logarítmica y exponencial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Conversión entre forma logarítmica y exponencial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#de-logaritmica-a-exponencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        De logarítmica a exponencial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-exponencial-a-logaritmica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        De exponencial a logarítmica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relacion-fundamental" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación fundamental
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-formula-de-cambio-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Fórmula de cambio de base
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-propiedades-de-los-logaritmos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Propiedades de los logaritmos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-ejemplos-de-aplicacion-directa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Ejemplos de aplicación directa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-expresiones-logaritmicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Expresiones Logarítmicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Expresiones Logarítmicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-simplificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Simplificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-expansion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Expansión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-reduccion-a-un-solo-termino" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Reducción a un solo término
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-consejos-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Consejos prácticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ecuaciones-exponenciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Ecuaciones Exponenciales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Ecuaciones Exponenciales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-metodo-1-igualar-bases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Método 1: Igualar bases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-metodo-2-tomar-logaritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Método 2: Tomar logaritmo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-metodo-3-cambio-de-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Método 3: Cambio de variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-resumen-cuando-usar-cada-metodo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Resumen — cuándo usar cada método
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ecuaciones-logaritmicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ecuaciones Logarítmicas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Ecuaciones Logarítmicas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-condiciones-de-existencia-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Condiciones de existencia (dominio)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-metodo-1-convertir-a-forma-exponencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Método 1: Convertir a forma exponencial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-metodo-2-usar-propiedades-para-reducir-a-un-solo-logaritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Método 2: Usar propiedades para reducir a un solo logaritmo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-metodo-3-cambio-de-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Método 3: Cambio de variable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-ecuaciones-con-cambio-de-base-obligatorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Ecuaciones con cambio de base obligatorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-verificacion-de-soluciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Verificación de soluciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-general-de-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen General de Fórmulas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resumen General de Fórmulas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecuaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ecuaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dominios-obligatorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dominios obligatorios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="logaritmos-expresiones-logaritmicas-y-ecuaciones">Logaritmos, Expresiones Logarítmicas y Ecuaciones<a class="headerlink" href="#logaritmos-expresiones-logaritmicas-y-ecuaciones" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="1-logaritmos">1. Logaritmos<a class="headerlink" href="#1-logaritmos" title="Permanent link">&para;</a></h2>
+<h3 id="11-definicion">1.1 Definición<a class="headerlink" href="#11-definicion" title="Permanent link">&para;</a></h3>
+<p>El <strong>logaritmo</strong> de un número <span class="arithmatex">\(N\)</span> en una <strong>base</strong> <span class="arithmatex">\(b\)</span> es el <strong>exponente</strong> <span class="arithmatex">\(x\)</span> al cual hay que elevar la base para obtener dicho número.</p>
+<div class="arithmatex">\[
+\log_b N = x \quad \Longleftrightarrow \quad b^x = N
+\]</div>
+<p>Donde se llaman:</p>
+<ul>
+<li><strong><span class="arithmatex">\(b\)</span></strong> → base del logaritmo (con <span class="arithmatex">\(b &gt; 0\)</span> y <span class="arithmatex">\(b \neq 1\)</span>)</li>
+<li><strong><span class="arithmatex">\(N\)</span></strong> → argumento o antilogaritmo (con <span class="arithmatex">\(N &gt; 0\)</span>)</li>
+<li><strong><span class="arithmatex">\(x\)</span></strong> → logaritmo</li>
+</ul>
+<p><strong>Se lee:</strong> <em>"logaritmo en base <span class="arithmatex">\(b\)</span> de <span class="arithmatex">\(N\)</span> es igual a <span class="arithmatex">\(x\)</span>"</em>, o bien <em>"logaritmo base <span class="arithmatex">\(b\)</span> de <span class="arithmatex">\(N\)</span> vale <span class="arithmatex">\(x\)</span>"</em>.</p>
+<blockquote>
+<p><strong>Restricciones fundamentales:</strong>
+- La base debe ser positiva y distinta de 1: <span class="arithmatex">\(b &gt; 0\)</span>, <span class="arithmatex">\(b \neq 1\)</span>.
+- El argumento debe ser estrictamente positivo: <span class="arithmatex">\(N &gt; 0\)</span>.</p>
+<p>Esto se deduce de la definición: <span class="arithmatex">\(b^x\)</span> con <span class="arithmatex">\(b &gt; 0\)</span> nunca produce un resultado <span class="arithmatex">\(\leq 0\)</span>, así que <span class="arithmatex">\(N\)</span> tiene que ser positivo.</p>
+</blockquote>
+<hr />
+<h3 id="12-casos-particulares-importantes">1.2 Casos particulares importantes<a class="headerlink" href="#12-casos-particulares-importantes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Definición</th>
+<th>Equivalencia exponencial</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Logaritmo común (decimal)</strong></td>
+<td><span class="arithmatex">\(\log N = \log_{10} N\)</span></td>
+<td><span class="arithmatex">\(10^x = N\)</span></td>
+</tr>
+<tr>
+<td><strong>Logaritmo natural</strong></td>
+<td><span class="arithmatex">\(\ln N = \log_e N\)</span></td>
+<td><span class="arithmatex">\(e^x = N\)</span>,  con <span class="arithmatex">\(e \approx 2.71828\)</span></td>
+</tr>
+<tr>
+<td><strong>Logaritmo de la base</strong></td>
+<td><span class="arithmatex">\(\log_b b\)</span></td>
+<td><span class="arithmatex">\(b^1 = b\)</span>,  así que <span class="arithmatex">\(= 1\)</span></td>
+</tr>
+<tr>
+<td><strong>Logaritmo de 1</strong></td>
+<td><span class="arithmatex">\(\log_b 1\)</span></td>
+<td><span class="arithmatex">\(b^0 = 1\)</span>,  así que <span class="arithmatex">\(= 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="13-conversion-entre-forma-logaritmica-y-exponencial">1.3 Conversión entre forma logarítmica y exponencial<a class="headerlink" href="#13-conversion-entre-forma-logaritmica-y-exponencial" title="Permanent link">&para;</a></h3>
+<p>Pasar de una forma a la otra es directo aplicando la definición.</p>
+<h4 id="de-logaritmica-a-exponencial">De logarítmica a exponencial<a class="headerlink" href="#de-logaritmica-a-exponencial" title="Permanent link">&para;</a></h4>
+<p>Dada la igualdad <span class="arithmatex">\(\log_b N = x\)</span>, se reescribe como <span class="arithmatex">\(b^x = N\)</span>.</p>
+<p><strong>Ejemplo 1:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>log₂ 32 = 5    ⟹    2⁵ = 32
+</code></pre></div>
+<p><strong>Ejemplo 2:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>log₅ 625 = 4   ⟹    5⁴ = 625
+</code></pre></div>
+<p><strong>Ejemplo 3:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>log₃ (1/9) = −2   ⟹    3⁻² = 1/9
+</code></pre></div>
+<h4 id="de-exponencial-a-logaritmica">De exponencial a logarítmica<a class="headerlink" href="#de-exponencial-a-logaritmica" title="Permanent link">&para;</a></h4>
+<p>Dada la igualdad <span class="arithmatex">\(b^x = N\)</span>, se reescribe como <span class="arithmatex">\(\log_b N = x\)</span>.</p>
+<p><strong>Ejemplo 1:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>4³ = 64         ⟹    log₄ 64 = 3
+</code></pre></div>
+<p><strong>Ejemplo 2:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>10⁻² = 0.01     ⟹    log 0.01 = −2
+</code></pre></div>
+<p><strong>Ejemplo 3:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>eˣ = 7          ⟹    ln 7 = x
+</code></pre></div>
+<h4 id="relacion-fundamental">Relación fundamental<a class="headerlink" href="#relacion-fundamental" title="Permanent link">&para;</a></h4>
+<p>La conversión logaritmo ↔ exponencial es la base de todas las propiedades y operaciones siguientes. Toda propiedad logarítmica tiene su equivalente inmediato en notación exponencial.</p>
+<hr />
+<h3 id="14-formula-de-cambio-de-base">1.4 Fórmula de cambio de base<a class="headerlink" href="#14-formula-de-cambio-de-base" title="Permanent link">&para;</a></h3>
+<p>Permite calcular un logaritmo en <strong>cualquier base</strong> si se dispone de logaritmos en otra base (típicamente base 10 o base <span class="arithmatex">\(e\)</span>).</p>
+<div class="arithmatex">\[
+\log_b N \ = \ \frac{\log_c N}{\log_c b}
+\]</div>
+<p>En particular, usando logaritmos decimales y naturales:</p>
+<div class="arithmatex">\[
+\log_b N \ = \ \frac{\log N}{\log b} \ = \ \frac{\ln N}{\ln b}
+\]</div>
+<p><strong>Ejemplo 1 — calcular <span class="arithmatex">\(\log_2 50\)</span> usando decimales:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>log₂ 50  =  log 50 / log 2
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>         =  1.69897 / 0.30103
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>         ≈  5.6439
+</code></pre></div>
+<p><strong>Verificación:</strong>  <span class="arithmatex">\(2^{5.6439} \approx 50\)</span> ✓</p>
+<p><strong>Ejemplo 2 — calcular <span class="arithmatex">\(\log_3 100\)</span> usando naturales:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>log₃ 100  =  ln 100 / ln 3
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>          =  4.60517 / 1.09861
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>          ≈  4.1918
+</code></pre></div>
+<p><strong>Verificación:</strong>  <span class="arithmatex">\(3^{4.1918} \approx 100\)</span> ✓</p>
+<p><strong>Ejemplo 3 — cambio a la base del argumento:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>log_a b · log_b c · log_c a  =  1
+</code></pre></div>
+<p>Demostración: aplicando cambio de base, cada producto cancela el siguiente denominador, y el resultado es <span class="arithmatex">\(1\)</span>. Esto es útil en identidades donde aparecen "cadenas" de logaritmos.</p>
+<hr />
+<h3 id="15-propiedades-de-los-logaritmos">1.5 Propiedades de los logaritmos<a class="headerlink" href="#15-propiedades-de-los-logaritmos" title="Permanent link">&para;</a></h3>
+<p>Sean <span class="arithmatex">\(b &gt; 0\)</span>, <span class="arithmatex">\(b \neq 1\)</span>, <span class="arithmatex">\(M &gt; 0\)</span>, <span class="arithmatex">\(N &gt; 0\)</span>, y <span class="arithmatex">\(r \in \mathbb{R}\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Propiedad</th>
+<th>Fórmula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Logaritmo de un producto</strong></td>
+<td><span class="arithmatex">\(\log_b (M \cdot N) = \log_b M + \log_b N\)</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Logaritmo de un cociente</strong></td>
+<td><span class="arithmatex">\(\log_b (M / N) = \log_b M - \log_b N\)</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Logaritmo de una potencia</strong></td>
+<td><span class="arithmatex">\(\log_b (N^r) = r \cdot \log_b N\)</span></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Logaritmo de una raíz</strong></td>
+<td><span class="arithmatex">\(\log_b \sqrt[r]{N} = \dfrac{1}{r}\log_b N\)</span></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Logaritmo de la base</strong></td>
+<td><span class="arithmatex">\(\log_b b = 1\)</span></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Logaritmo de 1</strong></td>
+<td><span class="arithmatex">\(\log_b 1 = 0\)</span></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Cambio de base</strong></td>
+<td><span class="arithmatex">\(\log_b N = \dfrac{\log_c N}{\log_c b}\)</span></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Inversa</strong></td>
+<td><span class="arithmatex">\(b^{\log_b N} = N\)</span></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Logaritmo de una potencia de la base</strong></td>
+<td><span class="arithmatex">\(\log_b (b^r) = r\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Demostración rápida de la propiedad 1 (producto):</strong></p>
+<p>Sean <span class="arithmatex">\(\log_b M = x\)</span> y <span class="arithmatex">\(\log_b N = y\)</span>. Entonces <span class="arithmatex">\(M = b^x\)</span> y <span class="arithmatex">\(N = b^y\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>M · N  =  b^x · b^y  =  b^(x+y)
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Por definición:
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>log_b (M · N)  =  x + y  =  log_b M + log_b N  ✓
+</code></pre></div>
+<p>Las propiedades 2, 3 y 4 se demuestran análogamente.</p>
+<hr />
+<h3 id="16-ejemplos-de-aplicacion-directa">1.6 Ejemplos de aplicación directa<a class="headerlink" href="#16-ejemplos-de-aplicacion-directa" title="Permanent link">&para;</a></h3>
+<p><strong>Ejemplo 1:</strong> Calcular <span class="arithmatex">\(\log_2 8 \cdot \log_3 27\)</span></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>log₂ 8 = 3       (porque 2³ = 8)
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>log₃ 27 = 3      (porque 3³ = 27)
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Producto = 3 × 3 = 9
+</code></pre></div>
+<p><strong>Ejemplo 2:</strong> Si <span class="arithmatex">\(\log_b 2 = 0.43\)</span> y <span class="arithmatex">\(\log_b 3 = 0.68\)</span>, hallar <span class="arithmatex">\(\log_b 6\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>log_b 6  =  log_b (2 · 3)
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>         =  log_b 2 + log_b 3
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>         =  0.43 + 0.68
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>         =  1.11
+</code></pre></div>
+<p><strong>Ejemplo 3:</strong> Si <span class="arithmatex">\(\log_b 5 = 0.83\)</span>, hallar <span class="arithmatex">\(\log_b \sqrt{5}\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>log_b √5  =  log_b (5^(1/2))
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>          =  (1/2) · log_b 5
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>          =  (1/2) · 0.83
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>          =  0.415
+</code></pre></div>
+<p><strong>Ejemplo 4:</strong> Calcular <span class="arithmatex">\(\log 1000 - \log 10\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>log 1000  =  3       (porque 10³ = 1000)
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>log 10    =  1
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>Diferencia  =  3 − 1  =  2
+</code></pre></div>
+<p>Y verificamos por la propiedad de cociente: <span class="arithmatex">\(\log(1000/10) = \log 100 = 2\)</span>. ✓</p>
+<hr />
+<h2 id="2-expresiones-logaritmicas">2. Expresiones Logarítmicas<a class="headerlink" href="#2-expresiones-logaritmicas" title="Permanent link">&para;</a></h2>
+<p>Una <strong>expresión logarítmica</strong> es una combinación de varios logaritmos conectados por sumas, restas, productos y cocientes. Trabajamos con ellas en tres sentidos:</p>
+<ul>
+<li><strong>Simplificar</strong> → convertir una expresión compleja en una más compacta.</li>
+<li><strong>Expandir</strong> → descomponer un logaritmo en suma/resta de varios.</li>
+<li><strong>Reducir a un solo término</strong> → dejar todo como un único <span class="arithmatex">\(\log\)</span> (o como un número).</li>
+</ul>
+<hr />
+<h3 id="21-simplificacion">2.1 Simplificación<a class="headerlink" href="#21-simplificacion" title="Permanent link">&para;</a></h3>
+<p>Se trata de <strong>comprimir</strong> varios logaritmos en uno solo, usando las propiedades en sentido inverso al de la expansión.</p>
+<p><strong>Ejemplo 1:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>log a + log b − log c  =  log (a · b / c)
+</code></pre></div>
+<p><strong>Ejemplo 2:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>2 log x − 3 log y + (1/2) log z  =  log (x² · z^(1/2) / y³)
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>                                    =  log (x² √z / y³)
+</code></pre></div>
+<p><strong>Ejemplo 3:</strong> Simplificar <span class="arithmatex">\(\log 6 + \log 5 - 2\log 3 - \log 2\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>=  log 6 + log 5 − log 3² − log 2
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>=  log (6 · 5) − log (9 · 2)
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>=  log 30 − log 18
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>=  log (30 / 18)
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>=  log (5 / 3)
+</code></pre></div>
+<p><strong>Ejemplo 4:</strong> Simplificar <span class="arithmatex">\(\ln(e^3) + \ln(\sqrt{e})\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>=  3 · ln e + (1/2) · ln e
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>=  3 · 1 + (1/2) · 1
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>=  7/2
+</code></pre></div>
+<hr />
+<h3 id="22-expansion">2.2 Expansión<a class="headerlink" href="#22-expansion" title="Permanent link">&para;</a></h3>
+<p>Se trata de <strong>descomponer</strong> un logaritmo de un producto/cociente/potencia en una suma/resta de varios logaritmos.</p>
+<p><strong>Regla práctica:</strong>
+- Producto → suma de logaritmos.
+- Cociente → resta de logaritmos.
+- Exponente → coeficiente multiplicando al logaritmo.</p>
+<p><strong>Ejemplo 1:</strong> Expandir <span class="arithmatex">\(\log(x^2 y / z)\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>=  log(x² y) − log z
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>=  log(x²) + log y − log z
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>=  2 log x + log y − log z
+</code></pre></div>
+<p><strong>Ejemplo 2:</strong> Expandir <span class="arithmatex">\(\ln\left(\dfrac{a^3 \sqrt{b}}{c^2}\right)\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>=  ln(a³ √b) − ln(c²)
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>=  ln(a³) + ln(√b) − 2 ln c
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>=  3 ln a + (1/2) ln b − 2 ln c
+</code></pre></div>
+<p><strong>Ejemplo 3:</strong> Expandir <span class="arithmatex">\(\log\left(\dfrac{(x+1)^2}{\sqrt{x^2+1}}\right)\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>=  2 log(x+1) − (1/2) log(x² + 1)
+</code></pre></div>
+<p><strong>Ejemplo 4:</strong> Expandir <span class="arithmatex">\(\log_b\left(\sqrt[3]{\dfrac{p^2 q}{r^5}}\right)\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>=  log_b(p²q) − log_b(r⁵), todo multiplicado por 1/3
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>=  (1/3) [ 2 log_b p + log_b q − 5 log_b r ]
+</code></pre></div>
+<hr />
+<h3 id="23-reduccion-a-un-solo-termino">2.3 Reducción a un solo término<a class="headerlink" href="#23-reduccion-a-un-solo-termino" title="Permanent link">&para;</a></h3>
+<p>El objetivo es dejar <strong>toda la expresión como un único logaritmo</strong> (o, si es posible, como un número puro).</p>
+<p><strong>Ejemplo 1:</strong> Reducir <span class="arithmatex">\(\log 5 + \log 4\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>=  log(5 · 4)
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>=  log 20
+</code></pre></div>
+<p><strong>Ejemplo 2:</strong> Reducir <span class="arithmatex">\(2 \log x - \log y\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>=  log(x²) − log y
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>=  log(x² / y)
+</code></pre></div>
+<p><strong>Ejemplo 3:</strong> Reducir <span class="arithmatex">\(\frac{1}{2}\log a - 2\log b + 3\log c\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>=  log(√a) − log(b²) + log(c³)
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>=  log( c³ √a / b² )
+</code></pre></div>
+<p><strong>Ejemplo 4:</strong> Reducir <span class="arithmatex">\(3 \log_2(x-1) - \frac{1}{2}\log_2(x+1)\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>=  log₂[(x−1)³] − log₂[√(x+1)]
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>=  log₂[ (x−1)³ / √(x+1) ]
+</code></pre></div>
+<p><strong>Ejemplo 5 (hasta un número):</strong> Reducir <span class="arithmatex">\(\log 8 + \log 125 - 2\log 5\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>=  log(8 · 125) − log(5²)
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>=  log 1000 − log 25
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>=  log(1000 / 25)
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>=  log 40
+</code></pre></div>
+<p><strong>Ejemplo 6 (hasta un número):</strong> Reducir <span class="arithmatex">\(2 \log_5 3 - \log_5 9\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>=  log_5(3²) − log_5 9
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>=  log_5 9 − log_5 9
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>=  0
+</code></pre></div>
+<hr />
+<h3 id="24-consejos-practicos">2.4 Consejos prácticos<a class="headerlink" href="#24-consejos-practicos" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Trabaja con las propiedades en el orden correcto:</strong> convierte cocientes a restas, productos a sumas, potencias en coeficientes.</li>
+<li><strong>Factoriza cuando puedas.</strong> Si ves números como 8, 27, 100, exprésalos como potencias (8 = 2³, 100 = 10²) para identificar cancelaciones.</li>
+<li><strong>Mantén el dominio en mente.</strong> Cualquier expresión intermedia debe tener argumento positivo.</li>
+<li><strong>Cambio de base como último recurso</strong> — solo si te piden el valor numérico o si la base no es uniforme.</li>
+</ol>
+<hr />
+<h2 id="3-ecuaciones-exponenciales">3. Ecuaciones Exponenciales<a class="headerlink" href="#3-ecuaciones-exponenciales" title="Permanent link">&para;</a></h2>
+<p>Una <strong>ecuación exponencial</strong> es aquella en la que la incógnita aparece en el <strong>exponente</strong>. La idea central es <strong>igualar bases</strong> y luego igualar exponentes.</p>
+<hr />
+<h3 id="31-metodo-1-igualar-bases">3.1 Método 1: Igualar bases<a class="headerlink" href="#31-metodo-1-igualar-bases" title="Permanent link">&para;</a></h3>
+<p>Si podemos expresar ambos lados como potencias de la <strong>misma base</strong>, entonces los exponentes deben ser iguales.</p>
+<p><strong>Procedimiento:</strong>
+1. Reescribir ambos miembros con la misma base.
+2. Igualar los exponentes.
+3. Resolver la ecuación algebraica resultante.</p>
+<p><strong>Ejemplo 1:</strong> Resolver <span class="arithmatex">\(2^x = 8\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>2^x  =  2³
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>Por igualdad de exponentes:
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>x  =  3
+</code></pre></div>
+<p><strong>Ejemplo 2:</strong> Resolver <span class="arithmatex">\(3^{x-1} = 81\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>3^(x−1)  =  3⁴
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>x − 1  =  4
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>x  =  5
+</code></pre></div>
+<p><strong>Ejemplo 3:</strong> Resolver <span class="arithmatex">\(4^x = 32\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Reescribimos con base 2:
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>4^x  =  (2²)^x  =  2^(2x)
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>32   =  2⁵
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>2^(2x)  =  2⁵
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>2x  =  5
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>x  =  5/2
+</code></pre></div>
+<p><strong>Ejemplo 4:</strong> Resolver <span class="arithmatex">\(9^x \cdot 27^{x-1} = 3^{x+2}\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>9^x       =  (3²)^x  =  3^(2x)
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>27^(x−1)  =  3^(3(x−1))  =  3^(3x−3)
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>3^(2x) · 3^(3x−3)  =  3^(x+2)
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>3^(5x − 3)          =  3^(x+2)
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>5x − 3  =  x + 2
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>4x  =  5
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>x  =  5/4
+</code></pre></div>
+<p><strong>Ejemplo 5:</strong> Resolver <span class="arithmatex">\(\dfrac{8^{x+1}}{2^x} = 16\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>8^(x+1)  =  (2³)^(x+1)  =  2^(3x+3)
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>2^x      =  2^x
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>Cociente:
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>2^(3x+3) / 2^x  =  2^(2x+3)
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>2^(2x+3)  =  16  =  2⁴
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>2x + 3   =  4
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>2x       =  1
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>x        =  1/2
+</code></pre></div>
+<p><strong>Ejemplo 6:</strong> Resolver <span class="arithmatex">\(\left(\dfrac{2}{3}\right)^{x^2 - 5x + 6} = 1\)</span>.</p>
+<p>Recordemos que <span class="arithmatex">\(a^0 = 1\)</span> para cualquier <span class="arithmatex">\(a &gt; 0\)</span>, <span class="arithmatex">\(a \neq 1\)</span>. Por tanto el exponente debe ser cero:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>x² − 5x + 6  =  0
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>(x − 2)(x − 3)  =  0
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>x = 2   o   x = 3
+</code></pre></div>
+<hr />
+<h3 id="32-metodo-2-tomar-logaritmo">3.2 Método 2: Tomar logaritmo<a class="headerlink" href="#32-metodo-2-tomar-logaritmo" title="Permanent link">&para;</a></h3>
+<p>Cuando <strong>no es posible igualar las bases</strong> directamente (típicamente cuando aparece un número "raro" como 7, 11, etc.), tomamos logaritmo a ambos lados.</p>
+<p><strong>Procedimiento:</strong>
+1. Aplicar <span class="arithmatex">\(\log\)</span> (o <span class="arithmatex">\(\ln\)</span>) a ambos miembros.
+2. Usar la propiedad <span class="arithmatex">\(\log(a^x) = x \log a\)</span> para bajar la incógnita.
+3. Resolver la ecuación algebraica.</p>
+<p><strong>Ejemplo 1:</strong> Resolver <span class="arithmatex">\(5^x = 17\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>Aplicamos ln a ambos lados:
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>ln(5^x)  =  ln 17
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>x · ln 5  =  ln 17
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>x  =  ln 17 / ln 5
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>   ≈  2.8332 / 1.6094
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>   ≈  1.7604
+</code></pre></div>
+<p><strong>Ejemplo 2:</strong> Resolver <span class="arithmatex">\(3^{2x-1} = 50\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>ln(3^(2x−1))  =  ln 50
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>(2x − 1) · ln 3  =  ln 50
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>2x − 1  =  ln 50 / ln 3
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>2x      =  1 + (ln 50 / ln 3)
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>2x      =  1 + 3.5609
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>x       ≈  2.2805
+</code></pre></div>
+<p><strong>Ejemplo 3:</strong> Resolver <span class="arithmatex">\(7 \cdot 2^x = 3^{x+1}\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>Aplicamos ln:
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>ln 7 + x ln 2  =  (x + 1) ln 3
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>ln 7 + x ln 2  =  x ln 3 + ln 3
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>x ln 2 − x ln 3  =  ln 3 − ln 7
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>x (ln 2 − ln 3)  =  ln(3/7)
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a>x  =  ln(3/7) / ln(2/3)
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>   ≈  −0.8473 / −0.4055
+<a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a>   ≈  2.0897
+</code></pre></div>
+<p><strong>Ejemplo 4:</strong> Resolver <span class="arithmatex">\(e^{2x} - 3e^x - 4 = 0\)</span>.</p>
+<p>Aquí el cambio de variable <span class="arithmatex">\(u = e^x\)</span> convierte la ecuación en cuadrática:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>u² − 3u − 4  =  0
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>(u − 4)(u + 1)  =  0
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>u = 4   o   u = −1
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>Pero e^x &gt; 0 siempre, así que u = −1 no es válido.
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>e^x  =  4
+<a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a>x  =  ln 4  ≈  1.3863
+</code></pre></div>
+<hr />
+<h3 id="33-metodo-3-cambio-de-variable">3.3 Método 3: Cambio de variable<a class="headerlink" href="#33-metodo-3-cambio-de-variable" title="Permanent link">&para;</a></h3>
+<p>Cuando la ecuación es "cuadrática en exponenciales", sustituimos <span class="arithmatex">\(u = a^x\)</span> o <span class="arithmatex">\(u = e^x\)</span> para obtener un polinomio.</p>
+<p><strong>Ejemplo:</strong> Resolver <span class="arithmatex">\(4^x - 5 \cdot 2^x + 4 = 0\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>Sea u = 2^x  (entonces 4^x = (2²)^x = u²)
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>u² − 5u + 4  =  0
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>(u − 1)(u − 4)  =  0
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>u = 1   →   2^x = 1  →  x = 0
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>u = 4   →   2^x = 4  →  x = 2
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>
+<a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>Soluciones: x = 0  o  x = 2
+</code></pre></div>
+<hr />
+<h3 id="34-resumen-cuando-usar-cada-metodo">3.4 Resumen — cuándo usar cada método<a class="headerlink" href="#34-resumen-cuando-usar-cada-metodo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>Método</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ambos lados se reescriben con la misma base</td>
+<td><strong>Igualar bases</strong> (el más rápido)</td>
+</tr>
+<tr>
+<td>Aparece un número "no potencia" (7, 13, etc.)</td>
+<td><strong>Tomar logaritmo</strong></td>
+</tr>
+<tr>
+<td>La ecuación es cuadrática en la exponencial</td>
+<td><strong>Cambio de variable</strong></td>
+</tr>
+<tr>
+<td>Coeficiente 1 con suma 0 en exponente</td>
+<td>Recordar <span class="arithmatex">\(a^0 = 1\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-ecuaciones-logaritmicas">4. Ecuaciones Logarítmicas<a class="headerlink" href="#4-ecuaciones-logaritmicas" title="Permanent link">&para;</a></h2>
+<p>Una <strong>ecuación logarítmica</strong> es aquella en la que la incógnita aparece dentro de un logaritmo. La estrategia general es <strong>convertir a forma exponencial</strong> y resolver.</p>
+<hr />
+<h3 id="41-condiciones-de-existencia-dominio">4.1 Condiciones de existencia (dominio)<a class="headerlink" href="#41-condiciones-de-existencia-dominio" title="Permanent link">&para;</a></h3>
+<p>Antes de resolver, <strong>siempre</strong> hay que determinar el dominio:</p>
+<ul>
+<li>Cada logaritmo exige argumento positivo.</li>
+<li>Si la variable aparece como base, la base debe ser positiva y <span class="arithmatex">\(\neq 1\)</span>.</li>
+</ul>
+<p><strong>Ejemplo:</strong> En <span class="arithmatex">\(\log_2(x - 3)\)</span>, el dominio es <span class="arithmatex">\(x &gt; 3\)</span>.</p>
+<hr />
+<h3 id="42-metodo-1-convertir-a-forma-exponencial">4.2 Método 1: Convertir a forma exponencial<a class="headerlink" href="#42-metodo-1-convertir-a-forma-exponencial" title="Permanent link">&para;</a></h3>
+<p>Si la ecuación tiene <strong>un único logaritmo</strong>, aplicamos directamente la definición.</p>
+<p><strong>Procedimiento:</strong>
+1. Determinar el dominio.
+2. Reescribir como ecuación exponencial.
+3. Resolver y verificar que la solución cumple el dominio.</p>
+<p><strong>Ejemplo 1:</strong> Resolver <span class="arithmatex">\(\log_2(x+3) = 4\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>Dominio: x + 3 &gt; 0  →  x &gt; −3
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>Convertimos a exponencial:
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>x + 3  =  2⁴  =  16
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>x  =  13
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>Verificación: 13 &gt; −3  ✓
+</code></pre></div>
+<p><strong>Ejemplo 2:</strong> Resolver <span class="arithmatex">\(\log_3(2x - 1) = -2\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>Dominio: 2x − 1 &gt; 0  →  x &gt; 1/2
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>Convertimos:
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>2x − 1  =  3^(−2)  =  1/9
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>2x  =  1 + 1/9  =  10/9
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>x   =  5/9
+<a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a>
+<a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a>Pero 5/9 &lt; 1/2 ... ¡no cumple el dominio!
+<a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a>
+<a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a>Conclusión: no hay solución. (Una ecuación logarítmica puede no tener solución si las restricciones lo impiden.)
+</code></pre></div>
+<p><strong>Ejemplo 3:</strong> Resolver <span class="arithmatex">\(\log(x-1) + \log(x+2) = 1\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>Dominio: x − 1 &gt; 0 y x + 2 &gt; 0  →  x &gt; 1
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>Aplicamos propiedad de producto:
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>log[(x − 1)(x + 2)]  =  1
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>Convertimos a exponencial (base 10):
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>(x − 1)(x + 2)  =  10¹  =  10
+<a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>x² + x − 2  =  10
+<a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>x² + x − 12  =  0
+<a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a>(x + 4)(x − 3)  =  0
+<a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a>
+<a id="__codelineno-41-12" name="__codelineno-41-12" href="#__codelineno-41-12"></a>x = −4   o   x = 3
+<a id="__codelineno-41-13" name="__codelineno-41-13" href="#__codelineno-41-13"></a>
+<a id="__codelineno-41-14" name="__codelineno-41-14" href="#__codelineno-41-14"></a>Solo x = 3 cumple x &gt; 1.
+<a id="__codelineno-41-15" name="__codelineno-41-15" href="#__codelineno-41-15"></a>
+<a id="__codelineno-41-16" name="__codelineno-41-16" href="#__codelineno-41-16"></a>Solución: x = 3
+</code></pre></div>
+<hr />
+<h3 id="43-metodo-2-usar-propiedades-para-reducir-a-un-solo-logaritmo">4.3 Método 2: Usar propiedades para reducir a un solo logaritmo<a class="headerlink" href="#43-metodo-2-usar-propiedades-para-reducir-a-un-solo-logaritmo" title="Permanent link">&para;</a></h3>
+<p>Cuando hay varios logaritmos, primero los reducimos a uno solo (con las propiedades de la sección 2), y luego convertimos a forma exponencial.</p>
+<p><strong>Ejemplo 1:</strong> Resolver <span class="arithmatex">\(\log_2(x) + \log_2(x-2) = 3\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Dominio: x &gt; 0  y  x − 2 &gt; 0  →  x &gt; 2
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>Reducimos:
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>log_2[ x(x − 2) ]  =  3
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>Convertimos:
+<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>x(x − 2)  =  2³  =  8
+<a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>x² − 2x − 8  =  0
+<a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>(x − 4)(x + 2)  =  0
+<a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>
+<a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>x = 4   o   x = −2
+<a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>
+<a id="__codelineno-42-13" name="__codelineno-42-13" href="#__codelineno-42-13"></a>Solo x = 4 cumple x &gt; 2.
+<a id="__codelineno-42-14" name="__codelineno-42-14" href="#__codelineno-42-14"></a>
+<a id="__codelineno-42-15" name="__codelineno-42-15" href="#__codelineno-42-15"></a>Solución: x = 4
+</code></pre></div>
+<p><strong>Ejemplo 2:</strong> Resolver <span class="arithmatex">\(\log_3(x+1) - \log_3(x-1) = 2\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>Dominio: x &gt; −1  y  x &gt; 1  →  x &gt; 1
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>Reducimos:
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>log_3[ (x+1)/(x−1) ]  =  2
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>
+<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>Convertimos:
+<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>(x + 1)/(x − 1)  =  3²  =  9
+<a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a>
+<a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a>x + 1  =  9(x − 1)
+<a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a>x + 1  =  9x − 9
+<a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a>10  =  8x
+<a id="__codelineno-43-12" name="__codelineno-43-12" href="#__codelineno-43-12"></a>x  =  10/8  =  5/4
+<a id="__codelineno-43-13" name="__codelineno-43-13" href="#__codelineno-43-13"></a>
+<a id="__codelineno-43-14" name="__codelineno-43-14" href="#__codelineno-43-14"></a>Verificación: 5/4 &gt; 1  ✓
+<a id="__codelineno-43-15" name="__codelineno-43-15" href="#__codelineno-43-15"></a>
+<a id="__codelineno-43-16" name="__codelineno-43-16" href="#__codelineno-43-16"></a>Solución: x = 5/4
+</code></pre></div>
+<p><strong>Ejemplo 3:</strong> Resolver <span class="arithmatex">\(2\log(x) - \log(x-3) = \log 4\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>Dominio: x &gt; 0  y  x − 3 &gt; 0  →  x &gt; 3
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>Reducimos:
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>log(x²) − log(x − 3)  =  log 4
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>log[ x²/(x − 3) ]  =  log 4
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>
+<a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a>Como log es inyectiva:
+<a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a>x²/(x − 3)  =  4
+<a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a>x²  =  4(x − 3)
+<a id="__codelineno-44-10" name="__codelineno-44-10" href="#__codelineno-44-10"></a>x²  =  4x − 12
+<a id="__codelineno-44-11" name="__codelineno-44-11" href="#__codelineno-44-11"></a>x² − 4x + 12  =  0
+<a id="__codelineno-44-12" name="__codelineno-44-12" href="#__codelineno-44-12"></a>
+<a id="__codelineno-44-13" name="__codelineno-44-13" href="#__codelineno-44-13"></a>Discriminante: 16 − 48 = −32 &lt; 0.
+<a id="__codelineno-44-14" name="__codelineno-44-14" href="#__codelineno-44-14"></a>
+<a id="__codelineno-44-15" name="__codelineno-44-15" href="#__codelineno-44-15"></a>No hay soluciones reales.
+</code></pre></div>
+<p><strong>Ejemplo 4:</strong> Resolver <span class="arithmatex">\(\log_2(x+5) + \log_2(x-1) = \log_2(3x+5)\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>Dominio: x + 5 &gt; 0, x − 1 &gt; 0, 3x + 5 &gt; 0  →  x &gt; 1
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>Reducimos:
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>log_2[ (x+5)(x−1) ]  =  log_2(3x+5)
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>
+<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>Como log_2 es inyectiva:
+<a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>(x + 5)(x − 1)  =  3x + 5
+<a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>x² + 4x − 5  =  3x + 5
+<a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a>x² + x − 10  =  0
+<a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a>
+<a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a>x  =  [ −1 ± √(1 + 40) ] / 2
+<a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a>   =  [ −1 ± √41 ] / 2
+<a id="__codelineno-45-13" name="__codelineno-45-13" href="#__codelineno-45-13"></a>   ≈  2.7016  o  −3.7016
+<a id="__codelineno-45-14" name="__codelineno-45-14" href="#__codelineno-45-14"></a>
+<a id="__codelineno-45-15" name="__codelineno-45-15" href="#__codelineno-45-15"></a>Solo x ≈ 2.7016 cumple x &gt; 1.
+<a id="__codelineno-45-16" name="__codelineno-45-16" href="#__codelineno-45-16"></a>
+<a id="__codelineno-45-17" name="__codelineno-45-17" href="#__codelineno-45-17"></a>Solución: x = (−1 + √41)/2
+</code></pre></div>
+<hr />
+<h3 id="44-metodo-3-cambio-de-variable">4.4 Método 3: Cambio de variable<a class="headerlink" href="#44-metodo-3-cambio-de-variable" title="Permanent link">&para;</a></h3>
+<p>En algunas ecuaciones el logaritmo aparece de manera que conviene sustituir <span class="arithmatex">\(u = \log_a x\)</span>.</p>
+<p><strong>Ejemplo:</strong> Resolver <span class="arithmatex">\((\log x)^2 - 3 \log x + 2 = 0\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>Sea u = log x.
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>u² − 3u + 2  =  0
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>(u − 1)(u − 2)  =  0
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>u = 1   o   u = 2
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>Volvemos a la variable original:
+<a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a>log x = 1   →   x = 10
+<a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>log x = 2   →   x = 100
+<a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a>
+<a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a>Soluciones: x = 10  y  x = 100
+</code></pre></div>
+<hr />
+<h3 id="45-ecuaciones-con-cambio-de-base-obligatorio">4.5 Ecuaciones con cambio de base obligatorio<a class="headerlink" href="#45-ecuaciones-con-cambio-de-base-obligatorio" title="Permanent link">&para;</a></h3>
+<p>Cuando aparece una base distinta en cada logaritmo, conviene unificarlas.</p>
+<p><strong>Ejemplo:</strong> Resolver <span class="arithmatex">\(\log_2 x + \log_4 x = 6\)</span>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>Convertimos log₄ x a base 2:
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>log₄ x  =  log₂ x / log₂ 4  =  (1/2) log₂ x
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>Sustituimos:
+<a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>log₂ x + (1/2) log₂ x  =  6
+<a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a>(3/2) log₂ x  =  6
+<a id="__codelineno-47-7" name="__codelineno-47-7" href="#__codelineno-47-7"></a>log₂ x  =  4
+<a id="__codelineno-47-8" name="__codelineno-47-8" href="#__codelineno-47-8"></a>x  =  16
+</code></pre></div>
+<hr />
+<h3 id="46-verificacion-de-soluciones">4.6 Verificación de soluciones<a class="headerlink" href="#46-verificacion-de-soluciones" title="Permanent link">&para;</a></h3>
+<p>Siempre se debe <strong>verificar</strong> cada candidata sustituyéndola en la ecuación original:</p>
+<ul>
+<li>Que cumpla las <strong>condiciones de dominio</strong>.</li>
+<li>Que la igualdad se satisfaga numéricamente (especialmente útil cuando hay logaritmos en bases mixtas).</li>
+</ul>
+<p><strong>Por qué se hace esto:</strong> Al aplicar propiedades como <span class="arithmatex">\(\log A + \log B = \log(AB)\)</span> o al convertir a exponencial, en principio estamos trabajando con expresiones equivalentes. Sin embargo, hay operaciones intermedias que podrían introducir raíces "falsas" si no se vigila el dominio.</p>
+<hr />
+<h2 id="resumen-general-de-formulas">Resumen General de Fórmulas<a class="headerlink" href="#resumen-general-de-formulas" title="Permanent link">&para;</a></h2>
+<h3 id="definicion">Definición<a class="headerlink" href="#definicion" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Fórmula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logaritmo</td>
+<td><span class="arithmatex">\(\log_b N = x \iff b^x = N\)</span></td>
+</tr>
+<tr>
+<td>Cambio de base</td>
+<td><span class="arithmatex">\(\log_b N = \dfrac{\log_c N}{\log_c b}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="propiedades">Propiedades<a class="headerlink" href="#propiedades" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Fórmula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Producto</td>
+<td><span class="arithmatex">\(\log_b(M \cdot N) = \log_b M + \log_b N\)</span></td>
+</tr>
+<tr>
+<td>Cociente</td>
+<td><span class="arithmatex">\(\log_b(M / N) = \log_b M - \log_b N\)</span></td>
+</tr>
+<tr>
+<td>Potencia</td>
+<td><span class="arithmatex">\(\log_b(N^r) = r \log_b N\)</span></td>
+</tr>
+<tr>
+<td>Raíz</td>
+<td><span class="arithmatex">\(\log_b\sqrt[r]{N} = \dfrac{1}{r} \log_b N\)</span></td>
+</tr>
+<tr>
+<td>Base</td>
+<td><span class="arithmatex">\(\log_b b = 1\)</span></td>
+</tr>
+<tr>
+<td>Unidad</td>
+<td><span class="arithmatex">\(\log_b 1 = 0\)</span></td>
+</tr>
+<tr>
+<td>Inversa</td>
+<td><span class="arithmatex">\(b^{\log_b N} = N\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ecuaciones">Ecuaciones<a class="headerlink" href="#ecuaciones" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Estrategia principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exponencial con bases iguales</td>
+<td>Igualar exponentes</td>
+</tr>
+<tr>
+<td>Exponencial con bases distintas</td>
+<td>Tomar logaritmo</td>
+</tr>
+<tr>
+<td>Exponencial cuadrática</td>
+<td>Cambio de variable <span class="arithmatex">\(u = a^x\)</span></td>
+</tr>
+<tr>
+<td>Logarítmica con un solo log</td>
+<td>Convertir a exponencial</td>
+</tr>
+<tr>
+<td>Logarítmica con varios logs</td>
+<td>Reducir a un solo log, luego exponencial</td>
+</tr>
+<tr>
+<td>Logarítmica con <span class="arithmatex">\((\log x)^2\)</span></td>
+<td>Cambio de variable <span class="arithmatex">\(u = \log x\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="dominios-obligatorios">Dominios obligatorios<a class="headerlink" href="#dominios-obligatorios" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Restricción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base <span class="arithmatex">\(b\)</span></td>
+<td><span class="arithmatex">\(b &gt; 0\)</span>, <span class="arithmatex">\(b \neq 1\)</span></td>
+</tr>
+<tr>
+<td>Argumento <span class="arithmatex">\(N\)</span></td>
+<td><span class="arithmatex">\(N &gt; 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Documento elaborado como guía de estudio. Para profundizar, se recomienda resolver una variedad amplia de ejercicios y verificar siempre el dominio antes de dar una solución como válida.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

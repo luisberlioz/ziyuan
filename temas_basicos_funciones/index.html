@@ -1,0 +1,3110 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Materiales académicos de matemáticas y afines">
+      
+      
+        <meta name="author" content="Luis">
+      
+      
+      
+        <link rel="prev" href="../logaritmos_y_ecuaciones/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Temas Básicos - Ziyuan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#temas-basicos-plano-cartesiano-relaciones-funciones-e-inecuaciones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Ziyuan" class="md-header__button md-logo" aria-label="Ziyuan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ziyuan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Temas Básicos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../recta_real_y_orden/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  La Recta Real
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../numeros_reales_notacion_cientifica/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Números Reales
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../polinomios_introduccion/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Polinomios
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ecuaciones_unidad_iii/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ecuaciones (Unidad III)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../matematicas_secundaria/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Matemáticas de Secundaria
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../logaritmos_y_ecuaciones/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Logaritmos y Ecuaciones
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Temas Básicos
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Ziyuan" class="md-nav__button md-logo" aria-label="Ziyuan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ziyuan
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recta_real_y_orden/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    La Recta Real
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../numeros_reales_notacion_cientifica/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Números Reales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../polinomios_introduccion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Polinomios
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ecuaciones_unidad_iii/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ecuaciones (Unidad III)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../matematicas_secundaria/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Matemáticas de Secundaria
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logaritmos_y_ecuaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logaritmos y Ecuaciones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temas Básicos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temas Básicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-plano-de-coordenadas-cartesianas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Plano de coordenadas cartesianas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Plano de coordenadas cartesianas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-construccion-del-plano-cartesiano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Construcción del plano cartesiano
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-ubicacion-de-puntos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Ubicación de puntos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-distancia-entre-dos-puntos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Distancia entre dos puntos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-punto-medio-de-un-segmento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Punto medio de un segmento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-producto-cartesiano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Producto cartesiano
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-relaciones-y-funcion-definiciones-fundamentales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Relaciones y Función: definiciones fundamentales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Relaciones y Función: definiciones fundamentales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-relacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Relación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-funcion-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Función: definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-notacion-de-una-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Notación de una función
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-formas-de-representacion-de-una-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Formas de representación de una función
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-dominio-rango-imagen-y-preimagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Dominio, rango, imagen y preimagen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-funcion-discreta-dominio-y-rango-de-la-guia-seccion-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Función discreta: dominio y rango (de la guía, sección 4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-como-saber-si-una-relacion-es-funcion-de-la-guia-seccion-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 ¿Cómo saber si una relación es función? (de la guía, sección 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-criterio-de-la-recta-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Criterio de la recta vertical
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-funcion-lineal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Función lineal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Función lineal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-grafica-interceptos-dominio-rango-y-monotonia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Gráfica, interceptos, dominio, rango y monotonía
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ecuacion-de-la-recta-conocido-un-punto-y-la-pendiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Ecuación de la recta conocido un punto y la pendiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-ecuacion-de-la-recta-conocidos-dos-puntos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Ecuación de la recta conocidos dos puntos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sistemas-de-ecuaciones-lineales-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Sistemas de ecuaciones lineales 2×2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Sistemas de ecuaciones lineales 2×2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-clasificacion-segun-el-tipo-de-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Clasificación según el tipo de solución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-metodo-de-sustitucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Método de sustitución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-metodo-de-eliminacion-suma-y-resta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Método de eliminación (suma y resta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-representacion-grafica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Representación gráfica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-funcion-cuadratica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Función cuadrática
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Función cuadrática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-grafica-la-parabola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Gráfica: la parábola
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-elementos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Elementos principales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Elementos principales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concavidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concavidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vértice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eje-de-simetria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eje de simetría
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interceptos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interceptos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valor-maximo-o-minimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Valor máximo o mínimo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-dominio-y-rango" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Dominio y rango
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-ejemplos-resueltos-de-la-guia-seccion-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Ejemplos resueltos (de la guía, sección 9)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-intervalos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Intervalos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Intervalos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-clasificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Clasificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-intervalos-infinitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Intervalos infinitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-distintas-notaciones-para-el-mismo-intervalo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Distintas notaciones para el mismo intervalo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-inecuaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Inecuaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Inecuaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-concepto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Concepto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-resolucion-de-inecuaciones-lineales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Resolución de inecuaciones lineales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-ejemplos-resueltos-de-la-guia-secciones-10-11-y-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Ejemplos resueltos (de la guía, secciones 10, 11 y 13)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-funcion-exponencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Función exponencial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Función exponencial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-elementos-principales-en-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Elementos principales (en general)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-ejemplos-resueltos-de-la-guia-seccion-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Ejemplos resueltos (de la guía, sección 15)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-funcion-logaritmica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Función logarítmica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Función logarítmica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-elementos-principales-en-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Elementos principales (en general)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-ejemplos-resueltos-de-la-guia-seccion-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Ejemplos resueltos (de la guía, sección 16)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-comparativo-funciones-exponencial-y-logaritmica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen comparativo: funciones exponencial y logarítmica
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-plano-de-coordenadas-cartesianas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Plano de coordenadas cartesianas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Plano de coordenadas cartesianas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-construccion-del-plano-cartesiano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Construcción del plano cartesiano
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-ubicacion-de-puntos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Ubicación de puntos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-distancia-entre-dos-puntos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Distancia entre dos puntos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-punto-medio-de-un-segmento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Punto medio de un segmento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-producto-cartesiano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Producto cartesiano
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-relaciones-y-funcion-definiciones-fundamentales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Relaciones y Función: definiciones fundamentales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Relaciones y Función: definiciones fundamentales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-relacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Relación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-funcion-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Función: definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-notacion-de-una-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Notación de una función
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-formas-de-representacion-de-una-funcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Formas de representación de una función
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-dominio-rango-imagen-y-preimagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Dominio, rango, imagen y preimagen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-funcion-discreta-dominio-y-rango-de-la-guia-seccion-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Función discreta: dominio y rango (de la guía, sección 4)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-como-saber-si-una-relacion-es-funcion-de-la-guia-seccion-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 ¿Cómo saber si una relación es función? (de la guía, sección 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-criterio-de-la-recta-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Criterio de la recta vertical
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-funcion-lineal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Función lineal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Función lineal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-grafica-interceptos-dominio-rango-y-monotonia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Gráfica, interceptos, dominio, rango y monotonía
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ecuacion-de-la-recta-conocido-un-punto-y-la-pendiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Ecuación de la recta conocido un punto y la pendiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-ecuacion-de-la-recta-conocidos-dos-puntos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Ecuación de la recta conocidos dos puntos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sistemas-de-ecuaciones-lineales-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Sistemas de ecuaciones lineales 2×2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Sistemas de ecuaciones lineales 2×2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-clasificacion-segun-el-tipo-de-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Clasificación según el tipo de solución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-metodo-de-sustitucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Método de sustitución
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-metodo-de-eliminacion-suma-y-resta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Método de eliminación (suma y resta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-representacion-grafica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Representación gráfica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-funcion-cuadratica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Función cuadrática
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Función cuadrática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-grafica-la-parabola" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Gráfica: la parábola
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-elementos-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Elementos principales
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Elementos principales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concavidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concavidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vértice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eje-de-simetria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eje de simetría
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interceptos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interceptos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valor-maximo-o-minimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Valor máximo o mínimo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-dominio-y-rango" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Dominio y rango
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-ejemplos-resueltos-de-la-guia-seccion-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Ejemplos resueltos (de la guía, sección 9)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-intervalos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Intervalos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Intervalos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-clasificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Clasificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-intervalos-infinitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Intervalos infinitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-distintas-notaciones-para-el-mismo-intervalo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Distintas notaciones para el mismo intervalo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-inecuaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Inecuaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Inecuaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-concepto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Concepto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-resolucion-de-inecuaciones-lineales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Resolución de inecuaciones lineales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-ejemplos-resueltos-de-la-guia-secciones-10-11-y-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Ejemplos resueltos (de la guía, secciones 10, 11 y 13)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-funcion-exponencial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Función exponencial
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Función exponencial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-elementos-principales-en-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Elementos principales (en general)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-ejemplos-resueltos-de-la-guia-seccion-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Ejemplos resueltos (de la guía, sección 15)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-funcion-logaritmica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Función logarítmica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Función logarítmica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-definicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Definición
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-elementos-principales-en-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Elementos principales (en general)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-ejemplos-resueltos-de-la-guia-seccion-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Ejemplos resueltos (de la guía, sección 16)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-comparativo-funciones-exponencial-y-logaritmica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumen comparativo: funciones exponencial y logarítmica
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="temas-basicos-plano-cartesiano-relaciones-funciones-e-inecuaciones">Temas Básicos: Plano Cartesiano, Relaciones, Funciones e Inecuaciones<a class="headerlink" href="#temas-basicos-plano-cartesiano-relaciones-funciones-e-inecuaciones" title="Permanent link">&para;</a></h1>
+<p>Una guía de referencia rápida que reúne los conceptos fundamentales sobre el plano cartesiano, las relaciones y funciones (lineal, cuadrática, exponencial y logarítmica), los sistemas de ecuaciones 2×2, los intervalos y las inecuaciones lineales. Los ejemplos están tomados de la <strong><a href="../Guia_Unidad_IV.pdf"><code>Guia_Unidad_IV.pdf</code></a></strong> del curso <strong>Matemática I (MM-112)</strong> de la UNAH; cuando aplica se indica entre paréntesis el inciso de la guía del que proviene cada ejercicio.</p>
+<hr />
+<h2 id="1-plano-de-coordenadas-cartesianas">1. Plano de coordenadas cartesianas<a class="headerlink" href="#1-plano-de-coordenadas-cartesianas" title="Permanent link">&para;</a></h2>
+<h3 id="11-construccion-del-plano-cartesiano">1.1 Construcción del plano cartesiano<a class="headerlink" href="#11-construccion-del-plano-cartesiano" title="Permanent link">&para;</a></h3>
+<p>El <strong>plano cartesiano</strong> se construye trazando dos rectas numéricas perpendiculares entre sí que se cruzan en un punto llamado <strong>origen</strong>, denotado <span class="arithmatex">\(O = (0, 0)\)</span>:</p>
+<ul>
+<li><strong>Eje X (eje de las abscisas):</strong> horizontal.</li>
+<li><strong>Eje Y (eje de las ordenadas):</strong> vertical.</li>
+</ul>
+<p>Los ejes dividen al plano en <strong>cuatro regiones</strong> llamadas <strong>cuadrantes</strong>, numerados en sentido antihorario a partir del superior derecho.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Cuadrante</th>
+<th style="text-align: center;">Abscisa <span class="arithmatex">\(x\)</span></th>
+<th style="text-align: center;">Ordenada <span class="arithmatex">\(y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">I</td>
+<td style="text-align: center;"><span class="arithmatex">\(x &gt; 0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(y &gt; 0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">II</td>
+<td style="text-align: center;"><span class="arithmatex">\(x &lt; 0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(y &gt; 0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">III</td>
+<td style="text-align: center;"><span class="arithmatex">\(x &lt; 0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(y &lt; 0\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">IV</td>
+<td style="text-align: center;"><span class="arithmatex">\(x &gt; 0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(y &lt; 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-ubicacion-de-puntos">1.2 Ubicación de puntos<a class="headerlink" href="#12-ubicacion-de-puntos" title="Permanent link">&para;</a></h3>
+<p>Cada punto del plano se representa mediante un <strong>par ordenado</strong> <span class="arithmatex">\((x, y)\)</span>. Si la primera coordenada es <span class="arithmatex">\(0\)</span> el punto está <strong>sobre el eje Y</strong>; si la segunda es <span class="arithmatex">\(0\)</span> está <strong>sobre el eje X</strong>.</p>
+<p><strong>Ejemplo 1 (guía, inciso 1.a):</strong> <span class="arithmatex">\(A = (2, 3)\)</span> está en el <strong>cuadrante I</strong> (abscisa positiva, ordenada positiva).</p>
+<p><strong>Ejemplo 2 (guía, inciso 1.b):</strong> <span class="arithmatex">\(B = (-4, -5)\)</span> está en el <strong>cuadrante III</strong> (ambas coordenadas negativas).</p>
+<p><strong>Ejemplo 3 (guía, inciso 1.c):</strong> <span class="arithmatex">\(C = \left(\dfrac{3}{2},\ -2\right)\)</span> está en el <strong>cuadrante IV</strong> (la abscisa es positiva aunque es fracción; la ordenada es negativa).</p>
+<p><strong>Ejemplo 4 (guía, inciso 1.e):</strong> <span class="arithmatex">\(D = (-6, 4)\)</span> está en el <strong>cuadrante II</strong>.</p>
+<p><strong>Ejemplo 5 (guía, incisos 1.h y 1.k):</strong> <span class="arithmatex">\(E = (0, -10)\)</span> está <strong>sobre el eje Y</strong> (no en un cuadrante); <span class="arithmatex">\(F = (10, 0)\)</span> está <strong>sobre el eje X</strong>.</p>
+<p><strong>Ejemplo 6 (guía, inciso 1.p):</strong> <span class="arithmatex">\(G = \left(-\dfrac{8}{5},\ -3\right)\)</span> está en el <strong>cuadrante III</strong> (ambas coordenadas negativas, la abscisa es fracción negativa).</p>
+<h3 id="13-distancia-entre-dos-puntos">1.3 Distancia entre dos puntos<a class="headerlink" href="#13-distancia-entre-dos-puntos" title="Permanent link">&para;</a></h3>
+<p>Dados dos puntos <span class="arithmatex">\(P_1 = (x_1, y_1)\)</span> y <span class="arithmatex">\(P_2 = (x_2, y_2)\)</span>, la <strong>distancia</strong> entre ellos es:</p>
+<div class="arithmatex">\[
+d(P_1, P_2) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+\]</div>
+<p>Esta fórmula se deduce directamente del <strong>teorema de Pitágoras</strong>.</p>
+<p><strong>Ejemplo 1 (guía, inciso 2.a):</strong> Distancia entre <span class="arithmatex">\(A = (1, 2)\)</span> y <span class="arithmatex">\(B = (4, 6)\)</span>.</p>
+<div class="arithmatex">\[
+d(A, B) = \sqrt{(4-1)^2 + (6-2)^2} = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5
+\]</div>
+<p><strong>Ejemplo 2 (guía, inciso 2.b):</strong> Distancia entre <span class="arithmatex">\(A = (-3, 5)\)</span> y <span class="arithmatex">\(B = (2, -1)\)</span>.</p>
+<div class="arithmatex">\[
+d(A, B) = \sqrt{(2-(-3))^2 + (-1-5)^2} = \sqrt{5^2 + (-6)^2} = \sqrt{25 + 36} = \sqrt{61}
+\]</div>
+<p><strong>Ejemplo 3 (guía, inciso 2.c):</strong> Distancia entre <span class="arithmatex">\(A = \left(\dfrac{1}{2},\ -2\right)\)</span> y <span class="arithmatex">\(B = \left(\dfrac{3}{2},\ 4\right)\)</span>.</p>
+<div class="arithmatex">\[
+d(A, B) = \sqrt{\left(\tfrac{3}{2} - \tfrac{1}{2}\right)^2 + (4-(-2))^2} = \sqrt{1^2 + 6^2} = \sqrt{1 + 36} = \sqrt{37}
+\]</div>
+<h3 id="14-punto-medio-de-un-segmento">1.4 Punto medio de un segmento<a class="headerlink" href="#14-punto-medio-de-un-segmento" title="Permanent link">&para;</a></h3>
+<p>El <strong>punto medio</strong> <span class="arithmatex">\(M\)</span> del segmento que une <span class="arithmatex">\(P_1 = (x_1, y_1)\)</span> y <span class="arithmatex">\(P_2 = (x_2, y_2)\)</span> es:</p>
+<div class="arithmatex">\[
+M = \left( \frac{x_1 + x_2}{2},\ \frac{y_1 + y_2}{2} \right)
+\]</div>
+<p><strong>Ejemplo 1 (guía, inciso 2.a):</strong> Punto medio entre <span class="arithmatex">\(A = (1, 2)\)</span> y <span class="arithmatex">\(B = (4, 6)\)</span>.</p>
+<div class="arithmatex">\[
+M = \left(\frac{1+4}{2},\ \frac{2+6}{2}\right) = \left(\frac{5}{2},\ 4\right)
+\]</div>
+<p><strong>Ejemplo 2 (guía, inciso 2.b):</strong> Punto medio entre <span class="arithmatex">\(A = (-3, 5)\)</span> y <span class="arithmatex">\(B = (2, -1)\)</span>.</p>
+<div class="arithmatex">\[
+M = \left(\frac{-3+2}{2},\ \frac{5+(-1)}{2}\right) = \left(-\frac{1}{2},\ 2\right)
+\]</div>
+<p><strong>Ejemplo 3 (guía, inciso 2.k):</strong> Punto medio entre <span class="arithmatex">\(A = (5, 5)\)</span> y <span class="arithmatex">\(B = (-5, -5)\)</span>.</p>
+<div class="arithmatex">\[
+M = \left(\frac{5+(-5)}{2},\ \frac{5+(-5)}{2}\right) = (0,\ 0)
+\]</div>
+<blockquote>
+<p>💡 El segmento que une un punto con su <strong>opuesto</strong> <span class="arithmatex">\((-x, -y)\)</span> siempre tiene al <strong>origen</strong> como punto medio.</p>
+</blockquote>
+<h3 id="15-producto-cartesiano">1.5 Producto cartesiano<a class="headerlink" href="#15-producto-cartesiano" title="Permanent link">&para;</a></h3>
+<p>Dados dos conjuntos <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(B\)</span>, el <strong>producto cartesiano</strong> <span class="arithmatex">\(A \times B\)</span> es el conjunto de <strong>todos los pares ordenados</strong> cuyo primer elemento pertenece a <span class="arithmatex">\(A\)</span> y el segundo pertenece a <span class="arithmatex">\(B\)</span>:</p>
+<div class="arithmatex">\[
+A \times B = \{ (a, b) \mid a \in A,\ b \in B \}
+\]</div>
+<blockquote>
+<p><strong>Propiedades:</strong>
+- Si <span class="arithmatex">\(A\)</span> tiene <span class="arithmatex">\(m\)</span> elementos y <span class="arithmatex">\(B\)</span> tiene <span class="arithmatex">\(n\)</span> elementos, entonces <span class="arithmatex">\(A \times B\)</span> tiene <span class="arithmatex">\(m \cdot n\)</span> elementos.
+- En general, <span class="arithmatex">\(A \times B \neq B \times A\)</span> (el producto cartesiano <strong>no es conmutativo</strong>), salvo que <span class="arithmatex">\(A = B\)</span>.</p>
+</blockquote>
+<p><strong>Ejemplo 1:</strong> <span class="arithmatex">\(A = \{1, 2\}\)</span> y <span class="arithmatex">\(B = \{x, y\}\)</span>.</p>
+<div class="arithmatex">\[
+A \times B = \{(1, x),\ (1, y),\ (2, x),\ (2, y)\}, \qquad |A \times B| = 2 \cdot 2 = 4
+\]</div>
+<p><strong>Ejemplo 2:</strong> Tomando los dominios de dos ejercicios de la guía, <span class="arithmatex">\(A = \{1, 2, 3\}\)</span> (dominio del inciso 3.a) y <span class="arithmatex">\(B = \{a, b, c\}\)</span> (codominio del inciso 3.a). Entonces <span class="arithmatex">\(A \times B\)</span> tiene <span class="arithmatex">\(3 \cdot 3 = 9\)</span> elementos.</p>
+<hr />
+<h2 id="2-relaciones-y-funcion-definiciones-fundamentales">2. Relaciones y Función: definiciones fundamentales<a class="headerlink" href="#2-relaciones-y-funcion-definiciones-fundamentales" title="Permanent link">&para;</a></h2>
+<h3 id="21-relacion">2.1 Relación<a class="headerlink" href="#21-relacion" title="Permanent link">&para;</a></h3>
+<p>Dados dos conjuntos <span class="arithmatex">\(A\)</span> y <span class="arithmatex">\(B\)</span>, una <strong>relación</strong> <span class="arithmatex">\(R\)</span> de <span class="arithmatex">\(A\)</span> en <span class="arithmatex">\(B\)</span> es cualquier <strong>subconjunto</strong> del producto cartesiano <span class="arithmatex">\(A \times B\)</span>:</p>
+<div class="arithmatex">\[
+R \subseteq A \times B
+\]</div>
+<p>Una relación puede representarse de cuatro formas: mediante un <strong>diagrama de flechas</strong>, un <strong>diagrama de Venn</strong>, una <strong>gráfica de puntos</strong> en el plano cartesiano o un <strong>conjunto de pares ordenados</strong>.</p>
+<h3 id="22-funcion-definicion">2.2 Función: definición<a class="headerlink" href="#22-funcion-definicion" title="Permanent link">&para;</a></h3>
+<p>Una <strong>función</strong> <span class="arithmatex">\(f : A \to B\)</span> es una relación que cumple una condición especial:</p>
+<blockquote>
+<p><strong>Cada elemento de <span class="arithmatex">\(A\)</span> se relaciona con exactamente un elemento de <span class="arithmatex">\(B\)</span>.</strong></p>
+</blockquote>
+<p>Es decir, en una función <strong>no puede haber</strong> dos pares ordenados que compartan la misma primera coordenada.</p>
+<h3 id="23-notacion-de-una-funcion">2.3 Notación de una función<a class="headerlink" href="#23-notacion-de-una-funcion" title="Permanent link">&para;</a></h3>
+<p>Las notaciones más usadas son:</p>
+<table>
+<thead>
+<tr>
+<th>Notación</th>
+<th>Lectura</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(f : A \to B\)</span></td>
+<td>Función <span class="arithmatex">\(f\)</span> de <span class="arithmatex">\(A\)</span> en <span class="arithmatex">\(B\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(f(x)\)</span></td>
+<td>"f de <span class="arithmatex">\(x\)</span>" (imagen de <span class="arithmatex">\(x\)</span>)</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(y = f(x)\)</span></td>
+<td><span class="arithmatex">\(y\)</span> es la imagen de <span class="arithmatex">\(x\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((x, y) \in f\)</span></td>
+<td>El par <span class="arithmatex">\((x, y)\)</span> pertenece a la función</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplo (guía, inciso 3.b):</strong> <span class="arithmatex">\(f : \{-1, 0, 1\} \to \{2, 4, 6\}\)</span> con <span class="arithmatex">\(R = \{(-1, 2), (0, 4), (1, 6)\}\)</span>. La notación <span class="arithmatex">\(f(0) = 4\)</span> indica que la imagen de <span class="arithmatex">\(0\)</span> es <span class="arithmatex">\(4\)</span>.</p>
+<h3 id="24-formas-de-representacion-de-una-funcion">2.4 Formas de representación de una función<a class="headerlink" href="#24-formas-de-representacion-de-una-funcion" title="Permanent link">&para;</a></h3>
+<p>Una misma función puede escribirse de cuatro maneras distintas:</p>
+<ol>
+<li><strong>Verbal (descripción):</strong> "El doble de un número menos tres."</li>
+<li><strong>Algebraica (fórmula):</strong> <span class="arithmatex">\(f(x) = 2x - 3\)</span>.</li>
+<li><strong>Tabla de valores</strong> (ver §2.6).</li>
+<li><strong>Gráfica:</strong> conjunto de puntos <span class="arithmatex">\((x, f(x))\)</span> en el plano cartesiano.</li>
+</ol>
+<h3 id="25-dominio-rango-imagen-y-preimagen">2.5 Dominio, rango, imagen y preimagen<a class="headerlink" href="#25-dominio-rango-imagen-y-preimagen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dominio</strong> (<span class="arithmatex">\(\text{Dom}\, f\)</span>): conjunto de <strong>todos los valores de entrada</strong> (primeras coordenadas).</li>
+<li><strong>Rango</strong> (<span class="arithmatex">\(\text{Rang}\, f\)</span>) o <strong>Imagen</strong> (<span class="arithmatex">\(\text{Im}\, f\)</span>): conjunto de <strong>todos los valores de salida</strong> (segundas coordenadas).</li>
+<li><strong>Imagen de <span class="arithmatex">\(x\)</span>:</strong> es el valor <span class="arithmatex">\(f(x)\)</span> que la función asigna a <span class="arithmatex">\(x\)</span>.</li>
+<li><strong>Preimagen de <span class="arithmatex">\(y\)</span>:</strong> es cualquier valor <span class="arithmatex">\(x\)</span> tal que <span class="arithmatex">\(f(x) = y\)</span>.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Imagen vs. preimagen:</strong> si <span class="arithmatex">\(y = f(x)\)</span>, entonces <span class="arithmatex">\(y\)</span> es la <strong>imagen</strong> de <span class="arithmatex">\(x\)</span>, y <span class="arithmatex">\(x\)</span> es la <strong>preimagen</strong> de <span class="arithmatex">\(y\)</span>.</p>
+</blockquote>
+<h3 id="26-funcion-discreta-dominio-y-rango-de-la-guia-seccion-4">2.6 Función discreta: dominio y rango (de la guía, sección 4)<a class="headerlink" href="#26-funcion-discreta-dominio-y-rango-de-la-guia-seccion-4" title="Permanent link">&para;</a></h3>
+<p>Una función es <strong>discreta</strong> cuando su <strong>dominio es un conjunto finito o numerable</strong>. Se representa con <strong>puntos aislados</strong>, no con una línea continua. La guía propone los siguientes ejercicios para practicar la lectura del dominio y el rango.</p>
+<p><strong>Ejemplo 1 (guía, inciso 4.a):</strong></p>
+<div class="arithmatex">\[
+f = \{(-3,\ 4),\ (-2,\ 1),\ (0,\ 5),\ (1,\ -1),\ (3,\ 7)\}
+\]</div>
+<div class="arithmatex">\[
+\text{Dom}\, f = \{-3,\ -2,\ 0,\ 1,\ 3\}, \qquad \text{Rang}\, f = \{-1,\ 1,\ 4,\ 5,\ 7\}
+\]</div>
+<p><strong>Ejemplo 2 (guía, inciso 4.k):</strong></p>
+<div class="arithmatex">\[
+s = \{(0,\ 0),\ (1,\ 2),\ (2,\ 4),\ (3,\ 6),\ (4,\ 8)\}
+\]</div>
+<div class="arithmatex">\[
+\text{Dom}\, s = \{0,\ 1,\ 2,\ 3,\ 4\}, \qquad \text{Rang}\, s = \{0,\ 2,\ 4,\ 6,\ 8\}
+\]</div>
+<blockquote>
+<p>💡 Esta función responde a la fórmula <span class="arithmatex">\(s(x) = 2x\)</span>: por cada aumento de <span class="arithmatex">\(1\)</span> en <span class="arithmatex">\(x\)</span>, la imagen aumenta en <span class="arithmatex">\(2\)</span>. Es una función lineal discreta.</p>
+</blockquote>
+<p><strong>Ejemplo 3 (guía, inciso 4.ñ):</strong></p>
+<div class="arithmatex">\[
+w = \{(-4,\ -4),\ (-2,\ -2),\ (0,\ 0),\ (2,\ 2),\ (4,\ 4)\}
+\]</div>
+<div class="arithmatex">\[
+\text{Dom}\, w = \text{Rang}\, w = \{-4,\ -2,\ 0,\ 2,\ 4\}
+\]</div>
+<blockquote>
+<p>💡 En este caso el dominio y el rango <strong>coinciden</strong>; la función responde a <span class="arithmatex">\(w(x) = x\)</span> (función identidad discreta).</p>
+</blockquote>
+<h3 id="27-como-saber-si-una-relacion-es-funcion-de-la-guia-seccion-3">2.7 ¿Cómo saber si una relación es función? (de la guía, sección 3)<a class="headerlink" href="#27-como-saber-si-una-relacion-es-funcion-de-la-guia-seccion-3" title="Permanent link">&para;</a></h3>
+<p>La guía propone 15 relaciones para clasificar. La regla es: <strong>cada elemento del dominio debe aparecer exactamente una vez como primera coordenada</strong>. Si un mismo elemento aparece dos veces con imágenes distintas, <strong>no es función</strong>.</p>
+<p><strong>Es función:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Inciso</th>
+<th>Relación</th>
+<th>Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">3.a</td>
+<td><span class="arithmatex">\(R = \{(1, a),\ (2, b),\ (3, c)\}\)</span></td>
+<td>Cada elemento de <span class="arithmatex">\(A\)</span> aparece <strong>una sola vez</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">3.c</td>
+<td><span class="arithmatex">\(R = \{(x, r),\ (y, s),\ (z, r)\}\)</span></td>
+<td>Aunque <span class="arithmatex">\(r\)</span> se repite como imagen, <strong>cada elemento del dominio tiene solo una imagen</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">3.e</td>
+<td><span class="arithmatex">\(R = \{(a, 1),\ (b, 2),\ (c, 1)\}\)</span></td>
+<td><span class="arithmatex">\(1\)</span> se repite como imagen, pero no hay elemento del dominio repetido</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.h</td>
+<td><span class="arithmatex">\(R = \{(\text{perro, ladrar}),\ (\text{gato, maullar})\}\)</span></td>
+<td>Cada animal produce <strong>un único sonido</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>No es función:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Inciso</th>
+<th>Relación</th>
+<th>Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">3.d</td>
+<td><span class="arithmatex">\(R = \{(2, 1),\ (4, 3),\ (2, 5)\}\)</span></td>
+<td>El elemento <span class="arithmatex">\(2\)</span> aparece <strong>dos veces</strong> con imágenes distintas (<span class="arithmatex">\(1\)</span> y <span class="arithmatex">\(5\)</span>)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.f</td>
+<td><span class="arithmatex">\(R = \{(1, x),\ (2, y),\ (3, z),\ (1, y)\}\)</span></td>
+<td>El elemento <span class="arithmatex">\(1\)</span> aparece <strong>dos veces</strong> con imágenes distintas (<span class="arithmatex">\(x\)</span> e <span class="arithmatex">\(y\)</span>)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.j</td>
+<td><span class="arithmatex">\(R = \{(1, a),\ (1, b),\ (2, c)\}\)</span></td>
+<td>El elemento <span class="arithmatex">\(1\)</span> tiene <strong>dos imágenes</strong> (<span class="arithmatex">\(a\)</span> y <span class="arithmatex">\(b\)</span>)</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.o</td>
+<td><span class="arithmatex">\(R = \{(\text{rojo, manzana}),\ (\text{verde, árbol}),\ (\text{azul, cielo})\}\)</span></td>
+<td>"cielo" <strong>no pertenece a</strong> <span class="arithmatex">\(B = \{\text{manzana, árbol}\}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="28-criterio-de-la-recta-vertical">2.8 Criterio de la recta vertical<a class="headerlink" href="#28-criterio-de-la-recta-vertical" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Regla:</strong> Una gráfica en el plano cartesiano representa una función <strong>si y solo si</strong> toda recta vertical corta a la gráfica <strong>a lo sumo en un punto</strong>.</p>
+</blockquote>
+<p>Si existe una recta vertical que corta la gráfica en dos o más puntos, entonces <strong>no es una función</strong> (hay un valor de <span class="arithmatex">\(x\)</span> con dos imágenes distintas).</p>
+<p><strong>Ejemplo 1:</strong> La parábola <span class="arithmatex">\(y = x^2\)</span> <strong>sí es función</strong>: cualquier recta vertical <span class="arithmatex">\(x = c\)</span> la corta a lo sumo en un punto: <span class="arithmatex">\((c, c^2)\)</span>.</p>
+<p><strong>Ejemplo 2:</strong> La circunferencia <span class="arithmatex">\(x^2 + y^2 = 1\)</span> <strong>no es función</strong> (no es <span class="arithmatex">\(y = f(x)\)</span>): la recta vertical <span class="arithmatex">\(x = 0\)</span> la corta en <span class="arithmatex">\((0, 1)\)</span> y en <span class="arithmatex">\((0, -1)\)</span>.</p>
+<hr />
+<h2 id="3-funcion-lineal">3. Función lineal<a class="headerlink" href="#3-funcion-lineal" title="Permanent link">&para;</a></h2>
+<h3 id="31-definicion">3.1 Definición<a class="headerlink" href="#31-definicion" title="Permanent link">&para;</a></h3>
+<p>Una <strong>función lineal</strong> es una función de la forma:</p>
+<div class="arithmatex">\[
+f(x) = mx + b
+\]</div>
+<p>donde <span class="arithmatex">\(m, b \in \mathbb{R}\)</span>, con <span class="arithmatex">\(m\)</span> llamada <strong>pendiente</strong> y <span class="arithmatex">\(b\)</span> el <strong>intercepto con el eje Y</strong>.</p>
+<blockquote>
+<p>Si <span class="arithmatex">\(b = 0\)</span>, la función <span class="arithmatex">\(f(x) = mx\)</span> se llama <strong>función lineal homogénea</strong> (o <strong>proporcionalidad directa</strong>) y su gráfica pasa por el origen.</p>
+</blockquote>
+<h3 id="32-grafica-interceptos-dominio-rango-y-monotonia">3.2 Gráfica, interceptos, dominio, rango y monotonía<a class="headerlink" href="#32-grafica-interceptos-dominio-rango-y-monotonia" title="Permanent link">&para;</a></h3>
+<p>La gráfica de una función lineal es una <strong>recta</strong>. Basta con conocer dos puntos cualesquiera para trazarla. Para una función lineal no constante (<span class="arithmatex">\(m \neq 0\)</span>):</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gráfica</strong></td>
+<td>Una recta</td>
+</tr>
+<tr>
+<td><strong>Intercepto con el eje Y</strong></td>
+<td><span class="arithmatex">\((0,\ b)\)</span></td>
+</tr>
+<tr>
+<td><strong>Intercepto con el eje X</strong></td>
+<td><span class="arithmatex">\(\left(-\dfrac{b}{m},\ 0\right)\)</span> (si <span class="arithmatex">\(m \neq 0\)</span>)</td>
+</tr>
+<tr>
+<td><strong>Dominio</strong></td>
+<td><span class="arithmatex">\(\mathbb{R}\)</span></td>
+</tr>
+<tr>
+<td><strong>Rango</strong></td>
+<td><span class="arithmatex">\(\mathbb{R}\)</span></td>
+</tr>
+<tr>
+<td><strong>Monotonía</strong></td>
+<td>Creciente si <span class="arithmatex">\(m &gt; 0\)</span>; decreciente si <span class="arithmatex">\(m &lt; 0\)</span>; constante si <span class="arithmatex">\(m = 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplo 1 (guía, inciso 5.a):</strong> <span class="arithmatex">\(f(x) = 2x + 3\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(m = 2 &gt; 0\)</span> → <strong>creciente</strong>.</li>
+<li>Intercepto Y: <span class="arithmatex">\((0, 3)\)</span>.</li>
+<li>Intercepto X: <span class="arithmatex">\(2x + 3 = 0 \Rightarrow x = -\dfrac{3}{2}\)</span> → <span class="arithmatex">\(\left(-\dfrac{3}{2},\ 0\right)\)</span>.</li>
+</ul>
+<p><strong>Ejemplo 2 (guía, inciso 5.d):</strong> <span class="arithmatex">\(f(x) = -\dfrac{2}{3}x + 4\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(m = -\dfrac{2}{3} &lt; 0\)</span> → <strong>decreciente</strong>.</li>
+<li>Intercepto Y: <span class="arithmatex">\((0, 4)\)</span>.</li>
+<li>Intercepto X: <span class="arithmatex">\(-\dfrac{2}{3}x + 4 = 0 \Rightarrow x = 6\)</span> → <span class="arithmatex">\((6,\ 0)\)</span>.</li>
+</ul>
+<p><strong>Ejemplo 3 (guía, inciso 5.g):</strong> <span class="arithmatex">\(f(x) = 3x + \dfrac{5}{2}\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(m = 3 &gt; 0\)</span> → <strong>creciente</strong>.</li>
+<li>Intercepto Y: <span class="arithmatex">\(\left(0,\ \dfrac{5}{2}\right)\)</span>.</li>
+<li>Intercepto X: <span class="arithmatex">\(3x + \dfrac{5}{2} = 0 \Rightarrow x = -\dfrac{5}{6}\)</span> → <span class="arithmatex">\(\left(-\dfrac{5}{6},\ 0\right)\)</span>.</li>
+</ul>
+<h3 id="33-ecuacion-de-la-recta-conocido-un-punto-y-la-pendiente">3.3 Ecuación de la recta conocido un punto y la pendiente<a class="headerlink" href="#33-ecuacion-de-la-recta-conocido-un-punto-y-la-pendiente" title="Permanent link">&para;</a></h3>
+<p>Cuando se conoce un punto <span class="arithmatex">\(A = (x_0, y_0)\)</span> por donde pasa la recta y su pendiente <span class="arithmatex">\(m\)</span>, la <strong>ecuación punto-pendiente</strong> es:</p>
+<div class="arithmatex">\[
+y - y_0 = m\,(x - x_0)
+\]</div>
+<p><strong>Ejemplo 1 (guía, inciso 6.a):</strong> Recta que pasa por <span class="arithmatex">\(A = (1, 2)\)</span> con <span class="arithmatex">\(m = 3\)</span>.</p>
+<div class="arithmatex">\[
+y - 2 = 3\,(x - 1) \;\Longrightarrow\; y = 3x - 3 + 2 \;\Longrightarrow\; y = 3x - 1
+\]</div>
+<p><strong>Ejemplo 2 (guía, inciso 6.d):</strong> Recta que pasa por <span class="arithmatex">\(A = (0, 5)\)</span> con <span class="arithmatex">\(m = -\dfrac{1}{2}\)</span>.</p>
+<div class="arithmatex">\[
+y - 5 = -\tfrac{1}{2}\,(x - 0) \;\Longrightarrow\; y = -\tfrac{1}{2}\,x + 5
+\]</div>
+<blockquote>
+<p>💡 Como <span class="arithmatex">\(x_0 = 0\)</span>, la ecuación queda directamente en la forma <span class="arithmatex">\(y = mx + b\)</span>, con <span class="arithmatex">\(b = 5\)</span>.</p>
+</blockquote>
+<h3 id="34-ecuacion-de-la-recta-conocidos-dos-puntos">3.4 Ecuación de la recta conocidos dos puntos<a class="headerlink" href="#34-ecuacion-de-la-recta-conocidos-dos-puntos" title="Permanent link">&para;</a></h3>
+<p>Dados <span class="arithmatex">\(A = (x_1, y_1)\)</span> y <span class="arithmatex">\(B = (x_2, y_2)\)</span> con <span class="arithmatex">\(x_1 \neq x_2\)</span>, primero se calcula la pendiente:</p>
+<div class="arithmatex">\[
+m = \frac{y_2 - y_1}{x_2 - x_1}
+\]</div>
+<p>y luego se aplica la forma punto-pendiente con cualquiera de los dos puntos.</p>
+<p><strong>Ejemplo 1 (guía, inciso 7.a):</strong> Recta por <span class="arithmatex">\(A = (1, 2)\)</span> y <span class="arithmatex">\(B = (3, 6)\)</span>.</p>
+<div class="arithmatex">\[
+m = \frac{6 - 2}{3 - 1} = \frac{4}{2} = 2
+\]</div>
+<div class="arithmatex">\[
+y - 2 = 2\,(x - 1) \;\Longrightarrow\; y = 2x
+\]</div>
+<blockquote>
+<p>💡 Como la recta pasa por el origen, <span class="arithmatex">\(b = 0\)</span>: es una función lineal homogénea.</p>
+</blockquote>
+<p><strong>Ejemplo 2 (guía, inciso 7.i):</strong> Recta por <span class="arithmatex">\(A = (2, -3)\)</span> y <span class="arithmatex">\(B = (4, 1)\)</span>.</p>
+<div class="arithmatex">\[
+m = \frac{1 - (-3)}{4 - 2} = \frac{4}{2} = 2
+\]</div>
+<div class="arithmatex">\[
+y - 1 = 2\,(x - 4) \;\Longrightarrow\; y = 2x - 7
+\]</div>
+<hr />
+<h2 id="4-sistemas-de-ecuaciones-lineales-22">4. Sistemas de ecuaciones lineales 2×2<a class="headerlink" href="#4-sistemas-de-ecuaciones-lineales-22" title="Permanent link">&para;</a></h2>
+<h3 id="41-definicion">4.1 Definición<a class="headerlink" href="#41-definicion" title="Permanent link">&para;</a></h3>
+<p>Un <strong>sistema de ecuaciones lineales 2×2</strong> es un conjunto de dos ecuaciones con dos incógnitas <span class="arithmatex">\(x\)</span> e <span class="arithmatex">\(y\)</span>:</p>
+<div class="arithmatex">\[
+\begin{cases} a_1 x + b_1 y = c_1 \\ a_2 x + b_2 y = c_2 \end{cases}
+\]</div>
+<p>Resolver el sistema significa hallar todos los pares <span class="arithmatex">\((x, y)\)</span> que satisfacen <strong>ambas</strong> ecuaciones simultáneamente.</p>
+<h3 id="42-clasificacion-segun-el-tipo-de-solucion">4.2 Clasificación según el tipo de solución<a class="headerlink" href="#42-clasificacion-segun-el-tipo-de-solucion" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Condición sobre coeficientes</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Compatible determinado</strong></td>
+<td><span class="arithmatex">\(\dfrac{a_1}{a_2} \neq \dfrac{b_1}{b_2}\)</span></td>
+<td>Una única solución</td>
+</tr>
+<tr>
+<td><strong>Compatible indeterminado</strong></td>
+<td><span class="arithmatex">\(\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} = \dfrac{c_1}{c_2}\)</span></td>
+<td>Infinitas soluciones (las ecuaciones son proporcionales)</td>
+</tr>
+<tr>
+<td><strong>Incompatible</strong></td>
+<td><span class="arithmatex">\(\dfrac{a_1}{a_2} = \dfrac{b_1}{b_2} \neq \dfrac{c_1}{c_2}\)</span></td>
+<td>No tiene solución</td>
+</tr>
+</tbody>
+</table>
+<p>Geométricamente:
+- <strong>Determinado:</strong> las dos rectas se cortan en <strong>un punto</strong>.
+- <strong>Indeterminado:</strong> las dos rectas son <strong>la misma</strong> (coinciden).
+- <strong>Incompatible:</strong> las dos rectas son <strong>paralelas</strong> y distintas.</p>
+<h3 id="43-metodo-de-sustitucion">4.3 Método de sustitución<a class="headerlink" href="#43-metodo-de-sustitucion" title="Permanent link">&para;</a></h3>
+<p><strong>Pasos:</strong>
+1. Se <strong>despeja</strong> una de las variables de una de las ecuaciones.
+2. Se <strong>sustituye</strong> esa expresión en la otra ecuación.
+3. Se <strong>resuelve</strong> la ecuación resultante (queda una sola incógnita).
+4. Se <strong>sustituye</strong> el valor obtenido en la ecuación del paso 1.</p>
+<p><strong>Ejemplo (guía, inciso 8.d):</strong> Resolver <span class="arithmatex">\(\begin{cases} -x + y = 2 \\ 2x + 3y = 1 \end{cases}\)</span>.</p>
+<p>De la primera ecuación despejamos <span class="arithmatex">\(y\)</span>:</p>
+<div class="arithmatex">\[
+y = 2 + x
+\]</div>
+<p>Sustituimos en la segunda:</p>
+<div class="arithmatex">\[
+2x + 3(2 + x) = 1 \;\Longrightarrow\; 2x + 6 + 3x = 1 \;\Longrightarrow\; 5x = -5 \;\Longrightarrow\; x = -1
+\]</div>
+<p>Sustituimos de vuelta: <span class="arithmatex">\(y = 2 + (-1) = 1\)</span>. <strong>Solución:</strong> <span class="arithmatex">\((x, y) = (-1, 1)\)</span>.</p>
+<h3 id="44-metodo-de-eliminacion-suma-y-resta">4.4 Método de eliminación (suma y resta)<a class="headerlink" href="#44-metodo-de-eliminacion-suma-y-resta" title="Permanent link">&para;</a></h3>
+<p><strong>Pasos:</strong>
+1. Se <strong>multiplican</strong> las ecuaciones (si es necesario) para que los coeficientes de una de las variables sean <strong>opuestos</strong>.
+2. Se <strong>suman</strong> las ecuaciones: esa variable se elimina.
+3. Se <strong>resuelve</strong> la ecuación resultante.
+4. Se <strong>sustituye</strong> el valor obtenido en cualquiera de las ecuaciones originales.</p>
+<p><strong>Ejemplo (guía, inciso 8.g):</strong> Resolver <span class="arithmatex">\(\begin{cases} x - y = 4 \\ 2x + y = 5 \end{cases}\)</span>.</p>
+<p>Los coeficientes de <span class="arithmatex">\(y\)</span> ya son opuestos (<span class="arithmatex">\(-1\)</span> y <span class="arithmatex">\(+1\)</span>). Sumamos ambas ecuaciones:</p>
+<div class="arithmatex">\[
+(x - y) + (2x + y) = 4 + 5 \;\Longrightarrow\; 3x = 9 \;\Longrightarrow\; x = 3
+\]</div>
+<p>Sustituimos en la primera: <span class="arithmatex">\(3 - y = 4 \Rightarrow y = -1\)</span>. <strong>Solución:</strong> <span class="arithmatex">\((x, y) = (3, -1)\)</span>.</p>
+<h3 id="45-representacion-grafica">4.5 Representación gráfica<a class="headerlink" href="#45-representacion-grafica" title="Permanent link">&para;</a></h3>
+<p>Cada ecuación del sistema representa una <strong>recta</strong> en el plano cartesiano. La solución del sistema es el <strong>punto de intersección</strong> de ambas rectas.</p>
+<p><strong>Ejemplo (gráfico de los dos sistemas anteriores):</strong></p>
+<ul>
+<li>Para <span class="arithmatex">\(\begin{cases} -x + y = 2 \\ 2x + 3y = 1 \end{cases}\)</span>: las rectas <span class="arithmatex">\(y = x + 2\)</span> e <span class="arithmatex">\(y = \dfrac{1 - 2x}{3}\)</span> se cortan en <span class="arithmatex">\((-1, 1)\)</span>.</li>
+<li>Para <span class="arithmatex">\(\begin{cases} x - y = 4 \\ 2x + y = 5 \end{cases}\)</span>: las rectas <span class="arithmatex">\(y = x - 4\)</span> e <span class="arithmatex">\(y = 5 - 2x\)</span> se cortan en <span class="arithmatex">\((3, -1)\)</span>.</li>
+</ul>
+<blockquote>
+<p>💡 En ambos casos el sistema es <strong>compatible determinado</strong>: las rectas no son paralelas y se cortan en un único punto.</p>
+</blockquote>
+<hr />
+<h2 id="5-funcion-cuadratica">5. Función cuadrática<a class="headerlink" href="#5-funcion-cuadratica" title="Permanent link">&para;</a></h2>
+<h3 id="51-definicion">5.1 Definición<a class="headerlink" href="#51-definicion" title="Permanent link">&para;</a></h3>
+<p>Una <strong>función cuadrática</strong> es una función de la forma:</p>
+<div class="arithmatex">\[
+f(x) = ax^2 + bx + c
+\]</div>
+<p>donde <span class="arithmatex">\(a, b, c \in \mathbb{R}\)</span> con <span class="arithmatex">\(a \neq 0\)</span>.</p>
+<h3 id="52-grafica-la-parabola">5.2 Gráfica: la parábola<a class="headerlink" href="#52-grafica-la-parabola" title="Permanent link">&para;</a></h3>
+<p>La gráfica de una función cuadrática es una <strong>parábola</strong>, una curva en forma de "U" o de "U invertida".</p>
+<h3 id="53-elementos-principales">5.3 Elementos principales<a class="headerlink" href="#53-elementos-principales" title="Permanent link">&para;</a></h3>
+<h4 id="concavidad">Concavidad<a class="headerlink" href="#concavidad" title="Permanent link">&para;</a></h4>
+<p>Depende del signo de <span class="arithmatex">\(a\)</span>:</p>
+<ul>
+<li>Si <span class="arithmatex">\(a &gt; 0\)</span>: la parábola abre <strong>hacia arriba</strong> (forma de ∪) → tiene un <strong>mínimo</strong>.</li>
+<li>Si <span class="arithmatex">\(a &lt; 0\)</span>: la parábola abre <strong>hacia abajo</strong> (forma de ∩) → tiene un <strong>máximo</strong>.</li>
+</ul>
+<h4 id="vertice">Vértice<a class="headerlink" href="#vertice" title="Permanent link">&para;</a></h4>
+<p>El <strong>vértice</strong> es el punto donde la parábola alcanza su valor máximo o mínimo. Sus coordenadas son:</p>
+<div class="arithmatex">\[
+V = \left( -\frac{b}{2a},\ c - \frac{b^2}{4a} \right) = \left( -\frac{b}{2a},\ f\!\left(-\frac{b}{2a}\right) \right)
+\]</div>
+<h4 id="eje-de-simetria">Eje de simetría<a class="headerlink" href="#eje-de-simetria" title="Permanent link">&para;</a></h4>
+<p>Es la <strong>recta vertical</strong> que pasa por el vértice y divide la parábola en dos mitades simétricas:</p>
+<div class="arithmatex">\[
+x = -\frac{b}{2a}
+\]</div>
+<h4 id="interceptos">Interceptos<a class="headerlink" href="#interceptos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Eje</th>
+<th>Cálculo</th>
+<th>Punto(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eje Y (con <span class="arithmatex">\(x = 0\)</span>)</td>
+<td><span class="arithmatex">\(f(0) = c\)</span></td>
+<td><span class="arithmatex">\((0,\ c)\)</span></td>
+</tr>
+<tr>
+<td>Eje X (con <span class="arithmatex">\(f(x) = 0\)</span>)</td>
+<td>Soluciones de <span class="arithmatex">\(ax^2 + bx + c = 0\)</span></td>
+<td>Según el <strong>discriminante</strong> <span class="arithmatex">\(D = b^2 - 4ac\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>El <strong>discriminante</strong> <span class="arithmatex">\(D = b^2 - 4ac\)</span> indica la cantidad de intersecciones con el eje X:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Discriminante</th>
+<th style="text-align: center;">Raíces reales</th>
+<th style="text-align: center;">Interceptos con el eje X</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(D &gt; 0\)</span></td>
+<td style="text-align: center;">Dos raíces distintas</td>
+<td style="text-align: center;"><strong>Dos</strong> puntos</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(D = 0\)</span></td>
+<td style="text-align: center;">Una raíz doble</td>
+<td style="text-align: center;"><strong>Un</strong> punto (la parábola es tangente al eje X)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(D &lt; 0\)</span></td>
+<td style="text-align: center;">Ninguna raíz real</td>
+<td style="text-align: center;"><strong>Ninguno</strong> (la parábola no toca el eje X)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="valor-maximo-o-minimo">Valor máximo o mínimo<a class="headerlink" href="#valor-maximo-o-minimo" title="Permanent link">&para;</a></h4>
+<p>El valor de la función en el vértice es:</p>
+<div class="arithmatex">\[
+f(V) = c - \frac{b^2}{4a}
+\]</div>
+<ul>
+<li>Si <span class="arithmatex">\(a &gt; 0\)</span>: es el <strong>valor mínimo</strong> de la función.</li>
+<li>Si <span class="arithmatex">\(a &lt; 0\)</span>: es el <strong>valor máximo</strong> de la función.</li>
+</ul>
+<h3 id="54-dominio-y-rango">5.4 Dominio y rango<a class="headerlink" href="#54-dominio-y-rango" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dominio</strong></td>
+<td><span class="arithmatex">\(\text{Dom}\, f = \mathbb{R}\)</span></td>
+</tr>
+<tr>
+<td><strong>Rango</strong></td>
+<td>Si <span class="arithmatex">\(a &gt; 0\)</span>: <span class="arithmatex">\(\text{Rang}\, f = \left[c - \dfrac{b^2}{4a},\ +\infty\right)\)</span> <br> Si <span class="arithmatex">\(a &lt; 0\)</span>: <span class="arithmatex">\(\text{Rang}\, f = \left(-\infty,\ c - \dfrac{b^2}{4a}\right]\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="55-ejemplos-resueltos-de-la-guia-seccion-9">5.5 Ejemplos resueltos (de la guía, sección 9)<a class="headerlink" href="#55-ejemplos-resueltos-de-la-guia-seccion-9" title="Permanent link">&para;</a></h3>
+<p><strong>Ejemplo 1 (guía, inciso 9.a):</strong> <span class="arithmatex">\(f(x) = x^2 - 4x + 3\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(a = 1 &gt; 0\)</span>: <strong>abre hacia arriba</strong> → tiene <strong>mínimo</strong>.</li>
+<li>Vértice: <span class="arithmatex">\(V = \left(-\dfrac{-4}{2(1)},\ f(2)\right) = (2,\ -1)\)</span>.</li>
+<li>Eje de simetría: <span class="arithmatex">\(x = 2\)</span>.</li>
+<li>Intercepto con Y: <span class="arithmatex">\((0, 3)\)</span>.</li>
+<li>Interceptos con X: <span class="arithmatex">\(x^2 - 4x + 3 = 0 \Rightarrow (x-1)(x-3) = 0 \Rightarrow\)</span> puntos <span class="arithmatex">\((1, 0)\)</span> y <span class="arithmatex">\((3, 0)\)</span>.</li>
+<li>Valor mínimo: <span class="arithmatex">\(f(2) = -1\)</span>.</li>
+<li>Dominio: <span class="arithmatex">\(\mathbb{R}\)</span>. Rango: <span class="arithmatex">\([-1, +\infty)\)</span>.</li>
+</ul>
+<p><strong>Ejemplo 2 (guía, inciso 9.d):</strong> <span class="arithmatex">\(f(x) = -x^2 + 6x - 9 = -(x-3)^2\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(a = -1 &lt; 0\)</span>: <strong>abre hacia abajo</strong> → tiene <strong>máximo</strong>.</li>
+<li>Vértice: <span class="arithmatex">\(V = \left(-\dfrac{6}{2(-1)},\ f(3)\right) = (3,\ 0)\)</span>.</li>
+<li>Eje de simetría: <span class="arithmatex">\(x = 3\)</span>.</li>
+<li>Intercepto con Y: <span class="arithmatex">\((0, -9)\)</span>.</li>
+<li>Interceptos con X: <span class="arithmatex">\(D = 36 - 36 = 0\)</span>, raíz doble <span class="arithmatex">\(x = 3\)</span> → punto <span class="arithmatex">\((3, 0)\)</span>. La parábola es <strong>tangente al eje X</strong> (solo lo toca, no lo cruza).</li>
+<li>Valor máximo: <span class="arithmatex">\(f(3) = 0\)</span>.</li>
+<li>Dominio: <span class="arithmatex">\(\mathbb{R}\)</span>. Rango: <span class="arithmatex">\((-\infty, 0]\)</span>.</li>
+</ul>
+<p><strong>Ejemplo 3 (guía, inciso 9.k):</strong> <span class="arithmatex">\(f(x) = x^2 - 2x = x(x - 2)\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(a = 1 &gt; 0\)</span>: <strong>abre hacia arriba</strong> → tiene <strong>mínimo</strong>.</li>
+<li>Vértice: <span class="arithmatex">\(V = \left(-\dfrac{-2}{2(1)},\ f(1)\right) = (1,\ -1)\)</span>.</li>
+<li>Eje de simetría: <span class="arithmatex">\(x = 1\)</span>.</li>
+<li>Intercepto con Y: <span class="arithmatex">\((0, 0)\)</span> (también es intercepto con X).</li>
+<li>Interceptos con X: <span class="arithmatex">\(x(x-2) = 0 \Rightarrow\)</span> puntos <span class="arithmatex">\((0, 0)\)</span> y <span class="arithmatex">\((2, 0)\)</span>.</li>
+<li>Valor mínimo: <span class="arithmatex">\(f(1) = -1\)</span>.</li>
+<li>Dominio: <span class="arithmatex">\(\mathbb{R}\)</span>. Rango: <span class="arithmatex">\([-1, +\infty)\)</span>.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Comparación:</strong> los ejemplos 1 y 3 tienen la misma concavidad y el mismo mínimo (<span class="arithmatex">\(-1\)</span>); se diferencian en que el primero corta el eje Y arriba del vértice, mientras que el tercero pasa por el origen.</p>
+</blockquote>
+<hr />
+<h2 id="6-intervalos">6. Intervalos<a class="headerlink" href="#6-intervalos" title="Permanent link">&para;</a></h2>
+<h3 id="61-definicion">6.1 Definición<a class="headerlink" href="#61-definicion" title="Permanent link">&para;</a></h3>
+<p>Un <strong>intervalo</strong> es un <strong>subconjunto continuo</strong> de la recta real, es decir, un conjunto donde entre dos elementos cualesquiera del mismo están todos los números intermedios.</p>
+<h3 id="62-clasificacion">6.2 Clasificación<a class="headerlink" href="#62-clasificacion" title="Permanent link">&para;</a></h3>
+<p>Sean <span class="arithmatex">\(a, b \in \mathbb{R}\)</span> con <span class="arithmatex">\(a &lt; b\)</span>. Existen cuatro tipos básicos:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Notación</th>
+<th>Significado</th>
+<th>Representación en la recta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Abierto</strong></td>
+<td><span class="arithmatex">\((a, b)\)</span></td>
+<td><span class="arithmatex">\(\{x \in \mathbb{R} \mid a &lt; x &lt; b\}\)</span></td>
+<td>○————○ (extremos <strong>excluidos</strong>)</td>
+</tr>
+<tr>
+<td><strong>Cerrado</strong></td>
+<td><span class="arithmatex">\([a, b]\)</span></td>
+<td><span class="arithmatex">\(\{x \in \mathbb{R} \mid a \leq x \leq b\}\)</span></td>
+<td>●————● (extremos <strong>incluidos</strong>)</td>
+</tr>
+<tr>
+<td><strong>Semiabierto por la izquierda</strong></td>
+<td><span class="arithmatex">\((a, b]\)</span></td>
+<td><span class="arithmatex">\(\{x \in \mathbb{R} \mid a &lt; x \leq b\}\)</span></td>
+<td>○————●</td>
+</tr>
+<tr>
+<td><strong>Semiabierto por la derecha</strong></td>
+<td><span class="arithmatex">\([a, b)\)</span></td>
+<td><span class="arithmatex">\(\{x \in \mathbb{R} \mid a \leq x &lt; b\}\)</span></td>
+<td>●————○</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Los círculos <strong>rellenos (●)</strong> indican que el extremo <strong>sí está incluido</strong>; los círculos <strong>vacíos (○)</strong> indican que el extremo <strong>no está incluido</strong>.</p>
+</blockquote>
+<h3 id="63-intervalos-infinitos">6.3 Intervalos infinitos<a class="headerlink" href="#63-intervalos-infinitos" title="Permanent link">&para;</a></h3>
+<p>Cuando uno o ambos extremos se extienden hasta el infinito, se usan los símbolos <span class="arithmatex">\(+\infty\)</span> o <span class="arithmatex">\(-\infty\)</span> (que <strong>siempre</strong> van acompañados de paréntesis, ya que el infinito no es un número):</p>
+<table>
+<thead>
+<tr>
+<th>Notación</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\((a, +\infty)\)</span></td>
+<td><span class="arithmatex">\(\{x \in \mathbb{R} \mid x &gt; a\}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\([a, +\infty)\)</span></td>
+<td><span class="arithmatex">\(\{x \in \mathbb{R} \mid x \geq a\}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((-\infty, b)\)</span></td>
+<td><span class="arithmatex">\(\{x \in \mathbb{R} \mid x &lt; b\}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((-\infty, b]\)</span></td>
+<td><span class="arithmatex">\(\{x \in \mathbb{R} \mid x \leq b\}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((-\infty, +\infty)\)</span></td>
+<td><span class="arithmatex">\(\mathbb{R}\)</span> (toda la recta real)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="64-distintas-notaciones-para-el-mismo-intervalo">6.4 Distintas notaciones para el mismo intervalo<a class="headerlink" href="#64-distintas-notaciones-para-el-mismo-intervalo" title="Permanent link">&para;</a></h3>
+<p><strong>Ejemplo:</strong> El conjunto de números reales mayores o iguales que <span class="arithmatex">\(-2\)</span> y menores que <span class="arithmatex">\(5\)</span> puede escribirse como:</p>
+<table>
+<thead>
+<tr>
+<th>Notación</th>
+<th>Forma</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conjunto</strong></td>
+<td><span class="arithmatex">\(\{x \in \mathbb{R} \mid -2 \leq x &lt; 5\}\)</span></td>
+</tr>
+<tr>
+<td><strong>Intervalo</strong></td>
+<td><span class="arithmatex">\([-2, 5)\)</span></td>
+</tr>
+<tr>
+<td><strong>Desigualdad</strong></td>
+<td><span class="arithmatex">\(-2 \leq x &lt; 5\)</span></td>
+</tr>
+<tr>
+<td><strong>En la recta</strong></td>
+<td>●━━━━━○</td>
+</tr>
+<tr>
+<td><strong>Verbal</strong></td>
+<td>"desde <span class="arithmatex">\(-2\)</span> (incluido) hasta <span class="arithmatex">\(5\)</span> (sin incluir)"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-inecuaciones">7. Inecuaciones<a class="headerlink" href="#7-inecuaciones" title="Permanent link">&para;</a></h2>
+<h3 id="71-concepto">7.1 Concepto<a class="headerlink" href="#71-concepto" title="Permanent link">&para;</a></h3>
+<p>Una <strong>inecuación</strong> es una <strong>desigualdad</strong> entre dos expresiones algebraicas. A diferencia de una ecuación, la solución <strong>no es un valor único</strong> sino un <strong>conjunto de valores</strong> que hacen verdadera la desigualdad.</p>
+<p>Los símbolos de desigualdad son:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Símbolo</th>
+<th style="text-align: center;">Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(&lt;\)</span></td>
+<td style="text-align: center;">menor que</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(&gt;\)</span></td>
+<td style="text-align: center;">mayor que</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\leq\)</span></td>
+<td style="text-align: center;">menor o igual que</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\geq\)</span></td>
+<td style="text-align: center;">mayor o igual que</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-resolucion-de-inecuaciones-lineales">7.2 Resolución de inecuaciones lineales<a class="headerlink" href="#72-resolucion-de-inecuaciones-lineales" title="Permanent link">&para;</a></h3>
+<p>Una <strong>inecuación lineal</strong> es aquella en la que la variable aparece con exponente <span class="arithmatex">\(1\)</span>. Se resuelve de manera similar a una ecuación lineal, pero con una <strong>regla adicional fundamental</strong>:</p>
+<blockquote>
+<p>⚠️ <strong>Regla fundamental:</strong> Si se multiplican o dividen <strong>ambos miembros</strong> por un número <strong>negativo</strong>, el sentido de la desigualdad <strong>se invierte</strong>.</p>
+</blockquote>
+<p><strong>Pasos generales:</strong>
+1. Eliminar denominadores (multiplicar por el m.c.m.).
+2. Eliminar paréntesis (propiedad distributiva).
+3. Agrupar términos con la variable en un miembro y constantes en el otro.
+4. Reducir hasta obtener la forma <span class="arithmatex">\(ax \lessgtr b\)</span>.
+5. Despejar <span class="arithmatex">\(x\)</span> (recordando invertir el signo si se divide entre un negativo).
+6. Expresar el <strong>conjunto solución</strong> en notación de intervalo o de conjunto.</p>
+<h3 id="73-ejemplos-resueltos-de-la-guia-secciones-10-11-y-13">7.3 Ejemplos resueltos (de la guía, secciones 10, 11 y 13)<a class="headerlink" href="#73-ejemplos-resueltos-de-la-guia-secciones-10-11-y-13" title="Permanent link">&para;</a></h3>
+<p><strong>Ejemplo 1 (guía, inciso 10.a):</strong> Resolver <span class="arithmatex">\(3x + 5 &lt; 20\)</span>.</p>
+<div class="arithmatex">\[
+3x &lt; 20 - 5 \;\Longrightarrow\; 3x &lt; 15 \;\Longrightarrow\; x &lt; 5
+\]</div>
+<p><strong>Conjunto solución:</strong> <span class="arithmatex">\(S = (-\infty,\ 5)\)</span>.</p>
+<p><strong>Ejemplo 2 (guía, inciso 10.c):</strong> Resolver <span class="arithmatex">\(-4x + 6 \leq 2\)</span>.</p>
+<div class="arithmatex">\[
+-4x \leq 2 - 6 \;\Longrightarrow\; -4x \leq -4
+\]</div>
+<p>Dividimos entre <span class="arithmatex">\(-4\)</span> <strong>(negativo, se invierte el signo)</strong>:</p>
+<div class="arithmatex">\[
+x \geq 1
+\]</div>
+<p><strong>Conjunto solución:</strong> <span class="arithmatex">\(S = [1,\ +\infty)\)</span>.</p>
+<p><strong>Ejemplo 3 (guía, inciso 10.e):</strong> Resolver <span class="arithmatex">\(-5x + 9 \geq -6\)</span>.</p>
+<div class="arithmatex">\[
+-5x \geq -6 - 9 \;\Longrightarrow\; -5x \geq -15
+\]</div>
+<p>Dividimos entre <span class="arithmatex">\(-5\)</span> <strong>(negativo, se invierte el signo)</strong>:</p>
+<div class="arithmatex">\[
+x \leq 3
+\]</div>
+<p><strong>Conjunto solución:</strong> <span class="arithmatex">\(S = (-\infty,\ 3]\)</span>.</p>
+<p><strong>Ejemplo 4 (guía, inciso 11.a):</strong> Resolver <span class="arithmatex">\(2x + \dfrac{1}{2} &lt; \dfrac{5}{2}\)</span>.</p>
+<div class="arithmatex">\[
+2x &lt; \tfrac{5}{2} - \tfrac{1}{2} \;\Longrightarrow\; 2x &lt; 2 \;\Longrightarrow\; x &lt; 1
+\]</div>
+<p><strong>Conjunto solución:</strong> <span class="arithmatex">\(S = (-\infty,\ 1)\)</span>.</p>
+<p><strong>Ejemplo 5 (guía, inciso 11.b):</strong> Resolver <span class="arithmatex">\(-3x - \dfrac{2}{3} \geq \dfrac{7}{3}\)</span>.</p>
+<div class="arithmatex">\[
+-3x \geq \tfrac{7}{3} + \tfrac{2}{3} \;\Longrightarrow\; -3x \geq 3
+\]</div>
+<p>Dividimos entre <span class="arithmatex">\(-3\)</span> <strong>(negativo, se invierte el signo)</strong>:</p>
+<div class="arithmatex">\[
+x \leq -1
+\]</div>
+<p><strong>Conjunto solución:</strong> <span class="arithmatex">\(S = (-\infty,\ -1]\)</span>.</p>
+<p><strong>Ejemplo 6 (guía, inciso 12.a):</strong> Resolver <span class="arithmatex">\(\dfrac{1}{2}x + \dfrac{3}{4} &lt; \dfrac{7}{8}\)</span>.</p>
+<p>Multiplicamos ambos miembros por el m.c.m. <span class="arithmatex">\(= 8\)</span>:</p>
+<div class="arithmatex">\[
+4x + 6 &lt; 7 \;\Longrightarrow\; 4x &lt; 1 \;\Longrightarrow\; x &lt; \tfrac{1}{4}
+\]</div>
+<p><strong>Conjunto solución:</strong> <span class="arithmatex">\(S = \left(-\infty,\ \dfrac{1}{4}\right)\)</span>.</p>
+<p><strong>Ejemplo 7 (guía, inciso 13.a):</strong> Resolver <span class="arithmatex">\(2(x + 3) - 4 &lt; 3(x - 1) + 2\)</span>.</p>
+<p>Aplicamos la propiedad distributiva:</p>
+<div class="arithmatex">\[
+2x + 6 - 4 &lt; 3x - 3 + 2 \;\Longrightarrow\; 2x + 2 &lt; 3x - 1
+\]</div>
+<p>Pasamos los términos con <span class="arithmatex">\(x\)</span> al miembro izquierdo y las constantes al derecho:</p>
+<div class="arithmatex">\[
+2 &lt; 3x - 2x - 1 \;\Longrightarrow\; 2 + 1 &lt; x \;\Longrightarrow\; 3 &lt; x
+\]</div>
+<p><strong>Conjunto solución:</strong> <span class="arithmatex">\(S = (3,\ +\infty)\)</span>.</p>
+<p><strong>Ejemplo 8 (guía, inciso 13.b):</strong> Resolver <span class="arithmatex">\(5(x - 2) + 3 \geq 2(x + 4) - 1\)</span>.</p>
+<div class="arithmatex">\[
+5x - 10 + 3 \geq 2x + 8 - 1 \;\Longrightarrow\; 5x - 7 \geq 2x + 7
+\]</div>
+<div class="arithmatex">\[
+3x \geq 14 \;\Longrightarrow\; x \geq \tfrac{14}{3}
+\]</div>
+<p><strong>Conjunto solución:</strong> <span class="arithmatex">\(S = \left[\dfrac{14}{3},\ +\infty\right)\)</span>.</p>
+<hr />
+<h2 id="8-funcion-exponencial">8. Función exponencial<a class="headerlink" href="#8-funcion-exponencial" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>⚠️ <strong>Nota:</strong> Este tema aparece dos veces en la lista original (numerado como 8 y como 9). Se desarrolla una sola vez aquí.</p>
+</blockquote>
+<h3 id="81-definicion">8.1 Definición<a class="headerlink" href="#81-definicion" title="Permanent link">&para;</a></h3>
+<p>Una <strong>función exponencial</strong> es una función de la forma:</p>
+<div class="arithmatex">\[
+f(x) = a^x
+\]</div>
+<p>donde la <strong>base</strong> <span class="arithmatex">\(a\)</span> es una constante real que cumple <span class="arithmatex">\(a &gt; 0\)</span> y <span class="arithmatex">\(a \neq 1\)</span>, y <span class="arithmatex">\(x\)</span> es el <strong>exponente</strong> (la variable independiente).</p>
+<blockquote>
+<p>Las funciones exponenciales más utilizadas son <span class="arithmatex">\(f(x) = e^x\)</span> (base <span class="arithmatex">\(e \approx 2.71828\)</span>) y <span class="arithmatex">\(f(x) = 10^x\)</span>.</p>
+</blockquote>
+<h3 id="82-elementos-principales-en-general">8.2 Elementos principales (en general)<a class="headerlink" href="#82-elementos-principales-en-general" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dominio</strong></td>
+<td><span class="arithmatex">\(\text{Dom}\, f = \mathbb{R}\)</span></td>
+</tr>
+<tr>
+<td><strong>Rango</strong></td>
+<td><span class="arithmatex">\(\text{Rang}\, f = (0,\ +\infty)\)</span> (siempre positivos, <strong>nunca</strong> <span class="arithmatex">\(\leq 0\)</span>)</td>
+</tr>
+<tr>
+<td><strong>Intercepto con Y</strong></td>
+<td><span class="arithmatex">\((0,\ 1)\)</span> porque <span class="arithmatex">\(a^0 = 1\)</span></td>
+</tr>
+<tr>
+<td><strong>Intercepto con X</strong></td>
+<td><strong>Ninguno</strong> (la gráfica nunca toca al eje X)</td>
+</tr>
+<tr>
+<td><strong>Asíntota</strong></td>
+<td>El <strong>eje X</strong>, <span class="arithmatex">\(y = 0\)</span>. La curva se acerca a <span class="arithmatex">\(y = 0\)</span> sin tocarlo</td>
+</tr>
+<tr>
+<td><strong>Monotonía</strong></td>
+<td>Creciente si <span class="arithmatex">\(a &gt; 1\)</span>; decreciente si <span class="arithmatex">\(0 &lt; a &lt; 1\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="83-ejemplos-resueltos-de-la-guia-seccion-15">8.3 Ejemplos resueltos (de la guía, sección 15)<a class="headerlink" href="#83-ejemplos-resueltos-de-la-guia-seccion-15" title="Permanent link">&para;</a></h3>
+<p>Los ejercicios de la guía involucran <strong>transformaciones</strong> de la forma <span class="arithmatex">\(f(x) = a^{g(x)} + k\)</span>: la base <span class="arithmatex">\(a\)</span> y el exponente <span class="arithmatex">\(g(x)\)</span> cambian la posición y la forma de la gráfica; las constantes sumadas la trasladan.</p>
+<p><strong>Ejemplo 1 (guía, inciso 15.a):</strong> <span class="arithmatex">\(f(x) = 2^{x+1} - 1\)</span>.</p>
+<ul>
+<li>Base <span class="arithmatex">\(2 &gt; 1\)</span>, sin signo negativo → <strong>creciente</strong>.</li>
+<li>Asíntota horizontal: <span class="arithmatex">\(y = -1\)</span> (desplazamiento vertical <span class="arithmatex">\(-1\)</span>).</li>
+<li>Intercepto con Y: <span class="arithmatex">\(f(0) = 2^{0+1} - 1 = 2 - 1 = 1 \Rightarrow (0,\ 1)\)</span>.</li>
+<li>Intercepto con X: <span class="arithmatex">\(2^{x+1} - 1 = 0 \Rightarrow 2^{x+1} = 1 \Rightarrow x + 1 = 0 \Rightarrow x = -1 \Rightarrow (-1,\ 0)\)</span>.</li>
+</ul>
+<p><strong>Ejemplo 2 (guía, inciso 15.e):</strong> <span class="arithmatex">\(f(x) = 3^{x-2}\)</span>.</p>
+<ul>
+<li>Base <span class="arithmatex">\(3 &gt; 1\)</span> → <strong>creciente</strong>.</li>
+<li>Asíntota horizontal: <span class="arithmatex">\(y = 0\)</span>.</li>
+<li>Intercepto con Y: <span class="arithmatex">\(f(0) = 3^{0-2} = 3^{-2} = \dfrac{1}{9} \Rightarrow \left(0,\ \dfrac{1}{9}\right)\)</span>.</li>
+<li>Intercepto con X: <span class="arithmatex">\(3^{x-2} = 1 \Rightarrow x - 2 = 0 \Rightarrow x = 2 \Rightarrow (2,\ 0)\)</span>.</li>
+</ul>
+<p><strong>Ejemplo 3 (guía, inciso 15.m):</strong> <span class="arithmatex">\(f(x) = 2^{-x+1} + 1\)</span>.</p>
+<ul>
+<li>El exponente <span class="arithmatex">\(-x+1 = -(x-1)\)</span> hace que cuando <span class="arithmatex">\(x\)</span> crece, el exponente <strong>decrece</strong> → la función es <strong>decreciente</strong>.</li>
+<li>Asíntota horizontal: <span class="arithmatex">\(y = 1\)</span>.</li>
+<li>Intercepto con Y: <span class="arithmatex">\(f(0) = 2^{-0+1} + 1 = 2 + 1 = 3 \Rightarrow (0,\ 3)\)</span>.</li>
+<li>Intercepto con X: <span class="arithmatex">\(2^{-x+1} + 1 = 0 \Rightarrow 2^{-x+1} = -1\)</span> → <strong>no existe</strong> (la función siempre es mayor que <span class="arithmatex">\(1\)</span>).</li>
+</ul>
+<p><strong>Ejemplo 4 (guía, inciso 15.j):</strong> <span class="arithmatex">\(f(x) = -2^{2x-1}\)</span>.</p>
+<ul>
+<li>El signo negativo invierte la gráfica con respecto al eje X. La función es siempre <strong>negativa</strong>.</li>
+<li><strong>Decreciente</strong>: cuando <span class="arithmatex">\(x\)</span> crece, <span class="arithmatex">\(2^{2x-1}\)</span> crece mucho en valor absoluto, así que <span class="arithmatex">\(-2^{2x-1}\)</span> se hace muy negativa.</li>
+<li>Asíntota horizontal: <span class="arithmatex">\(y = 0\)</span> (acercándose desde abajo).</li>
+<li>Intercepto con Y: <span class="arithmatex">\(f(0) = -2^{-1} = -\dfrac{1}{2} \Rightarrow \left(0,\ -\dfrac{1}{2}\right)\)</span>.</li>
+<li>No tiene intercepto con X (la función siempre es negativa).</li>
+</ul>
+<hr />
+<h2 id="9-funcion-logaritmica">9. Función logarítmica<a class="headerlink" href="#9-funcion-logaritmica" title="Permanent link">&para;</a></h2>
+<h3 id="91-definicion">9.1 Definición<a class="headerlink" href="#91-definicion" title="Permanent link">&para;</a></h3>
+<p>La <strong>función logarítmica</strong> es la <strong>inversa</strong> de la función exponencial. Se define como:</p>
+<div class="arithmatex">\[
+f(x) = \log_a x
+\]</div>
+<p>donde <span class="arithmatex">\(a\)</span> es la <strong>base</strong> del logaritmo, con <span class="arithmatex">\(a &gt; 0\)</span> y <span class="arithmatex">\(a \neq 1\)</span>, y cumple la equivalencia fundamental:</p>
+<div class="arithmatex">\[
+\log_a x = y \quad \Longleftrightarrow \quad a^y = x
+\]</div>
+<blockquote>
+<p>Las funciones logarítmicas más usadas son <span class="arithmatex">\(\log x = \log_{10} x\)</span> (logaritmo común o decimal) y <span class="arithmatex">\(\ln x = \log_e x\)</span> (logaritmo natural).</p>
+</blockquote>
+<h3 id="92-elementos-principales-en-general">9.2 Elementos principales (en general)<a class="headerlink" href="#92-elementos-principales-en-general" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dominio</strong></td>
+<td><span class="arithmatex">\(\text{Dom}\, f = (0,\ +\infty)\)</span> (el argumento debe ser positivo)</td>
+</tr>
+<tr>
+<td><strong>Rango</strong></td>
+<td><span class="arithmatex">\(\text{Rang}\, f = \mathbb{R}\)</span></td>
+</tr>
+<tr>
+<td><strong>Intercepto con X</strong></td>
+<td><span class="arithmatex">\((1,\ 0)\)</span> porque <span class="arithmatex">\(\log_a 1 = 0\)</span></td>
+</tr>
+<tr>
+<td><strong>Intercepto con Y</strong></td>
+<td><strong>Ninguno</strong> (la gráfica nunca toca al eje Y: <span class="arithmatex">\(x = 0\)</span> no está en el dominio)</td>
+</tr>
+<tr>
+<td><strong>Asíntota</strong></td>
+<td>El <strong>eje Y</strong>, <span class="arithmatex">\(x = 0\)</span>. La curva se acerca al eje Y sin tocarlo</td>
+</tr>
+<tr>
+<td><strong>Monotonía</strong></td>
+<td>Creciente si <span class="arithmatex">\(a &gt; 1\)</span>; decreciente si <span class="arithmatex">\(0 &lt; a &lt; 1\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-ejemplos-resueltos-de-la-guia-seccion-16">9.3 Ejemplos resueltos (de la guía, sección 16)<a class="headerlink" href="#93-ejemplos-resueltos-de-la-guia-seccion-16" title="Permanent link">&para;</a></h3>
+<p>Los ejercicios de la guía usan <strong>transformaciones</strong> del tipo <span class="arithmatex">\(f(x) = \log_a(g(x)) + k\)</span>: la expresión dentro del logaritmo cambia la <strong>asíntota vertical</strong> y la constante <span class="arithmatex">\(k\)</span> desplaza verticalmente la gráfica.</p>
+<p><strong>Ejemplo 1 (guía, inciso 16.a):</strong> <span class="arithmatex">\(f(x) = \log_2(x + 1) - 1\)</span>.</p>
+<ul>
+<li>Base <span class="arithmatex">\(2 &gt; 1\)</span> → <strong>creciente</strong>.</li>
+<li>Dominio: <span class="arithmatex">\(x + 1 &gt; 0 \Rightarrow x &gt; -1\)</span>.</li>
+<li>Asíntota vertical: <span class="arithmatex">\(x = -1\)</span>.</li>
+<li>Intercepto con X: <span class="arithmatex">\(\log_2(x+1) - 1 = 0 \Rightarrow \log_2(x+1) = 1 \Rightarrow x + 1 = 2 \Rightarrow x = 1 \Rightarrow (1,\ 0)\)</span>.</li>
+<li>Intercepto con Y: <span class="arithmatex">\(f(0) = \log_2(1) - 1 = 0 - 1 = -1 \Rightarrow (0,\ -1)\)</span>.</li>
+</ul>
+<p><strong>Ejemplo 2 (guía, inciso 16.e):</strong> <span class="arithmatex">\(f(x) = \log_3(x - 2)\)</span>.</p>
+<ul>
+<li>Base <span class="arithmatex">\(3 &gt; 1\)</span> → <strong>creciente</strong>.</li>
+<li>Dominio: <span class="arithmatex">\(x - 2 &gt; 0 \Rightarrow x &gt; 2\)</span>.</li>
+<li>Asíntota vertical: <span class="arithmatex">\(x = 2\)</span>.</li>
+<li>Intercepto con X: <span class="arithmatex">\(\log_3(x-2) = 0 \Rightarrow x - 2 = 1 \Rightarrow x = 3 \Rightarrow (3,\ 0)\)</span>.</li>
+<li>Intercepto con Y: <span class="arithmatex">\(x = 0\)</span> no está en el dominio → <strong>no hay intercepto con Y</strong>.</li>
+</ul>
+<p><strong>Ejemplo 3 (guía, inciso 16.c):</strong> <span class="arithmatex">\(f(x) = -\ln(-x + 2) - 2\)</span>.</p>
+<ul>
+<li>El signo negativo invierte la orientación: la función es <strong>decreciente</strong>.</li>
+<li>Dominio: <span class="arithmatex">\(-x + 2 &gt; 0 \Rightarrow x &lt; 2\)</span>.</li>
+<li>Asíntota vertical: <span class="arithmatex">\(x = 2\)</span>.</li>
+<li>Intercepto con X: <span class="arithmatex">\(-\ln(-x+2) - 2 = 0 \Rightarrow \ln(-x+2) = -2 \Rightarrow -x+2 = e^{-2} \Rightarrow x = 2 - e^{-2} \approx 1.865\)</span>.</li>
+<li>Intercepto con Y: <span class="arithmatex">\(f(0) = -\ln(2) - 2 \approx -2.693 \Rightarrow (0,\ -2.693)\)</span>.</li>
+</ul>
+<hr />
+<h2 id="resumen-comparativo-funciones-exponencial-y-logaritmica">Resumen comparativo: funciones exponencial y logarítmica<a class="headerlink" href="#resumen-comparativo-funciones-exponencial-y-logaritmica" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Exponencial <span class="arithmatex">\(f(x) = a^x\)</span></th>
+<th>Logarítmica <span class="arithmatex">\(f(x) = \log_a x\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dominio</td>
+<td><span class="arithmatex">\(\mathbb{R}\)</span></td>
+<td><span class="arithmatex">\((0,\ +\infty)\)</span></td>
+</tr>
+<tr>
+<td>Rango</td>
+<td><span class="arithmatex">\((0,\ +\infty)\)</span></td>
+<td><span class="arithmatex">\(\mathbb{R}\)</span></td>
+</tr>
+<tr>
+<td>Intercepto Y</td>
+<td><span class="arithmatex">\((0,\ 1)\)</span></td>
+<td>Ninguno</td>
+</tr>
+<tr>
+<td>Intercepto X</td>
+<td>Ninguno</td>
+<td><span class="arithmatex">\((1,\ 0)\)</span></td>
+</tr>
+<tr>
+<td>Asíntota</td>
+<td><span class="arithmatex">\(y = 0\)</span> (eje X)</td>
+<td><span class="arithmatex">\(x = 0\)</span> (eje Y)</td>
+</tr>
+<tr>
+<td>Creciente si</td>
+<td><span class="arithmatex">\(a &gt; 1\)</span></td>
+<td><span class="arithmatex">\(a &gt; 1\)</span></td>
+</tr>
+<tr>
+<td>Decreciente si</td>
+<td><span class="arithmatex">\(0 &lt; a &lt; 1\)</span></td>
+<td><span class="arithmatex">\(0 &lt; a &lt; 1\)</span></td>
+</tr>
+<tr>
+<td>Relación</td>
+<td>Una es la <strong>inversa</strong> de la otra: sus gráficas son simétricas respecto a la recta <span class="arithmatex">\(y = x\)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<blockquote>
+<p><strong>Sugerencia de uso:</strong> este documento sirve como hoja de referencia rápida con ejemplos resueltos de la <code>Guia_Unidad_IV.pdf</code>. Para profundizar en la resolución de ecuaciones exponenciales y logarítmicas, así como en sus propiedades algebraicas (producto, cociente, potencia, cambio de base), consulta el documento <a href="../logaritmos_y_ecuaciones/"><code>logaritmos_y_ecuaciones.md</code></a> del mismo repositorio. Para profundizar en la técnica algebraica de las ecuaciones (manipulación de igualdades, ecuaciones cuadráticas con fórmula general y división sintética), consulta <a href="../ecuaciones_unidad_iii/"><code>ecuaciones_unidad_iii.md</code></a>.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "search.highlight", "search.share", "search.suggest", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
