@@ -1,0 +1,32 @@
+/* Force MathJax output to match body text size and line-height.
+   mkdocs-material renders .md-typeset at .8rem on desktop with
+   line-height 1.6. MathJax by default uses 100% of inherited font
+   size but tall symbols (∈, ℝ, ≠, ≤, ≥) overflow line-height. We
+   (a) shrink inline math slightly, (b) reset line-height to inherit
+   so the surrounding paragraph rhythm is preserved, (c) align
+   vertically so symbols stay on the baseline. */
+
+.md-typeset mjx-container {
+  font-size: 0.95em !important;
+  line-height: inherit !important;
+  margin: 0 0.08em !important;
+  vertical-align: -0.15em !important;
+}
+
+.md-typeset mjx-container[display="true"] {
+  font-size: 1em !important;
+  line-height: 1.5 !important;
+  margin: 0.8em 0 !important;
+}
+
+/* Make the raw <span class="arithmatex"> behave like normal text */
+.md-typeset .arithmatex {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Allow the line with math to keep the paragraph line-height */
+.md-typeset p,
+.md-typeset li {
+  line-height: 1.6 !important;
+}
