@@ -19,13 +19,6 @@
 \institute[UNAH]{Universidad Nacional Autónoma de Honduras \\ Facultad de Ciencias \\ Departamento de Matemáticas}
 \date{II Período, 2026}
 
-%% ── Índice al inicio ──
-\AtBeginSection[]{%
-  \begin{frame}<beamer>\frametitle{Contenido}
-    \tableofcontents[currentsection]
-  \end{frame}
-}
-
 %% ======================================================================
 \begin{document}
 %% ======================================================================
@@ -36,45 +29,6 @@
 
 \begin{frame}{Contenido}
   \tableofcontents
-\end{frame}
-
-
-
-
-
-%% ======================================================================
-\section{Motivación: por qué necesitamos relaciones y funciones}
-%% ======================================================================
-
-\begin{frame}{De conjuntos aislados a conjuntos que interactúan}
-  \begin{alertblock}{Pregunta central del capítulo}
-    Hasta ahora hemos estudiado conjuntos como colecciones de objetos.
-    \alert{¿Cómo describimos matemáticamente la \emph{interacción} entre
-    elementos de uno o varios conjuntos?}
-  \end{alertblock}
-
-  \begin{itemize}
-    \item Un alumno \emph{pertenece} a una sección.
-    \item Un número \emph{divide} a otro.
-    \item Una función $f(x) = x^2$ \emph{asigna} a cada $x$ su cuadrado.
-  \end{itemize}
-
-  \vspace{0.2cm}
-  Todas estas afirmaciones son \textbf{relaciones} o \textbf{funciones}.
-  Este capítulo construye el lenguaje formal para manejarlas.
-\end{frame}
-
-\begin{frame}{Hoja de ruta}
-  El capítulo sigue una \textbf{escalera de generalización}:
-
-  \begin{enumerate}
-    \item Construimos el \emph{escenario}: \textbf{productos cartesianos}.
-    \item Sobre ellos definimos \textbf{relaciones} y, en particular, \textbf{funciones}.
-    \item Clasificamos las funciones (inyectivas, sobreyectivas, biyectivas).
-    \item Las \textbf{combinamos} (composición) y las \textbf{deshacemos} (inversa).
-    \item Aplicamos todo en \textbf{conteo}, en el \textbf{principio del palomar}
-          y en \textbf{complejidad computacional}.
-  \end{enumerate}
 \end{frame}
 
 
@@ -125,10 +79,30 @@
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{¿Por qué nos interesan?}
-  Toda interacción entre conjuntos \emph{es} una relación.
-  A continuación veremos el caso particular más importante:
-  las \textbf{funciones}.
+\begin{frame}{Relaciones destacadas: equivalencia y orden}
+  Más allá de los ejemplos sueltos, dos \emph{tipos} de relación
+  aparecen por todas partes en matemática.
+
+  \begin{block}{Relación de equivalencia}
+    Una relación $\mathcal{R}$ en $A$ es de \textbf{equivalencia} si es
+    \emph{reflexiva}, \emph{simétrica} y \emph{transitiva}:
+    \begin{itemize}
+      \item $a \mathbin{\mathcal{R}} a$.
+      \item $a \mathbin{\mathcal{R}} b \implies b \mathbin{\mathcal{R}} a$.
+      \item $a \mathbin{\mathcal{R}} b,\; b \mathbin{\mathcal{R}} c \implies a \mathbin{\mathcal{R}} c$.
+    \end{itemize}
+    \textbf{Ejemplo:} $a \equiv b \pmod{n}$ sobre $\mathbb{Z}$. Una relación
+    de equivalencia siempre \emph{parte} $A$ en clases disjuntas
+    (clases de equivalencia), y recíprocamente toda partición induce una.
+  \end{block}
+
+  \begin{block}{Relación de orden (parcial)}
+    Es \emph{reflexiva}, \emph{antisimétrica} ($a \mathbin{\mathcal{R}} b$ y
+    $b \mathbin{\mathcal{R}} a \implies a = b$) y \emph{transitiva}.
+    \textbf{Ejemplos:} $\subseteq$ sobre $\mathcal{P}(X)$, $\leq$ sobre
+    $\mathbb{R}$, $\mid$ (divide a) sobre $\mathbb{N}$. Si además todo par
+    es comparable, el orden es \textbf{total} (p.\ ej.\ $\leq$ en $\mathbb{R}$).
+  \end{block}
 \end{frame}
 
 
@@ -176,11 +150,8 @@
       \draw[->] (a3) -- (b1);
     \end{tikzpicture}
   \end{center}
-  \begin{itemize}
-    \item \emph{Cada} elemento de $A$ tiene \textbf{exactamente una} flecha saliendo.
-    \item Algunos elementos de $B$ pueden no recibir flechas (no es sobreyectiva).
-    \item Algunos pueden recibir varias flechas (no es inyectiva).
-  \end{itemize}
+  \emph{Cada} $a \in A$ tiene exactamente una flecha; algunas $b \in B$ no
+  reciben flecha y otras reciben varias.
 \end{frame}
 
 
@@ -230,40 +201,10 @@
   \end{alertblock}
 \end{frame}
 
-\begin{frame}{Las tres clases, en una mirada}
-  \begin{center}
-  \begin{tabular}{lccc}
-    \toprule
-    Propiedad & Inyectiva & Sobreyectiva & Biyectiva \\
-    \midrule
-    Flechas distintas en $A$ \emph{llegan} a distintos $b$? & Sí & --- & Sí \\
-    Toda $b \in B$ recibe alguna flecha? & --- & Sí & Sí \\
-    Cardinalidad (finitos) & $|A|\le|B|$ & $|A|\ge|B|$ & $|A|=|B|$ \\
-    \bottomrule
-  \end{tabular}
-  \end{center}
-  Una biyección entre $A$ y $B$ finitos es, en particular, un
-  \textbf{emparejamiento perfecto}: los dos conjuntos tienen el mismo tamaño.
-\end{frame}
-
-
-
-
 
 %% ======================================================================
 \section{Conteo de funciones sobreyectivas: Stirling}
 %% ======================================================================
-
-\begin{frame}{El problema del conteo}
-  Ya sabemos qué es una función sobreyectiva.
-  \begin{alertblock}{Pregunta de conteo}
-    ¿Cuántas funciones sobreyectivas $f : A \to B$ existen si
-    $|A| = n$ y $|B| = k$ con $n \geq k$?
-  \end{alertblock}
-
-  La respuesta requiere una idea intermedia: \textbf{particionar} $A$ en
-  $k$ bloques no vacíos, uno por cada elemento de $B$.
-\end{frame}
 
 \begin{frame}{Números de Stirling del segundo tipo}
   \begin{block}{Definición}
@@ -273,37 +214,28 @@
   \end{block}
 
   \begin{itemize}
-    \item Convención: $S(n,0) = 0$ si $n > 0$, y $S(0,0) = 1$.
-    \item \textbf{Casos base}: $S(n,1) = 1$, $S(n,n) = 1$.
+    \item Casos base: $S(n,0) = 0$ si $n > 0$, $S(0,0) = 1$, $S(n,1) = S(n,n) = 1$.
     \item \textbf{Recurrencia}:
       \[
         S(n,k) = k \cdot S(n-1,k) + S(n-1,k-1).
       \]
-      \begin{itemize}
-        \item $k \cdot S(n-1,k)$: el elemento nuevo se agrega a uno de los
-              $k$ bloques existentes.
-        \item $S(n-1,k-1)$: el elemento nuevo forma un bloque aparte.
-      \end{itemize}
+      El elemento nuevo se une a uno de los $k$ bloques existentes
+      (\,$\,k\,S(n-1,k)\,$) \emph{o} forma un bloque aparte
+      (\,$S(n-1,k-1)\,$).
   \end{itemize}
 \end{frame}
 
-\begin{frame}{De particiones a funciones sobreyectivas}
+\begin{frame}{Funciones sobreyectivas por conteo}
   \begin{block}{Teorema}
-    El número de funciones sobreyectivas de un conjunto $A$ de $n$ elementos
-    en un conjunto $B$ de $k$ elementos ($n \geq k$) es
+    El número de funciones sobreyectivas $f : A \to B$ con $|A| = n$,
+    $|B| = k$ y $n \geq k$ es
     \[
       k! \cdot S(n,k).
     \]
   \end{block}
-
-  \begin{block}{Idea de la demostración}
-    \begin{enumerate}
-      \item Particionar $A$ en $k$ bloques no vacíos: $S(n,k)$ formas.
-      \item Asignar cada bloque a un elemento distinto de $B$: $k!$ formas.
-    \end{enumerate}
-  \end{block}
-
-  Esto cierra el primer uso del capítulo: contar funciones vía combinatoria.
+  \textbf{Idea:} particionar $A$ en $k$ bloques no vacíos
+  ($\,S(n,k)$ formas) y asignar cada bloque a un elemento de $B$
+  ($\,k!$ formas).
 \end{frame}
 
 
@@ -549,61 +481,6 @@
     Un análisis cuidadoso \emph{distingue} mejor / peor / promedio, no los
     mezcla.
   \end{alertblock}
-\end{frame}
-
-\begin{frame}{El puente final}
-  Las herramientas que aprendimos en el capítulo se conectan aquí:
-
-  \begin{itemize}
-    \item Las \textbf{funciones} aparecen al describir algoritmos
-          ($f : \text{Entrada} \to \text{Salida}$).
-    \item El \textbf{principio del palomar} explica por qué ciertos
-          problemas \emph{deben} ser lentos.
-    \item \textbf{Composición} y \textbf{recursión} justifican las
-          recurrencias que aparecen al analizar algoritmos divide-y-vencerás.
-    \item La \textbf{notación $O$} resume el comportamiento de esas
-          recurrencias.
-  \end{itemize}
-\end{frame}
-
-
-
-
-
-%% ======================================================================
-\section{Resumen y repaso histórico}
-%% ======================================================================
-
-\begin{frame}{Resumen del capítulo: el hilo conductor}
-  \begin{enumerate}
-    \item \textbf{Producto cartesiano y relación}: el lenguaje para describir
-          interacciones entre conjuntos.
-    \item \textbf{Función}: la relación sin ambigüedad; inyectiva, sobreyectiva,
-          biyectiva.
-    \item \textbf{Conteo}: funciones sobreyectivas $= k!\,S(n,k)$ vía particiones.
-    \item \textbf{Funciones auxiliares}: constante, identidad, piso, techo,
-          característica, factorial.
-    \item \textbf{Principio del palomar}: herramienta de existencia no constructiva.
-    \item \textbf{Composición e inversa}: cómo combinar y revertir funciones.
-    \item \textbf{Complejidad y análisis}: traducir problemas a funciones y
-          medir su costo asintótico.
-  \end{enumerate}
-\end{frame}
-
-\begin{frame}{Repaso histórico}
-  \begin{itemize}
-    \item \textbf{Georg Cantor} (s.\ XIX): fundador de la teoría de conjuntos;
-          los conjuntos son el lenguaje base del capítulo.
-    \item \textbf{James Stirling} (s.\ XVIII): los números que llevan su nombre,
-          herramientas centrales en combinatoria.
-    \item \textbf{Peter Gustav Lejeune Dirichlet} (s.\ XIX): formulaciones
-          rigurosas del principio del palomar (\emph{cajón de Dirichlet}).
-    \item \textbf{Alonzo Church} y \textbf{Alan Turing} (s.\ XX):
-          formalizan la noción de ``función computable'' y, con ella,
-          la idea misma de \emph{algoritmo}.
-    \item \textbf{Donald Knuth} (s.\ XX): ``The Art of Computer Programming'';
-          formaliza el análisis asintótico de algoritmos.
-  \end{itemize}
 \end{frame}
 
 \end{document}
