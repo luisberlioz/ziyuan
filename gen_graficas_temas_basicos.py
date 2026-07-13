@@ -69,24 +69,31 @@ def _label_point(ax, x, y, label, dx=0.25, dy=0.25, ha="left"):
 
 
 def _draw_asymptote_h(ax, y, x_range, label_text, label_xy):
-    """Horizontal asymptote, drawn thicker and more visible."""
-    ax.plot(x_range, [y, y], "--", color=ASINT_COLOR, linewidth=1.8,
-            alpha=0.85, zorder=2)
-    ax.text(label_xy[0], label_xy[1], label_text, fontsize=11,
+    """Horizontal asymptote — dashed line offset well above x-axis so it's
+    visually distinct from the solid black axis below it.
+    """
+    y_offset = 0.3
+    ax.plot(x_range, [y + y_offset, y + y_offset], "--", color=ASINT_COLOR,
+            linewidth=2.4, dashes=(8, 4), alpha=1.0, zorder=2)
+    ax.text(label_xy[0], label_xy[1] + y_offset, label_text, fontsize=11,
             color=ASINT_COLOR, ha="right", va="bottom",
             fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.25", facecolor="white",
-                      edgecolor="none", alpha=0.85))
+                      edgecolor="none", alpha=0.9))
 
 
 def _draw_asymptote_v(ax, x, y_range, label_text, label_xy):
-    ax.plot([x, x], y_range, "--", color=ASINT_COLOR, linewidth=1.8,
-            alpha=0.85, zorder=2)
-    ax.text(label_xy[0], label_xy[1], label_text, fontsize=11,
-            color=ASINT_COLOR, ha="left", va="top",
+    """Vertical asymptote — offset well to the right of the y-axis so it
+    stands apart from the solid black axis.
+    """
+    x_offset = 0.3
+    ax.plot([x + x_offset, x + x_offset], y_range, "--", color=ASINT_COLOR,
+            linewidth=2.4, dashes=(8, 4), alpha=1.0, zorder=2)
+    ax.text(label_xy[0] + x_offset, label_xy[1], label_text, fontsize=11,
+            color=ASINT_COLOR, ha="left", va="center",
             fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.25", facecolor="white",
-                      edgecolor="none", alpha=0.85))
+                      edgecolor="none", alpha=0.9))
 
 
 def _draw_axis_of_symmetry(ax, x, y_range, label_text):
@@ -217,8 +224,9 @@ def graf_exponencial():
     x = np.linspace(-4, 4.4, 300)
     ax.plot(x, 2 ** x, color=CURVE_COLOR, linewidth=2.4, zorder=3)
     _label_point(ax, 0, 1, "(0, 1)", dx=0.25, dy=0.2, ha="left")
-    _draw_asymptote_h(ax, 0, (-4, 5), "y = 0  (asíntota)",
-                      label_xy=(5.0, 0.18))
+    # Asymptote label placed away from the subplot title (centered below)
+    _draw_asymptote_h(ax, 0, (-4, 5), "y = 0   (asíntota horizontal)",
+                      label_xy=(0.5, 0.25))
     ax.text(-3.6, 5.5, "Creciente  (a > 1)",
             fontsize=12, color="#37474f", fontweight="bold",
             ha="left",
@@ -236,8 +244,8 @@ def graf_exponencial():
     x = np.linspace(-0.5, 4.5, 300)
     ax.plot(x, (1 / 2) ** x, color=CURVE_COLOR, linewidth=2.4, zorder=3)
     _label_point(ax, 0, 1, "(0, 1)", dx=0.25, dy=0.2, ha="left")
-    _draw_asymptote_h(ax, 0, (-1, 5), "y = 0  (asíntota)",
-                      label_xy=(5.0, 0.18))
+    _draw_asymptote_h(ax, 0, (-1, 5), "y = 0   (asíntota horizontal)",
+                      label_xy=(2.0, 0.25))
     ax.text(0.4, 6.7, "Decreciente  (0 < a < 1)",
             fontsize=12, color="#37474f", fontweight="bold",
             ha="left",
@@ -269,8 +277,9 @@ def graf_logaritmica():
     x = np.linspace(0.05, 7.5, 400)
     ax.plot(x, np.log2(x), color=CURVE_COLOR, linewidth=2.4, zorder=3)
     _label_point(ax, 1, 0, "(1, 0)", dx=0.2, dy=-0.55, ha="left")
-    _draw_asymptote_v(ax, 0, (-3, 4), "x = 0  (asíntota)",
-                      label_xy=(0.05, 3.85))
+    # Asymptote label placed in middle of plot, away from subplot title
+    _draw_asymptote_v(ax, 0, (-3, 4), "x = 0   (asíntota vertical)",
+                      label_xy=(4.5, -1.5))
     ax.text(3.6, 2.0, "Creciente  (a > 1)",
             fontsize=12, color="#37474f", fontweight="bold",
             ha="left",
@@ -288,8 +297,8 @@ def graf_logaritmica():
     x = np.linspace(0.05, 7.5, 400)
     ax.plot(x, -np.log2(x), color=CURVE_COLOR, linewidth=2.4, zorder=3)
     _label_point(ax, 1, 0, "(1, 0)", dx=0.2, dy=-0.55, ha="left")
-    _draw_asymptote_v(ax, 0, (-3, 4), "x = 0  (asíntota)",
-                      label_xy=(0.05, 3.85))
+    _draw_asymptote_v(ax, 0, (-3, 4), "x = 0   (asíntota vertical)",
+                      label_xy=(4.5, -1.5))
     ax.text(3.5, -2.0, "Decreciente  (0 < a < 1)",
             fontsize=12, color="#37474f", fontweight="bold",
             ha="left",
