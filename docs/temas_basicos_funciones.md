@@ -30,7 +30,7 @@ Cada punto del plano se representa mediante un **par ordenado** $(x, y)$. Si la 
 
 La siguiente animación muestra cómo se construye el plano cartesiano, dónde quedan los cuatro cuadrantes según el signo de las coordenadas, y cómo se traza un punto dado a partir de su abscisa y su ordenada. Los tres ejemplos del video son los mismos que desarrollamos abajo: $(3, 2)$, $(-2, 3)$ y $(-3, -2)$.
 
-<video src="./plano_cartesiano.mp4" controls width="100%"></video>
+<video src="../plano_cartesiano.mp4" controls width="100%"></video>
 
 **Ejemplo 1 (guía, inciso 1.a):** $A = (2, 3)$ está en el **cuadrante I** (abscisa positiva, ordenada positiva).
 
