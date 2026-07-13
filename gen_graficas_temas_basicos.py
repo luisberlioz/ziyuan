@@ -107,7 +107,7 @@ def _draw_axis_of_symmetry(ax, x, y_range, label_text):
 # 1) Linear function                                                    #
 # -------------------------------------------------------------------- #
 def graf_lineal():
-    fig, axes = plt.subplots(1, 2, figsize=(13, 4.8))
+    fig, axes = plt.subplots(2, 1, figsize=(11, 8))
 
     # LEFT: f(x) = 2x + 3  (increasing)
     ax = axes[0]
@@ -126,7 +126,6 @@ def graf_lineal():
             color=CURVE_COLOR, fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
-    ax.set_title("Creciente", fontsize=14, fontweight="bold", pad=8)
 
     # RIGHT: f(x) = -(2/3)x + 4  (decreasing)
     ax = axes[1]
@@ -143,7 +142,6 @@ def graf_lineal():
             color=CURVE_COLOR, fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
-    ax.set_title("Decreciente", fontsize=14, fontweight="bold", pad=8)
 
     fig.suptitle("Función lineal:  f(x) = m·x + b",
                  fontsize=17, fontweight="bold", y=1.03)
@@ -157,7 +155,7 @@ def graf_lineal():
 # 2) Quadratic function                                                 #
 # -------------------------------------------------------------------- #
 def graf_cuadratica():
-    fig, axes = plt.subplots(1, 2, figsize=(13, 5))
+    fig, axes = plt.subplots(2, 1, figsize=(11, 9))
 
     # LEFT: f(x) = x^2 - 4x + 3   (opens up, vertex (2, -1))
     ax = axes[0]
@@ -216,7 +214,7 @@ def graf_cuadratica():
 # 3) Exponential function                                               #
 # -------------------------------------------------------------------- #
 def graf_exponencial():
-    fig, axes = plt.subplots(1, 2, figsize=(13, 5))
+    fig, axes = plt.subplots(2, 1, figsize=(11, 9))
 
     # LEFT: f(x) = 2^x       (increasing, base > 1)
     ax = axes[0]
@@ -236,7 +234,6 @@ def graf_exponencial():
             color=CURVE_COLOR, fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
-    ax.set_title("Creciente", fontsize=14, fontweight="bold", pad=8)
 
     # RIGHT: f(x) = (1/2)^x   (decreasing, 0 < a < 1)
     ax = axes[1]
@@ -255,7 +252,6 @@ def graf_exponencial():
             color=CURVE_COLOR, fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
-    ax.set_title("Decreciente", fontsize=14, fontweight="bold", pad=8)
 
     fig.suptitle("Función exponencial:  f(x) = a^x",
                  fontsize=17, fontweight="bold", y=1.03)
@@ -269,7 +265,7 @@ def graf_exponencial():
 # 4) Logarithmic function                                               #
 # -------------------------------------------------------------------- #
 def graf_logaritmica():
-    fig, axes = plt.subplots(1, 2, figsize=(13, 5))
+    fig, axes = plt.subplots(2, 1, figsize=(11, 9))
 
     # LEFT: f(x) = log_2(x)   (increasing, base > 1)
     ax = axes[0]
@@ -289,7 +285,6 @@ def graf_logaritmica():
             color=CURVE_COLOR, fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
-    ax.set_title("Creciente", fontsize=14, fontweight="bold", pad=8)
 
     # RIGHT: f(x) = log_{1/2}(x)  (decreasing, 0 < a < 1)
     ax = axes[1]
@@ -308,7 +303,6 @@ def graf_logaritmica():
             color=CURVE_COLOR, fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
-    ax.set_title("Decreciente", fontsize=14, fontweight="bold", pad=8)
 
     fig.suptitle("Función logarítmica:  f(x) = log_a x",
                  fontsize=17, fontweight="bold", y=1.03)
