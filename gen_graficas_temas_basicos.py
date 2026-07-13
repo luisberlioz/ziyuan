@@ -114,15 +114,15 @@ def graf_lineal():
     _draw_axes(ax, (-5, 5), (-3, 7), xticks=range(-4, 5), yticks=range(-2, 7, 2))
     x = np.linspace(-4, 4.5, 200)
     ax.plot(x, 2 * x + 3, color=CURVE_COLOR, linewidth=2.4, zorder=3)
-    _label_point(ax, 0, 3, "(0, 3)", dx=-0.15, dy=0.25, ha="right")
+    _label_point(ax, 0, 3, "(0, 3)", dx=-0.4, dy=0.55, ha="right")
     _label_point(ax, -1.5, 0, r"$\left(-\frac{3}{2},\ 0\right)$",
-                 dx=0.0, dy=-0.6, ha="center")
+                 dx=-0.1, dy=-0.75, ha="right")
     # Legend box outside the curve
     ax.text(-4.5, 5.8, "Creciente  (m > 0)", fontsize=13,
             color="#37474f", fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.4", facecolor="#f5f5f5",
                       edgecolor="#bdbdbd"))
-    ax.text(2.6, 6.3, r"$f(x) = 2x + 3$", fontsize=16,
+    ax.text(3.2, 6.4, r"$f(x) = 2x + 3$", fontsize=16,
             color=CURVE_COLOR, fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
@@ -132,13 +132,13 @@ def graf_lineal():
     _draw_axes(ax, (-1, 8), (-2, 6), xticks=range(0, 8), yticks=range(-1, 6))
     x = np.linspace(-0.5, 7.5, 200)
     ax.plot(x, -2 / 3 * x + 4, color=CURVE_COLOR, linewidth=2.4, zorder=3)
-    _label_point(ax, 0, 4, "(0, 4)", dx=0.2, dy=0.25, ha="left")
-    _label_point(ax, 6, 0, "(6, 0)", dx=0.2, dy=-0.55, ha="left")
+    _label_point(ax, 0, 4, "(0, 4)", dx=-0.3, dy=0.55, ha="right")
+    _label_point(ax, 6, 0, "(6, 0)", dx=0.2, dy=-0.6, ha="left")
     ax.text(0.4, 5.2, "Decreciente  (m < 0)", fontsize=13,
             color="#37474f", fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.4", facecolor="#f5f5f5",
                       edgecolor="#bdbdbd"))
-    ax.text(0.5, 2.5, r"$f(x) = -\dfrac{2}{3}\,x + 4$", fontsize=16,
+    ax.text(3.5, -1.2, r"$f(x) = -\dfrac{2}{3}\,x + 4$", fontsize=16,
             color=CURVE_COLOR, fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
@@ -163,19 +163,19 @@ def graf_cuadratica():
     x = np.linspace(-0.5, 5.5, 300)
     ax.plot(x, x ** 2 - 4 * x + 3, color=CURVE_COLOR, linewidth=2.4, zorder=3)
     # Vertex — pull label further away from the curve (down-left)
-    _label_point(ax, 2, -1, "Vértice (2, −1)", dx=-0.15, dy=-0.45, ha="right")
+    _label_point(ax, 2, -1, "Vértice (2, −1)", dx=-0.2, dy=-0.55, ha="right")
     _draw_axis_of_symmetry(ax, 2, (-3, 7), r"eje: $x = 2$")
-    _label_point(ax, 0, 3, "(0, 3)", dx=-0.15, dy=0.25, ha="right")
-    _label_point(ax, 1, 0, "(1, 0)", dx=-0.15, dy=-0.55, ha="right")
-    _label_point(ax, 3, 0, "(3, 0)", dx=0.2, dy=-0.55, ha="left")
+    _label_point(ax, 0, 3, "(0, 3)", dx=-0.25, dy=0.4, ha="right")
+    _label_point(ax, 1, 0, "(1, 0)", dx=-0.15, dy=-0.65, ha="right")
+    _label_point(ax, 3, 0, "(3, 0)", dx=0.25, dy=-0.65, ha="left")
     # Concavity label — top-right area, away from equation
     ax.text(4.7, 5.0, "Concavidad ↑\n(mínimo)",
             fontsize=12, color="#37474f", fontweight="bold", ha="center",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="#f5f5f5",
                       edgecolor="#bdbdbd"))
-    # Equation — bottom-left corner (free space, doesn't overlap curve)
-    ax.text(0.2, -2.5, r"$f(x) = x^2 - 4x + 3$", fontsize=15,
-            color=CURVE_COLOR, fontweight="bold", ha="left",
+    # Equation — top-right corner (curve is below, no overlap)
+    ax.text(4.8, 6.3, r"$f(x) = x^2 - 4x + 3$", fontsize=15,
+            color=CURVE_COLOR, fontweight="bold", ha="right",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
     ax.set_title("Abre hacia arriba  (a > 0)", fontsize=13,
@@ -188,15 +188,17 @@ def graf_cuadratica():
                xticks=range(0, 7), yticks=range(-12, 2, 3))
     x = np.linspace(-0.5, 6.5, 400)
     ax.plot(x, -x ** 2 + 6 * x - 9, color=CURVE_COLOR, linewidth=2.4, zorder=3)
-    _label_point(ax, 3, 0, "Vértice (3, 0)", dx=0.3, dy=0.4, ha="left")
+    # Vertex label — pull right past the peak
+    _label_point(ax, 3, 0, "Vértice (3, 0)", dx=0.5, dy=0.5, ha="left")
     _draw_axis_of_symmetry(ax, 3, (-13, 2), r"eje: $x = 3$")
-    _label_point(ax, 0, -9, "(0, −9)", dx=0.3, dy=-0.6, ha="left")
+    _label_point(ax, 0, -9, "(0, −9)", dx=0.35, dy=-0.65, ha="left")
     ax.text(5.5, -10, "Concavidad ↓\n(máximo)",
             fontsize=12, color="#37474f", fontweight="bold", ha="center",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="#f5f5f5",
                       edgecolor="#bdbdbd"))
-    ax.text(0.5, -5.5, r"$f(x) = -x^2 + 6x - 9$", fontsize=15,
-            color=CURVE_COLOR, fontweight="bold",
+    # Equation — move to UPPER-RIGHT corner (above the descending parabola)
+    ax.text(6.5, 1.3, r"$f(x) = -x^2 + 6x - 9$", fontsize=15,
+            color=CURVE_COLOR, fontweight="bold", ha="right",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
     ax.set_title("Abre hacia abajo  (a < 0)", fontsize=13,
@@ -221,7 +223,7 @@ def graf_exponencial():
     _draw_axes(ax, (-4, 5), (-1, 8), xticks=range(-3, 5), yticks=range(0, 8))
     x = np.linspace(-4, 4.4, 300)
     ax.plot(x, 2 ** x, color=CURVE_COLOR, linewidth=2.4, zorder=3)
-    _label_point(ax, 0, 1, "(0, 1)", dx=0.25, dy=0.2, ha="left")
+    _label_point(ax, 0, 1, "(0, 1)", dx=0.3, dy=0.4, ha="left")
     # Asymptote label placed away from the subplot title (centered below)
     _draw_asymptote_h(ax, 0, (-4, 5), "y = 0   (asíntota horizontal)",
                       label_xy=(0.5, 0.25))
@@ -230,7 +232,8 @@ def graf_exponencial():
             ha="left",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="#f5f5f5",
                       edgecolor="#bdbdbd"))
-    ax.text(1.5, 6.0, r"$f(x) = 2^x$", fontsize=16,
+    # Equation label moved to TOP-LEFT (free space above the slow-rising part)
+    ax.text(-2.5, 6.5, r"$f(x) = 2^x$", fontsize=16,
             color=CURVE_COLOR, fontweight="bold",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
@@ -240,7 +243,7 @@ def graf_exponencial():
     _draw_axes(ax, (-1, 5), (-1, 8), xticks=range(0, 5), yticks=range(0, 8))
     x = np.linspace(-0.5, 4.5, 300)
     ax.plot(x, (1 / 2) ** x, color=CURVE_COLOR, linewidth=2.4, zorder=3)
-    _label_point(ax, 0, 1, "(0, 1)", dx=0.25, dy=0.2, ha="left")
+    _label_point(ax, 0, 1, "(0, 1)", dx=0.3, dy=0.4, ha="left")
     _draw_asymptote_h(ax, 0, (-1, 5), "y = 0   (asíntota horizontal)",
                       label_xy=(2.0, 0.25))
     ax.text(0.4, 6.7, "Decreciente  (0 < a < 1)",
@@ -248,8 +251,9 @@ def graf_exponencial():
             ha="left",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="#f5f5f5",
                       edgecolor="#bdbdbd"))
-    ax.text(2.5, 4.0, r"$f(x) = \left(\dfrac{1}{2}\right)^x$", fontsize=16,
-            color=CURVE_COLOR, fontweight="bold",
+    # Equation label moved to TOP-RIGHT (the curve drops below this region)
+    ax.text(4.5, 5.5, r"$f(x) = \left(\dfrac{1}{2}\right)^x$", fontsize=16,
+            color=CURVE_COLOR, fontweight="bold", ha="right",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
 
@@ -272,17 +276,19 @@ def graf_logaritmica():
     _draw_axes(ax, (-1, 8), (-3, 4), xticks=range(0, 8), yticks=range(-2, 4))
     x = np.linspace(0.05, 7.5, 400)
     ax.plot(x, np.log2(x), color=CURVE_COLOR, linewidth=2.4, zorder=3)
-    _label_point(ax, 1, 0, "(1, 0)", dx=0.2, dy=-0.55, ha="left")
+    _label_point(ax, 1, 0, "(1, 0)", dx=0.25, dy=-0.65, ha="left")
     # Asymptote label placed in middle of plot, away from subplot title
     _draw_asymptote_v(ax, 0, (-3, 4), "x = 0   (asíntota vertical)",
                       label_xy=(4.5, -1.5))
-    ax.text(3.6, 2.0, "Creciente  (a > 1)",
+    # Creciente box in lower-right area (well below the curve)
+    ax.text(5.5, -2.3, "Creciente  (a > 1)",
             fontsize=12, color="#37474f", fontweight="bold",
             ha="left",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="#f5f5f5",
                       edgecolor="#bdbdbd"))
-    ax.text(2.5, 1.4, r"$f(x) = \log_2 x$", fontsize=16,
-            color=CURVE_COLOR, fontweight="bold",
+    # Equation label in TOP-RIGHT, well above the slow-rising curve
+    ax.text(6.5, 3.8, r"$f(x) = \log_2 x$", fontsize=14,
+            color=CURVE_COLOR, fontweight="bold", ha="right",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
 
@@ -291,16 +297,18 @@ def graf_logaritmica():
     _draw_axes(ax, (-1, 8), (-3, 4), xticks=range(0, 8), yticks=range(-2, 4))
     x = np.linspace(0.05, 7.5, 400)
     ax.plot(x, -np.log2(x), color=CURVE_COLOR, linewidth=2.4, zorder=3)
-    _label_point(ax, 1, 0, "(1, 0)", dx=0.2, dy=-0.55, ha="left")
+    _label_point(ax, 1, 0, "(1, 0)", dx=0.25, dy=-0.65, ha="left")
     _draw_asymptote_v(ax, 0, (-3, 4), "x = 0   (asíntota vertical)",
                       label_xy=(4.5, -1.5))
-    ax.text(3.5, -2.0, "Decreciente  (0 < a < 1)",
+    # Decreciente box in TOP-RIGHT (well above the curve in that region)
+    ax.text(6.5, 3.3, "Decreciente  (0 < a < 1)",
             fontsize=12, color="#37474f", fontweight="bold",
-            ha="left",
+            ha="right",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="#f5f5f5",
                       edgecolor="#bdbdbd"))
-    ax.text(2.5, -1.4, r"$f(x) = \log_{1/2} x$", fontsize=16,
-            color=CURVE_COLOR, fontweight="bold",
+    # Equation label in BOTTOM-LEFT (curve at x=1.2 is y=-0.26, this is at y=-2.5)
+    ax.text(1.2, -2.5, r"$f(x) = \log_{1/2} x$", fontsize=14,
+            color=CURVE_COLOR, fontweight="bold", ha="left",
             bbox=dict(boxstyle="round,pad=0.3", facecolor="white",
                       edgecolor="none", alpha=0.85))
 

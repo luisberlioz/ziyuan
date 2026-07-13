@@ -284,7 +284,7 @@ La gráfica de una función lineal es una **recta**. Basta con conocer dos punto
 - Intercepto Y: $\left(0,\ \dfrac{5}{2}\right)$.
 - Intercepto X: $3x + \dfrac{5}{2} = 0 \Rightarrow x = -\dfrac{5}{6}$ → $\left(-\dfrac{5}{6},\ 0\right)$.
 
-![Gráficas de una función lineal creciente y una decreciente, mostrando interceptos con los ejes y la pendiente $m$.](images/graf_lineal.png)
+![Gráficas de una función lineal creciente y una decreciente, mostrando interceptos con los ejes y la pendiente $m$.](images/graf_lineal_v4.png)
 
 ### 3.3 Ecuación de la recta conocido un punto y la pendiente
 
@@ -530,7 +530,7 @@ $$
 
 > 💡 **Comparación:** los ejemplos 1 y 3 tienen la misma concavidad y el mismo mínimo ($-1$); se diferencian en que el primero corta el eje Y arriba del vértice, mientras que el tercero pasa por el origen.
 
-![Gráficas de dos funciones cuadráticas: $f(x)=x^2-4x+3$ (abre hacia arriba, mínimo) y $f(x)=-x^2+6x-9$ (abre hacia abajo, máximo, tangente al eje $x$). Se indican vértice, eje de simetría, interceptos y concavidad.](images/graf_cuadratica.png)
+![Gráficas de dos funciones cuadráticas: $f(x)=x^2-4x+3$ (abre hacia arriba, mínimo) y $f(x)=-x^2+6x-9$ (abre hacia abajo, máximo, tangente al eje $x$). Se indican vértice, eje de simetría, interceptos y concavidad.](images/graf_cuadratica_v4.png)
 
 ---
 
@@ -768,7 +768,7 @@ Los ejercicios de la guía involucran **transformaciones** de la forma $f(x) = a
 - Intercepto con Y: $f(0) = -2^{-1} = -\dfrac{1}{2} \Rightarrow \left(0,\ -\dfrac{1}{2}\right)$.
 - No tiene intercepto con X (la función siempre es negativa).
 
-![Gráficas de una función exponencial creciente ($f(x)=2^x$) y una decreciente ($f(x)=\left(\frac{1}{2}\right)^x$). Ambas pasan por $(0,1)$ y tienen asíntota horizontal $y=0$.](images/graf_exponencial.png)
+![Gráficas de una función exponencial creciente ($f(x)=2^x$) y una decreciente ($f(x)=\left(\frac{1}{2}\right)^x$). Ambas pasan por $(0,1)$ y tienen asíntota horizontal $y=0$.](images/graf_exponencial_v4.png)
 
 ---
 
@@ -829,7 +829,7 @@ Los ejercicios de la guía usan **transformaciones** del tipo $f(x) = \log_a(g(x
 - Intercepto con X: $-\ln(-x+2) - 2 = 0 \Rightarrow \ln(-x+2) = -2 \Rightarrow -x+2 = e^{-2} \Rightarrow x = 2 - e^{-2} \approx 1.865$.
 - Intercepto con Y: $f(0) = -\ln(2) - 2 \approx -2.693 \Rightarrow (0,\ -2.693)$.
 
-![Gráficas de una función logarítmica creciente ($f(x)=\log_2 x$) y una decreciente ($f(x)=\log_{1/2} x$). Ambas pasan por $(1,0)$ y tienen asíntota vertical $x=0$.](images/graf_logaritmica.png)
+![Gráficas de una función logarítmica creciente ($f(x)=\log_2 x$) y una decreciente ($f(x)=\log_{1/2} x$). Ambas pasan por $(1,0)$ y tienen asíntota vertical $x=0$.](images/graf_logaritmica_v4.png)
 
 ---
 
