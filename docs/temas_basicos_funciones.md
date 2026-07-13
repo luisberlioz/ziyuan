@@ -26,6 +26,12 @@ Los ejes dividen al plano en **cuatro regiones** llamadas **cuadrantes**, numera
 
 Cada punto del plano se representa mediante un **par ordenado** $(x, y)$. Si la primera coordenada es $0$ el punto está **sobre el eje Y**; si la segunda es $0$ está **sobre el eje X**.
 
+**Ejemplo 0** (introductorio, con animación):
+
+La siguiente animación muestra cómo se construye el plano cartesiano, dónde quedan los cuatro cuadrantes según el signo de las coordenadas, y cómo se traza un punto dado a partir de su abscisa y su ordenada. Los tres ejemplos del video son los mismos que desarrollamos abajo: $(3, 2)$, $(-2, 3)$ y $(-3, -2)$.
+
+<video src="./plano_cartesiano.mp4" controls width="100%"></video>
+
 **Ejemplo 1 (guía, inciso 1.a):** $A = (2, 3)$ está en el **cuadrante I** (abscisa positiva, ordenada positiva).
 
 **Ejemplo 2 (guía, inciso 1.b):** $B = (-4, -5)$ está en el **cuadrante III** (ambas coordenadas negativas).
