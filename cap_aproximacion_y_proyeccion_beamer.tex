@@ -41,6 +41,7 @@
 \newcommand{\y}{\mathbf{y}}
 \newcommand{\xv}{\mathbf{v}}
 \newcommand{\xb}{\mathbf{b}}
+\newcommand{\bx}{\mathbf{b}}
 \newcommand{\xa}{\mathbf{a}}
 \newcommand{\z}{\mathbf{z}}
 \newcommand{\0}{\mathbf{0}}
@@ -125,6 +126,13 @@
       $\x$ son variables de diseño, $A\x$ el resultado producido;
       $\x^\star$ aproxima mejor el resultado deseado $\xb$.
   \end{enumerate}
+
+\begin{center}
+    % TODO: \includegraphics[width=0.55\textwidth]{<imagen-aquí>}
+    \fcolorbox{red}{white}{\parbox[c][3.5cm][c]{0.55\textwidth}{\centering\textcolor{red}{\itshape\bfseries [ imagen aquí ]}}}\\[2pt]
+    {\footnotesize \emph{Figura: las tres lecturas equivalentes de la aproximación por norma}.}\\
+    {\footnotesize \textcolor{red}{Descripción: ilustrar $\bx\in\R^m$, el recorrido $\R(A)$ como subespacio afín, y $A\x^\star$ como el punto de $\R(A)$ más cercano a $\bx$.}}
+  \end{center}
 \end{frame}
 
 % ------------------------------------------------------------
@@ -204,12 +212,6 @@
     \item Geométricamente: $\x^\star$ es el punto del conjunto afín
           $\{\x\mid A\x=\xb\}$ más cercano a $\0$ en la norma $\norm{\cdot}$.
   \end{itemize}
-  \begin{tikzpicture}[overlay,remember picture]
-    \node[draw=accentorange,fill=accentorange!10,align=left] at
-      ([xshift=-3.6cm,yshift=-0.5cm]current page.east) {%
-        \footnotesize
-        mínimo: \\[-0.2em]\footnotesize mira $\xb$ como dato \\[-0.2em]\footnotesize y $\x$ como a minimizar}; 
-  \end{tikzpicture}
 \end{frame}
 
 % ------------------------------------------------------------
@@ -339,6 +341,13 @@
     \end{array}
   \]
   La forma de $\phi$ controla la \emph{distribución} del residuo.
+
+\begin{center}
+    % TODO: \includegraphics[width=0.55\textwidth]{<imagen-aquí>}
+    \fcolorbox{red}{white}{\parbox[c][3.5cm][c]{0.55\textwidth}{\centering\textcolor{red}{\itshape\bfseries [ imagen aquí ]}}}\\[2pt]
+    {\footnotesize \emph{Figura: gráfica de las tres $\phi$: cuadrática, deadzone-lineal, log-barrera}.}\\
+    {\footnotesize \textcolor{red}{Descripción: mostrar cómo cada $\phi$ se comporta cerca y lejos de $0$; comparar con la curva $|u|$ y $u^2$.}}
+  \end{center}
 \end{frame}
 
 % ============================================================
