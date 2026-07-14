@@ -423,6 +423,136 @@
 \end{frame}
 
 % ============================================================
+\section{Una aplicación clásica: optimización de portafolios (Markowitz)}
+% ============================================================
+\begin{frame}{Motivación: diversificación y riesgo}
+  \begin{itemize}
+    \item Un inversionista elige pesos $w_i\ge0$ sobre $n$ activos con retornos
+          aleatorios $r_i$, $\sum_i w_i = 1$ (cartera autofinanciada).
+    \item Retorno y riesgo del portafolio (asumiendo retornos independientes
+          del período):
+          \[
+            R(w) \;=\; \mu^{\top}\! w, \qquad
+            \sigma^2(w) \;=\; w^{\top}\Sigma w,
+          \]
+          con $\mu\in\R^n$ los retornos esperados y $\Sigma\succ0$ la matriz de
+          covarianzas.
+    \item \textbf{Idea clave de Markowitz (1952):} la varianza del
+          portafolio es menor que el promedio ponderado de las varianzas
+          individuales, siempre que los activos no estén perfectamente
+          correlacionados.
+          \[
+            \sigma^2(w) \;=\; \sum_i w_i^2\,\sigma_i^2
+                            \;+\; \sum_{i\ne j} w_i w_j\,\sigma_{ij}
+                            \;<\; \sum_i w_i\,\sigma_i^2
+                            \quad\text{(si }\sigma_{ij}<0\text{ para algún par)}.
+          \]
+    \item Por tanto se puede \emph{reducir el riesgo sin sacrificar
+          rendimiento esperado}, eligiendo pesos que exploten la covarianza.
+  \end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{El modelo de media--varianza (Markowitz, 1952)}
+  \textbf{Datos:} $\mu\in\R^n$, $\Sigma\in\R^{n\times n}$ ($\Sigma\succ0$),
+  presupuesto $W=1$, restricción de no--venta corta opcional
+  $w\ge0$ (o $\ge -w_{\max}$, etc.).
+  \[
+    \boxed{
+      \begin{array}{rl}
+        (P_{\mathrm{MV}}) \quad & \min\limits_{w\in\R^n}\; w^{\top}\Sigma\, w \\[2pt]
+                               & \text{s.t.}\quad \mu^{\top} w \;\ge\; R_{\min}, \\[2pt]
+                               & \phantom{\text{s.t.}}\quad \mathbf{1}^{\top} w \;=\; 1.
+      \end{array}}
+  \]
+  Variantes equivalentes (todas convexas):
+  \begin{itemize}
+    \item Minimizar $\sigma^2(w)$ para una \emph{rentabilidad objetivo} $R_{\min}$.
+    \item Maximizar $\mu^{\top} w - \lambda\,w^{\top}\Sigma w$ para
+          $\lambda>0$ dado (aversión al riesgo).
+    \item Minimizar $\sigma^2(w)$ en la \emph{forma estándar} de QP
+          \[
+            \begin{array}{rl}
+              \min\limits_{w}\;& w^{\top}\Sigma w \\
+              \text{s.t.}\;& A w = b,\quad G w \le h
+            \end{array}
+          \]
+          que \emph{es exactamente} un problema de la familia
+          $(\mathrm{QP})$ de Boyd--Vandenberghe.
+  \end{itemize}
+  \begin{exampleblock}{Relación con lo anterior}
+    La forma dual de $(P_{\mathrm{MV}})$ es una \emph{aproximación
+    regularizada} (Tikhonov) sobre los retornos:
+    $\min_w\;\|\Sigma^{1/2}w\|^2$ controlado por $\mu$ ---
+    el mismo aparato convexo de $\ell_2$ y $\phi$.
+  \end{exampleblock}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Frontera eficiente}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{itemize}
+        \item Al resolver $(P_{\mathrm{MV}})$ para cada valor de
+              $R_{\min}\in[\mu_{\min},\mu_{\max}]$ se obtiene la
+              \textbf{frontera eficiente}: el conjunto de portafolios
+              con menor varianza para cada nivel de retorno esperado.
+        \item En el plano $(\sigma,R)$ la frontera es una hipérbola
+              que abre hacia la derecha (las dos ramas superior e
+              inferior son simétricas; sólo la superior es eficiente).
+        \item \textbf{Capital Market Line (CML):} al añadir un activo
+              libre de riesgo con retorno $r_f$, la mejor combinación
+              se obtiene en la recta tangente a la frontera que pasa
+              por $(0,r_f)$:
+              \[
+                R_P \;=\; r_f + \frac{\mu_M - r_f}{\sigma_M}\,\sigma_P.
+              \]
+        \item La pendiente $(\mu_M-r_f)/\sigma_M$ es el \emph{precio
+              de mercado del riesgo}.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \fcolorbox{red}{white}{\parbox[c][5.5cm][c]{\linewidth}{\centering\color{red}\itshape\bfseries [ esquema: $(\sigma,R)$ con\\frontera eficiente\\y CML ]}}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Convexidad y resolución}
+  \begin{itemize}
+    \item $(P_{\mathrm{MV}})$ es un \textbf{QP convexo}:
+      \begin{itemize}
+        \item objetivo: forma cuadrática $w^{\top}\Sigma w$ con
+              $\Sigma\succ0$ $\Rightarrow$ fuertemente convexa;
+        \item restricciones: lineales (afines) $\Rightarrow$ conjunto
+              factible convexo.
+      \end{itemize}
+    \item \emph{Por tanto} existe un único óptimo y los KKT son
+          \emph{suficientes}. Se resuelve en milisegundos con métodos
+          de punto interior para $n$ moderado ($\sim10^3$ activos).
+    \item Markowitz desarrolló el \textbf{método de la línea crítica}
+          (1956), un algoritmo de programación cuadrática que traza
+          toda la frontera eficiente cambiando $R_{\min}$ entre
+          restricciones activas.
+    \item Métodos generales aplicables: gradiente proyectado,
+          Newton truncado, \emph{ADMM} para problemas
+          separables, solvers de barrera modernos.
+  \end{itemize}
+  \begin{block}{Críticas conocidas (y por qué importa la convexidad)}
+    \begin{itemize}
+      \item \emph{Error maximization:} pequeños errores en
+            $\hat\mu$, $\hat\Sigma$ producen cambios enormes en $w^\star$.
+      \item Sin $w\ge0$, la solución puede ser altamente apalancada
+            (largos en unos activos, cortos en otros); en la práctica
+            se impone $w\ge0$ (o cotas por posición).
+      \item La covarianza empírica subestima las correlaciones reales
+            en crisis; alternativas: shrinkage (Ledoit--Wolf),
+            Black--Litterman, jerarquía de riesgo (HRP).
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% ============================================================
 \section{Aproximación no paramétrica de distribuciones}
 % ============================================================
 \begin{frame}{Estimación no paramétrica: idea}
@@ -678,6 +808,13 @@
       \emph{J. Royal Stat. Soc.\ B} 58(1):267--288, 1996.
     \bibitem{Hastie} T. Hastie, R. Tibshirani, J. Friedman.
       \emph{The Elements of Statistical Learning}. Springer, 2nd ed., 2009.
+    \bibitem{Markowitz52} H. Markowitz.
+      Portfolio selection.
+      \emph{Journal of Finance} 7(1):77--91, 1952.
+    \bibitem{WikiMV} \emph{Markowitz model}. Wikipedia.\\
+      \texttt{en.wikipedia.org/wiki/Markowitz\_model}.
+    \bibitem{WikiPO} \emph{Portfolio optimization}. Wikipedia.\\
+      \texttt{en.wikipedia.org/wiki/Portfolio\_optimization}.
   \end{thebibliography}
 \end{frame}
 
