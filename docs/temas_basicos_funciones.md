@@ -247,6 +247,12 @@ Si existe una recta vertical que corta la gráfica en dos o más puntos, entonce
 
 ## 3. Función lineal
 
+**Ejemplo 0** (introductorio, con animación):
+
+Antes de entrar en la teoría, mira esta animación: muestra cómo cambia la gráfica de $f(x) = mx + b$ cuando variamos la pendiente $m$ y el intercepto $b$, por separado. Primero se dibuja la recta inicial $y = x + 2$ y se resaltan el intercepto con el eje $Y$ en $(0,\ b)$ (verde) y el intercepto con el eje $X$ en $(-b/m,\ 0)$ (rojo), junto con un triángulo de pendiente. Luego se anima $m$ para mostrar cómo la recta se empina, se vuelve negativa y finalmente queda horizontal — en cuyo caso $y = b$ es una **función constante**. A continuación se resetea la pendiente a 1 y se anima $b$ para mostrar cómo la recta se desliza verticalmente (en paralelo a sí misma).
+
+<video src="../funcion_lineal_grafica.mp4" controls width="100%"></video>
+
 ### 3.1 Definición
 
 Una **función lineal** es una función de la forma:
