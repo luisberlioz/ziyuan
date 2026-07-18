@@ -397,6 +397,19 @@
 \end{frame}
 
 % ------------------------------------------------------------
+\begin{frame}{Ejemplo discreto: MLE para una \emph{Poisson}($\lambda$)}
+  \centering
+  \includegraphics[width=0.82\textwidth]{cap_aproximacion_y_proyeccion_images/poisson_mle_histogram.jpg}
+
+  \vspace{0.4em}
+  \begin{footnotesize}
+    $n=1000$ muestras i.i.d.\ de Poisson($\lambda^\star = 4$);
+    $\hat\lambda_{\mathrm{MLE}} = \bar x = 3.958 \approx 4$.
+    De $\lambda\in\{1,12\}$ sólo $\lambda = 4 = \hat\lambda_{\mathrm{MLE}}$ ajusta el histograma.
+  \end{footnotesize}
+\end{frame}
+
+% ------------------------------------------------------------
 \begin{frame}{Estimación MAP = aproximación regularizada}
   \begin{block}{Estimador MAP (máximo a posteriori)}
     \[
