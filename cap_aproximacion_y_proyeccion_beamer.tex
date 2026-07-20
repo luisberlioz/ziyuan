@@ -438,6 +438,27 @@
 % ============================================================
 \section{Una aplicación clásica: optimización de portafolios (Markowitz)}
 % ============================================================
+\begin{frame}{Motivación con datos reales: dos rutas para comprar USD}
+  \begin{itemize}
+    \item En la práctica hay \textbf{dos activos} para hacerse de USD en
+          Honduras: la compra \emph{bancaria} (precio estable, LPS Dólar
+          --Compra / --Venta) y la compra \emph{vía P2P} con USDT (precio
+          de mercado, volátil, USDT P2P--Mejor venta).
+    \item Pregunta natural: ¿cuándo conviene cada ruta? ¿Se pueden mezclar
+          para mejorar el \emph{precio efectivo}?
+    \item Es exactamente el problema de Markowitz: dos activos correlacionados
+          con perfiles distintos de retorno esperado ($\mu$) y riesgo
+          ($\Sigma$).
+    \item Los datos (ago 2025 -- jul 2026) muestran: el banco es estable pero
+          caro, el P2P es más barato en media pero mucho más volátil.
+          Combinarlos reduce varianza sin sacrificar precio promedio.
+  \end{itemize}
+  \begin{center}
+    \includegraphics[width=0.78\textwidth]{cap_aproximacion_y_proyeccion_images/usdt_p2p_vs_banco_lps.jpg}
+  \end{center}
+\end{frame}
+
+% ------------------------------------------------------------
 \begin{frame}{Motivación: diversificación y riesgo}
   \begin{itemize}
     \item Un inversionista elige pesos $w_i\ge0$ sobre $n$ activos con retornos
