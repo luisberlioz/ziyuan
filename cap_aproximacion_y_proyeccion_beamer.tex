@@ -597,7 +597,7 @@
           datos, sin conocimiento previo de su forma.
     \item Toda la información está en los datos: ``\emph{let the data speak}''.
   \end{itemize}
-  \vspace{0.3em}
+  \vspace{0.2em}
   \begin{block}{Resumen de los tres métodos que veremos}
     \begin{enumerate}
       \item Estimación por \emph{histogramas}.
@@ -605,6 +605,42 @@
       \item Estimación por \emph{$k$-vecinos más cercanos} ($k$-NN).
     \end{enumerate}
   \end{block}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Motivación con datos reales: suministro de proteína vs.\ edad}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{itemize}
+        \item Datos: Log Hazard Ratio del consumo de proteína
+              \emph{vegetal} vs.\ \emph{animal} en función de la edad
+              (0--95 años), separados por sexo.
+        \item \textbf{Sin asumir una forma paramétrica}: la curva
+              emerge de los datos mediante suavizamiento tipo
+              \emph{kernel} (las curvas lisas son los ajustes KDE).
+        \item Lectura:
+          \begin{itemize}
+            \item $\mathrm{LHR}>0$ favorece el consumo de proteína vegetal.
+            \item $\mathrm{LHR}<0$ favorece el consumo de proteína animal.
+            \item El cruce por $0$ está cerca de los 20 años.
+            \item A partir de $\sim$25 años, la dieta se inclina hacia
+                  proteína vegetal, con un máximo alrededor de los
+                  65--70 años.
+          \end{itemize}
+        \item \textbf{Idea}: cualquier patrón monótono o polinómico
+              \emph{falla} --- la curva es claramente no lineal y
+              no paramétrica.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.43\textwidth}
+      \begin{center}
+        \includegraphics[width=\linewidth]{images/nutricion_quintile.png}
+      \end{center}
+      {\footnotesize\emph{Log Hazard Ratio del consumo de proteína
+        vegetal vs.\ animal, por edad y sexo (datos suavizados por
+        kernel).}}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 % ------------------------------------------------------------
