@@ -753,6 +753,14 @@ donde la **base** $a$ es una constante real que cumple $a > 0$ y $a \neq 1$, y $
 | **Asíntota** | El **eje X**, $y = 0$. La curva se acerca a $y = 0$ sin tocarlo |
 | **Monotonía** | Creciente si $a > 1$; decreciente si $0 < a < 1$ |
 
+#### 8.2.1 Una aplicación real: la progresión del récord mundial de los 100 m planos
+
+El comportamiento asintótico no es solo una curiosidad matemática: aparece cada vez que una magnitud mejora con el tiempo pero está acotada por un límite físico, biológico o tecnológico. El ejemplo clásico es la **progresión del récord mundial masculino de los 100 m planos**: cada nueva marca bate a la anterior, pero la mejora es cada vez más pequeña y la curva de tiempos se acerca — sin tocarlo — a un valor límite cercano a los 9.5 s. Esa cota representa una **asíntota horizontal** impuesta por las limitaciones fisiológicas humanas.
+
+![Progresión del récord mundial masculino de los 100 m planos entre 1900 y 2005. Los tiempos mejoran con los años pero la curva se aplana, sugiriendo una cota asintótica inferior.](images/world_record_100m_men.png)
+
+*Imagen: [Wikimedia Commons — World-record-progression-100m-men](https://commons.wikimedia.org/wiki/File:World-record-progression-100m-men.png), diseñada por **mrnett1974**, publicada bajo [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).*
+
 ### 8.3 Ejemplos resueltos (de la guía, sección 15)
 
 Los ejercicios de la guía involucran **transformaciones** de la forma $f(x) = a^{g(x)} + k$: la base $a$ y el exponente $g(x)$ cambian la posición y la forma de la gráfica; las constantes sumadas la trasladan.
