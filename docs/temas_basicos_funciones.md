@@ -593,6 +593,12 @@ Cuando uno o ambos extremos se extienden hasta el infinito, se usan los símbolo
 
 ## 7. Inecuaciones
 
+**Ejemplo 0** (introductorio, con animación):
+
+Las tres operaciones básicas que se aplican al resolver una inecuación (sumar el mismo número a ambos lados, multiplicar por un número positivo, y multiplicar por un número negativo) tienen un comportamiento predecible sobre la recta real. La siguiente animación lo ilustra con un ejemplo concreto ($x = 2$, $y = 5$): las dos primeras operaciones **preservan el orden** de los puntos, mientras que la tercera lo **invierte**. El cero actúa como ancla: ambos lados crecen proporcionalmente desde el origen al multiplicar por un positivo, y al multiplicar por un negativo la desigualdad se refleja.
+
+<video src="../desigualdades_propiedades.mp4" controls width="100%"></video>
+
 ### 7.1 Concepto
 
 Una **inecuación** es una **desigualdad** entre dos expresiones algebraicas. A diferencia de una ecuación, la solución **no es un valor único** sino un **conjunto de valores** que hacen verdadera la desigualdad.
