@@ -69,10 +69,11 @@ def _label_point(ax, x, y, label, dx=0.25, dy=0.25, ha="left"):
 
 
 def _draw_asymptote_h(ax, y, x_range, label_text, label_xy):
-    """Horizontal asymptote — dashed line offset well above x-axis so it's
-    visually distinct from the solid black axis below it.
+    """Horizontal asymptote — dashed line drawn just above the x-axis so it
+    hugs the actual asymptote line and is clearly visible against the solid
+    black axis below it.
     """
-    y_offset = 0.3
+    y_offset = 0.08
     ax.plot(x_range, [y + y_offset, y + y_offset], "--", color=ASINT_COLOR,
             linewidth=2.4, dashes=(8, 4), alpha=1.0, zorder=2)
     ax.text(label_xy[0], label_xy[1] + y_offset, label_text, fontsize=11,
@@ -83,10 +84,11 @@ def _draw_asymptote_h(ax, y, x_range, label_text, label_xy):
 
 
 def _draw_asymptote_v(ax, x, y_range, label_text, label_xy):
-    """Vertical asymptote — offset well to the right of the y-axis so it
-    stands apart from the solid black axis.
+    """Vertical asymptote — drawn just to the right of the y-axis so it
+    hugs the actual asymptote line and is clearly visible against the solid
+    black axis.
     """
-    x_offset = 0.3
+    x_offset = 0.08
     ax.plot([x + x_offset, x + x_offset], y_range, "--", color=ASINT_COLOR,
             linewidth=2.4, dashes=(8, 4), alpha=1.0, zorder=2)
     ax.text(label_xy[0] + x_offset, label_xy[1], label_text, fontsize=11,
