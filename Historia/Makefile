@@ -36,4 +36,8 @@ $(PDF): $(TEX) $(wildcard images/*)
 clean:
 	rm -f *.aux *.log *.nav *.out *.snm *.toc *.vrb *.fls *.fdb_latexmk *.synctex.gz
 
-rebuild: clean all
+distclean: clean
+	rm -f $(PDF)
+
+# Rebuild = delete intermediates + the PDF, then rebuild from scratch.
+rebuild: distclean all
