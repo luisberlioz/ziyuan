@@ -10,6 +10,10 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
 \usepackage{booktabs}
+\setbeamerfont{caption}{size=\tiny}
+% Bundled vector PDFs: no Mayan/Egyptian Unicode font needed at runtime.
+\newcommand{\mayaicon}[1]{\raisebox{-0.32\height}{\includegraphics[width=0.47cm]{images/maya_vector/maya_#1.pdf}}}
+\newcommand{\egypticon}[1]{\raisebox{-0.3\height}{\includegraphics[width=0.65cm,height=0.40cm,keepaspectratio]{images/egyptian/#1.pdf}}}
 
 \title[Sistemas Numéricos]{Matemáticas Prehistóricas y Precolombinas}
 \subtitle{Historia de la Matemática --- MM-517}
@@ -56,7 +60,7 @@
         \begin{column}{0.4\textwidth}
             \begin{figure}
                 \includegraphics[width=0.9\textwidth]{images/Ishango_bone.jpg}
-                \caption{Hueso de Ishango. By Joeykentin - https://commons.wikimedia.org/w/index.php?curid=137144641}
+                \caption{Hueso de Ishango. By Joeykentin - \href{https://commons.wikimedia.org/w/index.php?curid=137144641}{Wikimedia Commons}}
             \end{figure}
         \end{column}
     \end{columns} 
@@ -92,11 +96,11 @@
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \begin{figure}
-                \includegraphics[width=0.9\textwidth]{images/otzitable.jpg}
+                \includegraphics[width=0.9\textwidth,height=5.9cm,keepaspectratio]{images/otzitable.jpg}
             \end{figure}
         \end{column}
         \begin{column}{0.5\textwidth}
-            \includegraphics[width=0.9\textwidth]{images/etgved.jpeg}
+            \includegraphics[width=0.9\textwidth,height=5.9cm,keepaspectratio]{images/etgved.jpeg}
         \end{column}
     \end{columns} 
 \end{frame}
@@ -128,11 +132,11 @@
 \end{frame}
 
 \begin{frame}{Artefactos y geometría}
-  \vspace{1cm}
+  \vspace{0.1cm}
   \begin{center}
     \begin{figure}
-  \includegraphics[width=0.85\textwidth]{images/stonehenge_solstice.jpg}
-  \caption{Stonehenge al amanecer del solsticio de verano (21 jun 2005), alineación solar. By Andrew Dunn - https://commons.wikimedia.org/wiki/File:Summer\_Solstice\_2005\_Sunrise\_over\_Stonehenge\_01.jpg}
+  \includegraphics[width=0.85\textwidth,height=4.7cm,keepaspectratio]{images/stonehenge_solstice.jpg}
+  \caption{Stonehenge al amanecer del solsticio de verano (21 jun 2005), alineación solar. By Andrew Dunn - \href{https://commons.wikimedia.org/wiki/File:Summer\_Solstice\_2005\_Sunrise\_over\_Stonehenge\_01.jpg}{Wikimedia Commons}}
 \end{figure}
   \end{center}
 \end{frame}
@@ -174,8 +178,8 @@
   \vspace{0.3cm}
   \begin{center}
     \begin{figure}
-  \includegraphics[width=0.55\textwidth]{images/plimpton_322.jpg}
-  \caption{Tablilla Plimpton 322 (~1800 BCE): triadas pitagóricas en notación sexagesimal. By photo author unknown - https://commons.wikimedia.org/wiki/File:Plimpton\_322.jpg}
+  \includegraphics[width=0.55\textwidth,height=2.25cm,keepaspectratio]{images/plimpton_322.jpg}
+  \caption{Tablilla Plimpton 322 (~1800 BCE): triadas pitagóricas en notación sexagesimal. By photo author unknown - \href{https://commons.wikimedia.org/wiki/File:Plimpton\_322.jpg}{Wikimedia Commons}}
 \end{figure}
   \end{center}
 \end{frame}
@@ -192,16 +196,18 @@
     \item \textbf{Sin cero} (nfr $\neq$ cero matemático)
     \item \textbf{Símbolos jeroglíficos}:
       \begin{itemize}
-        \item 1 = trazo vertical
-        \item 10 = traba de ganado
-        \item 100 = espiral de cuerda
-        \item 1{,}000 = flor de loto
-        \item 10{,}000 = dedo
-        \item 100{,}000 = renacuajo
-        \item 1{,}000{,}000 = dios Heh
+        \item \makebox[0.8cm][c]{\egypticon{1-stroke}} 1 = trazo vertical
+        \item \makebox[0.8cm][c]{\egypticon{10-cattle-hobble}} 10 = traba de ganado
+        \item \makebox[0.8cm][c]{\egypticon{100-coil-rope}} 100 = espiral de cuerda
+        \item \makebox[0.8cm][c]{\egypticon{1000-lotus}} 1{,}000 = flor de loto
+        \item \makebox[0.8cm][c]{\egypticon{10000-finger}} 10{,}000 = dedo
+        \item \makebox[0.8cm][c]{\egypticon{100000-tadpole}} 100{,}000 = renacuajo
+        \item \makebox[0.8cm][c]{\egypticon{1000000-heh}} 1{,}000{,}000 = dios Heh
       \end{itemize}
     \item 9{,}999 necesitaba 36 símbolos (suma, no posición)
   \end{itemize}
+  {\tiny Jeroglíficos: Otfried Lieberknecht, \href{https://commons.wikimedia.org/wiki/File:Num_aeg_hierog_0000001_L2R_80px.svg}{Wikimedia Commons},
+  \href{https://creativecommons.org/licenses/by-sa/3.0/}{CC BY-SA 3.0}. Vectores, no fotografías.}
 \end{frame}
 
 \begin{frame}{Numeración hierática}
@@ -215,8 +221,8 @@
   \vspace{0.3cm}
   \begin{center}
     \begin{figure}
-  \includegraphics[width=0.55\textwidth]{images/rhind_papyrus.jpg}
-  \caption{Papiro matemático Rhind (c. ~1650 BCE), detalle con numeración hierática. By Trustees of the British Museum - https://commons.wikimedia.org/wiki/File:Rhind\_Mathematical\_Papyrus.jpg}
+  \includegraphics[width=0.55\textwidth,height=2.65cm,keepaspectratio]{images/rhind_papyrus.jpg}
+  \caption{Papiro matemático Rhind (c. ~1650 BCE), detalle con numeración hierática. By Trustees of the British Museum - \href{https://commons.wikimedia.org/wiki/File:Rhind\_Mathematical\_Papyrus.jpg}{Wikimedia Commons}}
 \end{figure}
   \end{center}
 \end{frame}
@@ -234,9 +240,9 @@
       \end{itemize}
     \item \textbf{Símbolos básicos}:
       \begin{itemize}
-        \item Punto = 1
-        \item Barra = 5
-        \item Concha = 0
+        \item \mayaicon{01} Punto = 1
+        \item \mayaicon{05} Barra = 5
+        \item \mayaicon{00} Concha = 0
       \end{itemize}
     \item \textbf{Culturas}:
       \begin{itemize}
@@ -245,14 +251,15 @@
       \end{itemize}
     \item Calendario de Cuenta Larga: usado desde \textasciitilde 36 BCE
   \end{itemize}
+  {\tiny Dibujos esquemáticos de los signos mayas; variantes históricas no representadas.}
 \end{frame}
 
 \begin{frame}{Mapa cronológico}
-  \vspace{1cm}
+  \vspace{0.1cm}
   \begin{center}
     \begin{figure}
-        \includegraphics[width=0.85\textwidth]{images/olmeca1.jpg}
-  \caption{Región cultural de Mesoamérica. By Alex Covarrubias - https://commons.wikimedia.org/wiki/File:Region\_Mesoamerica.png}
+        \includegraphics[width=0.85\textwidth,height=4.8cm,keepaspectratio]{images/olmeca1.jpg}
+  \caption{Región cultural de Mesoamérica. By Alex Covarrubias - \href{https://commons.wikimedia.org/wiki/File:Region\_Mesoamerica.png}{Wikimedia Commons}}
 \end{figure}
   \end{center}
 \end{frame}
@@ -267,9 +274,9 @@
     \item \textbf{Vigesimal} (base 20) posicional
     \item \textbf{Tres símbolos}:
       \begin{itemize}
-        \item Concha (o glifo de pétalo) = 0
-        \item Punto = 1
-        \item Barra = 5
+        \item \mayaicon{00} Concha (o glifo de pétalo) = 0
+        \item \mayaicon{01} Punto = 1
+        \item \mayaicon{05} Barra = 5
       \end{itemize}
   \item \textbf{Posicional base 20}: 2$^{\circ}$ nivel es $18 \times 20 = 360$ (no $20 \times 20 = 400$), alineado con el año solar
     \item \textbf{Unidades temporales}:
@@ -281,27 +288,46 @@
         \item \textit{baktun} = 20 katun = 144{,}000 días
       \end{itemize}
   \end{itemize}
+  {\tiny Dibujos esquemáticos de los signos mayas; variantes históricas no representadas.}
 \end{frame}
 
 \begin{frame}{Calendarios y cero}
-  \begin{itemize}
-    \item \textbf{Tres calendarios}:
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.61\textwidth}
+      \small
       \begin{itemize}
-        \item \textit{Haab} (365 días, año vago)
-        \item \textit{Tzolkin} (260 días, año sagrado)
-        \item \textit{Cuenta Larga} (cronología absoluta)
+        \item \textbf{Tres calendarios}:
+          \begin{itemize}
+            \item \textit{Haab} (365 días, año vago)
+            \item \textit{Tzolkin} (260 días, año sagrado)
+            \item \textit{Cuenta Larga} (cronología absoluta)
+          \end{itemize}
+        \item \textbf{Cero matemático} usado desde \textasciitilde siglo III CE
+        \item Primera fecha Cuenta Larga: \textbf{36 BCE} (Estela 2, Chiapa de Corzo; antecedente mesoamericano, no maya)
+        \item Notación vertical u horizontal
       \end{itemize}
-    \item \textbf{Cero matemático} usado desde \textasciitilde siglo III CE
-    \item Primera fecha Cuenta Larga: \textbf{36 BCE} (Estela 2, Chiapa de Corzo)
-    \item Notación vertical u horizontal
-  \end{itemize}
-  \vspace{0.3cm}
-  \begin{center}
-    \begin{figure}
-  \includegraphics[width=0.55\textwidth]{images/la_mojarra.jpg}
-  \caption{Estela 1 de La Mojarra: glifos con fecha de Cuenta Larga 8.5.16.9.7 (~156 CE). By Maunu - https://commons.wikimedia.org/wiki/File:La\_Mojarra\_Inscription\_and\_Long\_Count\_date.jpg}
-\end{figure}
-  \end{center}
+      \medskip
+      \begin{beamercolorbox}[sep=5pt,rounded=true]{block body}
+        \centering\scriptsize
+        \textbf{El cero ocupa una posición}\par\smallskip
+        \includegraphics[width=0.67cm]{images/maya_vector/maya_13.pdf}\hspace{1pt}%
+        \includegraphics[width=0.67cm]{images/maya_vector/maya_00.pdf}\hspace{1pt}%
+        \includegraphics[width=0.67cm]{images/maya_vector/maya_00.pdf}\hspace{1pt}%
+        \includegraphics[width=0.67cm]{images/maya_vector/maya_00.pdf}\hspace{1pt}%
+        \includegraphics[width=0.67cm]{images/maya_vector/maya_00.pdf}\par
+        $13.0.0.0.0$: fecha mítica de creación.\par
+        {\tiny Esquema moderno, no calco de los glifos de la estela.}
+      \end{beamercolorbox}
+    \end{column}
+    \begin{column}{0.36\textwidth}
+      \centering
+      \includegraphics[width=\linewidth,height=4.65cm,keepaspectratio]{images/calendars/quirigua_stela_c.pdf}\par
+      {\tiny Estela C de Quiriguá (Guatemala, 766 CE).\par
+      Cara oriental: inscripción maya con la fecha mítica $13.0.0.0.0$.\par
+      Dibujo: A. P. Maudslay; dominio público.\par
+      \href{https://commons.wikimedia.org/wiki/File:East_side_of_stela_C,_Quirigua.svg}{Fuente: Wikimedia Commons}.}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 %% ======================================================================
@@ -326,11 +352,11 @@
 \end{frame}
 
 \begin{frame}{Fuentes y comparación}
-  \vspace{0.8cm}
+  \vspace{0.1cm}
   \begin{center}
     \begin{figure}
-  \includegraphics[width=0.85\textwidth]{images/codex_mendoza_46r.jpg}
-  \caption{Códice Mendoza, folio 46r: tributos al imperio azteca. By El Comandante - https://commons.wikimedia.org/wiki/File:Codex\_Mendoza\_folio\_46r.jpg}
+  \includegraphics[width=0.85\textwidth,height=3.7cm,keepaspectratio]{images/codex_mendoza_46r.jpg}
+  \caption{Códice Mendoza, folio 46r: tributos al imperio azteca. By El Comandante - \href{https://commons.wikimedia.org/wiki/File:Codex\_Mendoza\_folio\_46r.jpg}{Wikimedia Commons}}
 \end{figure}
   \end{center}
   \vspace{0.2cm}
@@ -341,20 +367,21 @@
 
 %% ======================================================================
 
-\begin{frame}{Símbolos Unicode (U+1D2E0--U+1D2F9)}
+\begin{frame}{Numerales mayas: 0--19}
   \begin{itemize}
-    \item Bloque Unicode \textit{Mayan Numerals}: 20 glifos (0--19)
-    \item Fuente: \texttt{Symbola} (renderizado desde PUA plano 1)
+    \item Unicode \textit{Mayan Numerals}: U+1D2E0--U+1D2F3 (0--19)
+    \item Vectores locales: concha = 0, punto = 1, barra = 5
   \end{itemize}
-  \vspace{0.2cm}
   \begin{center}
+  \setlength{\tabcolsep}{7pt}
   \begin{tabular}{ccccc}
-    \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2E0.png}}\,{\scriptsize 0} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2E1.png}}\,{\scriptsize 1} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2E2.png}}\,{\scriptsize 2} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2E3.png}}\,{\scriptsize 3} \\
-    \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2E4.png}}\,{\scriptsize 4} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2E5.png}}\,{\scriptsize 5} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2E6.png}}\,{\scriptsize 6} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2E7.png}}\,{\scriptsize 7} \\
-    \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2E8.png}}\,{\scriptsize 8} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2E9.png}}\,{\scriptsize 9} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2EA.png}}\,{\scriptsize 10} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2EB.png}}\,{\scriptsize 11} \\
-    \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2EC.png}}\,{\scriptsize 12} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2ED.png}}\,{\scriptsize 13} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2EE.png}}\,{\scriptsize 14} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2EF.png}}\,{\scriptsize 15} \\
-    \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2F0.png}}\,{\scriptsize 16} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2F1.png}}\,{\scriptsize 17} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2F2.png}}\,{\scriptsize 18} & \raisebox{-0.3\height}{\includegraphics[height=0.7cm]{images/maya_unicode/maya_1D2F3.png}}\,{\scriptsize 19} \\
-  \end{tabular}
+    \includegraphics[width=0.85cm]{images/maya_vector/maya_00.pdf}\,\textbf{0} & \includegraphics[width=0.85cm]{images/maya_vector/maya_01.pdf}\,\textbf{1} & \includegraphics[width=0.85cm]{images/maya_vector/maya_02.pdf}\,\textbf{2} & \includegraphics[width=0.85cm]{images/maya_vector/maya_03.pdf}\,\textbf{3} & \includegraphics[width=0.85cm]{images/maya_vector/maya_04.pdf}\,\textbf{4} \\[1pt]
+    \includegraphics[width=0.85cm]{images/maya_vector/maya_05.pdf}\,\textbf{5} & \includegraphics[width=0.85cm]{images/maya_vector/maya_06.pdf}\,\textbf{6} & \includegraphics[width=0.85cm]{images/maya_vector/maya_07.pdf}\,\textbf{7} & \includegraphics[width=0.85cm]{images/maya_vector/maya_08.pdf}\,\textbf{8} & \includegraphics[width=0.85cm]{images/maya_vector/maya_09.pdf}\,\textbf{9} \\[1pt]
+    \includegraphics[width=0.85cm]{images/maya_vector/maya_10.pdf}\,\textbf{10} & \includegraphics[width=0.85cm]{images/maya_vector/maya_11.pdf}\,\textbf{11} & \includegraphics[width=0.85cm]{images/maya_vector/maya_12.pdf}\,\textbf{12} & \includegraphics[width=0.85cm]{images/maya_vector/maya_13.pdf}\,\textbf{13} & \includegraphics[width=0.85cm]{images/maya_vector/maya_14.pdf}\,\textbf{14} \\[1pt]
+    \includegraphics[width=0.85cm]{images/maya_vector/maya_15.pdf}\,\textbf{15} & \includegraphics[width=0.85cm]{images/maya_vector/maya_16.pdf}\,\textbf{16} & \includegraphics[width=0.85cm]{images/maya_vector/maya_17.pdf}\,\textbf{17} & \includegraphics[width=0.85cm]{images/maya_vector/maya_18.pdf}\,\textbf{18} & \includegraphics[width=0.85cm]{images/maya_vector/maya_19.pdf}\,\textbf{19} \\[1pt]
+  \end{tabular}\par\smallskip
+  {\scriptsize Dibujos esquemáticos originales (CC0), no glifos de una fuente.\par
+  \href{https://www.unicode.org/charts/PDF/U1D2E0.pdf}{Correspondencia de valores: tabla oficial de Unicode}.}
   \end{center}
 \end{frame}
 
@@ -388,8 +415,8 @@
   \vspace{0.3cm}
   \begin{center}
     \begin{figure}
-  \includegraphics[width=0.55\textwidth]{images/quipu.jpg}
-  \caption{Quipu inka del Museo Arqueológico Rafael Larco Herrera (Lima, Perú). By Museo Arqueológico Rafael Larco Herrera - https://commons.wikimedia.org/wiki/File:Inca\_Quipu.jpg}
+  \includegraphics[width=0.55\textwidth,height=2.7cm,keepaspectratio]{images/quipu.jpg}
+  \caption{Quipu inka del Museo Arqueológico Rafael Larco Herrera (Lima, Perú). By Museo Arqueológico Rafael Larco Herrera - \href{https://commons.wikimedia.org/wiki/File:Inca\_Quipu.jpg}{Wikimedia Commons}}
 \end{figure}
   \end{center}
 \end{frame}

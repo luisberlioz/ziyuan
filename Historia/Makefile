@@ -15,12 +15,15 @@ TEX := historia_sistemas_numericos_beamer.tex
 PDF := $(TEX:.tex=.pdf)
 LOG := $(TEX:.tex=.log)
 
-.PHONY: all clean rebuild
+.PHONY: all clean rebuild distclean preview
+
+# Recurse into the bundled vector asset directories.
+IMAGES := $(shell find images -type f \( -name "*.pdf" -o -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.svg" \))
 
 all: $(PDF)
 
 # The PDF depends on the source plus every image in images/.
-$(PDF): $(TEX) $(wildcard images/*)
+$(PDF): $(TEX) $(IMAGES)
 	@echo "Building $(PDF)..."
 	@i=1; \
 	while [ $$i -le 5 ]; do \
@@ -41,3 +44,10 @@ distclean: clean
 
 # Rebuild = delete intermediates + the PDF, then rebuild from scratch.
 rebuild: distclean all
+
+# Render just the affected pages (requires Poppler pdftoppm).
+preview: $(PDF)
+	mkdir -p preview
+	@for page in 14 17 20 21 25; do \
+	  pdftoppm -f $$page -l $$page -scale-to 1600 -singlefile -png $(PDF) preview/slide-$$page; \
+	done
