@@ -1,0 +1,374 @@
+\documentclass[10pt,xcolor=dvipsnames]{beamer}
+\usetheme{Madrid}
+\usecolortheme[RGB={0,82,155}]{structure}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{booktabs}
+
+\title[Sistemas Numéricos]{Sistemas Numéricos en la Historia}
+\subtitle{Historia de la Matemática --- MM-517}
+\author{}
+\institute[UNAH]{Universidad Nacional Autónoma de Honduras \\ Facultad de Ciencias \\ Departamento de Matemáticas}
+\date{III Período, 2026}
+
+\AtBeginSection[]{%
+  \begin{frame}<beamer>\frametitle{Contenido}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Contenido}
+  \tableofcontents
+\end{frame}
+
+%% ======================================================================
+\section{Sistemas numéricos en la prehistoria}
+%% ======================================================================
+
+\begin{frame}{Paleolítico Superior: el origen del conteo}
+  \begin{itemize}
+    \item Período: \textbf{Paleolítico Superior} (\textasciitilde 50{,}000--10{,}000 BCE)
+    \item Notación más antigua: \textbf{muescas en hueso} (\textit{tally marks})
+    \item \textbf{Hueso de Lebombo}: \textasciitilde 44{,}000 años
+      \begin{itemize}
+        \item Border Cave (Sudáfrica)
+        \item 29 muescas: posible calendario lunar
+      \end{itemize}
+    \item \textbf{Hueso de Ishango}: \textasciitilde 20{,}000 años
+      \begin{itemize}
+        \item Fíbula de babuino, RD Congo (descubierto 1960)
+        \item Tres columnas de muescas: posible aritmética
+      \end{itemize}
+    \item Conteo corporal: bases 5 y 10
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Prehistoria: artefactos clave}
+  \vspace{1cm}
+  \begin{center}
+    \fbox{\begin{minipage}[c][5cm][c]{0.85\textwidth}
+      \centering \textit{( Espacio para imágenes: \\ hueso de Ishango, hueso de Lebombo, \\ marcas en cuevas como Lascaux )}
+    \end{minipage}}
+  \end{center}
+\end{frame}
+
+%% ======================================================================
+\section{El período neolítico}
+%% ======================================================================
+
+\begin{frame}{Neolítico y casos clave (Ötzi, Egtved)}
+  \begin{itemize}
+    \item \textbf{Período Neolítico}: \textasciitilde 10{,}000--4{,}500 BCE (Cercano Oriente)
+    \item \textbf{Ötzi el Hombre de Hielo}: \textasciitilde 3300 BCE (Edad del Cobre / Neolítico tardío)
+      \begin{itemize}
+        \item Hallado en los Alpes de Ötztal (Austria/Italia), 1991
+        \item Hacha de cobre + herramientas de piedra
+        \item Más antiguo que las pirámides egipcias y Stonehenge
+      \end{itemize}
+    \item \textbf{Niña de Egtved}: \textasciitilde 1370 BCE --- \textit{Edad del Bronce}
+      \begin{itemize}
+        \item Hallada en Dinamarca (1921); momificación en turbera
+        \item Edad estimada: 16--18 años
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Imágenes y nota}
+  \vspace{0.5cm}
+  \begin{center}
+    \fbox{\begin{minipage}[c][4.5cm][c]{0.85\textwidth}
+      \centering \textit{( Espacio para imágenes: \\ reconstrucción de Ötzi, sarcófago de la Niña de Egtved )}
+    \end{minipage}}
+  \end{center}
+  \vspace{0.3cm}
+  \begin{alertblock}{Nota}
+    La Niña de Egtved pertenece a la \textbf{Edad del Bronce}, no al Neolítico estricto.
+  \end{alertblock}
+\end{frame}
+
+%% ======================================================================
+\section{Matemáticas del Neolítico}
+%% ======================================================================
+
+\begin{frame}{¿Qué matemáticas se hacían?}
+  \begin{itemize}
+    \item \textbf{Sin escritura} ni notación simbólica formal
+    \item Herramientas principales:
+      \begin{itemize}
+        \item Cuerdas con nudos
+        \item Muescas en palos y huesos (\textit{tally sticks})
+        \item Marcas en cuevas y megalitos
+      \end{itemize}
+    \item \textbf{Observación astronómica}:
+      \begin{itemize}
+        \item Ciclos lunares (29 días)
+        \item Equinoccios y solsticios
+      \end{itemize}
+    \item \textbf{Geometría práctica}:
+      \begin{itemize}
+        \item Stonehenge (\textasciitilde 3000--2000 BCE): alineamientos a solsticios; posible calendario solar de 365.25 días
+        \item Triángulos pitagóricos (3-4-5, 5-12-13) en megalitos
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Artefactos y geometría}
+  \vspace{1cm}
+  \begin{center}
+    \fbox{\begin{minipage}[c][5cm][c]{0.85\textwidth}
+      \centering \textit{( Espacio para imágenes: \\ Stonehenge, tally stick neolítico, alineamientos )}
+    \end{minipage}}
+  \end{center}
+\end{frame}
+
+%% ======================================================================
+\section{Sistema posicional babilónico}
+%% ======================================================================
+
+\begin{frame}{Sexagesimal y cuneiforme}
+  \begin{itemize}
+    \item \textbf{Origen}: Sumerios (\textasciitilde 3500--3000 BCE), Mesopotamia
+    \item \textbf{Sistema sexagesimal} (base 60)
+    \item \textbf{Escritura cuneiforme} sobre tablillas de arcilla
+    \item \textbf{Posicional}: el valor depende de la posición
+    \item Sub-base 10: dígitos 1--9 (cuñas) y 10 (esquina)
+    \item Sin cero (espacio en blanco)
+    \item \textbf{Períodos}:
+      \begin{itemize}
+        \item Sumerio: 3500--2000 BCE
+        \item Babilónico antiguo: 2000--1595 BCE
+        \item Babilónico nuevo: 1595--1155 BCE
+        \item Seleúcida: 312--63 BCE
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tablillas famosas y legado moderno}
+  \begin{itemize}
+    \item \textbf{Plimpton 322} (\textasciitilde 1900--1600 BCE): triadas pitagóricas
+    \item Tablillas de Senkerah: cuadrados hasta 59, cubos hasta 32
+    \item Tablas de recíprocos, raíces cuadradas, ecuaciones
+    \item \textbf{Legado moderno}:
+      \begin{itemize}
+        \item 60 segundos/minuto, 60 minutos/hora
+        \item 360$^{\circ}$ por circunferencia
+        \item Coordenadas geográficas (latitud/longitud)
+      \end{itemize}
+  \end{itemize}
+  \vspace{0.3cm}
+  \begin{center}
+    \fbox{\begin{minipage}[c][2cm][c]{0.55\textwidth}
+      \centering \textit{( Imagen: Plimpton 322 )}
+    \end{minipage}}
+  \end{center}
+\end{frame}
+
+%% ======================================================================
+\section{Numeración egipcia}
+%% ======================================================================
+
+\begin{frame}{Sistema jeroglífico}
+  \begin{itemize}
+    \item \textbf{Período}: \textasciitilde 3000 BCE -- 300 CE
+    \item Sistema \textbf{decimal} (base 10)
+    \item \textbf{Sin notación posicional}
+    \item \textbf{Sin cero} (nfr $\neq$ cero matemático)
+    \item \textbf{Símbolos jeroglíficos}:
+      \begin{itemize}
+        \item 1 = trazo vertical
+        \item 10 = traba de ganado
+        \item 100 = espiral de cuerda
+        \item 1{,}000 = flor de loto
+        \item 10{,}000 = dedo
+        \item 100{,}000 = renacuajo
+        \item 1{,}000{,}000 = dios Heh
+      \end{itemize}
+    \item 9{,}999 necesitaba 36 símbolos (suma, no posición)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Numeración hierática}
+  \begin{itemize}
+    \item Origen: \textasciitilde 3000 BCE; formalizada \textasciitilde 1800 BCE
+    \item Usada en papiros: \textbf{Rhind} (\textasciitilde 1650 BCE), \textbf{Moscú} (\textasciitilde 1850 BCE)
+    \item Versión cursiva de los jeroglíficos
+    \item Coexistió con jeroglíficos por \textasciitilde 2000 años
+    \item \textbf{Compactación}:
+      \begin{itemize}
+        \item 9{,}999 en jeroglífico: 36 símbolos
+        \item 9{,}999 en hierático: 4 símbolos
+      \end{itemize}
+    \item Seis formas históricas distintas (evolución)
+  \end{itemize}
+  \vspace{0.3cm}
+  \begin{center}
+    \fbox{\begin{minipage}[c][2cm][c]{0.55\textwidth}
+      \centering \textit{( Imagen: comparación jeroglífico vs hierático )}
+    \end{minipage}}
+  \end{center}
+\end{frame}
+
+%% ======================================================================
+\section{Sistemas numéricos de América}
+%% ======================================================================
+
+\begin{frame}{Vigesimal y orígenes olmecas}
+  \begin{itemize}
+    \item \textbf{Origen}: cultura olmeca (\textasciitilde 1500--400 BCE), costa del Golfo de México
+    \item \textbf{Base común}: vigesimal (base 20)
+      \begin{itemize}
+        \item Conteo con dedos de manos y pies
+      \end{itemize}
+    \item \textbf{Símbolos básicos}:
+      \begin{itemize}
+        \item Punto = 1
+        \item Barra = 5
+        \item Concha = 0
+      \end{itemize}
+    \item \textbf{Culturas}:
+      \begin{itemize}
+        \item Olmeca (madre), Zapoteca (Monte Albán)
+        \item Maya, Azteca, Mixteca
+      \end{itemize}
+    \item Calendario de Cuenta Larga: usado desde \textasciitilde 36 BCE
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Mapa cronológico}
+  \vspace{1cm}
+  \begin{center}
+    \fbox{\begin{minipage}[c][5cm][c]{0.85\textwidth}
+      \centering \textit{( Espacio para: \\ mapa de Mesoamérica con civilizaciones, \\ línea de tiempo de culturas )}
+    \end{minipage}}
+  \end{center}
+\end{frame}
+
+%% ======================================================================
+\section{Sistema numérico y jeroglífico maya}
+%% ======================================================================
+
+\begin{frame}{Vigesimal posicional}
+  \begin{itemize}
+    \item \textbf{Período Clásico}: \textasciitilde 250--900 CE (sur de México, Guatemala, Belice)
+    \item \textbf{Vigesimal} (base 20) posicional
+    \item \textbf{Tres símbolos}:
+      \begin{itemize}
+        \item Concha (o glifo de pétalo) = 0
+        \item Punto = 1
+        \item Barra = 5
+      \end{itemize}
+    \item \textbf{Modificación}: 2$^{\circ}$ nivel es $18 \times 20 = 360$ (no $20 \times 20 = 400$), alineado con el año solar
+    \item \textbf{Unidades temporales}:
+      \begin{itemize}
+        \item \textit{kin} = 1 día
+        \item \textit{uinal} = 20 kin
+        \item \textit{tun} = 18 uinal = 360 días
+        \item \textit{katun} = 20 tun = 7{,}200 días
+        \item \textit{baktun} = 20 katun = 144{,}000 días
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Calendarios y cero}
+  \begin{itemize}
+    \item \textbf{Tres calendarios}:
+      \begin{itemize}
+        \item \textit{Haab} (365 días, año vago)
+        \item \textit{Tzolkin} (260 días, año sagrado)
+        \item \textit{Cuenta Larga} (cronología absoluta)
+      \end{itemize}
+    \item \textbf{Cero matemático} usado desde \textasciitilde siglo III CE
+    \item Primera fecha Cuenta Larga: \textbf{36 BCE} (Estela 2, Chiapa de Corzo)
+    \item Notación vertical u horizontal
+  \end{itemize}
+  \vspace{0.3cm}
+  \begin{center}
+    \fbox{\begin{minipage}[c][2cm][c]{0.55\textwidth}
+      \centering \textit{( Imagen: estela maya con glifos numéricos )}
+    \end{minipage}}
+  \end{center}
+\end{frame}
+
+%% ======================================================================
+\section{Sistema azteca}
+%% ======================================================================
+
+\begin{frame}{Pictográfico vigesimal}
+  \begin{itemize}
+    \item \textbf{Imperio Mexica/Azteca (Triple Alianza)}: 1428--1521 CE
+    \item \textbf{Vigesimal} (base 20) pictográfico
+    \item \textbf{Símbolos}:
+      \begin{itemize}
+        \item Punto = 1
+        \item Bandera / estandarte = 20
+        \item Pluma = 400
+        \item Bulto de copal = 8{,}000
+      \end{itemize}
+    \item \textbf{Uso}: tributos y registro comercial
+    \item \textbf{Sin cero} explícito (a diferencia de Maya)
+    \item Sistema \textbf{no posicional} estricto (suma)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Fuentes y comparación}
+  \vspace{0.8cm}
+  \begin{center}
+    \fbox{\begin{minipage}[c][4.5cm][c]{0.85\textwidth}
+      \centering \textit{( Espacio para: \\ Códice Mendoza, glifos numéricos aztecas, \\ comparación con Maya )}
+    \end{minipage}}
+  \end{center}
+  \vspace{0.2cm}
+  \begin{alertblock}{Diferencia con Maya}
+    Los aztecas \textbf{sumaban}; los mayas tenían notación \textbf{posicional} y usaban el \textbf{cero}.
+  \end{alertblock}
+\end{frame}
+
+%% ======================================================================
+\section{Los quipus incas}
+%% ======================================================================
+
+\begin{frame}{Estructura y materiales}
+  \begin{itemize}
+    \item \textbf{Imperio Inca}: \textasciitilde 1438--1532 CE
+    \item Uso más antiguo: \textasciitilde 2600 BCE (culturas andinas pre-Inca)
+    \item \textbf{Cuerdas anudadas} (algodón o fibra de camélido: alpaca, llama, vicuña)
+    \item \textbf{Información codificada}:
+      \begin{itemize}
+        \item Posición del nudo (decimal posicional)
+        \item Color del cordón
+        \item Tipo de nudo (simple, largo, en figura)
+        \item Distancia entre nudos
+        \item Orden de los cordones
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Uso, especialistas y escala}
+  \begin{itemize}
+    \item \textbf{Función principal}: numérica (decimal posicional)
+    \item \textbf{Registros}: censos, tributos, calendario, producción, militar
+    \item \textbf{Administradores}: \textit{quipucamayocs} (guardianes de la memoria)
+    \item Estudios recientes sugieren posible contenido narrativo en algunos quipus
+    \item \textbf{Escala}: desde pocos cordones hasta miles
+  \end{itemize}
+  \vspace{0.3cm}
+  \begin{center}
+    \fbox{\begin{minipage}[c][2cm][c]{0.55\textwidth}
+      \centering \textit{( Imagen: quipu reconstituido, ejemplo de nudos )}
+    \end{minipage}}
+  \end{center}
+\end{frame}
+
+\end{document}
