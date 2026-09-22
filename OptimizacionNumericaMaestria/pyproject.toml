@@ -1,0 +1,23 @@
+[project]
+name = "optimizacionnumericamaestria"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Luis", email = "lab156@case.edu" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "cvxpy>=1.9.3",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+    "pandas>=3.0.6",
+    "scipy>=1.18.1",
+]
+
+[project.scripts]
+optimizacionnumericamaestria = "optimizacionnumericamaestria:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
