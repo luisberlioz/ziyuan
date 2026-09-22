@@ -1,59 +1,6 @@
-# Burton — *The History of Mathematics: An Introduction* (7.ª ed.)
-
-**Referencia bibliográfica**
-
-> Burton, D. M. (2011). *The History of Mathematics: An Introduction*
-> (7.ª ed.). McGraw-Hill. ISBN 978-0-07-338315-6.
-> Universidad de New Hampshire.
-
-Índice de contenidos completo (pp. v–ix) traducido al español, sin
-resumir sub-secciones. Pensado como referencia rápida para planificación
-del curso.
+# Temas de Presentación para Historia MM-517
 
 ---
-
-## Prefacio — pp. x–xii
-
-## Capítulo 1 — Primeros sistemas numéricos y símbolos — p. 1
-- **1.1 Conteo primitivo** (1)
-  - El sentido del número (1)
-  - Muescas como marcas de conteo (2)
-  - Los quipus peruanos: nudos como números (6)
-- **1.2 Registro numérico de los egipcios y los griegos** (9)
-  - La *Historia* de Heródoto (9)
-  - Representación jeroglífica de los números (11)
-  - Numeración hierática egipcia (15)
-  - El sistema numérico alfabético griego (16)
-- **1.3 Registro numérico de los babilonios** (20)
-  - La escritura cuneiforme babilónica (20)
-  - Descifrando el cuneiforme: Grotefend y Rawlinson (21)
-  - El sistema numérico posicional babilónico (23)
-  - La escritura en la antigua China (26)
-
-## Capítulo 2 — La matemática en las civilizaciones antiguas — p. 33
-- **2.1 El papiro Rhind** (33)
-  - Papiros matemáticos egipcios (33)
-  - Una clave para descifrar: la Piedra Rosetta (35)
-- **2.2 Aritmética egipcia** (37)
-  - Multiplicación egipcia antigua (37)
-  - La tabla de fracciones unitarias (40)
-  - Representación de números racionales (43)
-- **2.3 Cuatro problemas del papiro Rhind** (46)
-  - El método de la falsa posición (46)
-  - Un problema curioso (49)
-  - La matemática egipcia como aritmética aplicada (50)
-- **2.4 Geometría egipcia** (53)
-  - Aproximación del área de un círculo (53)
-  - El volumen de una pirámide truncada (56)
-  - Especulaciones sobre la Gran Pirámide (57)
-- **2.5 Matemática babilónica** (62)
-  - Una tablilla de recíprocos (62)
-  - El tratamiento babilónico de las ecuaciones cuadráticas (64)
-  - Dos problemas babilónicos característicos (69)
-- **2.6 Plimpton 322** (72)
-  - Una tablilla sobre ternas numéricas (72)
-  - El uso babilónico del teorema de Pitágoras (76)
-  - El papiro matemático de El Cairo (77)
 
 ## Capítulo 3 — Los inicios de la matemática griega — p. 83
 - **3.1 Los descubrimientos geométricos de Tales** (83)
@@ -265,6 +212,7 @@ del curso.
 - **12.2 Contar el infinito** (673)
   - El último universalista: Poincaré (673)
   - La teoría cantoriana de los conjuntos infinitos (676)
+  - Historia perdida de Cantor y Dedekind https://www.quantamagazine.org/the-man-who-stole-infinity-20260225/
   - La visión de Kronecker sobre la teoría de conjuntos (681)
   - Conjuntos numerables y no numerables (684)
   - Números trascendentes (689)
@@ -275,6 +223,10 @@ del curso.
   - La escuela logística: Frege, Peano y Russell (704)
   - El enfoque formalista de Hilbert (708)
   - El intuicionismo de Brouwer (711)
+- **Axiomática de Conjuntos**
+  - El sistema Zermelo-Fraenkel-Choice (ZFC)
+  - Von Neumann-Bernays-Godel (NBG)
+  - Teoría de conjuntos de Tarski-Grothendiek
 
 ## Capítulo 13 — Extensiones y generalizaciones: Hardy, Hausdorff y Noether — p. 721
 - **13.1 Hardy y Ramanujan** (721)
@@ -292,12 +244,17 @@ del curso.
   - Las mujeres en la matemática moderna (744)
   - Algunos avances recientes (747)
 
+## Historia Reciente
+- Inteligencia Artificial en las Matemáticas
+    - La supuesta solución del problema del milenio de Navier-Stokes
+    - Historia de los LLMs (Large Language Models)
+    - Métodos formales en matemáticas
+    - Posibles conflictos entre la investigación matemática y la IA.
+- El programa de Langlands
+- Geometria No-conmutativa
+- La clasificación de los grupos finitos simples
+- Los Stacks de Grothendiek y el Motivic Program
+- Etc.
+
 ---
 
-## Material complementario
-
-- Bibliografía general — p. 755
-- Lecturas adicionales — p. 759
-- El alfabeto griego — p. 761
-- Soluciones a problemas seleccionados — p. 762
-- Índice — p. 777
