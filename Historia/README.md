@@ -18,7 +18,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - El alba de la geometría demostrativa: Tales de Mileto (86)
   - Mediciones mediante la geometría (87)
 - **3.2 Matemática pitagórica** (90)
-  - Pitágoras y sus seguidores (90)
+  - Pitágoras y sus seguidores (90)  **José Isaac 28 de sept.**
   - La *Introductio Arithmeticae* de Nicómaco (94)
   - La teoría de los números figurados (97)
   - Las paradojas de Zenón (101)
@@ -33,7 +33,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - La duplicación del cubo (124)
   - La trisección de un ángulo (126)
 - **3.5 La cuadratriz de Hipias** (130)
-  - El ascenso de los sofistas (130)
+  - El ascenso de los sofistas (130)  **José Isaac**
   - Hipias de Elis (131)
   - El bosquecillo de la Academia: la Academia de Platón (134)
 
@@ -53,7 +53,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - Propiedades de divisibilidad euclídeas (170)
   - El algoritmo de Euclides (173)
   - El teorema fundamental de la aritmética (177)
-  - Una infinidad de números primos (180)
+  - Una infinidad de números primos (180)   **José Isaac**
 - **4.4 Eratóstenes, el sabio de Alejandría** (183)
   - La criba de Eratóstenes (183)
   - Medición de la Tierra (186)
@@ -69,7 +69,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
 ## Capítulo 5 — El ocaso de la matemática griega: Diofanto — p. 213
 - **5.1 La decadencia de la matemática alejandrina** (213)
   - El ocaso de la edad de oro (213)
-  - La expansión del cristianismo (215)
+  - La expansión del cristianismo (215)    **José Isaac**
   - Constantinopla, un refugio para el saber griego (217)
 - **5.2 La *Aritmética*** (217)
   - Teoría de números de Diofanto (217)
