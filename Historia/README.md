@@ -20,13 +20,13 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
 - **3.2 Matemática pitagórica** (90)
   - Pitágoras y sus seguidores (90)  **José Isaac 28 de sept.**
   - La *Introductio Arithmeticae* de Nicómaco (94)
-  - La teoría de los números figurados (97)
+  - La teoría de los números figurados (97)  **Olvan Rene Martínez 30/09/2026**
   - Las paradojas de Zenón (101)
 - **3.3 El problema pitagórico** (105)
   - Demostraciones geométricas del teorema de Pitágoras (105)
   - Soluciones antiguas de la ecuación pitagórica (107)
   - La crisis de las magnitudes inconmensurables (109)
-  - Los números *lateral* y *diagonal* de Teón (111)
+  - Los números *lateral* y *diagonal* de Teón (111)  **Olvan Rene Martínez**
   - Eudoxo de Cnido (116)
 - **3.4 Tres problemas de construcción de la Antigüedad** (120)
   - Hipócrates y la cuadratura del círculo (120)
@@ -80,7 +80,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - El problema chino de las cien aves (228)
 - **5.4 Los últimos comentaristas** (232)
   - La *Colección matemática* de Papo (232)
-  - Hipatia, la primera mujer matemática (233)
+  - Hipatia, la primera mujer matemática (233)  **Olvan Rene Martínez**
   - Matemática romana: Boecio y Casiodoro (235)
 - **5.5 La matemática en el Cercano y el Lejano Oriente** (238)
   - El álgebra de al-Jwārizmī (238)
@@ -108,7 +108,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
 
 ## Capítulo 7 — El renacimiento de la matemática: Cardano y Tartaglia — p. 301
 - **7.1 Europa en los siglos XIV y XV** (301)
-  - El Renacimiento italiano (301)
+  - El Renacimiento italiano (301)  **Olvan Rene Martínez**
   - La escritura artificial: la invención de la imprenta (303)
   - Fundación de las grandes universidades (306)
   - La sed de saber clásico (310)
@@ -132,7 +132,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - La invención de los logaritmos por Napier (350)
   - Los descubrimientos astronómicos de Brahe y Kepler (355)
 - **8.2 Descartes: el *Discours de la Méthode*** (362)
-  - Los escritos de Descartes (362)
+  - Los escritos de Descartes (362)  **Olvan Rene Martínez**
   - La invención de la geometría cartesiana (367)
   - El aspecto algebraico de *La Géométrie* (372)
   - Los *Principia Philosophiae* de Descartes (375)
