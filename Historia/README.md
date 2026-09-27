@@ -61,7 +61,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - Diccionario geográfico de Ptolomeo (190)
 - **4.5 Arquímedes** (193)
   - El genio del mundo antiguo (193)
-  - Estimación del valor de π (197)
+  - Estimación del valor de π (197)  **Manuel Antonio Sorto**
   - El contador de arena (202)
   - Cuadratura de un segmento parabólico (205)
   - Apolonio de Pérgamo: las *Cónicas* (206)
@@ -99,7 +99,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - Los numerales hindú-árabes (277)
   - El *Liber Quadratorum* de Fibonacci (280)
   - Las obras de Jordanus de Nemore (283)
-- **6.3 La sucesión de Fibonacci** (287)
+- **6.3 La sucesión de Fibonacci** (287)  **Manuel Antonio Sorto**
   - El problema de los conejos del *Liber Abaci* (287)
   - Algunas propiedades de los números de Fibonacci (289)
 - **6.4 Fibonacci y el problema pitagórico** (293)
@@ -137,7 +137,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - El aspecto algebraico de *La Géométrie* (372)
   - Los *Principia Philosophiae* de Descartes (375)
   - Geometría de la perspectiva: Desargues y Poncelet (377)
-- **8.3 Newton: los *Principia Mathematica*** (381)
+- **8.3 Newton: los *Principia Mathematica*** (381)  **Manuel Antonio Sorto**
   - Los textos de Oughtred y Harriot (381)
   - La *Arithmetica Infinitorum* de Wallis (383)
   - La Cátedra Lucasiana: Barrow y Newton (386)
@@ -219,7 +219,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - La primacía de las universidades alemanas (657)
   - La matemática estadounidense echa raíces: 1800–1900 (659)
   - La consolidación del siglo XX (669)
-- **12.2 Contar el infinito** (673)
+- **12.2 Contar el infinito** (673)  **Manuel Antonio Sorto**
   - El último universalista: Poincaré (673)
   - La teoría cantoriana de los conjuntos infinitos (676)
   - Historia perdida de Cantor y Dedekind https://www.quantamagazine.org/the-man-who-stole-infinity-20260225/
