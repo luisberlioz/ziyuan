@@ -119,7 +119,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
 - **7.2 La batalla de los eruditos** (312)
   - Restaurando la tradición algebraica: Robert Recorde (312)
   - Los algebristas italianos: Pacioli, del Ferro y Tartaglia (315)
-  - Cardano, un matemático canalla (319)
+  - Cardano, un matemático canalla (319)  **Solanyi Damaris**
 - **7.3 El *Ars Magna* de Cardano** (320)
   - La solución de Cardano de la ecuación cúbica (320)
   - Bombelli y las raíces imaginarias de la cúbica (324)
@@ -130,7 +130,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
 ## Capítulo 8 — El mundo mecánico: Descartes y Newton — p. 337
 - **8.1 El alba de la matemática moderna** (337)
   - La difusión del saber en el siglo XVII (337)
-  - Las observaciones telescópicas de Galileo (339)
+  - Las observaciones telescópicas de Galileo (339)  **Solanyi Damaris**
   - Los inicios de la notación moderna: François Viète (345)
   - Las fracciones decimales de Simon Stevin (348)
   - La invención de los logaritmos por Napier (350)
@@ -185,11 +185,11 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - El célebre último teorema de Fermat (516)
   - La Ilustración del siglo XVIII (520)
   - El *Treatise of Fluxions* de Maclaurin (524)
-  - Vida y contribuciones de Euler (527)
+  - Vida y contribuciones de Euler (527)  **Solanyi Damaris**
 - **10.3 El príncipe de los matemáticos: Carl Friedrich Gauss** (539)
   - El período de la Revolución Francesa: Lagrange, Monge y Carnot (539)
   - Las *Disquisitiones Arithmeticae* de Gauss (546)
-  - El legado de Gauss: teoría de congruencias (551)
+  - El legado de Gauss: teoría de congruencias (551)  **Solanyi Damaris**
   - Dirichlet y Jacobi (558)
 
 ## Capítulo 11 — Aportes del siglo XIX: de Lobachevski a Hilbert — p. 563
