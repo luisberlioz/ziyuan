@@ -5,6 +5,10 @@
 - Mapa de las poblaciones humanas desde la prehistoria
     https://www.reddit.com/r/MapPorn/s/LMs6ZH2sY6
 
+- Terence Tao hablando sobre la medición de la circunferencia de la tierra y las extraordinarias implicaciones que esto tuvo.
+
+https://youtu.be/YdOXS_9_P4U?si=VGDE9MLfwUwYEXS1
+
 ---
 
 A continuación se enumeran la lista de temas de presentación de la clase basados en el libro de texto. Para seleccionar uno o varios temas, enviarme un correo a `luis.berlioz@unah.edu.hn`. 
