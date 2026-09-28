@@ -5,7 +5,7 @@
 - Mapa de las poblaciones humanas desde la prehistoria
     https://www.reddit.com/r/MapPorn/s/LMs6ZH2sY6
 
-- Terence Tao hablando sobre la medición de la circunferencia de la tierra y las extraordinarias implicaciones que esto tuvo.
+- Terence Tao hablando sobre la medición de la circunferencia de la tierra de Eratosthenes y las extraordinarias implicaciones que esto tuvo.
 
 https://youtu.be/YdOXS_9_P4U?si=VGDE9MLfwUwYEXS1
 
