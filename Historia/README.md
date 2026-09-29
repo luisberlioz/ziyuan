@@ -128,27 +128,27 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - La historia de la ecuación quíntica: Ruffini, Abel y Galois (331)
 
 ## Capítulo 8 — El mundo mecánico: Descartes y Newton — p. 337
-- **8.1 El alba de la matemática moderna** (337)
+- **8.1 El alba de la matemática moderna** (337)  **Nicolas Vladimir**
   - La difusión del saber en el siglo XVII (337)
   - Las observaciones telescópicas de Galileo (339)  **Solanyi Damaris**
   - Los inicios de la notación moderna: François Viète (345)
   - Las fracciones decimales de Simon Stevin (348)
   - La invención de los logaritmos por Napier (350)
   - Los descubrimientos astronómicos de Brahe y Kepler (355)
-- **8.2 Descartes: el *Discours de la Méthode*** (362)
+- **8.2 Descartes: el *Discours de la Méthode*** (362)  **Nicolas Vladimir**
   - Los escritos de Descartes (362)  **Olvan Rene Martínez**
   - La invención de la geometría cartesiana (367)
   - El aspecto algebraico de *La Géométrie* (372)
   - Los *Principia Philosophiae* de Descartes (375)
   - Geometría de la perspectiva: Desargues y Poncelet (377)
-- **8.3 Newton: los *Principia Mathematica*** (381)  **Manuel Antonio Sorto**
+- **8.3 Newton: los *Principia Mathematica*** (381)  **Manuel Antonio Sorto**  **Nicolas Vladimir**
   - Los textos de Oughtred y Harriot (381)
   - La *Arithmetica Infinitorum* de Wallis (383)
   - La Cátedra Lucasiana: Barrow y Newton (386)
   - Los años dorados de Newton (392)
   - Las leyes del movimiento (398)
   - Años posteriores: nombramiento en la Casa de la Moneda (404)
-- **8.4 Gottfried Leibniz: la controversia del cálculo** (409)
+- **8.4 Gottfried Leibniz: la controversia del cálculo** (409)  **Nicolas Vladimir**
   - Los primeros trabajos de Leibniz (409)
   - La creación del cálculo por Leibniz (413)
   - El cálculo fluxional de Newton (416)
