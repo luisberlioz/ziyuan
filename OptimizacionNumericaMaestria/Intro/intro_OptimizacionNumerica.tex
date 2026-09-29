@@ -301,9 +301,7 @@
     En particular $(\mathbb{E}[x])^{2}\leq\mathbb{E}[x^{2}]$ (tomando $f(t)=t^{2}$).
   \end{ejemplo}
 
-  \figura{Interpretación geométrica: cualquier politopo formado por $m$ puntos
-          sobre la función está enteramente contenido en el epígrafe.}
-          {0.78\textwidth}{1.6cm}
+  
 \end{frame}
 
 % =============================================================================
@@ -330,8 +328,9 @@
   Así, $\nabla f(x_{0})^{\top}\Delta x$ aproxima el cambio de $f$ ante un
   desplazamiento pequeño $\Delta x = x-x_{0}$.
 
-  \figura{El gradiente define el plano tangente en $x_{0}$. (Brunton, Fig.~1.19.)}
-          {0.78\textwidth}{1.6cm}
+  \begin{figure}
+      \includegraphics[width=0.4\textwidth]{images/grad_burton.png}
+  \end{figure}
 \end{frame}
 
 \begin{frame}[t]{El gradiente: interpretación geométrica}
@@ -364,7 +363,7 @@
   \end{lema}
 \end{frame}
 
-\begin{frame}[t]{Hessiana y convexidad de segundo orden}
+\begin{frame}[t]{Hessiano y convexidad de segundo orden}
   \begin{definicion}[Matriz Hessiana]
     Para $f$ dos veces continuamente diferenciable, la \emph{Hessiana} es
     \[
@@ -429,8 +428,28 @@
   El \emph{problema dual} (Ec.~(1.31)) se obtiene intercambiando el orden
   $\min$ y $\max$: $\max_{\lambda}\min_{x}L(x,\lambda)$.
 
-  \figura{Plano tangente al conjunto factible en el óptimo. (Brunton, Fig.~1.21.)}
-          {0.78\textwidth}{1.6cm}
+%  \figura{Plano tangente al conjunto factible en el óptimo. (Brunton, Fig.~1.21.)}
+%          {0.78\textwidth}{1.6cm}
+\end{frame}
+
+
+%%%%  FRAME  %%%%
+\begin{frame}
+    \frametitle{Ejemplo de problema con restricciones de igualdad}
+
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{block}{Ejemplo}
+                \[\begin{aligned}
+                        & \min_{(x,y)\in \mathbb{R}^2} x + y \\
+                    & \text{s.a. } x^2 + y^2 = 1
+                \end{aligned}\]
+            \end{block}
+        \end{column}
+        \begin{column}{0.7\textwidth}
+            \includegraphics[width=0.95\textwidth]{images/lagrange.png}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}[t]{Condición de optimalidad y ejemplos}
