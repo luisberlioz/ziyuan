@@ -531,10 +531,8 @@
   suele ser \emph{mal planteado} o \emph{mal condicionado}. Las soluciones
   estándar combinan:
   \begin{itemize}\setlength\itemsep{0pt}
-    \item \emph{Regularización}: añadir $\|x\|^{2}$, $\|x\|_{1}$, etc.
-    \item \emph{Relajación}: sustituir normas no convexas ($\ell_{0}$) por
-          convexas ($\ell_{1}$, nuclear).
-    \item \emph{Priors bayesianos} (Cap.~7).
+      \item \emph{Regularización}: penalizar propiedades no deseables en la función objetivo.
+      \item \emph{Relajación}:  usar normas como ($\ell_{0}$) ($\ell_{1}$, ).
   \end{itemize}
 
   \vspace{0.15em}
@@ -542,9 +540,9 @@
   (MRI), super-resolución, inversión sísmica, identificación de sistemas,
   diseño de perfiles aerodinámicos.
 
-  \figura{Esquema de un problema inverso: ajustar $x$ para que $F(x)$
-          coincida con los datos observados.}
-          {0.78\textwidth}{1.6cm}
+  \begin{figure}
+  \includegraphics[width=0.3\textwidth]{images/prob_inversos.jpeg}
+  \end{figure}
 \end{frame}
 
 \begin{frame}[t]{Teoría de control}
@@ -576,8 +574,6 @@
           interacción con el entorno.
   \end{itemize}
 
-  \figura{Diagrama de control en lazo cerrado. (Brunton, Fig.~1.23.)}
-          {0.78\textwidth}{1.6cm}
 \end{frame}
 
 \begin{frame}[t]{Aprendizaje automático (machine learning)}
@@ -605,8 +601,6 @@
   \emph{physics-informed neural networks} (PINNs), aprendizaje por
   refuerzo profundo, ajuste de hiperparámetros como meta-optimización.
 
-  \figura{Entrenamiento de una red neuronal como problema de optimización.}
-          {0.78\textwidth}{1.6cm}
 \end{frame}
 
 % =============================================================================
