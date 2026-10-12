@@ -37,7 +37,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - La duplicación del cubo (124)
   - La trisección de un ángulo (126)
 - **3.5 La cuadratriz de Hipias** (130)
-  - El ascenso de los sofistas (130)  **José Isaac**
+  - El ascenso de los sofistas (130)  **José Isaac 12/10/2026**
   - Hipias de Elis (131)
   - El bosquecillo de la Academia: la Academia de Platón (134)
 
