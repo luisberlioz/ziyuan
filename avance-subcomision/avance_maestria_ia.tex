@@ -1,0 +1,386 @@
+% =============================================================================
+%  Avance de los tres documentos de la Maestría en Inteligencia Artificial
+%  Presentación de avance ante la Subcomisión
+%
+%  Compilar con:
+%     pdflatex avance_maestria_ia.tex   (dos o tres veces)
+%  o bien:
+%     make
+% =============================================================================
+
+\documentclass[10pt,aspectratio=169]{beamer}
+
+% --- Paquetes ----------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,positioning,shapes.geometric,backgrounds,fit}
+
+% --- Tema y colores ----------------------------------------------------------
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+\definecolor{accentblue}{RGB}{31,73,125}
+\definecolor{accentgreen}{RGB}{46,125,50}
+\definecolor{accentorange}{RGB}{214,121,32}
+\definecolor{accentred}{RGB}{178,45,45}
+\definecolor{lightgray}{RGB}{245,246,248}
+
+\setbeamercolor{frametitle}{bg=accentblue,fg=white}
+\setbeamercolor{title}{fg=accentblue}
+\setbeamercolor{block title}{bg=accentblue!15,fg=accentblue}
+\setbeamercolor{block title alerted}{bg=accentgreen!18,fg=accentgreen}
+\setbeamercolor{block title example}{bg=accentorange!18,fg=accentorange}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+% --- Datos -------------------------------------------------------------------
+\title{Avance de los tres documentos\\
+       de la Maestría en Inteligencia Artificial}
+\subtitle{Plan de estudio \textbullet\ Plan de factibilidad \textbullet\ Diagnóstico}
+\institute{Subcomisión de la Maestría en Inteligencia Artificial\\
+           Universidad Nacional Autónoma de Honduras}
+\author{Luis A. Berlioz Cruz}
+\date{Octubre de 2026}
+
+% --- Macros ------------------------------------------------------------------
+\newcommand{\doc}[1]{\textbf{\textcolor{accentblue}{#1}}}
+\newcommand{\estado}[1]{\textcolor{accentgreen}{\textbf{#1}}}
+\newcommand{\pendiente}{\textcolor{accentorange}{\textbf{[pendiente]}}}
+
+% Cajas de estado
+\newcommand{\estadoverde}[1]{%
+  \begin{beamercolorbox}[wd=\textwidth,sep=0.6ex,rounded=true]{item}
+    \textcolor{accentgreen}{$\checkmark$\ \textbf{#1}}
+  \end{beamercolorbox}}
+\newcommand{\estadoambar}[1]{%
+  \begin{beamercolorbox}[wd=\textwidth,sep=0.6ex,rounded=true]{item}
+    \textcolor{accentorange}{$\bullet$\ \textbf{#1}}
+  \end{beamercolorbox}}
+
+% =============================================================================
+\begin{document}
+
+% ---------------------------------------------------------------- Portada ----
+{\setbeamertemplate{frametitle}{}
+\begin{frame}[plain]
+  \titlepage
+  \vspace{1.2cm}
+  \begin{center}
+    \begin{beamercolorbox}[wd=0.86\textwidth,sep=1.0ex,rounded=true]{title}
+      \centering\small
+      \textbf{Presentación de avance}\\[0.2ex]
+      {\footnotesize Instituto de Ciencias y Tecnología --- Subcomisión}
+    \end{beamercolorbox}
+  \end{center}
+\end{frame}}
+
+% ------------------------------------------------------------- Agenda --------
+\begin{frame}{Contenido}
+  \tableofcontents
+\end{frame}
+
+% =========================================================== SECCIÓN 1 =====
+\section{Punto de partida: los tres documentos}
+
+\begin{frame}{Los tres documentos y su propósito}
+  \small
+  La Maestría en Inteligencia Artificial requiere tres documentos que
+  sustentan academically el programa. Cada uno responde una pregunta distinta
+  y, juntos, conforma el expediente de propuesta.
+
+  \medskip
+  \begin{columns}[t]
+    \begin{column}{0.31\textwidth}
+      \begin{block}{\footnotesize\doc{Plan de estudio}}
+        \footnotesize
+        \textbf{¿Qué se enseña?}\\
+        Estructura curricular: ejes, courses, créditos, horas de
+        contacto independiente, asignaturas optativas y de orientación.
+      \end{block}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{block}{\footnotesize\doc{Plan de factibilidad}}
+        \footnotesize
+        \textbf{¿Se puede hacer?}\\
+        Condiciones de implementación: planta docente disponible,
+        recursos, infraestructura y prerrequisitos institucionales.
+      \end{block}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{block}{\footnotesize\doc{Diagnóstico}}
+        \footnotesize
+        \textbf{¿Por qué es necesario?}\\
+        Situación actual de la formación en IA en el país y la región,
+        vacíos identificados y pertinencia del programa.
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \medskip
+  \begin{alertblock}{Principio rector}
+    \footnotesize
+    La consistencia entre los tres es la fortaleza de la propuesta:
+    el \emph{diagnóstico} identifica la necesidad, el \emph{plan de estudio}
+    la responde, y el \emph{plan de factibilidad} demuestra que
+    institucionalmente es viable.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Estado de avance a la fecha}
+  \small
+  \begin{center}
+  \begin{tabular}{@{}p{3.1cm}p{2.3cm}p{2.3cm}p{4.1cm}@{}}
+    \toprule
+    \textbf{Documento} & \textbf{Estado} & \textbf{Correcciones} &
+    \textbf{Acción pendiente} \\
+    \midrule
+    \doc{Plan de estudio}
+      & \textcolor{accentorange}{En consolidation}
+      & \estado{Últimas aplicadas}
+      & Unificar \emph{todas} las correcciones en un solo documento \\
+    \doc{Plan de factibilidad}
+      & \estadoverde{Completo}
+      & \estado{Aplicadas}
+      & Listo para última revisión \\
+    \doc{Diagnóstico}
+      & \estadoverde{Completo}
+      & \estado{Aplicadas}
+      & Listo para última revisión \\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+
+  \medskip
+  \begin{block}{Mensaje central}
+    \footnotesize
+    Dos de los tres documentos están en su etapa final de revisión. El
+    Plan de estudio requiere una \textbf{consolidación editorial} antes de
+    entrar al mismo circuito de revisión.
+  \end{block}
+\end{frame}
+
+% =========================================================== SECCIÓN 2 =====
+\section{Plan de estudio}
+
+\begin{frame}{Plan de estudio: en qué consiste la consolidación}
+  \small
+  El Plan de estudio es el documento que más cambios ha recibido. Cada
+  observación de la Subcomisión se atendió de forma aislada, lo que dejó el
+  texto \emph{correcto en contenido pero disperso en la forma}.
+
+  \medskip
+  \begin{columns}[t]
+    \begin{column}{0.46\textwidth}
+      \begin{block}{Situación actual}
+        \footnotesize
+        \begin{itemize}
+          \item Correcciones ya incorporadas: \estado{completas}
+          \item Redactos paralelos o duplicados por observación
+          \item Orden de secciones que ya no refleja el flujo aprobado
+          \item Formato heterogéneo entre secciones
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \begin{block}{Trabajo pendiente}
+        \footnotesize
+        \begin{itemize}
+          \item Versión única consolidada de todo el documento
+          \item Verificación de \emph{coherencia horizontal}
+          \item Cotejo final contra la factibilidad y el diagnóstico
+          \item Cumplimiento de formato institucional
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \vfill
+  \begin{alertblock}{Riesgo a evitar}
+    \footnotesize
+    Consolidar no debe introducir \emph{nuevos} cambios de fondo. La
+    edición es de forma; el contenido ya fue revisado por la Subcomisión.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Plan de estudio: alcance de las últimas correcciones}
+  \small
+  \begin{columns}[t]
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Correcciones incorporadas}
+        \footnotesize
+        \begin{itemize}
+          \item \pendiente\ --- % dejar vacío o completar
+          \item \pendiente
+          \item \pendiente
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Pendiente de aplicar}
+        \footnotesize
+        \begin{itemize}
+          \item \pendiente
+          \item \pendiente
+          \item \pendiente
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \medskip
+  \begin{block}{Verificación de la consolidación}
+    \footnotesize
+    \begin{enumerate}
+      \item Un solo archivo, sin versiones divergentes circulando.
+      \item Cada corrección de la Subcomisión con su trazabilidad.
+      \item Checklist de formato institucional firmado por el responsable.
+      \item Circular junto con los otros dos documentos a revisión final.
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+% =========================================================== SECCIÓN 3 =====
+\section{Plan de factibilidad}
+
+\begin{frame}{Plan de factibilidad: listo para última revisión}
+  \small
+  Responde a la pregunta central de cualquier propuesta de maestría:
+  \emph{¿existen las condiciones reales para operar el programa?}
+
+  \medskip
+  \begin{columns}[t]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Contenido verificado}
+        \footnotesize
+        \begin{itemize}
+          \item \pendiente\ % planta docente disponible
+          \item \pendiente
+          \item \pendiente
+          \item \pendiente
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Qué revisaremos}
+        \footnotesize
+        \begin{itemize}
+          \item Consistencia con la carga académica del plan de estudio
+          \item Factores de conversión: supuesto frente a dato
+          \item Actualidad de los datos oficiales
+          \item Formato institucional
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \medskip
+  \estadoverde{Documento completo --- listo para última revisión}
+\end{frame}
+
+% =========================================================== SECCIÓN 4 =====
+\section{Diagnóstico}
+
+\begin{frame}{Diagnóstico: listo para última revisión}
+  \small
+  Es el documento que fundamenta la \emph{necesidad} del programa. Debe
+  sostener, con evidencia, que existe un vacío de formación en IA y que la
+  Maestría es la respuesta pertinente.
+
+  \medskip
+  \begin{columns}[t]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Contenido verificado}
+        \footnotesize
+        \begin{itemize}
+          \item \pendiente\ % situación actual y vacíos
+          \item \pendiente
+          \item \pendiente
+          \item \pendiente
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Qué revisaremos}
+        \footnotesize
+        \begin{itemize}
+          \item Solidez de las fuentes citadas
+          \item Actualidad de las cifras
+          \item Coherencia con el perfil de egreso del plan de estudio
+          \item Que la necesidad quede explicitada sin ambigüedad
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \medskip
+  \estadoverde{Documento completo --- listo para última revisión}
+\end{frame}
+
+% =========================================================== SECCIÓN 5 =====
+\section{Cierre}
+
+\begin{frame}{Compromisos y próximos pasos}
+  \small
+  \begin{columns}[t]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Responsable}
+        \footnotesize
+        \begin{itemize}
+          \item \pendiente\ % Consolidar plan de estudio
+          \item Revisión final: factibilidad
+          \item Revisión final: diagnóstico
+          \item Formato institucional de los tres
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Plazos}
+        \footnotesize
+        \begin{tabular}{@{}ll@{}}
+          \toprule
+          Hito & Fecha \\
+          \midrule
+          \pendiente & \pendiente \\
+          \pendiente & \pendiente \\
+          \pendiente & \pendiente \\
+          \bottomrule
+        \end{tabular}
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \vfill
+  \begin{alertblock}{Solicitud a la Subcomisión}
+    \footnotesize
+    \begin{enumerate}
+      \item Confirmar que el Plan de factibilidad y el Diagnóstico están
+            en revisión final.
+      \item Acordar la fecha de corte para la versión consolidada del
+            Plan de estudio.
+      \item Indicar si se requiere una sesión conjunta de los tres
+            documentos antes de la siguiente etapa.
+    \end{enumerate}
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Cierre}
+  \vspace{0.8cm}
+  \centering
+  {\Large\doc{Plan de estudio}} \textcolor{gray}{\textbullet}
+  {\Large\doc{Plan de factibilidad}} \textcolor{gray}{\textbullet}
+  {\Large\doc{Diagnóstico}}
+
+  \vspace{1.2cm}
+  {\normalsize Dos documentos listos para última revisión.}\\
+  {\normalsize Un documento pendiente de consolidación.}
+
+  \vfill
+  {\footnotesize\color{gray} Gracias por su atención.}
+\end{frame}
+
+\end{document}
