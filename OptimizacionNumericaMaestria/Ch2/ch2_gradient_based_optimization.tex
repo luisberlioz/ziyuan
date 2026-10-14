@@ -63,6 +63,8 @@
   \end{center}%
 }
 
+\title{Cap. 2: Métodos Iterativos de Gradiente}
+
 % =============================================================================
 \begin{document}
 % =============================================================================
@@ -159,6 +161,7 @@
     Criterio & Descripción \\
     \midrule
     Fijo & Simple; funciona bien si el Hessian está bien condicionado. \\
+    Armijo & Solo depende del gradiente y garantiza el descenso.
     Decreciente & $\gamma_k=\gamma_0/(1+\beta k)$; pasos grandes al inicio. \\
     Búsqueda lineal & Optimiza $\gamma$ en cada iteración (Sección 2.5). \\
     Momentum & Aporta inercia para cruzar regiones planas (Sección 2.2). \\
@@ -801,7 +804,7 @@
     Para $f(x)=\tfrac12x^{T}Ax+b^{T}x+c$ sin simetría:
     $\nabla f=\tfrac12(A+A^{T})x+b$ y
     $\nabla^{2}f=\tfrac12(A+A^{T})$.
-    El Hessian es simétrico aunque $A$ no lo sea.
+    El Hessiano es simétrico aunque $A$ no lo sea.
   \end{alertblock}
 \end{frame}
 
