@@ -207,7 +207,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
 - **11.3 La era del rigor** (604)
   - D'Alembert y Cauchy sobre los límites (604)
   - Las series de Fourier (610)
-  - El padre del análisis moderno, Weierstrass (614)
+  - El padre del análisis moderno, Weierstrass (614)  **William Antonio Ruiz 13/10/2026**
   - Sofia Kovalévskaya (616)
   - El movimiento axiomático: Pasch y Hilbert (619)
 - **11.4 Aritmética generalizada** (626)
@@ -247,15 +247,15 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - El examen Tripos (721)
   - El rejuvenecimiento de la matemática inglesa (722)
   - Una colaboración singular: Hardy y Littlewood (725)
-  - El prodigio de la India, Ramanujan (726)
+  - El prodigio de la India, Ramanujan (726)  **William Antonio Ruiz 13/10/2026**
 - **13.2 Los inicios de la topología de conjuntos de puntos** (729)
   - Los espacios métricos de Fréchet (729)
   - Los espacios de entornos de Hausdorff (731)
   - Banach y los espacios lineales normados (733)
 - **13.3 Algunos desarrollos del siglo XX** (735)
   - La teoría de anillos de Emmy Noether (735)
-  - Von Neumann y la computadora (741)
-  - Las mujeres en la matemática moderna (744)
+  - Von Neumann y la computadora (741)  **William Antonio Ruiz 13/10/2026**
+  - Las mujeres en la matemática moderna (744)  **William Antonio Ruiz 13/10/2026**
   - Algunos avances recientes (747)
 
 ## Historia Reciente
