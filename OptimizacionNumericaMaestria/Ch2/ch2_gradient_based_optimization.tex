@@ -119,7 +119,7 @@
     \begin{column}{.48\textwidth}
       \textbf{Métodos de segundo orden}
       \begin{itemize}
-        \item Usan $\nabla^2 f$ (Hessian).
+        \item Usan $\nabla^2 f$ (Hessiano).
         \item Aproximación cuadrática de $f$.
         \item Menos iteraciones.
         \item Mayor coste y memoria.
@@ -160,8 +160,8 @@
     \toprule
     Criterio & Descripción \\
     \midrule
-    Fijo & Simple; funciona bien si el Hessian está bien condicionado. \\
-    Armijo & Solo depende del gradiente y garantiza el descenso.
+    Fijo & Simple; funciona bien si el Hessiano está bien condicionado. \\
+    Armijo & Solo depende del gradiente y garantiza el descenso. \\
     Decreciente & $\gamma_k=\gamma_0/(1+\beta k)$; pasos grandes al inicio. \\
     Búsqueda lineal & Optimiza $\gamma$ en cada iteración (Sección 2.5). \\
     Momentum & Aporta inercia para cruzar regiones planas (Sección 2.2). \\
@@ -189,8 +189,9 @@
     \item $\gamma=0.1$: convergencia rápida y sin oscilaciones.
     \item $\gamma=0.543$: casi inestable, oscila alrededor del mínimo.
   \end{itemize}
-  \figura{Trayectorias sobre curvas de nivel y curva $f(x_k)$ para los tres pasos.}{0.86\textwidth}{1.9cm}
-  {\tiny\hfill Brunton, Figura 2.3}
+  \begin{figure}
+      \includegraphics[width=0.6\textwidth]{images/step_size.jpg}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{Convergencia de gradiente}
@@ -530,7 +531,7 @@
     \boxed{\;x_{k+1}=x_k-H_k^{-1}\nabla f(x_k)\;}.
   \]
   \begin{itemize}
-    \item El Hessian es simétrico (propiedad conmutativa de las derivadas mixtas).
+    \item El Hessiano es simétrico (propiedad conmutativa de las derivadas mixtas).
     \item En una dimensión: $x_{k+1}=x_k-f'(x_k)/f''(x_k)$.
     \item Equivale al descenso de gradiente con paso $\gamma=1/H_k$.
   \end{itemize}
@@ -546,7 +547,7 @@
     \item \textbf{Convergencia cuadrática:} los dígitos correctos casi se duplican
       en cada paso. Mucho más rápido que $\mathcal{O}(1/k^{2})$.
     \item \textbf{Memoria} $O(n^{2})$ y coste $O(n^{3})$ para la inversa de $H$.
-    \item Problema 1: el Hessian puede ser inaccesible o demasiado caro.
+    \item Problema 1: el Hessiano puede ser inaccesible o demasiado caro.
     \item Problema 2: puede no ser definido positivo (máximo local o silla).
   \end{itemize}
   \begin{alertblock}{De ahí nacen los métodos \emph{quasi}-Newton.}
@@ -592,7 +593,7 @@
     Añade algunas evaluaciones de $f$ por iteración, pero reduce el número de
     iteraciones~\emph{un orden de magnitud} y aporta gran robustez.
     En métodos de segundo orden el sobrecoste es despreciable frente a calcular
-    el Hessian, así que se usa siempre.
+    el Hessiano, así que se usa siempre.
   \end{block}
 \end{frame}
 
@@ -678,7 +679,7 @@
 \section{Quasi-Newton y BFGS}
 % =============================================================================
 
-\begin{frame}{Aproximar el Hessian}
+\begin{frame}{Aproximar el Hessiano}
   \small
   Se reemplaza $H$ por una matriz $A$ que da una aproximación cuadrática
   \[
@@ -714,7 +715,7 @@
   \begin{itemize}
     \item Sólo se necesita un par $(p_k,q_k)$ por iteración.
     \item $p_k^{T}q_k>0$ garantiza que la curvatura es positiva.
-    \item Es una \emph{ecuación secante}: no hace falta el Hessian completo.
+    \item Es una \emph{ecuación secante}: no hace falta el Hessiano completo.
   \end{itemize}
 \end{frame}
 
@@ -804,7 +805,7 @@
     Para $f(x)=\tfrac12x^{T}Ax+b^{T}x+c$ sin simetría:
     $\nabla f=\tfrac12(A+A^{T})x+b$ y
     $\nabla^{2}f=\tfrac12(A+A^{T})$.
-    El Hessiano es simétrico aunque $A$ no lo sea.
+    El Hessianoo es simétrico aunque $A$ no lo sea.
   \end{alertblock}
 \end{frame}
 
@@ -852,7 +853,7 @@
   \vfill
   \begin{block}{Idea fuerza}
     Sólo los métodos de primer orden escalan a millones de parámetros.
-    Los de segundo orden ganan en número de iteraciones, pero exigen Hessian
+    Los de segundo orden ganan en número de iteraciones, pero exigen Hessiano
     y pueden fallar si no es definido positivo.
   \end{block}
 \end{frame}
@@ -866,14 +867,14 @@
       $\mathcal{O}(1/k^{2})$.
     \item El mini-lote reduce el coste por paso a cambio de ruido:
       es el precio de la escalabilidad.
-    \item Newton converge cuadráticamente, pero necesita el Hessian y
+    \item Newton converge cuadráticamente, pero necesita el Hessiano y
       puede necesitar amortiguamiento y búsqueda lineal.
     \item BFGS reutiliza la curvatura por pares secantes, sin construir $H$.
   \end{enumerate}
   \vfill
   \begin{alertblock}{Idea final}
     La elección del método depende del balance entre coste por iteración,
-    número de iteraciones, calidad del Hessian y estructuración del problema.
+    número de iteraciones, calidad del Hessiano y estructuración del problema.
   \end{alertblock}
 \end{frame}
 
