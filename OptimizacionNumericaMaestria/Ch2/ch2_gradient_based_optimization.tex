@@ -294,22 +294,10 @@
 \section{Métodos con momento}
 % =============================================================================
 
-\begin{frame}{El problema}
-  \small
-  \begin{itemize}
-    \item Cerca de un punto de silla, $\lVert\nabla f\rVert$ es diminuto:
-      el descenso se estanca.
-    \item Con \emph{SGD} el problema se agrava: la estimación del gradiente además es ruidosa.
-    \item El momento \emph{integra} gradientes pasados: suaviza el ruido y aporta inercia.
-    \item Analogía física: una bola que acelera en pendiente conserva velocidad
-      y atraviesa regiones planas.
-  \end{itemize}
-  \begin{alertblock}{Idea}
-    Reemplazar el gradiente instantáneo por una media móvil exponencial de gradientes previos.
-  \end{alertblock}
-\end{frame}
 
-\begin{frame}{Heavy ball}
+\begin{frame}{Métodos de Momentum}
+    \framesubtitle{También conocido como Heavy-Ball}
+    Para reducir el problema del zig-zag, agregamos el un término a la iteración:
   \small
   \[
     \boxed{\;x_{k+1}=x_k-\gamma\nabla f(x_k)+\beta\,(x_k-x_{k-1})\;}
