@@ -31,5 +31,6 @@
 | Universidad de Harvard                   |               1636 | Estados Unidos       | Es la institución de educación superior más antigua de Estados Unidos.                                                                                                    | [harvard.edu](https://www.harvard.edu/)   |
 | Universidad de San Carlos de Guatemala   |               1676 | Guatemala            | Primera universidad fundada en el territorio de la antigua Capitanía General de Guatemala y una de las instituciones de educación superior más antiguas de Centroamérica. | [usac.edu.gt](https://www.usac.edu.gt/)   |
 
+* Fernando el Católico: https://es.wikipedia.org/wiki/Fernando_II_de_Arag%C3%B3n
 
 * La UNAH https://es.wikipedia.org/wiki/Universidad_Nacional_Aut%C3%B3noma_de_Honduras
