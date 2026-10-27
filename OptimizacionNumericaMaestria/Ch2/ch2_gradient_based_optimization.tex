@@ -468,8 +468,9 @@
   \begin{alertblock}{Precaución}
     Una época de SGD con lote 1 son $N$ pasos individuales, no uno.
   \end{alertblock}
-  \figura{Convergencia (MSE) de gradiente completo, mini-lote y SGD, y tiempo de cómputo según tamaño de lote.}{0.84\textwidth}{1.8cm}
-  {\tiny\hfill Brunton, Figuras 2.7--2.9}
+  \begin{figure}
+  \includegraphics[width=0.5\textwidth]{images/sgd_conv.png}
+  \end{figure}
 \end{frame}
 
 \begin{frame}{ADAM}
@@ -534,8 +535,8 @@
   \begin{itemize}
     \item \textbf{Convergencia cuadrática:} los dígitos correctos casi se duplican
       en cada paso. Mucho más rápido que $\mathcal{O}(1/k^{2})$.
-    \item \textbf{Memoria} $O(n^{2})$ y coste $O(n^{3})$ para la inversa de $H$.
-    \item Problema 1: el Hessiano puede ser inaccesible o demasiado caro.
+  \item \textbf{Costo:} $O(n^{3})$ para la inversa de $H$.
+  \item Problema 1: el Hessiano puede ser casi-singular o demasiado caro.
     \item Problema 2: puede no ser definido positivo (máximo local o silla).
   \end{itemize}
   \begin{alertblock}{De ahí nacen los métodos \emph{quasi}-Newton.}
@@ -557,8 +558,9 @@
     \item Levenberg--Marquardt es el método clásico de Gauss--Newton amortiguado
       (Sección 4.7).
   \end{itemize}
-  \figura{Trayectoria de Newton sobre un paisaje no convexo, encajando un modelo cuadrático local.}{0.84\textwidth}{1.7cm}
-  {\tiny\hfill Brunton, Figura 2.12}
+  \begin{figure}
+      \includegraphics[width=0.3\textwidth]{images/comp_newton.jpg}
+  \end{figure}
 \end{frame}
 
 % =============================================================================
