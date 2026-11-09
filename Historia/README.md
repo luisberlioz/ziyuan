@@ -128,7 +128,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - La historia de la ecuación quíntica: Ruffini, Abel y Galois (331)
 
 ## Capítulo 8 — El mundo mecánico: Descartes y Newton — p. 337
-- **8.1 El alba de la matemática moderna** (337)  **Nicolas Vladimir**
+- **8.1 El alba de la matemática moderna** (337)  **Nicolas Vladimir 09/11/2026**
   - La difusión del saber en el siglo XVII (337)
   - Las observaciones telescópicas de Galileo (339)  **Solanyi Damaris**
   - Los inicios de la notación moderna: François Viète (345)
