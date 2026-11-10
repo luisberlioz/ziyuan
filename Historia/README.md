@@ -135,7 +135,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - Las fracciones decimales de Simon Stevin (348)
   - La invención de los logaritmos por Napier (350)
   - Los descubrimientos astronómicos de Brahe y Kepler (355)
-- **8.2 Descartes: el *Discours de la Méthode*** (362)  **Nicolas Vladimir**
+- **8.2 Descartes: el *Discours de la Méthode*** (362)  **Nicolas Vladimir 10/11/2026**
   - Los escritos de Descartes (362)  **Olvan Rene Martínez**
   - La invención de la geometría cartesiana (367)
   - El aspecto algebraico de *La Géométrie* (372)
