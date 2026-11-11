@@ -267,7 +267,7 @@ x = np.linalg.pinv(A) @ b          # alternativa
   \end{semiverbatim}
 
   \begin{itemize}
-    \item \texttt{full\_matrices=0} pide la \textbf{SVD económica}: solo los
+      \item \texttt{full\_matrices=0} encuentra la descomposición \textbf{SVD económica}: solo los
       valores singulares no nulos, matrices $m\times n$ en vez de $m\times m$.
     \item Ambas líneas dan el mismo $x$ hasta error de redondeo.
   \end{itemize}
@@ -789,7 +789,7 @@ x = np.linalg.pinv(A) @ b          # alternativa
         \hat{s} = \argmin_s \; \|s\|_1
         \qquad \text{s.a. } y = C\Psi s \tag{4.31}
       \]
-    \item \textbf{Hecho clave: la solución $\ell_1$ mínima es dispersa; la
+  \item \textbf{La solución $\ell_1$ mínima es dispersa; la
       $\ell_2$ mínima no lo es.} La bola $\ell_1$ tiene vértices en los ejes,
       y el óptimo casi siempre cae en uno.
     \item Con ruido, $\|C\Psi s - y\|_2 < \epsilon$ (4.32) o la forma
