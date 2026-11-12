@@ -549,6 +549,11 @@ x = np.linalg.pinv(A) @ b          # alternativa
     Como $\Sigma$ es diagonal, la SVD se lee como una suma de términos
     $\sigma_j u_j v_j^T$, cada uno de rango 1 y ortogonal a los demás:
     \[
+      X = U\Sigma V^T = \sigma_1 u_1 v_1^T + \sigma_2 u_2 v_2^T
+             + \cdots + \sigma_r u_r v_n^T
+    \]
+    Si solo usamos los primeros $r$ valores singulares:
+    \[
       X \approx \sigma_1 u_1 v_1^T + \sigma_2 u_2 v_2^T
              + \cdots + \sigma_r u_r v_r^T
     \]
@@ -579,34 +584,6 @@ x = np.linalg.pinv(A) @ b          # alternativa
   \fuente
 \end{frame}
 
-\begin{frame}{Resolver $Ax=b$ con la SVD}
-  \small
-  Sustituyendo la SVD truncada exacta ($A=\hat{U}\hat{\Sigma}V^T$) y
-  ``invirtiendo'' cada factor:
-
-  \[
-    A^{\dagger} \triangleq V\hat{\Sigma}^{-1}\hat{U}^T
-    \qquad\Longrightarrow\qquad
-    A^{\dagger}A = VV^T \tag{4.12}
-  \]
-  \[
-    A^{\dagger}Ax^* = A^{\dagger}b
-    \;\;\Longrightarrow\;\;
-    x^* = V\hat{\Sigma}^{-1}\hat{U}^T b \tag{4.13}
-  \]
-
-  \begin{itemize}
-    \item Sustituyendo de vuelta:
-      $Ax^* = \hat{U}\hat{U}^T b$ \ \ (4.14b).
-    \item \textbf{Interpretación: $x^*$ es la proyección de $b$ sobre
-      $\col(\hat{U})$}. El residuo $b - \hat{U}\hat{U}^Tb$ es la parte de $b$
-      que vive en $\ker(A^T)$ y que \emph{ningún} $x$ puede explicar.
-    \item $A^{\dagger}A = I$ solo si la SVD captura \emph{todos} los valores
-      singulares no nulos. Con rango $r$ se obtiene $\tilde{V}\tilde{V}^T$:
-      una aproximación de la identidad.
-  \end{itemize}
-  \fuente
-\end{frame}
 
 \begin{frame}{Teorema de Eckart--Young}
   \small
@@ -751,10 +728,10 @@ x = np.linalg.pinv(A) @ b          # alternativa
 \begin{frame}{Compressed sensing: la idea}
   \small
   \begin{itemize}
-    \item Imágenes y audio son \textbf{compresibles}: en una base Fourier o
+    \item Imágenes y audio son \textbf{comprimibles}: en una base Fourier o
       wavelet, casi todos los coeficientes son despreciables. Es la base de
       JPEG y MP3.
-    \item Pero el paradigma clásico \textbf{mide todo y comprime después}.
+    \item Pero el  método tradicional \textbf{mide todo y comprime después}.
     \item Invertirlo: medir solo una \textbf{submuestra aleatoria} y reconstruir
       los pocos modos activos. Del millón de píxeles de una imagen,
       potencialmente basta el $10\%$.
@@ -762,7 +739,7 @@ x = np.linalg.pinv(A) @ b          # alternativa
 
   \vspace{1mm}
   \begin{block}{Formulación}
-    Señal compresible $x = \Psi s$, con $s$ \textbf{$K$-disperso}
+    Señal comprimibles $x = \Psi s$, con $s$ \textbf{$K$-disperso} ($K$-sparse)
     ($K$ entradas no nulas) y mediciones $y = Cx$:
     \[
       y = Cx = C\Psi s = \Theta s \tag{4.29}
