@@ -6,8 +6,9 @@
     https://www.reddit.com/r/MapPorn/s/LMs6ZH2sY6
 
 - Terence Tao hablando sobre la medición de la circunferencia de la tierra de Eratosthenes y las extraordinarias implicaciones que esto tuvo.
-
 https://youtu.be/YdOXS_9_P4U?si=VGDE9MLfwUwYEXS1
+
+- Blog critico sobre Ramanujan https://cs.nyu.edu/~davise/personal/PJDBib/Ramanujan.html
 
 ---
 
