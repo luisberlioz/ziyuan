@@ -44,7 +44,7 @@ El recorrido, en orden:
 El objeto de estudio es el problema de optimización compuesta
 
 $$
-\min_x \; f(x) + g(x) \tag{5.1}
+\min_x \  f(x) + g(x) \tag{5.1}
 $$
 
 con `f` suave (típicamente convexa con gradiente Lipschitz continuo) y `g` posiblemente no suave (típicamente convexa). El libro señala que estas hipótesis "no son estrictamente necesarias para gran parte de la discusión y de la implementación práctica".
@@ -72,7 +72,7 @@ Los operadores proximales son esenciales cuando hay términos no suaves en el ob
 > Con frecuencia tenemos objetivos en competencia, como la bondad del ajuste `∥Ax − b∥²₂` y la dispersidad de la solución `∥x∥₀`, que forman la función objetivo
 >
 > $$
-> f(x) = \|Ax-b\|_2^2 + \lambda\|x\|_0 .
+> f(x) = \Vert Ax-b\Vert_2^2 + \lambda\Vert x\Vert_0 .
 > $$
 >
 > Para un `λ` fijo esto forma una única función objetivo escalar, pero a menudo nos interesan los *tradeoffs* de rendimiento para distintos pesos `λ` entre estos múltiples objetivos. En ese caso, formamos la familia Pareto de soluciones óptimas barriendo `λ` y resolviendo para los distintos óptimos. El **frente de Pareto** o *frontera de Pareto* denota la familia de soluciones de modo que cualquier disminución en un objetivo resulte en un aumento correspondiente en otro. Esto puede ser muy útil en optimización de diseño, donde el peso particular de los distintos términos no está decidido, y en su lugar es más útil entender los distintos *tradeoffs* de diseño para buscar un buen balance de objetivos.
@@ -86,7 +86,7 @@ Los operadores proximales son esenciales cuando hay términos no suaves en el ob
 **Enunciado del libro** (prosa, "The proximal operator of `g` with step size `γ` is defined as"):
 
 $$
-\mathrm{prox}_{\gamma,g}(z) := \arg\min_x \; \tfrac{1}{2}\|x-z\|_2^2 + \gamma g(x) \tag{5.3}
+\mathrm{prox}_{\gamma,g}(z) := \arg\min_x \  \tfrac{1}{2}\Vert x-z\Vert_2^2 + \gamma g(x) \tag{5.3}
 $$
 
 **Nota sobre la notación:** el subíndice `γ` es explícito porque el operador proximal **depende del paso `γ` del problema no regularizado** (es decir, `min f` sin `g`) y de la función no suave `g`. El argumento `z` en (5.2) es el paso de gradiente no regularizado `z = x_k − γ∇f(x_k)`.
@@ -112,15 +112,15 @@ $$
 **Enunciado del libro** (prosa, "We typically assume that `f` is convex with Lipschitz continuous gradient, so that we may write it as"):
 
 $$
-f(x) \le f(x_0) + (x-x_0)^T\nabla f(x_0) + \tfrac{\beta}{2}\|x-x_0\|_2^2 \tag{5.4a}
+f(x) \le f(x_0) + (x-x_0)^T\nabla f(x_0) + \tfrac{\beta}{2}\Vert x-x_0\Vert_2^2 \tag{5.4a}
 $$
 
 Completando el cuadrado, la segunda ecuación es:
 
 $$
 \begin{aligned}
-= f(x_0) &+ \tfrac{\beta}{2}\Big\| x - \Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) \Big\|_2^2 \\
-&- \tfrac{1}{2\beta}\|\nabla f(x_0)\|_2^2 \;\equiv\; m_0(x)
+= f(x_0) &+ \tfrac{\beta}{2}\Big\Vert x - \Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) \Big\Vert_2^2 \\
+&- \tfrac{1}{2\beta}\Vert\nabla f(x_0)\Vert_2^2 \ \equiv\  m_0(x)
 \end{aligned} \tag{5.4b}
 $$
 
@@ -137,7 +137,7 @@ $$
 y además
 
 $$
-f(x_1) \le f(x_0) - \tfrac{1}{2\beta}\|\nabla f(x_0)\|_2^2
+f(x_1) \le f(x_0) - \tfrac{1}{2\beta}\Vert\nabla f(x_0)\Vert_2^2
 $$
 
 que proporciona una **cota inferior para el descenso** de la iteración. Nótese que la cantidad es 0 si `x₀` es un punto estacionario.
@@ -153,13 +153,13 @@ Partiendo de (5.4a) y **añadiendo `g(x)`** a `f(x)` (y por tanto al lado derech
 $$
 \begin{aligned}
 f(x) + g(x) \le f(x_0) &+ (x-x_0)^T\nabla f(x_0) \\
-&+ \tfrac{\beta}{2}\|x-x_0\|_2^2 + g(x)
+&+ \tfrac{\beta}{2}\Vert x-x_0\Vert_2^2 + g(x)
 \end{aligned} \tag{5.5a}
 $$
 $$
 \begin{aligned}
-= f(x_0) &+ \tfrac{\beta}{2}\Big\| x - \Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) \Big\|_2^2 \\
-&- \tfrac{1}{2\beta}\|\nabla f(x_0)\|_2^2 + g(x)
+= f(x_0) &+ \tfrac{\beta}{2}\Big\Vert x - \Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) \Big\Vert_2^2 \\
+&- \tfrac{1}{2\beta}\Vert\nabla f(x_0)\Vert_2^2 + g(x)
 \end{aligned} \tag{5.5b}
 $$
 
@@ -168,7 +168,7 @@ de donde
 $$
 \begin{aligned}
 x_1 &= \arg\min_x \big(m_0(x) + g(x)\big) \\
-&= \arg\min_x \Big[ g(x) + \tfrac{\beta}{2}\Big\| x - \Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) \Big\|_2^2 \Big] \\
+&= \arg\min_x \Big[ g(x) + \tfrac{\beta}{2}\Big\Vert x - \Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) \Big\Vert_2^2 \Big] \\
 &\equiv \mathrm{prox}_{\beta^{-1},g}\Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) = \mathrm{prox}_{\beta^{-1},g}(z)
 \end{aligned}
 $$
@@ -192,43 +192,43 @@ $$
 El ejemplo motivador del §5.1: `f(x)` es la pérdida de mínimos cuadrados y `g(x) = λ∥x∥₁` el regularizador que promueve dispersión (Capítulo 4):
 
 $$
-\min_x \; \|Ax-b\|_2^2 + \lambda\|x\|_1
+\min_x \  \Vert Ax-b\Vert_2^2 + \lambda\Vert x\Vert_1
 $$
 
 **Cálculo del prox para `g(x) = λ∥x∥₁` (p. 172).** El libro:
 
 $$
-\mathrm{prox}_{\frac{1}{\beta},\lambda\|\cdot\|_1}(z) = \arg\min_x \; \tfrac{\beta}{2}\|x-z\|_2^2 + \lambda\|x\|_1 = \arg\min_x \; \sum_{j=1}^{n} \Big[ \tfrac{\beta}{2}(x_j-z_j)^2 + \lambda|x_j| \Big]
+\mathrm{prox}_{\frac{1}{\beta},\lambda\Vert\cdot\Vert_1}(z) = \arg\min_x \  \tfrac{\beta}{2}\Vert x-z\Vert_2^2 + \lambda\Vert x\Vert_1 = \arg\min_x \  \sum_{j=1}^{n} \Big[ \tfrac{\beta}{2}(x_j-z_j)^2 + \lambda|x_j| \Big]
 $$
 
 Como tanto el objetivo cuadrático como la norma ℓ1 se descomponen en sumas de expresiones que dependen de las coordenadas individuales `x_j` y `z_j`, se puede calcular explícitamente la solución para cada índice `j` por separado:
 
 $$
-x^* = \arg\min_x \sum_{j=1}^{n} \Big[ \tfrac{\beta}{2}(x_j-z_j)^2 + \lambda|x_j| \Big] \;\Longrightarrow\; x^*_j = \arg\min_{x_j} \Big[ \tfrac{\beta}{2}(x_j-z_j)^2 + \lambda|x_j| \Big]
+x^\ast = \arg\min_x \sum_{j=1}^{n} \Big[ \tfrac{\beta}{2}(x_j-z_j)^2 + \lambda|x_j| \Big] \ \Longrightarrow\  x^\ast_j = \arg\min_{x_j} \Big[ \tfrac{\beta}{2}(x_j-z_j)^2 + \lambda|x_j| \Big]
 $$
 
 **Desarrollo (p. 172).** Para resolver el operador proximal basta resolver el problema de optimización lineal por morceaux, coordenada a coordenada. Se calcula el gradiente de la expresión anterior y se pone igual a cero. Como `|x_j|₁` es no suave, su gradiente depende del signo de `x_j`:
 
 $$
-\beta(x_j - z_j) + \lambda\,\mathrm{sign}(x_j) = 0
+\beta(x_j - z_j) + \lambda\ \mathrm{sign}(x_j) = 0
 $$
 
 De donde:
 
 $$
-x_j > 0 \;\Longrightarrow\; \beta(x_j-z_j) + \lambda = 0 \;\Longrightarrow\; x_j - z_j = -\tfrac{\lambda}{\beta}
+x_j > 0 \ \Longrightarrow\  \beta(x_j-z_j) + \lambda = 0 \ \Longrightarrow\  x_j - z_j = -\tfrac{\lambda}{\beta}
 $$
 $$
-x_j < 0 \;\Longrightarrow\; \beta(x_j-z_j) - \lambda = 0 \;\Longrightarrow\; x_j - z_j = \tfrac{\lambda}{\beta}
+x_j < 0 \ \Longrightarrow\  \beta(x_j-z_j) - \lambda = 0 \ \Longrightarrow\  x_j - z_j = \tfrac{\lambda}{\beta}
 $$
 
 **Reformulación por argumento (p. 173).** No se quiere una condición sobre `x_j` sino sobre el argumento `z_j`. Cuando `x_j > 0` se sabe que `z_j > λ/β`, y cuando `x_j < 0` se sabe que `z_j < −λ/β`, de donde:
 
 $$
-z_j > \tfrac{\lambda}{\beta} \;\Longrightarrow\; x^*_j = z_j - \tfrac{\lambda}{\beta}
+z_j > \tfrac{\lambda}{\beta} \ \Longrightarrow\  x^\ast_j = z_j - \tfrac{\lambda}{\beta}
 $$
 $$
-z_j < -\tfrac{\lambda}{\beta} \;\Longrightarrow\; x^*_j = z_j + \tfrac{\lambda}{\beta}
+z_j < -\tfrac{\lambda}{\beta} \ \Longrightarrow\  x^\ast_j = z_j + \tfrac{\lambda}{\beta}
 $$
 
 Finalmente, cuando `|z_j| < λ/β` se pone `x*_j = 0`.
@@ -248,7 +248,7 @@ Finalmente, cuando `|z_j| < λ/β` se pone `x*_j = 0`.
 Análogamente, para el regularizador `g(x) = λ∥x∥₀`:
 
 $$
-\mathrm{prox}_{\frac{1}{\beta},\lambda\|\cdot\|_0}(z) = \arg\min_x \; \tfrac{\beta}{2}\|x-z\|_2^2 + \lambda\|x\|_0 = \arg\min_x \; \sum_{j=1}^{n} \Big[ \tfrac{\beta}{2}(x_j-z_j)^2 + \lambda\,\mathbf{1}(x_j \neq 0) \Big]
+\mathrm{prox}_{\frac{1}{\beta},\lambda\Vert\cdot\Vert_0}(z) = \arg\min_x \  \tfrac{\beta}{2}\Vert x-z\Vert_2^2 + \lambda\Vert x\Vert_0 = \arg\min_x \  \sum_{j=1}^{n} \Big[ \tfrac{\beta}{2}(x_j-z_j)^2 + \lambda\ \mathbf{1}(x_j \neq 0) \Big]
 $$
 
 La función indicador `1(x_j ≠ 0)` vale 1 si `x_j ≠ 0` y 0 si `x_j = 0`.
@@ -256,9 +256,9 @@ La función indicador `1(x_j ≠ 0)` vale 1 si `x_j ≠ 0` y 0 si `x_j = 0`.
 **Desarrollo (pp. 173–174).** En lugar de calcular el gradiente y ponerlo igual a cero, como en el problema regularizado con ℓ1, se resuelve directamente el `x*_j` que minimiza el objetivo. Se está **balanceando los dos términos**: o se elige `x*_j = 0` para eliminar el segundo término, en cuyo caso el error del `j`-ésimo término es `(β/2)z_j²`; o se elige `x*_j ≠ 0`, en cuyo caso el segundo término vale `λ` — y en ese caso lo mejor es elegir `x_j = z_j` para eliminar el primer término. De ahí los casos:
 
 $$
-x^*_j = 0 \;\Longrightarrow\; \tfrac{\beta}{2}z_j^2
+x^\ast_j = 0 \ \Longrightarrow\  \tfrac{\beta}{2}z_j^2
 \qquad\qquad
-x^*_j = z_j \neq 0 \;\Longrightarrow\; \lambda
+x^\ast_j = z_j \neq 0 \ \Longrightarrow\  \lambda
 $$
 
 **R5.6 — Umbralización dura (*hard thresholding*) (p. 174).** Dependiendo de `z_j`, se elige el `x*_j` que da el menor de `(β/2)z_j²` y `λ`. Cuando `z_j² < 2λ/β` se elige `x*_j = 0`, y cuando `z_j² > 2λ/β` se elige `x*_j = z_j`. Esto es exactamente la **umbralización dura iterativa**, mostrada en la Fig. 5.1, con umbral
@@ -274,7 +274,10 @@ $$
 **R5.7 — Indicador del conjunto factible (definición) (p. 174).** Las restricciones se pueden manejar con el gradiente proximal añadiéndolas directamente a la función objetivo, mediante una penalización infinita para `x` fuera del conjunto factible `C`:
 
 $$
-g(x) = \delta_C(x) = \begin{cases} 0, & x \in C \\ \infty, & x \notin C \end{cases}
+g(x) = \delta_C(x) = \begin{cases}
+0, & x \in C \\
+\infty, & x \notin C
+\end{cases}
 $$
 
 Esta función es no suave, discontinua y no acotada. Sin embargo, se puede calcular su gradiente proximal, lo que permite desarrollar un algoritmo de descenso basado en gradiente para problemas de optimización restringida.
@@ -282,7 +285,7 @@ Esta función es no suave, discontinua y no acotada. Sin embargo, se puede calcu
 **R5.8 — El operador proximal del indicador es la proyección (p. 174).**
 
 $$
-\mathrm{prox}_{\frac{1}{\beta},\delta_C} = \arg\min_x \; \tfrac{\beta}{2}\|x-z\|_2^2 + \delta_C(x) = \arg\min_{x \in C} \; \tfrac{\beta}{2}\|x-z\|_2^2 \equiv \mathrm{proj}_C(z)
+\mathrm{prox}_{\frac{1}{\beta},\delta_C} = \arg\min_x \  \tfrac{\beta}{2}\Vert x-z\Vert_2^2 + \delta_C(x) = \arg\min_{x \in C} \  \tfrac{\beta}{2}\Vert x-z\Vert_2^2 \equiv \mathrm{proj}_C(z)
 $$
 
 El operador proximal toma un paso de gradiente sobre `f(x)` y luego **proyecta sobre el conjunto factible `C`**. Este operador de proyección puede o no ser simple de calcular; por ejemplo, si `C` es una esfera o una caja, es simple proyectar `z` sobre ese conjunto.
@@ -292,7 +295,7 @@ El operador proximal toma un paso de gradiente sobre `f(x)` y luego **proyecta s
 **R5.10 — Proyección sobre cajas (*box constraints*) (pp. 174–175).** El problema de regresión por mínimos cuadrados restringido a cajas:
 
 $$
-\min_x \; \tfrac{1}{2}\|Ax-b\|_2^2 \tag{5.6a}
+\min_x \  \tfrac{1}{2}\Vert Ax-b\Vert_2^2 \tag{5.6a}
 $$
 $$
 \text{s.t. } \ell \le x \le u \tag{5.6b}
@@ -307,7 +310,7 @@ $$
 y se proyecta de vuelta a la caja factible:
 
 $$
-x_{k+1} = P_{[\ell,u]}(z_{k+1}) \qquad \text{donde} \qquad P_{[\ell,u]}(z)_j = \min\{u_j,\ \max\{\ell_j,\ z_j\}\}
+x_{k+1} = P_{[\ell,u]}(z_{k+1}) \qquad \text{donde} \qquad P_{[\ell,u]}(z)_j = \min\lbrace u_j,\ \max\lbrace\ell_j,\ z_j\rbrace\rbrace
 $$
 
 Con `f(x) = ½∥Ax − b∥²₂`, de modo que `∇f(x) = Aᵀ(Ax − b)`. El libro anticipa: "Revisitaremos los mínimos cuadrados restringidos a caja en el contexto de multiplicadores de Lagrange en el Capítulo 6."
@@ -319,13 +322,13 @@ El operador proximal del gradiente proximal generaliza a una **amplia familia de
 **R5.11 — La formulación con variables separadas (p. 175).** La idea general es transformar un problema de la forma
 
 $$
-\min_x \; f(x) + g(x) \tag{5.7}
+\min_x \  f(x) + g(x) \tag{5.7}
 $$
 
 en la forma
 
 $$
-\min_{x,z} \; f(x) + g(z) + \tfrac{\rho}{2}\|x-z\|_2^2 \tag{5.8}
+\min_{x,z} \  f(x) + g(z) + \tfrac{\rho}{2}\Vert x-z\Vert_2^2 \tag{5.8}
 $$
 
 El término de regularización `g(x)` puede usarse para promover propiedades específicas, como dispersión, o imponer restricciones (Capítulos 4 y 6). Los términos tienen variables de decisión distintas `x` y `z`, acopladas por el cuadrático `(ρ/2)∥x − z∥²₂`. **El parámetro `ρ` determina la tightness de este acoplamiento**.
@@ -337,7 +340,7 @@ El término de regularización `g(x)` puede usarse para promover propiedades esp
 **R5.12 — Aplicación a la regresión por mínimos cuadrados (p. 175).** El problema de regresión por mínimos cuadrados con `f(x) = ½∥Ax − b∥²₂` se escribe
 
 $$
-\min_{x,z} \; \tfrac{1}{2}\|Ax-b\|_2^2 + g(z) + \tfrac{\rho}{2}\|x-z\|_2^2 \tag{5.9}
+\min_{x,z} \  \tfrac{1}{2}\Vert Ax-b\Vert_2^2 + g(z) + \tfrac{\rho}{2}\Vert x-z\Vert_2^2 \tag{5.9}
 $$
 
 Es posible incorporate normas no suaves y no convexas mediante gradientes proximales. La regresión **LASSO** usa `g(z) = λ∥z∥₁`, y la regresión **ridge** usa `g(z) = α∥z∥²₂`. Ocasionalmente, los algoritmos añaden una matriz adicional `C` en el último término: `(ρ/2)∥Cx − z∥²₂`.
@@ -465,7 +468,7 @@ $$
 donde cada `f_j(x)` se define como
 
 $$
-f_j(x) = -\alpha_j\, e^{-\frac{1}{2}\|x-x_j\|_2^2}
+f_j(x) = -\alpha_j\  e^{-\frac{1}{2}\Vert x-x_j\Vert_2^2}
 $$
 
 y `x_j` es el centro del `j`-ésimo mínimo y `α_j` es la profundidad. Para este ejemplo se usan `(α₁, α₂, α₃, α₄) = (3, 1.5, 1, 2)` en los centros `x₁ = (2, 2)`, `x₂ = (−2, 2)`, `x₃ = (2, −2)` y `x₄ = (−2, −2)`. Esta función se visualiza en la Fig. 5.7.
@@ -611,7 +614,7 @@ Con el tiempo, `T` se disminuye según el **calendario de enfriamiento**, reduci
 Una decaída **geométrica** clásica para la temperatura es
 
 $$
-T_{k+1} = \alpha\, T_k
+T_{k+1} = \alpha\  T_k
 $$
 
 donde `0 < α < 1` es una constante (p. ej. `0.9 ≤ α ≤ 0.99`). Los calendarios más sofisticados ajustan la temperatura dinámicamente según las tasas de aceptación recientes.
@@ -838,7 +841,7 @@ Con el auge de los macrodatos, la computación paralela y los sistemas intercone
 Un escenario común de optimización distribuida surge cuando se tiene un objetivo a gran escala
 
 $$
-\min_x \; f(x) = \sum_{j=1}^{m} f_j(x)
+\min_x \  f(x) = \sum_{j=1}^{m} f_j(x)
 $$
 
 donde cada `f_j(x)` está asociado a un agente (o nodo) distinto `j ∈ {1, ···, m}` en una red [357]. **Cada agente conoce solo su función local `f_j(x)`** y es responsable de procesar o almacenar parte de los datos. Los agentes deben encontrar colaborativamente un minimizador global `x*`.
@@ -864,7 +867,7 @@ Los métodos de optimización por enjambre ven una población de agentes (partí
 **R5.33 — Las ecuaciones de PSO (p. 196).** En PSO, cada partícula tiene una posición `x_j` (solución candidata) y una velocidad `v_j` en el espacio de búsqueda. El algoritmo actualiza estas con base en la mejor posición conocida que la partícula ha encontrado individualmente y la mejor posición conocida encontrada por cualquier partícula:
 
 $$
-v_j^{(k+1)} = \omega v_j^{(k)} + c_1 r_1\big(x_j^{(k)*} - x_j^{(k)}\big) + c_2 r_2\big(x^{(k)*} - x_j^{(k)}\big)
+v_j^{(k+1)} = \omega v_j^{(k)} + c_1 r_1\big(x_j^{(k)\ast} - x_j^{(k)}\big) + c_2 r_2\big(x^{(k)\ast} - x_j^{(k)}\big)
 $$
 $$
 x_j^{(k+1)} = x_j^{(k)} + v_j^{(k+1)}
@@ -926,7 +929,7 @@ def particle_swarm_optimization(n_particles=30, n_iter=20, w=0.5, c1
 ACO [149], inspirado en cómo las hormigas depositan y siguen rastros de feromonas, representa las soluciones como **caminos en un grafo**. En cada paso, una hormiga elige su siguiente arista con probabilidad de moverse del nodo `i` al nodo `j` dada por
 
 $$
-P_{i,j} = \frac{\tau_{i,j}^{\alpha}\,\eta_{i,j}^{\beta}}{\sum_{k \in N_i} \tau_{i,k}^{\alpha}\,\eta_{i,k}^{\beta}}
+P_{i,j} = \frac{\tau_{i,j}^{\alpha}\ \eta_{i,j}^{\beta}}{\sum_{k \in N_i} \tau_{i,k}^{\alpha}\ \eta_{i,k}^{\beta}}
 $$
 
 donde `τ_{i,j}` es el **nivel de feromona** en la arista `(i, j)`, `η_{i,j}` es una **medida heurística** (p. ej. el inverso de la distancia), y `α`, `β` ajustan la influencia relativa de la feromona frente a la heurística. El denominador normaliza sobre todos los vecinos factibles `N_i` de modo que las probabilidades sumen uno.
@@ -934,13 +937,16 @@ donde `τ_{i,j}` es el **nivel de feromona** en la arista `(i, j)`, `η_{i,j}` e
 **R5.35 — Actualización de feromonas (p. 198).** Después de construir soluciones candidatas, las hormigas actualizan los rastros de feromona, reforzando las aristas prometedoras y dejando que otras se evaporen:
 
 $$
-\tau_{i,j} \leftarrow (1-\rho)\,\tau_{i,j} + \sum_{\text{ants } k} \Delta\tau_{i,j}^{k}
+\tau_{i,j} \leftarrow (1-\rho)\ \tau_{i,j} + \sum_{\text{ants } k} \Delta\tau_{i,j}^{k}
 $$
 
 con tasa de evaporación `ρ ∈ (0, 1]` y refuerzo
 
 $$
-\Delta\tau_{i,j}^{k} = \begin{cases} Q/L_k & \text{si la hormiga } k \text{ usó la arista } (i,j) \text{ en una solución de costo } L_k \\ 0 & \text{en caso contrario} \end{cases}
+\Delta\tau_{i,j}^{k} = \begin{cases}
+Q/L_k & \text{si la hormiga } k \text{ usó la arista } (i,j) \text{ en una solución de costo } L_k \\
+0 & \text{en caso contrario}
+\end{cases}
 $$
 
 **R5.36 — Convergencia colectiva (p. 198).** "Tanto PSO como ACO se apoyan en reglas locales simples a nivel del agente. Notablemente, el sistema colectivo puede converger hacia soluciones de alta calidad, incluso en paisajes complejos y de alta dimensión. Las pruebas de convergencia típicamente dependen de supuestos sobre la estructura del problema y del ajuste de parámetros."
@@ -1029,13 +1035,13 @@ Empezar con 100 puntos de datos uniformemente distribuidos en el intervalo `[−
 Dado un objetivo convexo `J(u)`, la búsqueda de extremos añade una perturbación sinusoidal a la estimación de la entrada que maximiza el objetivo, `û`: `u = û + a sin(ωt)`. Esta perturbación resulta en una función objetivo `J` que varía sinusoidalamente alrededor de un valor medio. La salida `J` se filtra en alta frecuencia (*high-pass*) para remover la media, resultando en el `ρ` oscilante. El filtro de alta frecuencia se elige para pasar la frecuencia de perturbación `ω`. El `ρ` filtrado en alta frecuencia se multiplica por el seno de la entrada, posiblemente con un desplazamiento de fase `ϕ`, resultando en `ξ`:
 
 $$
-\xi = a\sin(\omega t - \phi)\,\rho
+\xi = a\sin(\omega t - \phi)\ \rho
 $$
 
 que **estima el gradiente de `J`**. Esta señal `ξ` es mayormente positiva si `u < u*` y mayormente negativa si `u > u*`. Así, `ξ` se integra en `û`, la mejor estimación del valor optimizador:
 
 $$
-\frac{d\hat{u}}{dt} = k\,\xi
+\frac{d\hat{u}}{dt} = k\ \xi
 $$
 
 de modo que la estimación del sistema `û` se dirige hacia la entrada óptima `u*`. Aquí `k` es una ganancia integral, que determina qué tan agresivamente el algoritmo sube los gradientes en `J`.
