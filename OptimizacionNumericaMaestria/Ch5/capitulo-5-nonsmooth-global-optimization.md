@@ -44,7 +44,7 @@ El recorrido, en orden:
 El objeto de estudio es el problema de optimización compuesta
 
 $$
-\min_x \  f(x) + g(x) 
+\min_x \  f(x) + g(x) \qquad (5.1)
 $$
 
 con `f` suave (típicamente convexa con gradiente Lipschitz continuo) y `g` posiblemente no suave (típicamente convexa). El libro señala que estas hipótesis "no son estrictamente necesarias para gran parte de la discusión y de la implementación práctica".
@@ -86,7 +86,7 @@ Los operadores proximales son esenciales cuando hay términos no suaves en el ob
 **Enunciado del libro** (prosa, "The proximal operator of `g` with step size `γ` is defined as"):
 
 $$
-\mathrm{prox}_{\gamma,g}(z) := \arg\min_x \  \tfrac{1}{2}\Vert x-z\Vert_2^2 + \gamma g(x) \tag{5.3}
+\mathrm{prox}_{\gamma,g}(z) := \arg\min_x \  \tfrac{1}{2}\Vert x-z\Vert_2^2 + \gamma g(x) \qquad (5.3)
 $$
 
 **Nota sobre la notación:** el subíndice `γ` es explícito porque el operador proximal **depende del paso `γ` del problema no regularizado** (es decir, `min f` sin `g`) y de la función no suave `g`. El argumento `z` en (5.2) es el paso de gradiente no regularizado `z = x_k − γ∇f(x_k)`.
@@ -98,7 +98,7 @@ El algoritmo alterna un paso de gradiente sobre la parte suave `f` y un paso pro
 **Enunciado del libro** (prosa, "The idea behind the proximal gradient method is to replace a gradient step"):
 
 $$
-x_{k+1} = \mathrm{prox}_{\gamma,g}\big(x_k - \gamma\nabla f(x_k)\big) \tag{5.2}
+x_{k+1} = \mathrm{prox}_{\gamma,g}\big(x_k - \gamma\nabla f(x_k)\big) \qquad (5.2)
 $$
 
 **Corolario inmediato (del libro):** en el caso `g(x) = λ∥x∥₁`, el paso proximal corresponde a **soft thresholding**, y el método se reduce al **algoritmo clásico de umbralización iterativa con contracción (ISTA)**. Las variantes aceleradas, como **FISTA** [32], mejoran la convergencia de `O(1/k)` a `O(1/k²)` para problemas convexos, combinando ISTA con el método de gradiente acelerado de Nesterov de la Sección 2.2.
@@ -112,7 +112,7 @@ $$
 **Enunciado del libro** (prosa, "We typically assume that `f` is convex with Lipschitz continuous gradient, so that we may write it as"):
 
 $$
-f(x) \le f(x_0) + (x-x_0)^T\nabla f(x_0) + \tfrac{\beta}{2}\Vert x-x_0\Vert_2^2 \tag{5.4a}
+f(x) \le f(x_0) + (x-x_0)^T\nabla f(x_0) + \tfrac{\beta}{2}\Vert x-x_0\Vert_2^2 \qquad (5.4a)
 $$
 
 Completando el cuadrado, la segunda ecuación es:
@@ -121,7 +121,7 @@ $$
 \begin{aligned}
 = f(x_0) &+ \tfrac{\beta}{2}\Big\Vert x - \Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) \Big\Vert_2^2 \\
 &- \tfrac{1}{2\beta}\Vert\nabla f(x_0)\Vert_2^2 \ \equiv\  m_0(x)
-\end{aligned} \tag{5.4b}
+\end{aligned} \qquad (5.4b)
 $$
 
 **Esto es la envolvente de Moreau**, denotada `m₀(x)`. Como solo el término central depende de `x`, minimizar `m₀(x)` respecto de `x` equivale a poner `x = x₀ − (1/β)∇f(x₀)`, que es exactamente el descenso de gradiente con paso `γ = 1/β`.
@@ -154,13 +154,13 @@ $$
 \begin{aligned}
 f(x) + g(x) \le f(x_0) &+ (x-x_0)^T\nabla f(x_0) \\
 &+ \tfrac{\beta}{2}\Vert x-x_0\Vert_2^2 + g(x)
-\end{aligned} \tag{5.5a}
+\end{aligned} \qquad (5.5a)
 $$
 $$
 \begin{aligned}
 = f(x_0) &+ \tfrac{\beta}{2}\Big\Vert x - \Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) \Big\Vert_2^2 \\
 &- \tfrac{1}{2\beta}\Vert\nabla f(x_0)\Vert_2^2 + g(x)
-\end{aligned} \tag{5.5b}
+\end{aligned} \qquad (5.5b)
 $$
 
 de donde
@@ -295,10 +295,10 @@ El operador proximal toma un paso de gradiente sobre `f(x)` y luego **proyecta s
 **R5.10 — Proyección sobre cajas (*box constraints*) (pp. 174–175).** El problema de regresión por mínimos cuadrados restringido a cajas:
 
 $$
-\min_x \  \tfrac{1}{2}\Vert Ax-b\Vert_2^2 \tag{5.6a}
+\min_x \  \tfrac{1}{2}\Vert Ax-b\Vert_2^2 \qquad (5.6a)
 $$
 $$
-\text{s.t. } \ell \le x \le u \tag{5.6b}
+\text{s.t. } \ell \le x \le u \qquad (5.6b)
 $$
 
 Las restricciones de caja sobre cada coordenada se escriben `ℓ_j ≤ x_j ≤ u_j`. Se comienza con un `x₀` en la caja `[ℓ, u]`, se toma un paso sin restricciones
@@ -322,13 +322,13 @@ El operador proximal del gradiente proximal generaliza a una **amplia familia de
 **R5.11 — La formulación con variables separadas (p. 175).** La idea general es transformar un problema de la forma
 
 $$
-\min_x \  f(x) + g(x) \tag{5.7}
+\min_x \  f(x) + g(x) \qquad (5.7)
 $$
 
 en la forma
 
 $$
-\min_{x,z} \  f(x) + g(z) + \tfrac{\rho}{2}\Vert x-z\Vert_2^2 \tag{5.8}
+\min_{x,z} \  f(x) + g(z) + \tfrac{\rho}{2}\Vert x-z\Vert_2^2 \qquad (5.8)
 $$
 
 El término de regularización `g(x)` puede usarse para promover propiedades específicas, como dispersión, o imponer restricciones (Capítulos 4 y 6). Los términos tienen variables de decisión distintas `x` y `z`, acopladas por el cuadrático `(ρ/2)∥x − z∥²₂`. **El parámetro `ρ` determina la tightness de este acoplamiento**.
@@ -340,7 +340,7 @@ El término de regularización `g(x)` puede usarse para promover propiedades esp
 **R5.12 — Aplicación a la regresión por mínimos cuadrados (p. 175).** El problema de regresión por mínimos cuadrados con `f(x) = ½∥Ax − b∥²₂` se escribe
 
 $$
-\min_{x,z} \  \tfrac{1}{2}\Vert Ax-b\Vert_2^2 + g(z) + \tfrac{\rho}{2}\Vert x-z\Vert_2^2 \tag{5.9}
+\min_{x,z} \  \tfrac{1}{2}\Vert Ax-b\Vert_2^2 + g(z) + \tfrac{\rho}{2}\Vert x-z\Vert_2^2 \qquad (5.9)
 $$
 
 Es posible incorporate normas no suaves y no convexas mediante gradientes proximales. La regresión **LASSO** usa `g(z) = λ∥z∥₁`, y la regresión **ridge** usa `g(z) = α∥z∥²₂`. Ocasionalmente, los algoritmos añaden una matriz adicional `C` en el último término: `(ρ/2)∥Cx − z∥²₂`.
@@ -462,7 +462,7 @@ donde `0 < σ < 1` es el **coeficiente de contracción (shrinkage)**. Típicamen
 El libro demuestra la capacidad del downhill simplex para encontrar un óptimo global de un paisaje no convexo con cuatro mínimos locales. La función objetivo es
 
 $$
-f(x) = 1 + f_1(x) + f_2(x) + f_3(x) + f_4(x) \tag{5.10}
+f(x) = 1 + f_1(x) + f_2(x) + f_3(x) + f_4(x) \qquad (5.10)
 $$
 
 donde cada `f_j(x)` se define como
