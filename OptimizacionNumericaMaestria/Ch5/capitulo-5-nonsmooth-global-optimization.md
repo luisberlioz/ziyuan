@@ -44,7 +44,7 @@ El recorrido, en orden:
 El objeto de estudio es el problema de optimización compuesta
 
 $$
-\min_x \  f(x) + g(x) \tag{5.1}
+\min_x \  f(x) + g(x) 
 $$
 
 con `f` suave (típicamente convexa con gradiente Lipschitz continuo) y `g` posiblemente no suave (típicamente convexa). El libro señala que estas hipótesis "no son estrictamente necesarias para gran parte de la discusión y de la implementación práctica".
