@@ -118,12 +118,15 @@ $$
 Completando el cuadrado, la segunda ecuación es:
 
 $$
-= f(x_0) + \left\| x - x_0 - \tfrac{1}{\beta}\nabla f(x_0) \right\|_2^2 - \tfrac{1}{2\beta}\|\nabla f(x_0)\|_2^2 \;\equiv\; m_0(x) \tag{5.4b}
+\begin{aligned}
+= f(x_0) &+ \tfrac{\beta}{2}\Big\| x - \Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) \Big\|_2^2 \\
+&- \tfrac{1}{2\beta}\|\nabla f(x_0)\|_2^2 \;\equiv\; m_0(x)
+\end{aligned} \tag{5.4b}
 $$
 
 **Esto es la envolvente de Moreau**, denotada `m₀(x)`. Como solo el término central depende de `x`, minimizar `m₀(x)` respecto de `x` equivale a poner `x = x₀ − (1/β)∇f(x₀)`, que es exactamente el descenso de gradiente con paso `γ = 1/β`.
 
-`[EXTRACCIÓN DAÑADA: pdftotext separa los términos fraccionarios (1/β, 1/(2β)) en renglones distintos. Las fracciones fueron reconstruidas y verificadas contra las coordenadas reales del PDF (pdftotext -bbox-layout, p. 170).]`
+`[EXTRACCIÓN DAÑADA: pdftotext separa los términos fraccionarios (1/β, 1/(2β)) en renglones distintos y **pierde los paréntesis grandes** que agrupan x₀ − (1/β)∇f(x₀), que en el PDF son glifos altos (\x10, \x11). Tanto las fracciones como la agrupación se reconstruyeron a partir de las cajas de palabra (`pdftotext -bbox-layout`, p. 170) y se verificaron exigiendo que la forma completada del cuadrado reproduzca exactamente (5.4a) y que su minimizador sea x₀ − (1/β)∇f(x₀), como afirma la prosa del libro (p. 170).]`
 
 **R5.3a — Cota de descenso (p. 171).** Del libro, en prosa: "Importantly, this establishes some very useful bounds. First,"
 
@@ -148,16 +151,26 @@ que proporciona una **cota inferior para el descenso** de la iteración. Nótese
 Partiendo de (5.4a) y **añadiendo `g(x)`** a `f(x)` (y por tanto al lado derecho de la envolvente de Moreau):
 
 $$
-f(x) + g(x) \le f(x_0) + (x-x_0)^T\nabla f(x_0) + \tfrac{\beta}{2}\|x-x_0\|_2^2 + g(x) \tag{5.5a}
+\begin{aligned}
+f(x) + g(x) \le f(x_0) &+ (x-x_0)^T\nabla f(x_0) \\
+&+ \tfrac{\beta}{2}\|x-x_0\|_2^2 + g(x)
+\end{aligned} \tag{5.5a}
 $$
 $$
-= f(x_0) + \left\| x - x_0 - \tfrac{1}{\beta}\nabla f(x_0) \right\|_2^2 - \tfrac{1}{2\beta}\|\nabla f(x_0)\|_2^2 + g(x) \tag{5.5b}
+\begin{aligned}
+= f(x_0) &+ \tfrac{\beta}{2}\Big\| x - \Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) \Big\|_2^2 \\
+&- \tfrac{1}{2\beta}\|\nabla f(x_0)\|_2^2 + g(x)
+\end{aligned} \tag{5.5b}
 $$
 
 de donde
 
 $$
-x_1 = \arg\min_x \big(m_0(x) + g(x)\big) = \arg\min_x \bigg[ g(x) + \tfrac{\beta}{2}\Big\| x - x_0 - \tfrac{1}{\beta}\nabla f(x_0) \Big\|_2^2 \bigg] \equiv \mathrm{prox}_{\frac{1}{\beta},g}\Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) = \mathrm{prox}_{\frac{1}{\beta},g}(z)
+\begin{aligned}
+x_1 &= \arg\min_x \big(m_0(x) + g(x)\big) \\
+&= \arg\min_x \Big[ g(x) + \tfrac{\beta}{2}\Big\| x - \Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) \Big\|_2^2 \Big] \\
+&\equiv \mathrm{prox}_{\beta^{-1},g}\Big(x_0 - \tfrac{1}{\beta}\nabla f(x_0)\Big) = \mathrm{prox}_{\beta^{-1},g}(z)
+\end{aligned}
 $$
 
 donde `z = x₀ − (1/β)∇f(x₀)`.
