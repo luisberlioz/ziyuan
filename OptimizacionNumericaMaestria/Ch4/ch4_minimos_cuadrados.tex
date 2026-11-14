@@ -1007,7 +1007,7 @@ x = np.linalg.pinv(A) @ b          # alternativa
 
 \begin{frame}{La norma mínima como caso particular}
   \small
-  Con $A=I$ y $b=0$, los mínimos cuadrados restringidos se reducen a
+  Con $A=I$ y $b=0$, los mínimos cuadrados restringidos se reducen al problema de 
   \textbf{norma mínima}:
   \[
     \min_x \|x\|_2^2 \quad\text{s.a. } Cx=d
@@ -1023,7 +1023,7 @@ x = np.linalg.pinv(A) @ b          # alternativa
 
   \vspace{1mm}
   \begin{itemize}
-    \item Todo el capítulo es un mismo sistema KKT con distintas matrices:
+    \item Todos los  problemas vistos  son un mismo sistema KKT con distintas matrices:
       cambio de $Q$, de $C$ o de $d$.
     \item \textbf{Sistemas con punto de silla:} la matriz KKT es simétrica pero
       \textbf{indefinida}, aunque $Q$ sea definida positiva. Los solvers
