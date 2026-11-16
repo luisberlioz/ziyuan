@@ -10,6 +10,9 @@ https://youtu.be/YdOXS_9_P4U?si=VGDE9MLfwUwYEXS1
 
 - Blog critico sobre Ramanujan https://cs.nyu.edu/~davise/personal/PJDBib/Ramanujan.html
 
+- Cálculos matemáticos manuscritos originales de Isaac Newton, de 1694 (foto en r/Damnthatsinteresting; la pieza se subastó en Sotheby's por $588,800)
+    https://www.reddit.com/r/Damnthatsinteresting/s/g4WhjZ3aHv
+
 ---
 
 A continuación se enumeran la lista de temas de presentación de la clase basados en el libro de texto. Para seleccionar uno o varios temas, enviarme un correo a `luis.berlioz@unah.edu.hn`. 
