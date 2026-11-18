@@ -439,10 +439,10 @@
         \qquad x_{k+1} = P_C(z_{k+1})
       \]
       \textbf{R5.10 --- Proyección sobre cajas} (pp.~174--175):
-      \[
-        \min_x \tfrac{1}{2}\norm{Ax-b}_2^2
-        \quad\text{s.t.}\quad \ell \le x \le u \tag{5.6a,5.6b}
-      \]
+      \begin{align}
+        \min_x \tfrac{1}{2}\norm{Ax-b}_2^2 \tag{5.6a}\\
+        \text{s.t.}\quad \ell \le x \le u \tag{5.6b}
+      \end{align}
       \[
         P_{[\ell,u]}(z)_j = \min\{u_j, \max\{\ell_j, z_j\}\}
       \]
