@@ -88,7 +88,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
   - El problema chino de las cien aves (228)
 - **5.4 Los últimos comentaristas** (232)
   - La *Colección matemática* de Papo (232)
-  - Hipatia, la primera mujer matemática (233)  **Olvan Rene Martínez**
+  - Hipatia, la primera mujer matemática (233)  **Olvan Rene Martínez 19/11/2026**
   - Matemática romana: Boecio y Casiodoro (235)
 - **5.5 La matemática en el Cercano y el Lejano Oriente** (238)
   - El álgebra de al-Jwārizmī (238)
