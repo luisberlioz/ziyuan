@@ -211,7 +211,7 @@ A continuación se enumeran la lista de temas de presentación de la clase basad
 - **11.3 La era del rigor** (604)
   - D'Alembert y Cauchy sobre los límites (604)
   - Las series de Fourier (610)
-  - El padre del análisis moderno, Weierstrass (614)  **William Antonio Ruiz 13/10/2026**
+  - El padre del análisis moderno, Weierstrass (614)  **William Antonio Ruiz 23/11/2026**
   - Sofia Kovalévskaya (616)
   - El movimiento axiomático: Pasch y Hilbert (619)
 - **11.4 Aritmética generalizada** (626)
