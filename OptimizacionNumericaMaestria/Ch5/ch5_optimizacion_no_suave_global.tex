@@ -93,7 +93,6 @@
 
 \title{Cap. 5: Optimización No Suave y Global}
 \subtitle{Gradiente proximal, búsqueda sin derivadas y algoritmos evolutivos}
-\author{Luis Berlioz}
 \date{\today}
 
 % =============================================================================
@@ -104,35 +103,7 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{Ruta del capítulo}
-  \small
-  \begin{columns}[T,onlytextwidth]
-    \begin{column}{.48\textwidth}
-      \tableofcontents
-    \end{column}
-    \begin{column}{.48\textwidth}
-      \begin{block}{Pregunta guía}
-        \small
-        ¿Cómo se optimiza cuando el objetivo no tiene gradiente útil, o cuando
-        la geometría es no convexa?
-      \end{block}
-      \vspace{2mm}
-      \begin{itemize}
-        \item \textbf{Con estructura}: optimización convexa y proximal.
-        \item \textbf{Sin estructura}: búsqueda sin derivadas.
-        \item \textbf{Con población}: búsqueda distribuida y por enjambre.
-      \end{itemize}
-      \vspace{2mm}
-      {\footnotesize\color{gray}
-       El libro advierte: este capítulo tiene ``un poco menos de estructura que
-       los anteriores'', porque la optimización no convexa es ella misma menos
-       estructurada.}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{El problema en una línea}
-  \small
+\begin{frame}{El problema principal}
   \[
     \min_x\; f(x) + g(x) \tag{5.1}
   \]
@@ -141,28 +112,21 @@
       \begin{itemize}
         \item $f$: suave (típicamente convexa, gradiente Lipschitz continuo).
         \item $g$: posiblemente no suave (típicamente convexa): $\norm{x}_1$,
-          norma nuclear, variación total.
-        \item El descenso de gradiente del Cap.~2 \textbf{no aplica} cuando $g$
-          es no suave.
+            norma nuclear, variación total. Recordemos que:
+            $$\norm{x}_1 = |x_1| + \ldots + |x_n|$$
       \end{itemize}
     \end{column}
     \begin{column}{.48\textwidth}
       \begin{itemize}
-        \item El Cap.~4 ya tenía el par $\norm{Ax-b}_2^2 + \lambda\norm{x}_1$
-          (LASSO): ahora se resuelve \emph{sin} derivar una fórmula cerrada.
-        \item El operador proximal reaparece en el Cap.~6 con ADMM.
+        \item El descenso de gradiente del Cap.~2 \textbf{no aplica} cuando $g$
+          es no suave.
+          \item El Cap.~4 ya tenía el par $\norm{Ax-b}_2^2 + \lambda\norm{x}_1$ ahora pensamos en $\norm{N_\theta(x)-b}_2^2 + \lambda\norm{x}_1$
       \end{itemize}
     \end{column}
   \end{columns}
-  \begin{block}{La cadena del capítulo}
-    \centering\scriptsize
-    gradiente proximal $\to$ umbralización $\to$ restricciones y proyección
-    $\to$ separación de variables y SR3 $\to$ búsqueda sin derivadas
-    $\to$ recocido simulado $\to$ algoritmos evolutivos $\to$ enjambre
-  \end{block}
 \end{frame}
 
-\begin{frame}{Panel 5.1: la hegemonía convexa se relativiza}
+\begin{frame}{Nota histórica sobre el Panel 5.1}
   \small
   \begin{columns}[T,onlytextwidth]
     \begin{column}{.48\textwidth}
@@ -174,47 +138,16 @@
       \end{block}
       \begin{block}{Hoy}
         \small
-        Los métodos de separación y proximales, y el éxito del aprendizaje
-        profundo hicieron mainstream la no convexidad. La optimización convexa sigue
+        Los métodos de separación y proximales, y el éxito del
+        \emph{deep learning} le dieron importancia a la no-convexidad. La optimización convexa sigue
         siendo fundacional, pero ya no es la única plantilla.
       \end{block}
     \end{column}
     \begin{column}{.48\textwidth}
-      \begin{itemize}
-        \item \textbf{Lo que no cambió}: la convexidad sigue siendo la
-          referencia; los algoritmos de primer orden que la usan siguen
-          siendo los más formales.
-        \item \textbf{Lo que cambió}: la no convexidad dejó de ser un
-          callejón sin salida matemático y pasó a ser una herramienta
-          legítima.
-      \end{itemize}
-      \vspace{2mm}
-      {\footnotesize\color{gray}
-       Panel 5.1, p.~168.}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Panel 5.2: multiobjectivo y frente de Pareto}
-  \small
-  \[
-    f(x) = \norm{Ax-b}_2^2 + \lambda\norm{x}_0
-  \]
-  \begin{itemize}
-    \item Para un $\lambda$ fijo: un único objetivo escalar. Pero a menudo
-      interesan los \textbf{tradeoffs} entre varios pesos $\lambda$.
-    \item Barrer $\lambda$ produce la familia Pareto; el \textbf{frente de
-      Pareto} son las soluciones donde mejorar un objetivo empeora otro.
-    \item Útil en diseño cuando el peso de los términos no está decidido.
-  \end{itemize}
-  \begin{block}{Los saltos del frente señalan buenos $\lambda$}
-    \small
-    En ajuste de modelos, un salto en la curva de Pareto suele marcar el
-    punto donde empieza el \emph{overfitting}. Si hay datos de prueba, se
-    valida sobre ellos; si no, los saltos son la única señal.
-  \end{block}
-  \fuente
-\end{frame}
 
 % =============================================================================
 \section{Gradiente proximal}
@@ -273,9 +206,8 @@
     \item Sólo el término central depende de $x$: minimizar $m_0$ equivale a
       $x = x_0 - \tfrac{1}{\beta}\nabla f(x_0)$, es decir, \textbf{descenso de
       gradiente con $\gamma = 1/\beta$}.
-    \item Ese paso sale de un método de Newton sobre la cuadrática envolvente
-      de curvatura $\beta/2$ --- y puede ser \emph{bastante ineficiente}: por
-      eso conviene una búsqueda lineal.
+  \item Note que si $x_1 = x_0 - \tfrac{1}{\beta}\nabla f(x_0)$:
+      $$f(x_1) \leq m_0(x_1) \leq m_0(x_0)  = f(x_0)$$
   \end{itemize}
   \fuente
 \end{frame}
@@ -295,17 +227,11 @@
   \]
   \begin{block}{R5.4a --- Cota de descenso}
     \small
+    El autor justifica que si $x_1  = \argmin_x(m_0(x) + g(x))$, entonces:
     \[
       (f+g)(x_1) \le (m_0+g)(x_1) \le (m_0+g)(x_0) = (f+g)(x_0)
     \]
   \end{block}
-  \begin{itemize}
-    \item El argmin de $m_0(x)+g(x)$ \emph{no} se calculó explícitamente:
-      \textbf{es el prox}. En la práctica puede ser difícil.
-    \item \textbf{Advertencia}: con $f(x)=\norm{Ax-b}_2^2$, la curvatura
-      $\beta/2$ es pesimista $\to$ descenso lento. De ahí SR3 y ADMM (Cap.~6).
-  \end{itemize}
-  \fuente
 \end{frame}
 
 \begin{frame}{E5.1 --- LASSO con gradiente proximal}
@@ -1392,7 +1318,7 @@ def particle_swarm_optimization(n_particles=30, n_iter=20,
   \small
   \begin{columns}[T,onlytextwidth]
     \begin{column}{.52\textwidth}
-      \textbf{ACO (Dorigo y coautores)} representa las soluciones como
+      \textbf{ACO } representa las soluciones como
       \textbf{caminos en un grafo}. Cada hormiga elige su siguiente arista con
       probabilidad
       \[
@@ -1400,11 +1326,11 @@ def particle_swarm_optimization(n_particles=30, n_iter=20,
         {\sum_{k \in N_i} \tau_{i,k}^{\alpha}\ \eta_{i,k}^{\beta}}
       \]
       \begin{itemize}
-        \item $\tau_{i,j}$: \textbf{nivel de feromona} en la arista $(i,j)$.
+          \item $\tau_{i,j}$: \textbf{nivel de feromona} en la arista $(i,j)$. No tiene orientación.
         \item $\eta_{i,j}$: \textbf{medida heurística} (p.ej.~el inverso de la
           distancia).
         \item $\alpha,\beta$: peso relativo de la feromona frente a la
-          heurística.
+            heurística. $Q$ es constante.
       \end{itemize}
     \end{column}
     \begin{column}{.44\textwidth}
@@ -1423,6 +1349,10 @@ def particle_swarm_optimization(n_particles=30, n_iter=20,
         Con tasa de evaporación $\rho\in(0,1]$: se refuerzan las aristas
         prometedoras y las demás se evaporan.
       \end{block}
+      \begin{block}{Robustez}
+        \small
+        ACO es muy robusto -- excelente para problemas dinámicos.
+    \end{block}
     \end{column}
   \end{columns}
   \fuente
@@ -1432,28 +1362,6 @@ def particle_swarm_optimization(n_particles=30, n_iter=20,
 \section{Cierre}
 % =============================================================================
 
-\begin{frame}{Puntos para recordar}
-  \small
-  \begin{enumerate}
-    \item \textbf{El prox sustituye al gradiente:} define una operación que
-      incorpora el término no suave; ya se conoce para decenas de
-      regularizadores.
-    \item \textbf{ISTA y hard thresholding:} el prox del $\ell_1$ es
-      umbralización suave ($\tau=\lambda/\beta$); el del $\ell_0$ es
-      umbralización dura ($\tau=\sqrt{2\lambda/\beta}$).
-    \item \textbf{Proyección y separación:} el prox del indicador es la
-      proyección; separar variables abre la puerta a SR3 y ADMM.
-    \item \textbf{SR3 relaja y regulariza:} aplasta los conjuntos de nivel en
-      esferas, converge en 2 iteraciones donde LASSO necesita 40, y elimina
-      los falsos positivos del camino de LASSO.
-    \item \textbf{Nelder--Mead, annealing, GA, PSO, ACO:} todos son
-      heurísticas sin garantía de óptimo global; su valor está en la
-      robustez y la facilidad de implementación.
-    \item \textbf{El calendario de enfriamiento y la $T_0$} son las
-      palancas que deciden si el recocido explota o converge.
-  \end{enumerate}
-  \fuente
-\end{frame}
 
 \begin{frame}{El mapa completo}
   \centering
@@ -1464,13 +1372,9 @@ def particle_swarm_optimization(n_particles=30, n_iter=20,
     \textbf{Herramienta} & \textbf{Qué problema resuelve} \\
     \midrule
     Gradiente proximal & $f$ suave $+ g$ no suave, sin fórmula cerrada \\
-    Umbralización suave / dura & Prox del $\ell_1$ (ISTA) y del $\ell_0$ \\
-    Gradiente proyectado & Restricciones de caja y conjuntos factibles \\
-    Separación de variables & Problemas grandes o mal condicionados (SR3, ADMM) \\
     Nelder--Mead & Búsqueda local sin derivadas, dimensiones bajas \\
     Recocido simulado & Búsqueda global estocástica, objetivos ruidosos \\
     Algoritmos genéticos & Optimización de parámetros, espacios grandes \\
-    Programación genética & Regresión simbólica, IA explicable \\
     PSO / ACO & Búsqueda por enjambre, problemas de caja negra \\
     \bottomrule
   \end{tabular}
@@ -1518,75 +1422,6 @@ def particle_swarm_optimization(n_particles=30, n_iter=20,
   \fuente
 \end{frame}
 
-\begin{frame}{Para profundizar}
-  \small
-  \textbf{Libros}
-  \begin{itemize}
-    \item Nocedal \& Wright, \emph{Numerical Optimization} (1999).
-    \item Combettes \& Pesquet, \emph{Proximal Splitting Methods in Signal
-      Processing} (2011).
-    \item Laarhove, Peter \& Aarts, \emph{Simulated Annealing} (1987).
-    \item Goldberg, \emph{Genetic Algorithms} (2006).
-    \item Koza, Bennett \& Stiffelman, \emph{Genetic Programming as a Darwinian
-      Invention Machine} (1999).
-  \end{itemize}
-  \textbf{Artículos fundacionales}
-  \begin{itemize}
-    \item Parikh \& Boyd, \emph{Proximal algorithms} (2014).
-    \item Zheng, Askham, Brunton, Kutz \& Aravkin, \emph{Sparse relaxed regularized
-      regression: SR3}, IEEE Access (2019).
-    \item Tropp, \emph{Just relax: Convex programming methods for identifying
-      sparse signals in noise} (2006).
-    \item Lagarias, Reeds, Wright \& Wright, \emph{Convergence properties of the
-      Nelder--Mead simplex method in low dimensions} (1998).
-    \item Bertsimas \& Tsitsiklis, \emph{Simulated annealing} (1993).
-    \item Kennedy \& Eberhart, \emph{Particle swarm optimization} (1995).
-    \item Nedić \& Ozdaglar, \emph{Distributed subgradient methods for
-      multi-agent optimization} (2009).
-  \end{itemize}
-  \vfill
-  \centering
-  {\footnotesize\color{gray}
-    Siguiente capítulo: restricciones y dualidad (ADMM, KKT).}
-\end{frame}
-
-\begin{frame}{Ejercicios (del libro, pp.~200--202)}
-  \small
-  \begin{columns}[T,onlytextwidth]
-    \begin{column}{.48\textwidth}
-      \textbf{Regresión dispersa (5--1 a 5--7)}
-      \begin{itemize}
-        \item Comparar LASSO, prox-gradient con $\ell_1$ y $\ell_0$, STLS y
-          SR3: con $x\in\R^{10}$ de 2 elementos no nulos y $A$ de $100\times10$
-          con ruido $\sim1\%$.
-        \item ¿Cuántas iteraciones necesita SR3? ¿Y LASSO?
-        \item Repetir con ruido de 1\% a 25\% (5--2).
-        \item Graficar error de entrenamiento vs.~número de términos no nulos,
-          y superponer el error de prueba (5--3).
-        \item Derivar el prox del ridge (5--5) y el de la norma nuclear (5--6).
-        \item Reproducir la Fig.~5.4 de Zheng et al.\ (5--7).
-      \end{itemize}
-    \end{column}
-    \begin{column}{.48\textwidth}
-      \textbf{Simplex, annealing y enjambre (5--8 a 5--14)}
-      \begin{itemize}
-        \item Explorar Nelder--Mead sobre los cuatro mínimos con simplex
-          iniciales de distintos tamaños (5--8).
-        \item Probar distintos calendarios de enfriamiento (5--9).
-        \item En $f(x)=\norm{x}_2^2$ y $f(x)=\tfrac12 x^TQx$: variar los
-          parámetros del simplex y la dimensión; ¿cuáles son óptimos?
-          (5--10)
-        \item Repetir con recocido simulado (5--11) y con el punto de silla
-          (5--12, 5--13), incluyendo \textbf{momentum} (5--12).
-        \item Repetir el punto de silla con PSO (5--14).
-      \end{itemize}
-      \vspace{1mm}
-      \textbf{Otros}: PySR con 3 funciones (5--15) y ruido en Lorenz (5--16);
-      \textbf{Extremum seeking} (5--17): perturbación sinusoidal y correlación
-      cruzada para estimar el gradiente.
-    \end{column}
-  \end{columns}
-\end{frame}
 
 % =============================================================================
 \end{document}
