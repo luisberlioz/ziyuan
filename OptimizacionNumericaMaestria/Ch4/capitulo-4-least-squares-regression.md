@@ -44,25 +44,25 @@ El capítulo 4 construye, en orden, la cadena completa de la regresión lineal p
 El sistema lineal
 
 $$
-Ax = b \tag{4.1}
+Ax = b  \qquad (4.1)
 $$
 
 se convierte, cuando $A$ no es cuadrado, en el problema de optimización convexa
 
 $$
-\min_x \; \|Ax - b\|_2^2 \tag{4.2}
+\min_x \; \|Ax - b\|_2^2  \qquad (4.2)
 $$
 
 cuya solución (analítica, cerrada) es
 
 $$
-x = A^\dagger b \tag{4.3}
+x = A^\dagger b  \qquad (4.3)
 $$
 
 donde $A^\dagger$ es la **pseudo-inversa de Moore–Penrose**. La generalización no lineal es
 
 $$
-\min_\theta \; \|N_\theta(x) - y\|_2^2 \tag{4.4}
+\min_\theta \; \|N_\theta(x) - y\|_2^2  \qquad (4.4)
 $$
 
 (con $N_\theta$ una red neuronal, por ejemplo), que es **no convexa** y requiere métodos iterativos.
@@ -86,7 +86,7 @@ $$
 **R4.1 — el modelo de regresión lineal (p. 124).** Dados datos de variables predictoras y sus resultados, ordenados como filas de una matriz $A \in \mathbb{R}^{m \times n}$ y un vector $b \in \mathbb{R}^m$, la regresión busca la relación entre las columnas de $A$ más consistente con los resultados en $b$. Dicha relación se cuantifica mediante
 
 $$
-Ax \approx b \tag{4.1}
+Ax \approx b
 $$
 
 es decir, $b$ se aproxima como combinación lineal de las columnas de $A$, con pesos $x \in \mathbb{R}^n$. El vector $b$ suele estar contaminado con **ruido de medición**, que se modela típicamente como la adición de un vector $\epsilon$ de ruido blanco Gaussiano i.i.d.:
@@ -98,25 +98,25 @@ $$
 **R4.2 — solución analítica por condición de optimalidad (pp. 124–125).** El objetivo se expande:
 
 $$
-\|Ax - b\|_2^2 = (Ax - b)^T(Ax - b) \tag{4.5a}
+\|Ax - b\|_2^2 = (Ax - b)^T(Ax - b)  \qquad (4.5a)
 $$
 $$
-= (x^T A^T - b^T)(Ax - b) \tag{4.5b}
+= (x^T A^T - b^T)(Ax - b)  \qquad (4.5b)
 $$
 $$
-= x^T A^T A x - x^T A^T b - b^T A x + b^T b \tag{4.5c}
+= x^T A^T A x - x^T A^T b - b^T A x + b^T b  \qquad (4.5c)
 $$
 
 Diferenciando e igualando a cero:
 
 $$
-\nabla \|Ax - b\|_2^2 = 2A^T A x - A^T b - A^T b = 0 \tag{4.6a}
+\nabla \|Ax - b\|_2^2 = 2A^T A x - A^T b - A^T b = 0  \qquad (4.6a)
 $$
 $$
-\Rightarrow A^T A x = A^T b \tag{4.6b}
+\Rightarrow A^T A x = A^T b  \qquad (4.6b)
 $$
 $$
-\Rightarrow x = (A^T A)^{-1} A^T b \tag{4.6c}
+\Rightarrow x = (A^T A)^{-1} A^T b  \qquad (4.6c)
 $$
 
 La matriz $A^\dagger = (A^T A)^{-1}A^T$ es la **pseudo-inversa de Moore–Penrose**. Está definida incluso para $A$ no cuadrado, **pero (4.6c) solo es válida cuando $A^T A$ es invertible**, es decir cuando $A$ tiene $n$ columnas linealmente independientes y $m \ge n$. **Conclusión clave: la fórmula solo aplica al caso sobredeterminado** (Fig. 4.2, izquierda).
@@ -124,7 +124,7 @@ La matriz $A^\dagger = (A^T A)^{-1}A^T$ es la **pseudo-inversa de Moore–Penros
 **R4.3 — la pseudo-inversa vía SVD (p. 125).** En la práctica la pseudo-inversa de sistemas grandes se calcula con la descomposición en valores singulares. Si $A = U\Sigma V^T$, entonces
 
 $$
-A^\dagger = V\Sigma^{-1}U^T \quad \Rightarrow \quad x = V\Sigma^{-1}U^T b \tag{4.7}
+A^\dagger = V\Sigma^{-1}U^T \quad \Rightarrow \quad x = V\Sigma^{-1}U^T b  \qquad (4.7)
 $$
 
 $U$ y $V$ son unitarias, así que invertirlas es tomar la transpuesta ($U^T U = I$, $V^T V = I$); $\Sigma$ es diagonal y por tanto también fácil de invertir.
@@ -198,7 +198,7 @@ El problema contiene precios y atributos de **506 viviendas**, así que la matri
 La alternativa robusta es minimizar la suma de valores absolutos de los errores:
 
 $$
-\|Ax - b\|_1 \tag{4.8}
+\|Ax - b\|_1  \qquad (4.8)
 $$
 
 denominada **regresión de desviación absoluta mínima (LAD, *least absolute deviation*)**. Como los errores no se elevan al cuadrado, los outliers grandes no sesgan desproporcionadamente la regresión. **Tema general de optimización: usar la norma $\|\cdot\|_1$ del error como función de pérdida suele ser más robusto a outliers.**
@@ -255,10 +255,10 @@ En consecuencia:
 **R4.7 — las descomposiciones en suma directa (p. 131).** Los subespacios fundamentales satisfacen:
 
 $$
-\mathrm{col}(A) \oplus \ker(A^T) = \mathbb{R}^n \tag{4.9a}
+\mathrm{col}(A) \oplus \ker(A^T) = \mathbb{R}^n  \qquad (4.9a)
 $$
 $$
-\mathrm{col}(A^T) \oplus \ker(A) = \mathbb{R}^n \tag{4.9b}
+\mathrm{col}(A^T) \oplus \ker(A) = \mathbb{R}^n  \qquad (4.9b)
 $$
 
 donde $\oplus$ significa **suma directa** de subespacios: $U \oplus V = \{u + v : u \in U,\, v \in V\}$, con la propiedad adicional de que la descomposición es única, $U \cap V = \{0\}$. Así, $\mathrm{col}(A) \oplus \ker(A^T) = \mathbb{R}^n$ significa que todo vector de $\mathbb{R}^n$ se puede escribir de manera única como suma de un vector del espacio columna y un vector del espacio nulo, y los dos subespacios sólo se intersecan en el vector cero.
@@ -284,7 +284,7 @@ donde $\oplus$ significa **suma directa** de subespacios: $U \oplus V = \{u + v 
 La SVD completa se denota
 
 $$
-A = U\Sigma V^T \tag{4.10}
+A = U\Sigma V^T  \qquad (4.10)
 $$
 
 donde $U \in \mathbb{R}^{m\times m}$ y $V \in \mathbb{R}^{n\times n}$ son matrices **ortogonales** (con columnas ortonormales) y $\Sigma \in \mathbb{R}^{m\times n}$ es una matriz con entradas reales no negativas en la diagonal y ceros fuera de ella. Las columnas de $U$ son los **vectores singulares izquierdos** de $A$ y las columnas de $V$ los **derechos**. Los elementos diagonales de $\Sigma$ son los **valores singulares**, ordenados de mayor a menor:
@@ -304,7 +304,7 @@ Para matrices complejas $A \in \mathbb{C}^{m\times n}$ se usa la **transpuesta c
 **R4.10 — la SVD económica y el truncamiento (p. 132).** Cuando $m \ge n$, la matriz $\Sigma$ tiene a lo sumo $n$ elementos no nulos en la diagonal. Si hay columnas linealmente dependientes en $A$, habrá aún menos valores singulares no nulos. Denotando por $\hat{\Sigma}$ la matriz diagonal de los valores singulares no nulos, es posible representar exactamente $A$ mediante la **SVD económica**:
 
 $$
-A = U\Sigma V^T = \hat{U}\begin{bmatrix}\hat{\Sigma} \\ 0\end{bmatrix}V^T = \hat{U}\hat{\Sigma}V^T \tag{4.11}
+A = U\Sigma V^T = \hat{U}\begin{bmatrix}\hat{\Sigma} \\ 0\end{bmatrix}V^T = \hat{U}\hat{\Sigma}V^T  \qquad (4.11)
 $$
 
 donde $\hat{U}$ son las columnas correspondientes a los valores singulares no nulos de $\hat{\Sigma}$ y $\hat{U}^\perp$ es su complemento ortogonal. **El rango de $A$ es igual al número de valores singulares no nulos.**
@@ -335,22 +335,22 @@ La SVD también da la **aproximación óptima de rango $r$** de $A = \tilde{U}\t
 **R4.12 — la pseudo-inversa izquierda de Moore–Penrose (p. 134).** Se sustituye una SVD truncada exacta $A = \hat{U}\hat{\Sigma}V^T$ en el problema y se "invierte" cada una de las matrices $\hat{U}$, $\hat{\Sigma}$ y $V^T$ por turno, obteniendo la **pseudo-inversa izquierda de Moore–Penrose** $A^\dagger$:
 
 $$
-A^\dagger \triangleq V\hat{\Sigma}^{-1}\hat{U}^T \quad \Rightarrow \quad A^\dagger A = VV^T \tag{4.12}
+A^\dagger \triangleq V\hat{\Sigma}^{-1}\hat{U}^T \quad \Rightarrow \quad A^\dagger A = VV^T  \qquad (4.12)
 $$
 
 Nótese que $A^\dagger A$ será igual a la identidad $I_{n\times n}$ **solo si la SVD truncada captura todos los valores singulares no nulos**; si se usa una aproximación de rango $r$, entonces $\tilde{V}\tilde{V}^T \ne I_{n\times n}$ y solo aproxima la identidad. Con esto se obtienen las soluciones de norma mínima y de mínimos cuadrados de (4.1):
 
 $$
-A^\dagger A x^* = A^\dagger b \quad \Rightarrow \quad x^* = V\hat{\Sigma}^{-1}\hat{U}^T b \tag{4.13}
+A^\dagger A x^* = A^\dagger b \quad \Rightarrow \quad x^* = V\hat{\Sigma}^{-1}\hat{U}^T b  \qquad (4.13)
 $$
 
 Sustituyendo la solución $x^*$ de vuelta en (4.1):
 
 $$
-Ax^* = \hat{U}\hat{\Sigma}V^T V\hat{\Sigma}^{-1}\hat{U}^T b \tag{4.14a}
+Ax^* = \hat{U}\hat{\Sigma}V^T V\hat{\Sigma}^{-1}\hat{U}^T b  \qquad (4.14a)
 $$
 $$
-= \hat{U}\hat{U}^T b \tag{4.14b}
+= \hat{U}\hat{U}^T b  \qquad (4.14b)
 $$
 
 Es decir, **esta solución es una proyección del vector $b$ sobre el espacio generado por las columnas de $\hat{U}$**. Si $b$ no está en el span de $A$ (y por tanto tampoco en el de $\hat{U}$), $x^*$ solo resolverá aproximadamente la ecuación y quedará un error residual de las componentes de $b$ que no están en el span de $A$. Nótese que $\hat{U}\hat{U}^T$ **no** es la identidad cuando $n < m$, aunque $V^T V$ sí lo es, ya que $V$ es una matriz ortogonal $n \times n$ de rango completo.
@@ -377,7 +377,7 @@ Es decir, **esta solución es una proyección del vector $b$ sobre el espacio ge
 > **Teorema 1 (Eckart–Young [159], p. 135).** La aproximación óptima de rango $r$ de $X$, en sentido de mínimos cuadrados, está dada por la truncación SVD de rango $r$, $\tilde{X}$:
 >
 > $$
-> \underset{\tilde{X},\; \mathrm{rank}(\tilde{X})=r}{\arg\min}\; \|X - \tilde{X}\|_F = \tilde{U}\tilde{\Sigma}\tilde{V}^T \tag{4.15}
+> \underset{\tilde{X},\; \mathrm{rank}(\tilde{X})=r}{\arg\min}\; \|X - \tilde{X}\|_F = \tilde{U}\tilde{\Sigma}\tilde{V}^T  \qquad (4.15)
 > $$
 >
 > donde $\tilde{U}$ y $\tilde{V}$ denotan las primeras $r$ columnas de $U$ y $V$, y $\tilde{\Sigma}$ contiene el bloque $r \times r$ de $\Sigma$. La **norma de Frobenius** se define como
@@ -391,13 +391,13 @@ Es decir, **esta solución es una proyección del vector $b$ sobre el espacio ge
 **R4.16 — error exacto de la aproximación de rango $r$ (p. 135).** Es posible cuantificar exactamente el error:
 
 $$
-\|X - \tilde{X}\|_F^2 = \sum_{k=r+1}^{m} \sigma_k^2 \tag{4.16}
+\|X - \tilde{X}\|_F^2 = \sum_{k=r+1}^{m} \sigma_k^2  \qquad (4.16)
 $$
 
 Es decir, **todas las otras matrices de rango $r$ tendrán al menos este error**. Como el error escala con el tamaño y la magnitud de $X$, suele ser más útil considerar el **error relativo**
 
 $$
-\frac{\|X-\tilde{X}\|_F^2}{\|X\|_F^2} \tag{4.17}
+\frac{\|X-\tilde{X}\|_F^2}{\|X\|_F^2}  \qquad (4.17)
 $$
 
 que tiene la interpretación de la **cantidad de varianza faltante** en la aproximación $\tilde{X}$; es una propiedad usada extensivamente en el PCA.
@@ -405,19 +405,19 @@ que tiene la interpretación de la **cantidad de varianza faltante** en la aprox
 **R4.17 — optimalidad también en la norma 2 (espectral) (p. 135).** Sorprendentemente, la SVD también proporciona una aproximación óptima de rango $r$ en la **norma 2 de matriz**, también conocida como **norma espectral**:
 
 $$
-\underset{\tilde{X},\; \mathrm{rank}(\tilde{X})=r}{\arg\min}\; \|X - \tilde{X}\|_2 = \tilde{U}\tilde{\Sigma}\tilde{V}^T \tag{4.18}
+\underset{\tilde{X},\; \mathrm{rank}(\tilde{X})=r}{\arg\min}\; \|X - \tilde{X}\|_2 = \tilde{U}\tilde{\Sigma}\tilde{V}^T  \qquad (4.18)
 $$
 
 donde $\|X\|_2 = \max_{v \ne 0} \frac{\|Xv\|}{\|v\|_2}$. La expresión del error en la norma 2 es aún más simple:
 
 $$
-\|X - \tilde{X}\|_2 = \sigma_{r+1} \tag{4.19}
+\|X - \tilde{X}\|_2 = \sigma_{r+1}  \qquad (4.19)
 $$
 
 Esta expresión se deriva fácilmente expandiendo
 
 $$
-X - \tilde{X} = \sum_{k=r+1}^{m} \sigma_k u_k v_k^T \tag{4.20}
+X - \tilde{X} = \sum_{k=r+1}^{m} \sigma_k u_k v_k^T  \qquad (4.20)
 $$
 
 Como los vectores $v_k$ son ortonormales, el máximo $\|(X-\tilde{X})v\|_2 = \sigma_{r+1}$ se alcanza para $v = v_{r+1}$.
@@ -431,16 +431,16 @@ Como los vectores $v_k$ son ortonormales, el máximo $\|(X-\tilde{X})v\|_2 = \si
 **R4.18 — el problema de norma mínima (p. 136).** Es similar al de mínimos cuadrados, salvo que ahora se considera el caso **subdeterminado**
 
 $$
-Ax = b \tag{4.21}
+Ax = b  \qquad (4.21)
 $$
 
 donde $A$ es una matriz short-fat, de modo que hay menos ecuaciones que incógnitas; en este caso, bajo condiciones suaves, habrá infinitos vectores $x$ que resuelven el sistema. El problema de regresión de norma mínima busca el $x$ que satisface el sistema de ecuaciones y tiene la **norma $\ell_2$ mínima**:
 
 $$
-\min_x \; \|x\|_2^2 \tag{4.22a}
+\min_x \; \|x\|_2^2  \qquad (4.22a)
 $$
 $$
-\text{s.t. } Ax = b \tag{4.22b}
+\text{s.t. } Ax = b  \qquad (4.22b)
 $$
 
 **Importante: aquí se minimiza la norma $\|x\|_2^2$ y no $\|Ax-b\|_2$**; el sistema de ecuaciones entra como **restricción**.
@@ -456,34 +456,34 @@ $$
 **R4.19 — derivación con multiplicadores de Lagrange (p. 137).** Se usa la forma de multiplicadores de Lagrange (introducida en §1.4, desarrollada en el Capítulo 6) y se expande el objetivo $\|x\|_2^2 = x^T x$:
 
 $$
-L(x, \lambda) = x^T x + \lambda^T(Ax - b) \tag{4.23}
+L(x, \lambda) = x^T x + \lambda^T(Ax - b)  \qquad (4.23)
 $$
 
 La condición de gradiente respecto a $x$ es
 
 $$
-\nabla_x L = 2x + A^T\lambda = 0 \quad \Rightarrow \quad x = -\tfrac{1}{2}A^T\lambda \tag{4.24}
+\nabla_x L = 2x + A^T\lambda = 0 \quad \Rightarrow \quad x = -\tfrac{1}{2}A^T\lambda  \qquad (4.24)
 $$
 
 y la condición de gradiente respecto a $\lambda$ es
 
 $$
-\nabla_\lambda L = Ax - b = 0 \quad \Rightarrow \quad -AA^T\lambda = b \tag{4.25a}
+\nabla_\lambda L = Ax - b = 0 \quad \Rightarrow \quad -AA^T\lambda = b  \qquad (4.25a)
 $$
 $$
-\Rightarrow \lambda = -2(AA^T)^{-1}b \tag{4.25b}
+\Rightarrow \lambda = -2(AA^T)^{-1}b  \qquad (4.25b)
 $$
 
 lo que lleva a
 
 $$
-x = -\tfrac{1}{2}A^T\lambda = A^T(AA^T)^{-1}b \tag{4.26}
+x = -\tfrac{1}{2}A^T\lambda = A^T(AA^T)^{-1}b  \qquad (4.26)
 $$
 
 Esta es la **pseudo-inversa derecha de Moore–Penrose**:
 
 $$
-x = A^T(AA^T)^{-1}b \tag{4.27}
+x = A^T(AA^T)^{-1}b  \qquad (4.27)
 $$
 
 Puede computarse con la SVD, como en la regresión por mínimos cuadrados: si $A = U\Sigma V^T$ entonces $x = V\Sigma^{-1}U^T b$.
@@ -499,7 +499,7 @@ Sin embargo, hasta hace poco las imágenes y el audio se recolectaban **en resol
 Una señal compresible $x \in \mathbb{R}^n$ puede escribirse como un vector disperso $s \in \mathbb{R}^n$ (conteniendo sobre todo ceros) en una base de transformación $\Psi \in \mathbb{R}^{n\times n}$:
 
 $$
-x = \Psi s \tag{4.28}
+x = \Psi s  \qquad (4.28)
 $$
 
 El vector $s$ se llama **$K$-disperso en $\Psi$** (*K-sparse*) si tiene exactamente $K$ elementos no nulos. Si la base $\Psi$ es genérica (Fourier o wavelet), solo los pocos términos activos de $s$ se necesitan para reconstruir la señal original $x$, reduciendo los datos requeridos. Imágenes y audio son compresibles en bases Fourier o wavelet, así que tras la transformación la mayoría de los coeficientes son pequeños y pueden fijarse en cero con pérdida de calidad despreciable.
@@ -507,13 +507,13 @@ El vector $s$ se llama **$K$-disperso en $\Psi$** (*K-sparse*) si tiene exactame
 El objetivo es **medir un subconjunto pequeño** de la señal original en un vector de mediciones $y \in \mathbb{R}^p$ e inferir el vector disperso $s$ consistente con esas mediciones. Las mediciones se relacionan con el estado completo $x$ mediante $y = Cx$, donde $C \in \mathbb{R}^{p\times n}$ es una **matriz de medición** con $p \ll n$:
 
 $$
-y = Cx = C\Psi s = \Theta s \tag{4.29}
+y = Cx = C\Psi s = \Theta s  \qquad (4.29)
 $$
 
 El sistema (4.29) es subdeterminado, pues hay infinitas soluciones $s$ consistentes. La solución más dispersa $\hat{s}$ satisface:
 
 $$
-\hat{s} = \underset{s}{\arg\min}\; \|s\|_0 \quad \text{s.t. } y = C\Psi s \tag{4.30}
+\hat{s} = \underset{s}{\arg\min}\; \|s\|_0 \quad \text{s.t. } y = C\Psi s  \qquad (4.30)
 $$
 
 donde $\|\cdot\|_0$ es la **pseudo-norma $\ell_0$**, dada por el número de entradas no nulas; se conoce también como la **cardinalidad** de $s$.
@@ -523,7 +523,7 @@ donde $\|\cdot\|_0$ es la **pseudo-norma $\ell_0$**, dada por el número de entr
 Afortunadamente, bajo ciertas condiciones sobre la matriz de medición $C$, es posible **relajar** la optimización (4.30) a una minimización $\ell_1$ convexa [93, 146]:
 
 $$
-\hat{s} = \underset{s}{\arg\min}\; \|s\|_1 \quad \text{s.t. } y = C\Psi s \tag{4.31}
+\hat{s} = \underset{s}{\arg\min}\; \|s\|_1 \quad \text{s.t. } y = C\Psi s  \qquad (4.31)
 $$
 
 **La norma $\ell_1$ también se conoce como norma taxicab o de Manhattan**, porque representa la distancia que recorrería un taxi entre dos puntos de una grilla rectangular. **La solución de norma $\ell_1$ mínima es dispersa, mientras que la solución de norma $\ell_2$ mínima no lo es.**
@@ -535,13 +535,13 @@ El libro señala además que en §5.1 se muestra que es posible usar los **méto
 > Cuando las mediciones $y$ tienen ruido aditivo, por ejemplo ruido blanco de magnitud $\epsilon$, la siguiente variante de (4.31) puede ser más robusta [508]:
 >
 > $$
-> \hat{s} = \underset{s}{\arg\min}\; \|s\|_1 \quad \text{s.t. } \|C\Psi s - y\|_2 < \epsilon \tag{4.32}
+> \hat{s} = \underset{s}{\arg\min}\; \|s\|_1 \quad \text{s.t. } \|C\Psi s - y\|_2 < \epsilon  \qquad (4.32)
 > $$
 >
 > Una optimización convexa relacionada es la siguiente [11]:
 >
 > $$
-> \hat{s} = \underset{s}{\arg\min}\; \|C\Psi s - y\|_2 + \lambda\|s\|_1 \tag{4.33}
+> \hat{s} = \underset{s}{\arg\min}\; \|C\Psi s - y\|_2 + \lambda\|s\|_1  \qquad (4.33)
 > $$
 >
 > donde $\lambda \ge 0$ es un parámetro que pondera la importancia de la dispersidad. Las ecuaciones (4.32) y (4.33) están estrechamente relacionadas [499]. Esto es muy similar a la regresión LASSO que se introduce en (4.40), pero para el problema subdeterminado de compressed sensing.
@@ -561,7 +561,7 @@ En esta sección se define formalmente el **número de condición**, concepto fu
 **R4.24 — definición (p. 140).** El número de condición de una matriz $A$ mide **cuán sensible es la multiplicación y la inversión de matrices a errores en la entrada**. Un número de condición mayor indica mayor sensibilidad y peor desempeño. El número de condición $\kappa(A)$ está directamente relacionado con los valores singulares:
 
 $$
-\kappa(A) = \frac{\sigma_{\max}(A)}{\sigma_{\min}(A)} \tag{4.34}
+\kappa(A) = \frac{\sigma_{\max}(A)}{\sigma_{\min}(A)}  \qquad (4.34)
 $$
 
 El número de condición es un concepto central en todo el álgebra lineal numérica y la computación aplicada.
@@ -569,13 +569,13 @@ El número de condición es un concepto central en todo el álgebra lineal numé
 **R4.25 — propagación del error (pp. 140–141).** El efecto de un número de condición grande se entiende mejor en el sistema $Ax=b$. Si $b$ no está especificado perfectamente, sino que tiene algún error $\epsilon_b$, el sistema se vuelve
 
 $$
-A(x + \epsilon_x) = b + \epsilon_b \tag{4.35}
+A(x + \epsilon_x) = b + \epsilon_b  \qquad (4.35)
 $$
 
 donde $\epsilon_x$ es el error correspondiente en $x$. Suponiendo el **peor caso**, donde $\epsilon_b$ está alineado con el vector singular correspondiente al valor singular mínimo $\sigma_{\min}$, y $b$ está alineado con el vector singular correspondiente al máximo $\sigma_{\max}$, la solución estimada es
 
 $$
-x + \epsilon_x \approx A^\dagger(b + \epsilon_b) = \frac{1}{\sigma_{\max}}b + \frac{1}{\sigma_{\min}}\epsilon_b \tag{4.36}
+x + \epsilon_x \approx A^\dagger(b + \epsilon_b) = \frac{1}{\sigma_{\max}}b + \frac{1}{\sigma_{\min}}\epsilon_b  \qquad (4.36)
 $$
 
 La relación señal-ruido de la estimación $x$ es
@@ -604,7 +604,7 @@ Incluso si $b$ y $\epsilon_b$ no están perfectamente alineados con las direccio
 Recordando que cuando $A$ no es cuadrado no se puede invertir, y en su lugar se computa la pseudo-inversa vía SVD:
 
 $$
-A = U\Sigma V^T \quad \Rightarrow \quad A^\dagger = V\Sigma^{-1}U^T = \cdots = (A^TA)^{-1}A^T \tag{4.37}
+A = U\Sigma V^T \quad \Rightarrow \quad A^\dagger = V\Sigma^{-1}U^T = \cdots = (A^TA)^{-1}A^T  \qquad (4.37)
 $$
 
 Cuando las columnas de $A$ son casi paralelas, el número de condición de $A$ es grande, y por tanto **el número de condición de $A^T A$ es aún mayor**. Esto se manifiesta en que la matriz diagonal $\Sigma$ tiene valores singulares casi degenerados, de modo que invertir $\Sigma^{-1}$ implica dividir por números muy pequeños.
@@ -614,13 +614,13 @@ Cuando las columnas de $A$ son casi paralelas, el número de condición de $A$ e
 Una solución es **regularizar** el problema de mínimos cuadrados con un término de pérdida adicional $\|x\|_2^2$:
 
 $$
-x = \underset{x'}{\arg\min}\; \|Ax' - b\|_2^2 + \alpha\|x'\|_2^2 \tag{4.38}
+x = \underset{x'}{\arg\min}\; \|Ax' - b\|_2^2 + \alpha\|x'\|_2^2  \qquad (4.38)
 $$
 
 donde $\alpha$ es un **hiperparámetro** que pondera este término regularizador. Es posible computar el gradiente de este objetivo aumentado e igualarlo a cero, dando la solución analítica:
 
 $$
-x = (A^TA + \alpha I)^{-1}A^Tb \tag{4.39}
+x = (A^TA + \alpha I)^{-1}A^Tb  \qquad (4.39)
 $$
 
 ![Figura 4.12: esquemática de la regularización de Tikhonov](images/fig_4_12.png)
@@ -660,7 +660,7 @@ Esto puede invertirse simplemente, ya que $V$ es unitaria y $\Sigma^2 + \alpha I
 La regresión por mínimos cuadrados tiende a producir un vector $x$ con **coeficientes no nulos en todas las entradas**, lo que indica que deben usarse todas las columnas de $A$ para predecir $b$. Sin embargo, a menudo creemos que el modelo estadístico debe ser más simple, de modo que $x$ sea **disperso**. El LASSO añade un término de penalización $\ell_1$ para regularizar el problema de mínimos cuadrados, es decir, para **prevenir el sobreajuste**:
 
 $$
-x = \underset{x'}{\arg\min}\; \|Ax' - b\|_2^2 + \lambda\|x'\|_1 \tag{4.40}
+x = \underset{x'}{\arg\min}\; \|Ax' - b\|_2^2 + \lambda\|x'\|_1  \qquad (4.40)
 $$
 
 **R4.33 — selección de $\lambda$ por validación cruzada (p. 143).** Típicamente el parámetro $\lambda$ se varía a lo largo de un rango de valores y el ajuste se valida contra un conjunto de prueba de datos retenidos (*holdout*). Si no hay datos suficientes para tener un conjunto de entrenamiento y de prueba suficientemente grande, es común **entrenar y probar el modelo repetidamente sobre selecciones aleatorias de los datos** (a menudo 80% para entrenamiento y 20% para prueba), dando un desempeño con **validación cruzada**. Este procedimiento de validación cruzada permite seleccionar un modelo **parcimonioso** con relativamente pocos términos y evita el sobreajuste.
@@ -676,7 +676,7 @@ La regresión LASSO funciona bien con problemas sobredeterminados, ya que estos 
 **R4.35 — elastic net (p. 144).** El **elastic net** [558] combina los términos de regularización ridge y LASSO:
 
 $$
-x = \underset{x'}{\arg\min}\; \|Ax' - b\|_2^2 + \lambda\|x'\|_1 + \alpha\|x'\|_2^2 \tag{4.41}
+x = \underset{x'}{\arg\min}\; \|Ax' - b\|_2^2 + \lambda\|x'\|_1 + \alpha\|x'\|_2^2  \qquad (4.41)
 $$
 
 La regresión elastic net se usa ampliamente en aplicaciones de aprendizaje automático.
@@ -696,52 +696,52 @@ La regresión elastic net se usa ampliamente en aplicaciones de aprendizaje auto
 **R4.37 — el problema restringido y su forma cuadrática (p. 145).** La solución de mínimos cuadrados restringida para restricciones lineales de igualdad se deriva de
 
 $$
-\min_x \; \|Ax - b\|_2^2 \tag{4.42a}
+\min_x \; \|Ax - b\|_2^2  \qquad (4.42a)
 $$
 $$
-\text{s.t. } Cx = d \tag{4.42b}
+\text{s.t. } Cx = d  \qquad (4.42b)
 $$
 
 Expandiendo el objetivo, puede escribirse como un **programa cuadrático con restricciones lineales de igualdad**:
 
 $$
-\min_x \; \tfrac{1}{2}x^T Q x + c^T x \tag{4.43a}
+\min_x \; \tfrac{1}{2}x^T Q x + c^T x  \qquad (4.43a)
 $$
 $$
-\text{s.t. } Cx = d \tag{4.43b}
+\text{s.t. } Cx = d  \qquad (4.43b)
 $$
 
 con las matrices
 
 $$
-Q = 2A^TA \qquad c^T = -2b^TA \tag{4.44}
+Q = 2A^TA \qquad c^T = -2b^TA  \qquad (4.44)
 $$
 
 **R4.38 — Lagrange augmented y condiciones KKT (p. 145).** Se pueden usar multiplicadores de Lagrange para augmentar el objetivo con la ecuación de restricción, dando el **Lagrangian aumentado**:
 
 $$
-L(x,\lambda) = \tfrac{1}{2}x^TQx + c^Tx + \lambda^T(Cx - d) \tag{4.45}
+L(x,\lambda) = \tfrac{1}{2}x^TQx + c^Tx + \lambda^T(Cx - d)  \qquad (4.45)
 $$
 
 Las condiciones de optimalidad son $\nabla_x L = 0$ y $\nabla_\lambda L = 0$, que dan la **condición de stationarity** y la **condición de restricción de igualdad** respectivamente:
 
 $$
-\nabla_x L = Qx + c + C^T\lambda = 0 \tag{4.46a}
+\nabla_x L = Qx + c + C^T\lambda = 0  \qquad (4.46a)
 $$
 $$
-\nabla_\lambda L = Cx - d = 0 \tag{4.46b}
+\nabla_\lambda L = Cx - d = 0  \qquad (4.46b)
 $$
 
 Reescribiendo en forma matricial:
 
 $$
-\begin{bmatrix} Q & C^T \\ C & 0 \end{bmatrix}\begin{bmatrix} x \\ \lambda \end{bmatrix} = \begin{bmatrix} -c \\ d \end{bmatrix} \tag{4.47}
+\begin{bmatrix} Q & C^T \\ C & 0 \end{bmatrix}\begin{bmatrix} x \\ \lambda \end{bmatrix} = \begin{bmatrix} -c \\ d \end{bmatrix}  \qquad (4.47)
 $$
 
 Y en términos de las matrices y vectores originales del problema restringido:
 
 $$
-\begin{bmatrix} 2A^TA & C^T \\ C & 0 \end{bmatrix}\begin{bmatrix} x \\ \lambda \end{bmatrix} = \begin{bmatrix} 2A^Tb \\ d \end{bmatrix} \tag{4.48}
+\begin{bmatrix} 2A^TA & C^T \\ C & 0 \end{bmatrix}\begin{bmatrix} x \\ \lambda \end{bmatrix} = \begin{bmatrix} 2A^Tb \\ d \end{bmatrix}  \qquad (4.48)
 $$
 
 Es posible resolver por $x$ y $\lambda$ **invirtiendo este sistema de ecuaciones matricial**, de nuevo usando SVD o factorización QR. Es claro que **si no hay restricciones, esto es equivalente al problema estándar de mínimos cuadrados**.
@@ -751,16 +751,16 @@ Es posible resolver por $x$ y $\lambda$ **invirtiendo este sistema de ecuaciones
 **R4.39 — caso particular (p. 146).** Si $A = I$ y $b = 0$, entonces los mínimos cuadrados restringidos se reducen al problema de norma mínima anterior. Específicamente, al resolver
 
 $$
-\min_x \; \|x\|_2^2 \tag{4.49a}
+\min_x \; \|x\|_2^2  \qquad (4.49a)
 $$
 $$
-\text{s.t. } Cx = d \tag{4.49b}
+\text{s.t. } Cx = d  \qquad (4.49b)
 $$
 
 el problema restringido se convierte en
 
 $$
-\begin{bmatrix} I & C^T \\ C & 0 \end{bmatrix}\begin{bmatrix} x \\ \lambda \end{bmatrix} = \begin{bmatrix} 0 \\ d \end{bmatrix} \tag{4.50}
+\begin{bmatrix} I & C^T \\ C & 0 \end{bmatrix}\begin{bmatrix} x \\ \lambda \end{bmatrix} = \begin{bmatrix} 0 \\ d \end{bmatrix}  \qquad (4.50)
 $$
 
 que tiene la solución óptima
@@ -778,10 +778,10 @@ $$
 **R4.40 — definición (p. 146).** Los mínimos cuadrados lineales pueden escribirse como un **programa cuadrático**, que generaliza la programación lineal a funciones objetivo cuadráticas. Un programa cuadrático se escribe en forma estándar como:
 
 $$
-\min_x \; \tfrac{1}{2}x^TQx + c^Tx \tag{4.51a}
+\min_x \; \tfrac{1}{2}x^TQx + c^Tx  \qquad (4.51a)
 $$
 $$
-\text{Subject to: } Ax \le b \tag{4.51b}
+\text{Subject to: } Ax \le b  \qquad (4.51b)
 $$
 
 donde $Q$ es una matriz **simétrica**.
@@ -811,16 +811,16 @@ En programación lineal la solución ocurría en los **vértices**, pero para pr
 **R4.44 (p. 147).** Es simple ver que el problema de mínimos cuadrados lineales es un programa cuadrático:
 
 $$
-\min_x \; \|Ax - b\|_2^2 = (Ax-b)^T(Ax-b) \tag{4.52a}
+\min_x \; \|Ax - b\|_2^2 = (Ax-b)^T(Ax-b)  \qquad (4.52a)
 $$
 $$
-= x^TA^TAx - 2b^TAx + b^Tb \tag{4.52b}
+= x^TA^TAx - 2b^TAx + b^Tb  \qquad (4.52b)
 $$
 
 Así, esta función de pérdida es una forma cuadrática con
 
 $$
-Q = A^TA \qquad c^T = -2b^TA \tag{4.53}
+Q = A^TA \qquad c^T = -2b^TA  \qquad (4.53)
 $$
 
 Se ve que $Q$ es **simétrica y semidefinida positiva** para cualquier matriz $A$ del problema original de mínimos cuadrados, por lo que el programa cuadrático resultante es **convexo**.
@@ -982,7 +982,7 @@ Aquí, el objetivo es la suma de dos términos de mínimos cuadrados separados, 
 **R4.46 — el problema no lineal (p. 151).** Al pasar de los mínimos cuadrados simples (4.2) a los mínimos cuadrados no lineales (4.4), el problema **ya no es convexo y no hay solución en forma cerrada**. Los **métodos de Gauss–Newton** son una clase potente de técnicas iterativas para resolver estos problemas no lineales. Se usa la notación:
 
 $$
-L = \tfrac{1}{2}\sum_{j=1}^{m}\|y_j - N(x_j;\theta)\|_2^2 = \tfrac{1}{2}\sum_{j=1}^{m} f_j(\theta)^2 = \|\mathbf{f}(\theta)\|_2^2 \tag{4.54}
+L = \tfrac{1}{2}\sum_{j=1}^{m}\|y_j - N(x_j;\theta)\|_2^2 = \tfrac{1}{2}\sum_{j=1}^{m} f_j(\theta)^2 = \|\mathbf{f}(\theta)\|_2^2  \qquad (4.54)
 $$
 
 La suma de $j=1$ a $m$ es típicamente una suma sobre $m$ puntos de datos $\{(x_j,y_j)\}_{j=1}^m$, de modo que se minimiza el error cuadrático de un ajuste de función sobre todos los datos. La función $\mathbf{f}(\theta)$ es el **vector de residuos normados**, de modo que cada $f_j(\theta) = \|r_j\|_2$ donde el error residual es $r_j = y_j - N(x_j)$ evaluado en el $j$-ésimo punto de datos. Las variables $\theta$ son los **parámetros del modelo de regresión no lineal** y son las variables sobre las que se optimiza.
@@ -994,19 +994,19 @@ Esta formulación de mínimos cuadrados no lineales es **muy general**, y englob
 El gradiente es
 
 $$
-\nabla_\theta L = \sum_{j=1}^{m} f_j(\theta)\nabla f_j(\theta) = J^T\mathbf{f} \tag{4.55}
+\nabla_\theta L = \sum_{j=1}^{m} f_j(\theta)\nabla f_j(\theta) = J^T\mathbf{f}  \qquad (4.55)
 $$
 
 donde $J$ es la **matriz jacobiana** de derivadas
 
 $$
-J = D\mathbf{f} = \begin{bmatrix} \dfrac{\partial f_1}{\partial \theta_1} & \dfrac{\partial f_1}{\partial \theta_2} & \cdots & \nabla f_1^T \\ \dfrac{\partial f_2}{\partial \theta_1} & \dfrac{\partial f_2}{\partial \theta_2} & \cdots & \nabla f_2^T \\ \vdots & \vdots & \ddots & \vdots \end{bmatrix} = \begin{bmatrix} \nabla f_1^T \\ \nabla f_2^T \\ \vdots \end{bmatrix} \tag{4.56}
+J = D\mathbf{f} = \begin{bmatrix} \dfrac{\partial f_1}{\partial \theta_1} & \dfrac{\partial f_1}{\partial \theta_2} & \cdots & \nabla f_1^T \\ \dfrac{\partial f_2}{\partial \theta_1} & \dfrac{\partial f_2}{\partial \theta_2} & \cdots & \nabla f_2^T \\ \vdots & \vdots & \ddots & \vdots \end{bmatrix} = \begin{bmatrix} \nabla f_1^T \\ \nabla f_2^T \\ \vdots \end{bmatrix}  \qquad (4.56)
 $$
 
 y su transpuesta es
 
 $$
-J^T = \begin{bmatrix} \nabla f_1 & \nabla f_2 & \cdots \end{bmatrix} \tag{4.57}
+J^T = \begin{bmatrix} \nabla f_1 & \nabla f_2 & \cdots \end{bmatrix}  \qquad (4.57)
 $$
 
 Así, $J^T\mathbf{f}$ produce la suma de (4.55).
@@ -1014,13 +1014,13 @@ Así, $J^T\mathbf{f}$ produce la suma de (4.55).
 **R4.48 — el Hessiano y su aproximación de Gauss–Newton (p. 152).** Se escribe una expresión para el Hessiano $H = \nabla_\theta^2 L$:
 
 $$
-H = \nabla_\theta^2 L = J^TJ + \sum_{j=1}^{m} f_j(\theta)\nabla^2 f_j(\theta) = J^TJ + Q \tag{4.58}
+H = \nabla_\theta^2 L = J^TJ + \sum_{j=1}^{m} f_j(\theta)\nabla^2 f_j(\theta) = J^TJ + Q  \qquad (4.58)
 $$
 
 El primer término solo incluye derivadas de primer orden, y el segundo contiene derivadas de segundo orden. Para muchos problemas es demasiado costoso computar $Q$. Afortunadamente, como $f_j(\theta)$ son los errores residuales, es común suponer que son pequeños y **aproximar el Hessiano solo con los términos de primer orden**:
 
 $$
-H \approx J^TJ \tag{4.59}
+H \approx J^TJ  \qquad (4.59)
 $$
 
 **Esta es la suposición primaria usada en los métodos de Gauss–Newton.**
@@ -1028,34 +1028,34 @@ $$
 **R4.49 — la iteración (pp. 152–153).** El método de Newton se vuelve:
 
 $$
-\theta^{k+1} = \theta^k - H^{-1}\nabla_\theta L \tag{4.60}
+\theta^{k+1} = \theta^k - H^{-1}\nabla_\theta L  \qquad (4.60)
 $$
 
 Sin embargo, en lugar de almacenar y computar $H^{-1}$, lo que implicaría operaciones $O(n^3)$, se resuelve el sistema lineal
 
 $$
-Hs^k = -\nabla_\theta L \tag{4.61}
+Hs^k = -\nabla_\theta L  \qquad (4.61)
 $$
 
 y se usa directamente $s^k$, que debería ser igual a $H^{-1}\nabla_\theta L$, para la actualización en el método de Newton:
 
 $$
-\theta^{k+1} = \theta^k + s^k \tag{4.62}
+\theta^{k+1} = \theta^k + s^k  \qquad (4.62)
 $$
 
 Usando la aproximación de Gauss–Newton al Hessiano de (4.59), esto se convierte en
 
 $$
-J_k^TJ_k s^k \approx -J_k^T\mathbf{f}(\theta^k) \tag{4.63}
+J_k^TJ_k s^k \approx -J_k^T\mathbf{f}(\theta^k)  \qquad (4.63)
 $$
 
 donde $J_k = J(\theta^k) = D\mathbf{f}(\theta^k)$. Por tanto, la **iteración completa de Gauss–Newton** es
 
 $$
-\text{Solve } J_k^TJ_k s^k = -J_k^T\mathbf{f}(\theta^k) \tag{4.64a}
+\text{Solve } J_k^TJ_k s^k = -J_k^T\mathbf{f}(\theta^k)  \qquad (4.64a)
 $$
 $$
-\text{Iterate } \theta^{k+1} = \theta^k + s^k \tag{4.64b}
+\text{Iterate } \theta^{k+1} = \theta^k + s^k  \qquad (4.64b)
 $$
 
 Así, **los métodos de Gauss–Newton reducen el problema de mínimos cuadrados no lineales a una secuencia de problemas de mínimos cuadrados regulares linealizados**[^fn1].
@@ -1063,28 +1063,28 @@ Así, **los métodos de Gauss–Newton reducen el problema de mínimos cuadrados
 **R4.50 — equivalencia con un problema de mínimos cuadrados (pp. 153).** En cada paso de iteración, resolver
 
 $$
-J^TJs = -J^T\mathbf{f} \tag{4.65}
+J^TJs = -J^T\mathbf{f}  \qquad (4.65)
 $$
 
 equivale a resolver un problema de mínimos cuadrados
 
 $$
-\min_s \; \tfrac{1}{2}\|Js + \mathbf{f}\|_2^2 \tag{4.66}
+\min_s \; \tfrac{1}{2}\|Js + \mathbf{f}\|_2^2  \qquad (4.66)
 $$
 
 Específicamente, expandiendo:
 
 $$
-\tfrac{1}{2}(Js+\mathbf{f})^T(Js+\mathbf{f}) \tag{4.67a}
+\tfrac{1}{2}(Js+\mathbf{f})^T(Js+\mathbf{f})  \qquad (4.67a)
 $$
 $$
-= \tfrac{1}{2}s^TJ^TJs + 2s^TJ^T\mathbf{f} + \mathbf{f}^T\mathbf{f} \tag{4.67b}
+= \tfrac{1}{2}s^TJ^TJs + 2s^TJ^T\mathbf{f} + \mathbf{f}^T\mathbf{f}  \qquad (4.67b)
 $$
 
 Minimizando esto respecto a $s$ (gradiente igual a cero) se obtiene:
 
 $$
-J^TJs = J^T\mathbf{f} \tag{4.68}
+J^TJs = J^T\mathbf{f}  \qquad (4.68)
 $$
 
 ### Derivación del Hessiano
@@ -1092,25 +1092,25 @@ $$
 **R4.51 (pp. 153–154).** Si $\nabla_\theta L = J^T\mathbf{f}(\theta)$, se denota la componente $j$-ésima como
 
 $$
-\nabla_{\theta_j}L = \sum_{i=1}^{m} f_i(\theta)\frac{\partial f_i}{\partial \theta_j} \tag{4.69}
+\nabla_{\theta_j}L = \sum_{i=1}^{m} f_i(\theta)\frac{\partial f_i}{\partial \theta_j}  \qquad (4.69)
 $$
 
 y la componente $(j,k)$ del Hessiano, $H_{jk} = \nabla^2_{\theta_j\theta_k}L$, como
 
 $$
-H_{jk} = \nabla^2_{\theta_j\theta_k}L = \sum_i \frac{\partial f_i}{\partial\theta_k}\frac{\partial f_i}{\partial\theta_j} + f_i\frac{\partial^2 f_i}{\partial\theta_j\partial\theta_k} = J^TJ + Q \tag{4.70}
+H_{jk} = \nabla^2_{\theta_j\theta_k}L = \sum_i \frac{\partial f_i}{\partial\theta_k}\frac{\partial f_i}{\partial\theta_j} + f_i\frac{\partial^2 f_i}{\partial\theta_j\partial\theta_k} = J^TJ + Q  \qquad (4.70)
 $$
 
 De nuevo, se descartan los términos cuadráticos, ya que son costosos de computar y se asumen pequeños. Para ver que $J^TJ = \sum_i \frac{\partial f_i}{\partial\theta_k}\frac{\partial f_i}{\partial\theta_j}$, se expande
 
 $$
-J^TJ = \begin{bmatrix} \nabla f_1^T \\ \nabla f_2^T \\ \vdots \end{bmatrix}\begin{bmatrix} \nabla f_1 & \nabla f_2 & \cdots \end{bmatrix} \tag{4.71}
+J^TJ = \begin{bmatrix} \nabla f_1^T \\ \nabla f_2^T \\ \vdots \end{bmatrix}\begin{bmatrix} \nabla f_1 & \nabla f_2 & \cdots \end{bmatrix}  \qquad (4.71)
 $$
 
 de modo que el elemento $(j,k)$ de $J^TJ$ está dado por la fila $j$-ésima de $J^T$ por la columna $k$-ésima de $J$:
 
 $$
-\begin{bmatrix} \dfrac{\partial f_1}{\partial\theta_j} & \dfrac{\partial f_2}{\partial\theta_j} & \cdots \end{bmatrix}\begin{bmatrix} \dfrac{\partial f_1}{\partial\theta_k} \\ \dfrac{\partial f_2}{\partial\theta_k} \\ \vdots \end{bmatrix} = \sum_i \frac{\partial f_i}{\partial\theta_k}\frac{\partial f_i}{\partial\theta_j} \tag{4.72}
+\begin{bmatrix} \dfrac{\partial f_1}{\partial\theta_j} & \dfrac{\partial f_2}{\partial\theta_j} & \cdots \end{bmatrix}\begin{bmatrix} \dfrac{\partial f_1}{\partial\theta_k} \\ \dfrac{\partial f_2}{\partial\theta_k} \\ \vdots \end{bmatrix} = \sum_i \frac{\partial f_i}{\partial\theta_k}\frac{\partial f_i}{\partial\theta_j}  \qquad (4.72)
 $$
 
 ### Desafíos con Gauss–Newton
@@ -1135,19 +1135,19 @@ El **algoritmo de Levenberg–Marquardt** mejora la robustez de los métodos de 
 La idea fundamental es **regularizar la aproximación al Hessiano con una matriz identidad ponderada**, de modo que
 
 $$
-H \approx J^TJ + \alpha I \tag{4.73}
+H \approx J^TJ + \alpha I  \qquad (4.73)
 $$
 
 Así, la ecuación de actualización se convierte en
 
 $$
-(J^TJ + \alpha I)\Delta\theta = -J^T\mathbf{f} \tag{4.74}
+(J^TJ + \alpha I)\Delta\theta = -J^T\mathbf{f}  \qquad (4.74)
 $$
 
 **El parámetro de amortiguamiento $\alpha$ interpola entre Gauss–Newton ($\alpha = 0$) y el descenso de gradiente ($\alpha \to \infty$).** La transición a descenso de gradiente cuando $\alpha \to \infty$ es simple de ver, ya que la actualización se convierte en
 
 $$
-\Delta\theta = -\tfrac{1}{\alpha}J^T\mathbf{f} \tag{4.75}
+\Delta\theta = -\tfrac{1}{\alpha}J^T\mathbf{f}  \qquad (4.75)
 $$
 
 cuando el término $\alpha I$ domina la aproximación al Hessiano.
@@ -1159,19 +1159,19 @@ cuando el término $\alpha I$ domina la aproximación al Hessiano.
 Hay varios enfoques para modificar $\alpha$ dinámicamente. El más simple es **aumentar $\alpha$ si la función de pérdida no disminuye suficientemente, y disminuir $\alpha$ si el cambio en la función de pérdida es suficiente**. Esto se logra multiplicando o dividiendo $\alpha$ por un factor constante $\nu > 1$. Como la función de pérdida disminuye naturalmente hacia la solución, los cambios en la función de pérdida se hacen más pequeños con iteraciones exitosas, y por eso se usa un **cambio relativo** de la función de pérdida respecto a la aproximación cuadrática para determinar si el cambio es suficiente. Esto se cuantifica por el **ratio relativo** $\rho$:
 
 $$
-\rho = \frac{\Delta L_{\text{actual}}}{\Delta L_{\text{predicho}}} \tag{4.76}
+\rho = \frac{\Delta L_{\text{actual}}}{\Delta L_{\text{predicho}}}  \qquad (4.76)
 $$
 
 donde
 
 $$
-\Delta L_{\text{actual}} = L(\theta^k) - L(\theta^{k+1}) \tag{4.77}
+\Delta L_{\text{actual}} = L(\theta^k) - L(\theta^{k+1})  \qquad (4.77)
 $$
 
 es la reducción actual, y
 
 $$
-\Delta L_{\text{predicho}} = -J^T\mathbf{f}\Delta\theta - \Delta\theta^T(J^TJ + \alpha I)\Delta\theta \tag{4.78}
+\Delta L_{\text{predicho}} = -J^T\mathbf{f}\Delta\theta - \Delta\theta^T(J^TJ + \alpha I)\Delta\theta  \qquad (4.78)
 $$
 
 es la reducción predicha por el modelo cuadrático.
@@ -1186,7 +1186,7 @@ Incluso si $\Delta L_{\text{actual}}$ se hace pequeño cerca del mínimo, $\rho$
 LM ajusta explícitamente $\alpha$ con base en la norma del paso $\Delta\theta$, de modo que
 
 $$
-\alpha = \max(\alpha\nu,\ \epsilon\|\Delta\theta\|) \tag{4.79}
+\alpha = \max(\alpha\nu,\ \epsilon\|\Delta\theta\|)  \qquad (4.79)
 $$
 
 donde $\epsilon > 0$ asegura regularización suficiente.
@@ -1194,7 +1194,7 @@ donde $\epsilon > 0$ asegura regularización suficiente.
 **R4.57 — regularizaciones más sofisticadas (p. 156).** También es posible introducir regularizaciones más sofisticadas, más allá de la de Tikhonov. Por ejemplo, en lugar de añadir $\alpha I$ a la aproximación al Hessiano, se puede **escalar adaptativamente cada entrada diagonal individualmente**:
 
 $$
-H = J^TJ + \alpha\,\mathrm{diag}(J^TJ) \tag{4.80}
+H = J^TJ + \alpha\,\mathrm{diag}(J^TJ)  \qquad (4.80)
 $$
 
 Este enfoque escala dinámicamente el amortiguamiento con base en la **curvatura local**.
@@ -1208,7 +1208,7 @@ Este enfoque escala dinámicamente el amortiguamiento con base en la **curvatura
 **R4.58 — el método (p. 156).** El método de **gradiente conjugado (CG)** es un algoritmo iterativo para resolver sistemas grandes y dispersos de ecuaciones lineales
 
 $$
-Ax = b \tag{4.81}
+Ax = b  \qquad (4.81)
 $$
 
 donde $A \in \mathbb{R}^{n\times n}$ es **simétrica definida positiva**, $x \in \mathbb{R}^n$ es el vector desconocido y $b \in \mathbb{R}^n$ el lado derecho. Por ejemplo, $A$ podría ser el Hessiano, o la aproximación al Hessiano del método de Gauss–Newton anterior.
@@ -1218,7 +1218,7 @@ donde $A \in \mathbb{R}^{n\times n}$ es **simétrica definida positiva**, $x \in
 CG también se usa con frecuencia para **acelerar los métodos de Gauss–Newton** en sistemas muy grandes y dispersos. Específicamente, el método de gradiente conjugado se usa para resolver el sistema lineal
 
 $$
-J^TJ\Delta x = -J^T\mathbf{f} \tag{4.82}
+J^TJ\Delta x = -J^T\mathbf{f}  \qquad (4.82)
 $$
 
 En lugar de invertir directamente la aproximación al Hessiano $J^TJ \approx H$, CG resuelve el sistema iterativamente, **evitando el cómputo explícito de la matriz del Hessiano**. Solo requiere **productos matriz-vector**, lo que mejora dramáticamente la eficiencia de memoria para problemas a gran escala, donde construir y almacenar la aproximación al Hessiano puede ser prohibitivo. La mejora en memoria y velocidad es aún más pronunciada cuando el Hessiano es disperso.
@@ -1228,7 +1228,7 @@ Además de mejorar la escalabilidad de los métodos de Gauss–Newton, CG tambi�
 **R4.59 — la idea: expansión en una base conjugada (pp. 156–157).** La idea detrás del método de gradiente conjugado es **expandir la solución $x$** de (4.81) en una base de vectores conjugados $p_k$, que son ortogonales con respecto al producto interior definido por $A$:
 
 $$
-p_i^TAp_j = 0 \quad \forall\, i \ne j \tag{4.83}
+p_i^TAp_j = 0 \quad \forall\, i \ne j  \qquad (4.83)
 $$
 
 *Nota al pie 4 (p. 156):* "conjugado" significa simplemente ortogonal con respecto al producto interior $\langle u, v\rangle_A = u^TAv = 0$. En este método se construye y re-ortogonaliza iterativamente una base.
@@ -1238,31 +1238,31 @@ Si $A$ es simétrica definida positiva, el conjunto $\{p_j\}_{j=1}^n$ forma una 
 Dada una base conjugada $\{p_j\}_{j=1}^n$, se aproxima la solución $x$ como
 
 $$
-x = \sum_{j=1}^{n}\alpha_j p_j \tag{4.84}
+x = \sum_{j=1}^{n}\alpha_j p_j  \qquad (4.84)
 $$
 
 Para aproximar el coeficiente $\alpha_k$, se usa $Ax = b$:
 
 $$
-Ax = \sum_{j=1}^{n}\alpha_jAp_j = b \tag{4.85}
+Ax = \sum_{j=1}^{n}\alpha_jAp_j = b  \qquad (4.85)
 $$
 
 y se toma el producto interior de ambos lados con $p_k$:
 
 $$
-p_k^Tb = \sum_{j=1}^{n}\alpha_j p_k^TAp_j \tag{4.86}
+p_k^Tb = \sum_{j=1}^{n}\alpha_j p_k^TAp_j  \qquad (4.86)
 $$
 
 Como los $p$ son vectores conjugados, el único término no nulo en la suma es $\alpha_kp_k^TAp_k$:
 
 $$
-p_k^Tb = \alpha_kp_k^TAp_k \tag{4.87}
+p_k^Tb = \alpha_kp_k^TAp_k  \qquad (4.87)
 $$
 
 de donde
 
 $$
-\alpha_k = \frac{p_k^Tb}{p_k^TAp_k} \tag{4.88}
+\alpha_k = \frac{p_k^Tb}{p_k^TAp_k}  \qquad (4.88)
 $$
 
 Así, **el método de gradiente conjugado construye iterativamente esta base $p_k$ y la aproximación a $x$**, que se reconstruye mediante los coeficientes $\alpha_k$ en la base $p_k$.
@@ -1270,13 +1270,13 @@ Así, **el método de gradiente conjugado construye iterativamente esta base $p_
 **R4.60 — formulación como descenso de gradiente (p. 157).** El método de CG puede verse como una **mejora del algoritmo clásico de descenso de gradiente** para minimizar la función objetivo cuadrática:
 
 $$
-f(x) = \tfrac{1}{2}x^TAx - b^Tx \tag{4.89}
+f(x) = \tfrac{1}{2}x^TAx - b^Tx  \qquad (4.89)
 $$
 
 El gradiente de $f(x)$ es
 
 $$
-\nabla f(x) = Ax - b \tag{4.90}
+\nabla f(x) = Ax - b  \qquad (4.90)
 $$
 
 Como se trata de anular $\nabla f(x) = 0$, se usa el **gradiente negativo** como primer vector: $p_1 = b - Ax$. **Así, todos los vectores futuros serán conjugados a la dirección del gradiente, de ahí el nombre.**
@@ -1284,7 +1284,7 @@ Como se trata de anular $\nabla f(x) = 0$, se usa el **gradiente negativo** como
 **R4.61 — construcción iterativa de los vectores conjugados (p. 158).** El residuo en cada paso es $r_k = b - Ax^k$, así que el primer vector conjugado $p_1$ es también el primer residuo. El descenso de gradiente clásico daría el siguiente paso en esta dirección del residuo, pero CG requiere que el siguiente paso vaya en una dirección **conjugada a los vectores $p$ previos**. Así, la dirección del siguiente paso se obtiene tomando el residuo $r_k$ y **quitando todas sus componentes en cada una de las direcciones $p_j$ previas**. Esto equivale a una **ortonormalización de Gram–Schmidt en el espacio con producto interior ponderado** determinado por $A$:
 
 $$
-p_k = r_k - \sum_{j=1}^{k-1}\frac{p_j^TA r_k}{p_j^TAp_j}p_j \tag{4.91}
+p_k = r_k - \sum_{j=1}^{k-1}\frac{p_j^TA r_k}{p_j^TAp_j}p_j  \qquad (4.91)
 $$
 
 Cada término de la suma se entiende así: el **numerador** es la proyección de $r_k$ en la dirección $p_j$; el **denominador** es un factor de normalización; y el $p_j$ a la derecha de la fracción indica que **ese vector está siendo restado de $r_k$ exactamente en la cantidad que contiene $r_k$**. Así, esta suma quita todas las componentes de todas las direcciones conjugadas previas, de modo que **$p_k$ garantiza ser conjugado a todos los vectores anteriores**.
@@ -1292,7 +1292,7 @@ Cada término de la suma se entiende así: el **numerador** es la proyección de
 Una vez construido el nuevo vector $p_k$, se puede actualizar $x$ como
 
 $$
-x^{k+1} = x^k + \alpha_k p_k = x^k + \frac{p_k^Tb}{p_k^TAp_k}p_k \tag{4.92}
+x^{k+1} = x^k + \alpha_k p_k = x^k + \frac{p_k^Tb}{p_k^TAp_k}p_k  \qquad (4.92)
 $$
 
 donde $\alpha_k$ fue derivado en (4.88). En la práctica hay formas de comprimir y simplificar varios de estos pasos.
@@ -1300,7 +1300,7 @@ donde $\alpha_k$ fue derivado en (4.88). En la práctica hay formas de comprimir
 **R4.62 — subespacios de Krylov y direcciones conjugadas (p. 158).** En cada iteración, CG minimiza $f(x)$ dentro del **subespacio de Krylov de dimensión $k$**:
 
 $$
-\mathcal{K}_k = \mathrm{span}\{r_0, Ar_0, A^2r_0, \ldots, A^{k-1}r_0\} \tag{4.93}
+\mathcal{K}_k = \mathrm{span}\{r_0, Ar_0, A^2r_0, \ldots, A^{k-1}r_0\}  \qquad (4.93)
 $$
 
 donde $r_0 = b - Ax_0$ es el residuo inicial. A diferencia del descenso de gradiente, el método de gradiente conjugado construye una secuencia de direcciones de búsqueda $p_k$ que son **$A$-conjugadas**. Las **direcciones conjugadas aseguran que la minimización a lo largo de cada dirección no interfiera con el progreso hecho a lo largo de las direcciones previamente elegidas**, lo que conduce a una convergencia más rápida.
@@ -1308,28 +1308,28 @@ donde $r_0 = b - Ax_0$ es el residuo inicial. A diferencia del descenso de gradi
 **R4.63 — el algoritmo (pp. 158–159).** El método CG actualiza iterativamente $x^k$, el residuo $r_k$ y la dirección de búsqueda $p_k$ como sigue. Se comienza con una estimación inicial $x_0$:
 
 $$
-x_0, \qquad r_0 = b - Ax_0, \qquad p_0 = r_0 \tag{4.94}
+x_0, \qquad r_0 = b - Ax_0, \qquad p_0 = r_0  \qquad (4.94)
 $$
 
 Luego, para cada iteración $k$ se computa:
 
 $$
-\alpha_k = \frac{r_k^Tr_k}{p_k^TAp_k} \tag{4.95a}
+\alpha_k = \frac{r_k^Tr_k}{p_k^TAp_k}  \qquad (4.95a)
 $$
 $$
-x^{k+1} = x^k + \alpha_k p_k \tag{4.95b}
+x^{k+1} = x^k + \alpha_k p_k  \qquad (4.95b)
 $$
 $$
-r_{k+1} = r_k - \alpha_kAp_k \tag{4.95c}
+r_{k+1} = r_k - \alpha_kAp_k  \qquad (4.95c)
 $$
 
 y se actualiza la siguiente dirección conjugada:
 
 $$
-\beta_k = \frac{r_{k+1}^Tr_{k+1}}{r_k^Tr_k} \tag{4.96a}
+\beta_k = \frac{r_{k+1}^Tr_{k+1}}{r_k^Tr_k}  \qquad (4.96a)
 $$
 $$
-p_{k+1} = r_{k+1} + \beta_kp_k \tag{4.96b}
+p_{k+1} = r_{k+1} + \beta_kp_k  \qquad (4.96b)
 $$
 
 Nótese que aquí se modificó la expresión de $\alpha_k$ para incluir solo el residuo actual $r_k$ y el vector conjugado actual $p_k$. También es útil para el lector verificar que **la nueva expresión del residuo es equivalente a $r_k = Ax^k - b$** (con signo cambiado respecto de la definición original $r_k = b - Ax^k$).
@@ -1339,13 +1339,13 @@ Nótese que aquí se modificó la expresión de $\alpha_k$ para incluir solo el 
 Sin embargo, el desempeño práctico depende del **número de condición** $\kappa(A) = \lambda_{\max}/\lambda_{\min}$, donde $\lambda_{\max}$ y $\lambda_{\min}$ son los valores propios mayor y menor de $A$. La tasa de convergencia es aproximadamente:
 
 $$
-\|x^k - x^*\|_A \le C\left(\frac{\kappa(A)-1}{\kappa(A)+1}\right)^k \tag{4.97}
+\|x^k - x^*\|_A \le C\left(\frac{\kappa(A)-1}{\kappa(A)+1}\right)^k  \qquad (4.97)
 $$
 
 donde $x^*$ es la solución verdadera y $C$ es una constante dependiente del error inicial. Así, **el desempeño de CG se deteriora para sistemas pobremente condicionados** (grande $\kappa(A)$), lo que ralentiza la convergencia. El **precondicionamiento** se usa comúnmente para mejorar el número de condición de $A$, transformando el sistema en:
 
 $$
-M^{-1}Ax = M^{-1}b \tag{4.98}
+M^{-1}Ax = M^{-1}b  \qquad (4.98)
 $$
 
 donde $M$ es un **precondicionador** elegido para aproximar $A$ mientras sea fácil de invertir.
@@ -1384,7 +1384,7 @@ Los 29 ejercicios del capítulo, en el orden del libro (el guion largo "–" del
 - **Ejercicio 4-1.** Recordar que la solución de norma mínima puede formularse en el marco KKT con el sistema de ecuaciones
 
   $$
-  \begin{bmatrix} I & A^T \\ A & 0 \end{bmatrix}\begin{bmatrix} x \\ \lambda \end{bmatrix} = \begin{bmatrix} 0 \\ b \end{bmatrix} \tag{4.99}
+  \begin{bmatrix} I & A^T \\ A & 0 \end{bmatrix}\begin{bmatrix} x \\ \lambda \end{bmatrix} = \begin{bmatrix} 0 \\ b \end{bmatrix}  \qquad (4.99)
   $$
 
   Mostrar que la solución de este sistema es $x^* = A^T(AA^T)^{-1}b$.
@@ -1464,7 +1464,7 @@ Los 29 ejercicios del capítulo, en el orden del libro (el guion largo "–" del
   2. **(b)** El número de mediciones $p$ debe ser suficientemente grande, del orden de
 
      $$
-     p \approx O(K\log(n/K)) \approx k_1 K\log(n/K) \tag{4.100}
+     p \approx O(K\log(n/K)) \approx k_1 K\log(n/K)  \qquad (4.100)
      $$
 
      donde la constante multiplicadora $k_1$ depende de cuán incoherentes son $C$ y $\Psi$.
